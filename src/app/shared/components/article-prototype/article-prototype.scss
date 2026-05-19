@@ -1,0 +1,67 @@
+@use '@styles/styles.scss';
+
+.fitImageMyStorySour {
+  margin: 2%;
+}
+
+@media (max-width: 75.375rem) {
+  .fitImageMyStorySour {
+    width: 40rem;
+    height: 10rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    object-fit: cover;
+  }
+}
+@media (min-width: 75.375rem) {
+  .fitImageMyStorySour {
+    width: 45rem;
+    height: 30rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    object-fit: cover;
+  }
+}
+.titlePartPresentation {
+  color: styles.$base-color-darkPurple;
+  font-weight: bold;
+}
+@media (max-width: 75.375rem) {
+  .titlePartPresentation {
+    font-size: styles.$size-small-mobile;
+  }
+}
+@media (min-width: 75.375rem) {
+  .titlePartPresentation {
+    font-size: styles.$size-medium-pc;
+  }
+}
+
+@media (max-width: 75.375rem) {
+  .titleH3Hook {
+    font-size: styles.$size-large-mobile;
+    margin: 0.5rem 0;
+  }
+}
+@media (min-width: 75.375rem) {
+  .titleH3Hook {
+    font-size: styles.$size-large-pc;
+    margin: 1rem 0;
+  }
+}
+.articleContent {
+  word-spacing: 5%;
+}
+@media (max-width: 75.375rem) {
+  .articleContent {
+    font-size: styles.$size-medium-mobile;
+    line-height: 1rem;
+  }
+}
+@media (min-width: 75.375rem) {
+  .articleContent {
+    font-size: styles.$size-medium-pc;
+    width: 80%;
+    line-height: 2rem;
+  }
+}

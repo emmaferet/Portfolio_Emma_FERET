@@ -1,0 +1,56 @@
+@use '@styles/styles.scss';
+// @use "@styles/";
+
+@media (max-width: 75.375rem) {
+  .fitImageIntroduction {
+    width: 80%;
+    height: 10rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    object-fit: cover;
+    transform: rotate(4deg);
+    margin: 2%;
+  }
+}
+@media (min-width: 75.375rem) {
+  .fitImageIntroduction {
+    width: 15rem;
+    height: 25rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    object-fit: cover;
+    transform: rotate(5deg);
+  }
+}
+.textBoxAlternance {
+  background-color: styles.$base-color-softPurple;
+  color: styles.$base-color-darkPurple;
+  font-weight: bold;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.8rem;
+}
+@media (max-width: 75.375rem) {
+  .textBoxAlternance {
+    font-size: styles.$size-medium-mobile;
+    width: 8rem;
+  }
+}
+@media (min-width: 75.375rem) {
+  .textBoxAlternance {
+    font-size: styles.$size-medium-pc;
+    width: 16rem;
+  }
+}
+
+.bigTitleIntroduction {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.bigTitleIntroductionColor {
+  color: styles.$base-color-darkPurple;
+}
+.introductionContent {
+  font-size: styles.$size-medium-mobile;
+  width: 90%;
+  line-height: 140%;
+}

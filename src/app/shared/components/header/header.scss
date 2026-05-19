@@ -1,0 +1,54 @@
+@use '@styles/styles.scss';
+
+.header {
+  background-color: styles.$base-color-whiteCream;
+  border: 0.1rem solid styles.$base-color-softPurple;
+  border-radius: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+@media (max-width: 75.375rem) {
+  .header {
+    font-size: styles.$size-medium-mobile;
+    height: 3rem;
+    margin: 1rem 3%;
+  }
+}
+@media (min-width: 75.375rem) {
+  header {
+    font-size: styles.$size-medium-pc;
+    height: 5rem;
+    margin: 2rem 4%;
+  }
+}
+.nameH1Title {
+  font-weight: bold;
+  color: styles.$base-color-darkPurple;
+}
+@media (max-width: 75.375rem) {
+  .nameH1Title {
+    font-size: styles.$size-large-mobile;
+  }
+}
+@media (min-width: 75.375rem) {
+  .nameH1Title {
+    font-size: styles.$size-large-pc;
+  }
+}
+.headerNavigationButtons {
+  background-color: transparent;
+  color: styles.$base-color-darkGrey;
+  padding: 0 0.3rem;
+  text-decoration: none;
+}
+
+@media (min-width: 75.375rem) {
+  .headerNavigationButtons {
+    font-size: styles.$size-medium-pc;
+  }
+}
