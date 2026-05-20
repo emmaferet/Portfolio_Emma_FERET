@@ -7,3 +7,4 @@ import { Component } from '@angular/core';
   styleUrl: './home-page-introduction.scss',
 })
 export class HomePageIntroduction {}
+

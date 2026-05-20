@@ -1,8 +1,9 @@
 @use '@styles/styles.scss';
+@use '@styles/variables.scss';
 
 .header {
-  background-color: styles.$base-color-whiteCream;
-  border: 0.1rem solid styles.$base-color-softPurple;
+  background-color: variables.$base-color-whiteCream;
+  border: 0.1rem solid variables.$base-color-softPurple;
   border-radius: 4rem;
   display: flex;
   align-items: center;
@@ -14,41 +15,41 @@
 
 @media (max-width: 75.375rem) {
   .header {
-    font-size: styles.$size-medium-mobile;
+    font-size: variables.$size-medium-mobile;
     height: 3rem;
     margin: 1rem 3%;
   }
 }
 @media (min-width: 75.375rem) {
   header {
-    font-size: styles.$size-medium-pc;
+    font-size: variables.$size-medium-pc;
     height: 5rem;
     margin: 2rem 4%;
   }
 }
 .nameH1Title {
   font-weight: bold;
-  color: styles.$base-color-darkPurple;
+  color: variables.$base-color-darkPurple;
 }
 @media (max-width: 75.375rem) {
   .nameH1Title {
-    font-size: styles.$size-large-mobile;
+    font-size: variables.$size-large-mobile;
   }
 }
 @media (min-width: 75.375rem) {
   .nameH1Title {
-    font-size: styles.$size-large-pc;
+    font-size: variables.$size-large-pc;
   }
 }
 .headerNavigationButtons {
   background-color: transparent;
-  color: styles.$base-color-darkGrey;
+  color: variables.$base-color-darkGrey;
   padding: 0 0.3rem;
   text-decoration: none;
 }
 
 @media (min-width: 75.375rem) {
   .headerNavigationButtons {
-    font-size: styles.$size-medium-pc;
+    font-size: variables.$size-medium-pc;
   }
 }

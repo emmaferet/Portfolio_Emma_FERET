@@ -1,5 +1,5 @@
 @use '@styles/styles.scss';
-// @use "@styles/";
+@use '@styles/variables.scss';
 
 @media (max-width: 75.375rem) {
   .fitImageIntroduction {
@@ -23,21 +23,21 @@
   }
 }
 .textBoxAlternance {
-  background-color: styles.$base-color-softPurple;
-  color: styles.$base-color-darkPurple;
+  background-color: variables.$base-color-softPurple;
+  color: variables.$base-color-darkPurple;
   font-weight: bold;
   padding: 0.5rem 0.5rem;
   border-radius: 0.8rem;
 }
 @media (max-width: 75.375rem) {
   .textBoxAlternance {
-    font-size: styles.$size-medium-mobile;
+    font-size: variables.$size-medium-mobile;
     width: 8rem;
   }
 }
 @media (min-width: 75.375rem) {
   .textBoxAlternance {
-    font-size: styles.$size-medium-pc;
+    font-size: variables.$size-medium-pc;
     width: 16rem;
   }
 }
@@ -47,10 +47,10 @@
   font-weight: bold;
 }
 .bigTitleIntroductionColor {
-  color: styles.$base-color-darkPurple;
+  color: variables.$base-color-darkPurple;
 }
 .introductionContent {
-  font-size: styles.$size-medium-mobile;
+  font-size: variables.$size-medium-mobile;
   width: 90%;
   line-height: 140%;
 }

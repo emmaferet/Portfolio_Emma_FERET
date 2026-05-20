@@ -1,2 +1,20 @@
 <app-home-page-introduction></app-home-page-introduction>
-<app-article-prototype></app-article-prototype>
+<app-article-prototype
+  [currentArticle]="{
+    title: '1. Mon histoire',
+    subtitle: 'Fusionner les mondes.',
+    content: 'Mon parcours a commencé dans le monde du volume et de la lumière.',
+    image: '/img/emma-feret-SOUR-sideImg.jpg',
+    altImage: 'image issue du court-métrage D.S. Al Coda, sorti en 2024',
+  }"
+></app-article-prototype>
+<app-article-prototype
+  [currentArticle]="{
+    title: '2. Projets',
+    subtitle: 'Réalisations récentes',
+    content: '',
+    image: 'lien',
+    altImage: '',
+  }"
+></app-article-prototype>
+<app-skills-section></app-skills-section>

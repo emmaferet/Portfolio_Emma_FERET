@@ -20,7 +20,10 @@
       "@shared/*": ["src/app/shared/*"],
       "@core/*": ["src/app/core/*"],
       "@assets/*": ["src/assets/*"],
-      "@styles/*": ["src/styles/*"]
+      "@styles/*": ["src/styles/*"],
+      "@models/*": ["src/app/core/models/*"],
+      "@image/*": ["public/image/*"],
+      "@files/*": ["public/files/*"]
     }
   },
   "angularCompilerOptions": {
