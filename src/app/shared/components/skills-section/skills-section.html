@@ -1,9 +1,34 @@
-<p>skills-section works!</p>
-<div class="align centerContent">
-  <article class="articlGlobalPresentation">
-    <h2 class="">title</h2>
-    <h3 class="">subtile</h3>
-    <p class="">content</p>
-  </article>
-  <img class="fitImageMyStorySour" src="" alt="" />
+<div>
+  <div class="centerSkills">
+    <h2 class="titlePartPresentation">{{ titleSection() }}</h2>
+    <h3 class="titleH3Hook">{{ subtitleSection() }}</h3>
+  </div>
+  <div class="align centerContent">
+    <article class="articlGlobalPresentation skillsBoxPurple">
+      <h2 class=""></h2>
+      <h3 class=""></h3>
+      <!-- <p class="">{{ this.currentArticleSkillsForm1()?.formation?.dateForm }}</p>
+       a corriger  -->
+    </article>
+    <!-- boucler les 2 articles -->
+    <article class="articlGlobalPresentation skillsBoxPurple">
+      <h2 class="h1TitlePurpleBox articlGlobalPresentation">&lt; &gt; Programmation</h2>
+      <ul>
+        <!-- variable html -->
+        @let articleSkills = currentArticleSkills1();
+        <!-- Boucle for : on loop sur CvLanguages -->
+        @for (property of articleSkills; track property.name) {
+          <li class="align centerContent">
+            <!-- Commentez les ifs -->
+            @if (property.name === 'JS') {
+              <h3 class="articlGlobalPresentation" style="color: yellow">{{ property.name }}</h3>
+            } @else {
+              <h3 class="articlGlobalPresentation">{{ property.name }}</h3>
+            }
+            <p class="articlGlobalPresentation">{{ property.level }}</p>
+          </li>
+        }
+      </ul>
+    </article>
+  </div>
 </div>

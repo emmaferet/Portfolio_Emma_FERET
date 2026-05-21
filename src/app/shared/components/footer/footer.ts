@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
   templateUrl: './footer.html',
   styleUrl: './footer.scss',
 })
-export class Footer {}
+export class Footer {
+  downloadCv() {
+    const link = document.createElement('a');
+    link.href = '@files/CVWebDev_EmmaFERET.pdf';
+    link.download = 'CVWebDev_EmmaFERET.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+}

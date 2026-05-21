@@ -1,8 +1,14 @@
-export interface projects {
+export interface Projects {
   name: string;
-  year: string;
-  credits: string;
+  yearCreation: string;
+  credits: string[];
   image: string;
-  lien: string;
-  skills: string;
+  link: string;
+  skills: string[];
+}
+
+export interface Skills{
+  name: string;
+  description: string;
+
 }

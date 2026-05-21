@@ -23,33 +23,7 @@
     object-fit: cover;
   }
 }
-.titlePartPresentation {
-  color: variables.$base-color-darkPurple;
-  font-weight: bold;
-}
-@media (max-width: 75.375rem) {
-  .titlePartPresentation {
-    font-size: variables.$size-small-mobile;
-  }
-}
-@media (min-width: 75.375rem) {
-  .titlePartPresentation {
-    font-size: variables.$size-medium-pc;
-  }
-}
 
-@media (max-width: 75.375rem) {
-  .titleH3Hook {
-    font-size: variables.$size-large-mobile;
-    margin: 0.5rem 0;
-  }
-}
-@media (min-width: 75.375rem) {
-  .titleH3Hook {
-    font-size: variables.$size-large-pc;
-    margin: 1rem 0;
-  }
-}
 .articleContent {
   word-spacing: 5%;
 }

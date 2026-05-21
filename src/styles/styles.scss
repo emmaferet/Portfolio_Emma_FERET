@@ -19,6 +19,7 @@ body {
   flex-direction: row;
 }
 .centerContent {
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
@@ -34,7 +35,7 @@ body {
 }
 
 .articlGlobalPresentation {
-  margin: 8%;
+  margin: 0 7%;
 }
 @media (max-width: 75.375rem) {
   .articlGlobalPresentation {
@@ -57,5 +58,33 @@ body {
 @media (min-width: 75.375rem) {
   .darkPurpleSolidButton {
     padding: 0.8rem 2rem;
+  }
+}
+
+.titlePartPresentation {
+  color: variables.$base-color-darkPurple;
+  font-weight: bold;
+}
+@media (max-width: 75.375rem) {
+  .titlePartPresentation {
+    font-size: variables.$size-small-mobile;
+  }
+}
+@media (min-width: 75.375rem) {
+  .titlePartPresentation {
+    font-size: variables.$size-medium-pc;
+  }
+}
+
+@media (max-width: 75.375rem) {
+  .titleH3Hook {
+    font-size: variables.$size-large-mobile;
+    margin: 0.5rem 0;
+  }
+}
+@media (min-width: 75.375rem) {
+  .titleH3Hook {
+    font-size: variables.$size-large-pc;
+    margin: 1rem 0;
   }
 }

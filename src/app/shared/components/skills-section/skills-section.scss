@@ -1,0 +1,21 @@
+@use '@styles/variables.scss';
+@use '@styles/styles.scss';
+
+.skillsBoxPurple {
+  background-color: variables.$base-color-darkPurple;
+  width: 50%;
+  border-radius: 4rem;
+  color: variables.$base-color-softPurple;
+}
+.h1TitlePurpleBox {
+  font-size: variables.$size-medium-pc;
+  font-weight: bold;
+  margin-top: 10%;
+}
+.centerSkills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input, OnInit } from '@angular/core';
+import { CvLanguages } from '@core/models/interfaces/my-cv.interface';
 
 @Component({
   selector: 'app-skills-section',
@@ -6,6 +7,13 @@ import { Component } from '@angular/core';
   templateUrl: './skills-section.html',
   styleUrl: './skills-section.scss',
 })
-export class SkillsSection {
+export class SkillsSection implements OnInit {
+  // object ?
+  titleSection = input();
+  subtitleSection = input();
+  currentArticleSkills1 = input.required<CvLanguages[]>();
 
+  // currentArticleSkillsForm1 = input<myCv>();
+  // boucle pour import les currentArticleSkills
+  ngOnInit(): void {}
 }
