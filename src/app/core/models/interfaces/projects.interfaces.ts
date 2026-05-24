@@ -6,9 +6,3 @@ export interface Projects {
   link: string;
   skills: string[];
 }
-
-export interface Skills{
-  name: string;
-  description: string;
-
-}

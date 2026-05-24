@@ -14,7 +14,7 @@
 }
 @media (min-width: 75.375rem) {
   .fitImageIntroduction {
-    width: 15rem;
+    width: 50rem;
     height: 25rem;
     border-radius: 2rem;
     overflow: hidden;
@@ -43,14 +43,16 @@
 }
 
 .bigTitleIntroduction {
-  font-size: 1.6rem;
+  font-size: 4rem;
   font-weight: bold;
+  margin-top: 5%;
 }
 .bigTitleIntroductionColor {
   color: variables.$base-color-darkPurple;
 }
 .introductionContent {
-  font-size: variables.$size-medium-mobile;
+  font-size: variables.$size-medium-pc;
   width: 90%;
-  line-height: 140%;
+  line-height: 160%;
+  margin: 5% 0;
 }

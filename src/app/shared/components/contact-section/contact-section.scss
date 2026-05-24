@@ -1,0 +1,26 @@
+@use '@styles/variables.scss';
+@use '@styles/styles.scss';
+.centerContact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 25%;
+  margin-bottom: 10rem;
+  background-color: variables.$base-color-whiteCream;
+  border-radius: 2rem;
+  width: 50%;
+  height: 25rem;
+}
+.buttonsPositionMargin {
+  margin: 2.5rem 3rem 0 0;
+}
+
+.centerContactPositionFix {
+  display: flex;
+}
+.centerSmallDescriptionPositionFix {
+  margin: 0 20%;
+  text-align: center;
+  line-height: 150%;
+}

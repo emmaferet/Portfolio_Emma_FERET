@@ -18,26 +18,15 @@
   }"
 ></app-article-prototype>
 <app-skills-section
-  [currentArticleSkills1]="[
-    { name: 'TS', level: 'advanced' },
-    { name: 'JS', level: 'advanced' },
-    { name: 'HTML', level: 'advanced' },
+  [currentArticleRightPurpleBox]="[
+    { name: 'HTML/CSS', level: 'Competent' },
+    { name: 'JS/TS', level: 'Advanced' },
+    { name: 'Angular', level: 'Advanced' },
+  ]"
+  [currentArticleLeftWhiteBox]="[
+    { name: 'Maya', level: 'Proficient' },
+    { name: 'Zbrush', level: 'Expert' },
+    { name: 'Suite Substance', level: 'Proficient' },
   ]"
 ></app-skills-section>
-<!-- comment importer un interface dans un autre interface sans rentrer toutes les données ? -->
-<!-- [titleSection]="'03. Expertise'"
-  [subtitleSection]="'Double Compétence'"
-  [currentArticleSkillsForm1]="{
-    formation: { nameForm: 'Angular', dateForm: '25', skillsForm: 'html,css,js,angular' },
-    experience: { nameExp: 'string', dateExp: 'any', skillsExp: 'string' },
-    languages: { name: 'string', level: 'string' },
-  }" -->
-
-<!-- [currentArticleSkills2]="{
-    name: 'JS/TS',
-    level: 'Advanced',
-  }"
-  [currentArticleSkills3]="{
-    name: 'Angular',
-    level: 'Beginner',
-  }" -->
+<app-contact-section></app-contact-section>

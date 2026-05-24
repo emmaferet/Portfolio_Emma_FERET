@@ -1,11 +1,13 @@
-import { Skills } from './projects.interfaces';
+import { Emma } from './person-emma.interface';
+import { Projects } from './projects.interfaces';
 
 export interface MyCv {
-
+  id: Emma;
+  smallDescription: string;
   experience: CvExperience[];
   formation: CvFormation[];
-  languages: CvLanguages[];
-  skills: Skills[];
+  skills: CvSkills[];
+  projects: Projects[];
 }
 export interface CvExperience {
   nameExp: string;
@@ -17,7 +19,8 @@ export interface CvFormation {
   dateForm: Date;
   skillsForm: string;
 }
-export interface CvLanguages {
+export interface CvSkills {
   name: string;
   level: string;
 }
+

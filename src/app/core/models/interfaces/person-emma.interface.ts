@@ -1,8 +1,11 @@
-import { MyCv } from './my-cv.interface';
-
 export interface Emma {
   name: string;
   surname: string;
   age: string;
-  skills: MyCv;
+  phone: string;
+  mail: string;
+  location: string;
+  school: string;
+  rythm: string;
+  links: string[];
 }

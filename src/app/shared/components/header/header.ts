@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input, OnInit } from '@angular/core';
+import { ListNavigation } from '@core/models/interfaces/listNavigation.interface';
 
 @Component({
   selector: 'app-header',
@@ -6,4 +7,7 @@ import { Component } from '@angular/core';
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
-export class Header {}
+export class Header implements OnInit {
+  headerNavigation = input.required<ListNavigation[]>();
+  ngOnInit(): void {}
+}

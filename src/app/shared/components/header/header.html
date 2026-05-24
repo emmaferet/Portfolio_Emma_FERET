@@ -2,18 +2,12 @@
   <h1 class="nameH1Title">Emma Feret</h1>
   <nav>
     <ul class="align">
-      <li>
-        <a href="#" class="headerNavigationButtons">Work</a>
-      </li>
-      <li>
-        <a href="#" class="headerNavigationButtons">Story</a>
-      </li>
-      <li>
-        <a href="#" class="headerNavigationButtons">Philosophy</a>
-      </li>
-      <li>
-        <a href="#" class="headerNavigationButtons">Contact</a>
-      </li>
+      @let headerList = headerNavigation();
+      @for (listElement of headerList; track listElement.listNavigationElement) {
+        <li>
+          <a href="#" class="headerNavigationButtons">{{ listElement.listNavigationElement }}</a>
+        </li>
+      }
     </ul>
   </nav>
   <a href="#" class="darkPurpleSolidButton">Hire Me</a>

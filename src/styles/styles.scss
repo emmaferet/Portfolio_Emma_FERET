@@ -9,7 +9,7 @@ body {
   color: variables.$base-color-darkGrey;
   background-image: url('/img/backGroundImg.jpg');
   background-repeat: repeat-x repeat-y;
-  background-size: 300rem;
+  background-size: 400rem;
   background-position: 200rem 0;
 }
 
@@ -35,7 +35,7 @@ body {
 }
 
 .articlGlobalPresentation {
-  margin: 0 7%;
+  margin: 0 5%;
 }
 @media (max-width: 75.375rem) {
   .articlGlobalPresentation {
@@ -60,7 +60,24 @@ body {
     padding: 0.8rem 2rem;
   }
 }
-
+.whiteBorderSolidButton {
+  background-color: variables.$base-color-whiteCream;
+  border: solid 1px;
+  border-color: variables.$base-color-darkPurple;
+  color: variables.$base-color-darkPurple;
+  text-decoration: none;
+  border-radius: 5rem;
+}
+@media (max-width: 75.375rem) {
+  .whiteBorderSolidButton {
+    padding: 0.45rem 0.5rem;
+  }
+}
+@media (min-width: 75.375rem) {
+  .whiteBorderSolidButton {
+    padding: 0.8rem 2rem;
+  }
+}
 .titlePartPresentation {
   color: variables.$base-color-darkPurple;
   font-weight: bold;
@@ -87,4 +104,21 @@ body {
     font-size: variables.$size-large-pc;
     margin: 1rem 0;
   }
+}
+
+.whiteColor {
+  color: variables.$base-color-whiteCream;
+}
+.darkPurpleColor {
+  color: variables.$base-color-darkPurple;
+}
+.softPurpleColor {
+  color: variables.$base-color-softPurple;
+}
+.darkGreyColor {
+  color: variables.$base-color-darkGrey;
+}
+
+.bold {
+  font-weight: bold;
 }
