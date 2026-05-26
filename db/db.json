@@ -1,5 +1,5 @@
 {
-  "$schema": ,
+  "$schema": "../node_modules/json-server/schema.json",
   "user": {
     "name": "Emma",
     "surname": "Feret",
