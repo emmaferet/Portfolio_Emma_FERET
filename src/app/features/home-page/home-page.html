@@ -17,16 +17,5 @@
     altImage: '',
   }"
 ></app-article-prototype>
-<app-skills-section
-  [currentArticleRightPurpleBox]="[
-    { name: 'HTML/CSS', level: 'Competent' },
-    { name: 'JS/TS', level: 'Advanced' },
-    { name: 'Angular', level: 'Advanced' },
-  ]"
-  [currentArticleLeftWhiteBox]="[
-    { name: 'Maya', level: 'Proficient' },
-    { name: 'Zbrush', level: 'Expert' },
-    { name: 'Suite Substance', level: 'Proficient' },
-  ]"
-></app-skills-section>
+<app-skills-section [userSkills]="userSkills()"></app-skills-section>
 <app-contact-section></app-contact-section>

@@ -1,9 +1,10 @@
 <header class="header">
-  <h1 class="nameH1Title">Emma Feret</h1>
+  @let nameTitleSignal = nameTitle();
+  <h1 class="nameH1Title">{{ nameTitleSignal?.name }} {{ nameTitleSignal?.surname }}</h1>
   <nav>
     <ul class="align">
       @let headerList = headerNavigation();
-      @for (listElement of headerList; track listElement.listNavigationElement) {
+      @for (listElement of headerList; track $index) {
         <li>
           <a href="#" class="headerNavigationButtons">{{ listElement.listNavigationElement }}</a>
         </li>

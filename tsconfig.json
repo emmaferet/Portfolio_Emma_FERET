@@ -23,7 +23,8 @@
       "@styles/*": ["src/styles/*"],
       "@models/*": ["src/app/core/models/*"],
       "@image/*": ["public/image/*"],
-      "@files/*": ["public/files/*"]
+      "@files/*": ["public/files/*"],
+      "@services/*": ["src/app/shared/services/*"]
     }
   },
   "angularCompilerOptions": {

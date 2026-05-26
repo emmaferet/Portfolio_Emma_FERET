@@ -1,8 +1,7 @@
 export interface Projects {
+  id: number;
   name: string;
-  yearCreation: string;
-  credits: string[];
+  year: string;
+  description: string;
   image: string;
-  link: string;
-  skills: string[];
 }

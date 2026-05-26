@@ -1,5 +1,6 @@
 import { Component, input, OnInit } from '@angular/core';
 import { ListNavigation } from '@core/models/interfaces/listNavigation.interface';
+import { User } from '@core/models/interfaces/user.interface';
 
 @Component({
   selector: 'app-header',
@@ -9,5 +10,6 @@ import { ListNavigation } from '@core/models/interfaces/listNavigation.interface
 })
 export class Header implements OnInit {
   headerNavigation = input.required<ListNavigation[]>();
+  nameTitle = input.required<User | undefined>();
   ngOnInit(): void {}
 }

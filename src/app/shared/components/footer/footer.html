@@ -1,25 +1,36 @@
 <footer class="footer">
   <div class="positionTitleFooter">
-    <h3 class="h3TitleFooter">Emma Feret</h3>
+    @let user = footerUser();
+    <h3 class="h3TitleFooter">{{ user?.name }} {{ user?.surname }}</h3>
     <p>
-      @ 2026 Emma Feret Portofolio. <br />
+      @ 2026 {{ user?.name }} {{ user?.surname }} Portofolio. <br />
       Crafted with precision and soul.
     </p>
   </div>
   <nav>
     <ul class="align">
-      <li>
-        <a href="#" class="footerNavigationButtons">Linkedin</a>
-      </li>
-      <li>
-        <a href="#" class="footerNavigationButtons">GitHub</a>
-      </li>
-      <li>
-        <a href="#" class="footerNavigationButtons" (click)="downloadCv()">CV</a>
-      </li>
-      <li>
-        <a href="#" class="footerNavigationButtons">Mail</a>
-      </li>
+      @let links = footerUser()?.links;
+      @for (link of links; track $index) {
+        <li>
+          @if (link.url.startsWith('mailto')) {
+            <a [href]="link.url" class="footerNavigationButtons">{{ link.label }}</a>
+          }
+          <!-- TODO:(Emma):revoirCss -->
+          @else if (link.label.includes('CV')) {
+            <button class="footerNavigationButtons" (click)="downloadCv()">
+              {{ link.label }}
+            </button>
+          } @else {
+            <a
+              [href]="link.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footerNavigationButtons"
+              >{{ link.label }}</a
+            >
+          }
+        </li>
+      }
     </ul>
   </nav>
 </footer>

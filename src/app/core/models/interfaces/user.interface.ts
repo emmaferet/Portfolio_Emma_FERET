@@ -1,4 +1,4 @@
-export interface Emma {
+export interface User {
   name: string;
   surname: string;
   age: string;
@@ -7,5 +7,11 @@ export interface Emma {
   location: string;
   school: string;
   rythm: string;
-  links: string[];
+  links: Links[];
+}
+
+export interface Links {
+  id: number;
+  label: string;
+  url: string;
 }

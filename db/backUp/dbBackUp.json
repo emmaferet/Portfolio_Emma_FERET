@@ -1,0 +1,101 @@
+{
+  "$schema": "../node_modules/json-server/schema.json",
+  "user": {
+    "name": "Emma",
+    "surname": "Feret",
+    "age": 25,
+    "phone": "0671252815",
+    "mail": "emmaferet11@gmail.com",
+    "location": "Lille",
+    "school": "2iAcademy",
+    "rythm": "3 semaines en entreprise, 1 semaine à l'école",
+    "links": [
+      {
+        "id": 1,
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/emma-feret/"
+      },
+      {
+        "id": 2,
+        "label": "GitHub",
+        "url": "https://github.com/emmaferet/"
+      },
+      {
+        "id": 3,
+        "label": "CV",
+        "url": ""
+      },
+      {
+        "id": 4,
+        "label": "Mail",
+        "url": "mailto:emmaferet11@gmail.com"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "id": 1,
+      "title": "Stage",
+      "company": "",
+      "duration": "",
+      "description": ""
+    },
+    {
+      "id": 2,
+      "title": "Stage2",
+      "company": "",
+      "duration": "",
+      "description": ""
+    }
+  ],
+  "formation": [
+    {
+      "id": 1,
+      "nameForm": "2iAcademy",
+      "degree": "",
+      "year": "",
+      "skillsForm": ""
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "name": "Maya",
+      "level": "Proficient"
+    },
+    {
+      "id": 2,
+      "name": "Zbrush",
+      "level": "Expert"
+    },
+    {
+      "id": 3,
+      "name": "Substance",
+      "level": "Proficient"
+    },
+    {
+      "id": 4,
+      "name": "HTML/CSS",
+      "level": "Competent"
+    },
+    {
+      "id": 5,
+      "name": "JS/TS",
+      "level": "Advanced"
+    },
+    {
+      "id": 6,
+      "name": "Angular",
+      "level": "Advanced"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Film",
+      "year": 2025,
+      "description": "",
+      "image": ""
+    }
+  ]
+}

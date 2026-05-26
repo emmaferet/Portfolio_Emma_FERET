@@ -60,6 +60,31 @@ body {
     padding: 0.8rem 2rem;
   }
 }
+
+.darkPurpleSolidButtonNative {
+  background-color: variables.$base-color-darkPurple;
+  border: none;
+  color: variables.$base-color-whiteCream;
+  text-decoration: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  outline: none;
+  font: inherit;
+}
+
+@media (max-width: 75.375rem) {
+  .darkPurpleSolidButtonNative {
+    padding: 0.45rem 0.5rem;
+  }
+}
+
+@media (min-width: 75.375rem) {
+  .darkPurpleSolidButtonNative {
+    padding: 0.8rem 2rem;
+  }
+}
 .whiteBorderSolidButton {
   background-color: variables.$base-color-whiteCream;
   border: solid 1px;

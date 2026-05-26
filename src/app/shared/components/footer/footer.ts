@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { User } from '@core/models/interfaces/user.interface';
 
 @Component({
   selector: 'app-footer',
@@ -7,6 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './footer.scss',
 })
 export class Footer {
+  footerUser = input.required<User | undefined>();
+  // listNavigationFooter = input.required<ListNavigation[]>();
+
   downloadCv() {
     const link = document.createElement('a');
     link.href = '@files/CVWebDev_EmmaFERET.pdf';

@@ -1,5 +1,6 @@
-import { Component, input, OnInit } from '@angular/core';
-import { CvSkills } from '@core/models/interfaces/my-cv.interface';
+import { Component, input } from '@angular/core';
+import { Skills } from '@core/models/interfaces/my-cv.interface';
+import { SkillTypeEnum } from './../../../core/models/enums/skillType.enum';
 
 @Component({
   selector: 'app-skills-section',
@@ -7,16 +8,17 @@ import { CvSkills } from '@core/models/interfaces/my-cv.interface';
   templateUrl: './skills-section.html',
   styleUrl: './skills-section.scss',
 })
-export class SkillsSection implements OnInit {
+export class SkillsSection {
   // object ?
-  titleSection = input();
-  subtitleSection = input();
-  currentArticleRightPurpleBox = input.required<CvSkills[]>();
-  currentArticleLeftWhiteBox = input.required<CvSkills[]>();
+  titleSection = input<string>();
+  subtitleSection = input<string>();
+  skillTypeEnum = SkillTypeEnum;
+  // currentArticleRightPurpleBox = input.required<Skills[]>();
+  // currentArticleLeftWhiteBox = input.required<Skills[]>();
   // currentArticleLeftWhiteBox = input.required<MyCv>();
   // currentArticleLeftWhiteBoxTEST = MyCvInfos;
 
   // currentArticleSkillsForm1 = input<myCv>();
   // boucle pour import les currentArticleSkills
-  ngOnInit(): void {}
+  userSkills = input.required<Skills[] | undefined>();
 }
