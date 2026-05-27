@@ -14,10 +14,8 @@
         <li>
           @if (link.url.startsWith('mailto')) {
             <a [href]="link.url" class="footerNavigationButtons">{{ link.label }}</a>
-          }
-          <!-- TODO:(Emma):revoirCss -->
-          @else if (link.label.includes('CV')) {
-            <button class="footerNavigationButtons" (click)="downloadCv()">
+          } @else if (link.label.includes('CV')) {
+            <button class="footerNavigationButtonsNative" (click)="downloadCv()">
               {{ link.label }}
             </button>
           } @else {

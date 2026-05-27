@@ -60,3 +60,29 @@
     font-size: variables.$size-small-mobile;
   }
 }
+
+.footerNavigationButtonsNative {
+  background: transparent;
+  border: none;
+
+  appearance: none;
+  padding: 0 0.3rem;
+  font-weight: bold;
+  color: variables.$base-color-darkGrey;
+  cursor: pointer;
+
+  text-decoration: none;
+}
+
+@media (min-width: 75.375rem) {
+  .footerNavigationButtonsNative {
+    font-size: variables.$size-medium-pc;
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 75.375rem) {
+  .footerNavigationButtonsNative {
+    font-size: variables.$size-small-mobile;
+  }
+}
