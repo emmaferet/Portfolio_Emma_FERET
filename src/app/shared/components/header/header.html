@@ -6,10 +6,12 @@
       @let headerList = headerNavigation();
       @for (listElement of headerList; track $index) {
         <li>
-          <a href="#" class="headerNavigationButtons">{{ listElement.listNavigationElement }}</a>
+          <button class="headerNavigationButtons" (click)="navigateToProject(listElement.router)">
+            {{ listElement.listNavigationElement }}
+          </button>
         </li>
       }
     </ul>
   </nav>
-  <a href="#" class="darkPurpleSolidButton">Hire Me</a>
+  <a routerLink="/projects" class="darkPurpleSolidButton">Hire Me</a>
 </header>
