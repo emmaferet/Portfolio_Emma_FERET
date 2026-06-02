@@ -22,9 +22,10 @@
       "@assets/*": ["src/assets/*"],
       "@styles/*": ["src/styles/*"],
       "@models/*": ["src/app/core/models/*"],
-      "@image/*": ["public/image/*"],
+      "@image/*": ["public/*"],
       "@files/*": ["public/files/*"],
-      "@services/*": ["src/app/shared/services/*"]
+      "@services/*": ["src/app/shared/services/*"],
+      "@enums/*": ["src/app/core/models/enums/*"]
     }
   },
   "angularCompilerOptions": {

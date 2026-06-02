@@ -1,0 +1,63 @@
+<div class="justifyCenter">
+  <div class="contact-container">
+    <!-- Colonne gauche -->
+    <div class="contact-info">
+      <img src="profile.jpg" alt="Profile" />
+
+      <h1>Say hello</h1>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua.
+      </p>
+    </div>
+
+    <!-- Formulaire -->
+    <div class="contact-form">
+      <form (submit)="submitContactForm($event)" novalidate>
+        <div class="row">
+          <div class="input-group">
+            <label>First Name</label>
+            <input
+              [formField]="contactForm.firstName"
+              type="text"
+              placeholder="Enter your First Name"
+            />
+            @let contactFirstName = contactForm.firstName();
+            @if (contactFirstName.touched() && contactFirstName.invalid()) {
+              @for (error of contactFirstName.errors(); track error.kind) {
+                <div>
+                  <p>{{ error.message }}</p>
+                </div>
+              }
+            }
+          </div>
+
+          <div class="input-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Enter your Last Name" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="Enter a valid email address" />
+          </div>
+
+          <div class="input-group">
+            <label>Phone</label>
+            <input type="text" placeholder="Enter your phone" />
+          </div>
+        </div>
+
+        <div class="input-group full">
+          <label>Message</label>
+          <textarea placeholder="Enter your message"></textarea>
+        </div>
+        <!-- TODO: class invalid tant que le formulaire pas valide -->
+        <button [disabled]="!contactForm().valid()" type="submit">ENVOYER</button>
+      </form>
+    </div>
+  </div>
+</div>

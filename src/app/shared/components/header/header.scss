@@ -41,15 +41,32 @@
     font-size: variables.$size-large-pc;
   }
 }
-.headerNavigationButtons {
-  background-color: transparent;
-  color: variables.$base-color-darkGrey;
+.headerNavigationButtonsNative {
+  background: transparent;
+  border: none;
+
+  appearance: none;
   padding: 0 0.3rem;
+  color: variables.$base-color-darkGrey;
+  cursor: pointer;
+
   text-decoration: none;
 }
 
 @media (min-width: 75.375rem) {
-  .headerNavigationButtons {
+  .headerNavigationButtonsNative {
     font-size: variables.$size-medium-pc;
+    padding: 0 2rem;
   }
+}
+
+@media (max-width: 75.375rem) {
+  .headerNavigationButtonsNative {
+    font-size: variables.$size-small-mobile;
+  }
+}
+
+.homePageLogo {
+  width: 3rem;
+  height: 3rem;
 }

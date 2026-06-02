@@ -48,13 +48,27 @@
       "description": ""
     }
   ],
-  "formation": [
+  "formations": [
     {
       "id": 1,
-      "nameForm": "2iAcademy",
-      "degree": "",
-      "year": "",
+      "nameForm": "Lycée Sainte Marie Beaucamps-Ligny",
+      "degree": "Baccalauréat Général Scientifique Spécialité Informatique et Sciences du Numérique  Option Européenne et Latin",
+      "year": "2019",
       "skillsForm": ""
+    },
+    {
+      "id": 2,
+      "nameForm": "Piktura",
+      "degree": "Master Réalisateur Numérique",
+      "year": "2019/2024",
+      "skillsForm": " 3D Animation Rigging, Modeling, Sculpting, Texturing et Shading "
+    },
+    {
+      "id": 3,
+      "nameForm": "Formation par un développeur expérimenté",
+      "degree": "",
+      "year": "2026",
+      "skillsForm": "HTML, CSS, JS, TS, Git, Angular"
     }
   ],
   "skills": [
@@ -98,10 +112,17 @@
   "projects": [
     {
       "id": 1,
-      "name": "Film",
+      "name": "D.S. Al Coda",
       "year": 2025,
-      "description": "",
-      "image": ""
+      "description": "Film de master",
+      "image": "/emma-feret-SOUR-sideImg.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Film M2",
+      "year": 2025,
+      "description": "Deuxieme film",
+      "image": "emma-feret-SOUR-sideImg.jpg"
     }
   ]
 }

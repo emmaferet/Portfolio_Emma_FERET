@@ -14,6 +14,23 @@ export const routes: Routes = [
     title: 'My Projects Page',
   },
   {
+    path: 'mystory',
+    loadComponent: () =>
+      import('./features/my-story-page/my-story-page').then((m) => m.MyStoryPage),
+    title: 'My Projects Page',
+  },
+  {
+    path: 'competences',
+    loadComponent: () =>
+      import('./features/my-skills-page/my-skills-page').then((m) => m.MySkillsPage),
+    title: 'Compétences',
+  },
+  {
+    path: 'contact',
+    loadComponent: () => import('./features/contact-page/contact-page').then((m) => m.ContactPage),
+    title: 'Contact',
+  },
+  {
     // ** redirige vers toutes les pages non définies
     // tjrs mettre en bas de la liste de route, car il vérifie toutes les routes au dessus
     path: '**',

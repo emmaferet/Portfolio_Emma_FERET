@@ -18,10 +18,18 @@ body {
   display: flex;
   flex-direction: row;
 }
+.column {
+  display: flex;
+  flex-direction: column;
+}
 .centerContent {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.justifyCenter {
+  display: flex;
+  justify-content: center;
 }
 @media (max-width: 75.375rem) {
   .centerContent {

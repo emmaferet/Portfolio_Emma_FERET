@@ -1,17 +1,23 @@
 <header class="header">
   @let nameTitleSignal = nameTitle();
+  <a routerLink="/">
+    <img src="/homeLogo.png" alt="LogoHomePage" class="homePageLogo" />
+  </a>
   <h1 class="nameH1Title">{{ nameTitleSignal?.name }} {{ nameTitleSignal?.surname }}</h1>
   <nav>
     <ul class="align">
       @let headerList = headerNavigation();
       @for (listElement of headerList; track $index) {
         <li>
-          <button class="headerNavigationButtons" (click)="navigateToProject(listElement.router)">
+          <button
+            class="headerNavigationButtonsNative"
+            (click)="navigateToProject(listElement.router)"
+          >
             {{ listElement.listNavigationElement }}
           </button>
         </li>
       }
     </ul>
   </nav>
-  <a routerLink="/projects" class="darkPurpleSolidButton">Hire Me</a>
+  <a routerLink="/contact" class="darkPurpleSolidButton">Hire Me</a>
 </header>

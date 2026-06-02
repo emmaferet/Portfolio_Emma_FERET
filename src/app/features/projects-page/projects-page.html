@@ -1,1 +1,11 @@
-<p>projects-page works!</p>
+@let projectsList = userProjects();
+@for (project of projectsList; track $index) {
+  @if (project.id % 2 !== 0) {
+    <app-project-article [userProject]="project"></app-project-article>
+  } @else {
+    <app-project-article
+      [userProject]="project"
+      [sidePhotoArticle]="sidePhotoArticleEnum.DISPLAYRIGHT"
+    ></app-project-article>
+  }
+}

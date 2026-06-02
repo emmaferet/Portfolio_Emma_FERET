@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Skills } from '@core/models/interfaces/my-cv.interface';
+import { Skills } from '@core/models/interfaces/skills.interface';
+
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -20,11 +21,11 @@ export class SkillsService {
   getSkillById(id: number): Observable<Skills> {
     return this.http.get<Skills>(`${this.apiUrl}/${id}`);
   }
-  // Get all
+  // Update all
   updateSkills(skillsList: Skills[]): Observable<Skills[]> {
     return this.http.put<Skills[]>(`${this.apiUrl}`, skillsList);
   }
-  // Get one by id
+  // Update one by id
   updateSkillById(id: number, newSkill: Skills): Observable<Skills> {
     return this.http.put<Skills>(`${this.apiUrl}/${id}`, newSkill);
   }

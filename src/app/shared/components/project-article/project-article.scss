@@ -1,0 +1,52 @@
+@use '@styles/styles.scss';
+@use '@styles/variables.scss';
+
+.fitImageMyStorySour {
+  margin: 5%;
+}
+
+@media (max-width: 75.375rem) {
+  .fitImageMyStorySour {
+    width: 40rem;
+    height: 10rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    object-fit: cover;
+  }
+}
+@media (min-width: 75.375rem) {
+  .fitImageMyStorySour {
+    width: 45rem;
+    height: 30rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    object-fit: cover;
+  }
+}
+
+.articleContent {
+  word-spacing: 5%;
+}
+@media (max-width: 75.375rem) {
+  .articleContent {
+    font-size: variables.$size-medium-mobile;
+    line-height: 1rem;
+  }
+}
+@media (min-width: 75.375rem) {
+  .articleContent {
+    font-size: variables.$size-medium-pc;
+    line-height: 2rem;
+  }
+}
+.rightSide {
+  justify-content: end;
+}
+.articlProjectPresentation {
+  margin: 0 10%;
+}
+@media (max-width: 75.375rem) {
+  .articlProjectPresentation {
+    margin: 8%;
+  }
+}
