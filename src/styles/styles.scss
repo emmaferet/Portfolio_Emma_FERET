@@ -5,7 +5,7 @@
 
 html,
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
   color: variables.$base-color-darkGrey;
   background-image: url('/img/backGroundImg.jpg');
   background-repeat: repeat-x repeat-y;
@@ -68,7 +68,9 @@ body {
     padding: 0.8rem 2rem;
   }
 }
-
+.darkPurpleSolidButton:hover {
+  opacity: 0.9;
+}
 .darkPurpleSolidButtonNative {
   background-color: variables.$base-color-darkPurple;
   border: none;
@@ -81,7 +83,9 @@ body {
   outline: none;
   font: inherit;
 }
-
+.darkPurpleSolidButtonNative:hover {
+  opacity: 0.9;
+}
 @media (max-width: 75.375rem) {
   .darkPurpleSolidButtonNative {
     padding: 0.45rem 0.5rem;
@@ -137,21 +141,4 @@ body {
     font-size: variables.$size-large-pc;
     margin: 1rem 0;
   }
-}
-
-.whiteColor {
-  color: variables.$base-color-whiteCream;
-}
-.darkPurpleColor {
-  color: variables.$base-color-darkPurple;
-}
-.softPurpleColor {
-  color: variables.$base-color-softPurple;
-}
-.darkGreyColor {
-  color: variables.$base-color-darkGrey;
-}
-
-.bold {
-  font-weight: bold;
 }

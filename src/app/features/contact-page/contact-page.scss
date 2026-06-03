@@ -1,39 +1,46 @@
+@use '@styles/styles.scss';
+@use '@styles/variables.scss';
+
 .contact-container {
   width: 1100px;
-  background: white;
+  background: variables.$base-color-whiteCream;
+  margin: 5rem;
   padding: 50px;
   display: flex;
-  gap: 60px;
+  gap: 4rem;
   align-items: center;
+  border-radius: 5rem;
 }
 
 /* Carte gauche */
 
 .contact-info {
-  width: 320px;
-  background: #d7e0d1;
-  padding: 40px 35px;
+  width: 24rem;
+  background: variables.$base-color-softPurple;
+  padding: 2.2rem 2.3rem;
+  border-radius: 2rem;
 }
-
-.contact-info img {
-  width: 95px;
-  height: 95px;
+.centerPhotoContact {
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  margin: auto;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 25px;
 }
 
 .contact-info h1 {
-  font-size: 48px;
+  font-size: variables.$size-large-pc;
   font-weight: 300;
-  color: #222;
-  margin-bottom: 30px;
+  color: variables.$base-color-darkGrey;
+  margin: 2rem 0;
+  align-items: center;
 }
 
 .contact-info p {
-  color: #444;
+  color: variables.$base-color-darkGrey;
   line-height: 1.9;
-  font-size: 17px;
+  font-size: variables.$size-medium-pc;
 }
 
 /* Formulaire */
@@ -91,9 +98,9 @@ textarea {
 
 /* Bouton */
 
-button {
+.submitButtonContact {
   width: 100%;
-  background: #738d68;
+  background: variables.$base-color-darkPurple;
   color: white;
   border: none;
   padding: 18px;
@@ -101,8 +108,9 @@ button {
   letter-spacing: 1px;
   cursor: pointer;
   transition: 0.3s;
+  border-radius: 0.5rem;
 }
 
-button:hover {
+.submitButtonContact:hover {
   opacity: 0.9;
 }

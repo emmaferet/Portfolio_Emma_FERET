@@ -7,4 +7,6 @@ export interface Projects {
   description: string;
   image: string;
   display: SidePhotoArticleEnum;
+  link: string;
+  alt: string;
 }

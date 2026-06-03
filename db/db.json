@@ -112,17 +112,30 @@
   "projects": [
     {
       "id": 1,
-      "name": "D.S. Al Coda",
-      "year": 2025,
-      "description": "Film de master",
-      "image": "/emma-feret-SOUR-sideImg.jpg"
+      "name": "Ce site haha",
+      "year": 2026,
+      "description": "Mon tout premier portofolio, réalisé en Angular, combinant des compétences en HTML, CSS, JS/TS, sous la surpervision de Quentin Buysschaert !",
+      "image": "/angular-imagePresentation.webp",
+      "link": "https://youtu.be/IgCvP8jAk4g?si=-nixvO4q3WBFoslK",
+      "alt": "premier portofolio Angular"
     },
     {
       "id": 2,
-      "name": "Film M2",
+      "name": "D.S. Al Coda",
       "year": 2025,
-      "description": "Deuxieme film",
-      "image": "emma-feret-SOUR-sideImg.jpg"
+      "description": "⭐️ 48 sélections officielles\n⭐️ 4 prix\n⭐️ Longlisté pour les BAFTA, semi finaliste des Oscars étudiants, finaliste des Rookies \nCourt métrage 3D de 5ème année, réalisé par Maxime Wattrelos, Emma Feret, Jeremy Trochet, Louis Cocquet, François Mainguet, Rachel Cuvilliez, Florian Lecocq.\nConsumé par la peur de devenir sourd, Ian dessine et mémorises les sons qui l'entourent.",
+      "image": "/dsalcoda_affiche_emmaF.jpg",
+      "link": "https://youtu.be/gLA3pJN7coY?si=hoT0p6HuuKlN0xct",
+      "alt": "projet film D.S. Al Coda"
+    },
+    {
+      "id": 3,
+      "name": "Les oiseaux de nuit",
+      "year": 2023,
+      "description": "🏆15 sélections officielles \n🏆2 prix \nCourt métrage 3D de 3ème année, réalisé par Emma Richet, Candice Yernaux, Emma Feret, Juliette Buysschaert, Rachel Cuvilliez.\nUn loup abandonné découvre une étrange mais magnifique ville.",
+      "image": "/oiseauxDeNuit_affiche_EmmaF.jpg",
+      "link": "https://youtu.be/IgCvP8jAk4g?si=-nixvO4q3WBFoslK",
+      "alt": "projet film Oiseaux de Nuit"
     }
   ]
 }

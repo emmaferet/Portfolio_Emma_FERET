@@ -2,19 +2,27 @@
 @if (sidePhotoArticle() === sidePhotoArticleEnum.DISPLAYLEFT) {
   <article class="align centerContent">
     <div class="articlProjectPresentation column">
-      <a class="titlePartPresentation"> Projet n°{{ project?.id }}</a>
-      <a class="titleH3Hook left"> {{ project?.name }}</a>
-      <a class="articleContent">{{ project?.description }}</a>
+      <p class="titlePartPresentation">Projet n°{{ project?.id }}</p>
+      <p class="titleH3Hook left">{{ project?.name }}</p>
+      <div class="articleContent">
+        <p>{{ project?.year }}</p>
+        <p>{{ project?.description }}</p>
+        <a [href]="project?.link">Lien vers le projet</a>
+      </div>
     </div>
-    <img [src]="project?.image" class="fitImageMyStorySour" />
+    <img [src]="project?.image" class="fitImageProjects" [alt]="project?.alt" />
   </article>
 } @else {
   <article class="align centerContent">
-    <img [src]="project?.image" class="fitImageMyStorySour" alt="image du projet" />
+    <img [src]="project?.image" class="fitImageProjects" [alt]="project?.alt" />
     <div class="column articlProjectPresentation">
-      <a class="titlePartPresentation"> Projet n°{{ project?.id }}</a>
-      <a class="titleH3Hook left"> {{ project?.name }}</a>
-      <a class="articleContent">{{ project?.description }}</a>
+      <p class="titlePartPresentation">Projet n°{{ project?.id }}</p>
+      <p class="titleH3Hook left">{{ project?.name }}</p>
+      <div class="articleContent">
+        <p>{{ project?.year }}</p>
+        <p>{{ project?.description }}</p>
+        <a [href]="project?.link">Lien vers le projet</a>
+      </div>
     </div>
   </article>
 }

@@ -1,31 +1,29 @@
 @use '@styles/styles.scss';
 @use '@styles/variables.scss';
 
-.fitImageMyStorySour {
-  margin: 5%;
+.fitImageProjects {
+  border-radius: 2rem;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 @media (max-width: 75.375rem) {
-  .fitImageMyStorySour {
-    width: 40rem;
+  .fitImageProjects {
+    margin: 0 2%;
+    width: 30rem;
     height: 10rem;
-    border-radius: 2rem;
-    overflow: hidden;
-    object-fit: cover;
   }
 }
 @media (min-width: 75.375rem) {
-  .fitImageMyStorySour {
+  .fitImageProjects {
+    margin: 0 5%;
     width: 45rem;
-    height: 30rem;
-    border-radius: 2rem;
-    overflow: hidden;
-    object-fit: cover;
+    height: 28rem;
   }
 }
 
 .articleContent {
-  word-spacing: 5%;
+  white-space: pre-line;
 }
 @media (max-width: 75.375rem) {
   .articleContent {
@@ -35,17 +33,26 @@
 }
 @media (min-width: 75.375rem) {
   .articleContent {
+    word-spacing: 5%;
     font-size: variables.$size-medium-pc;
     line-height: 2rem;
   }
 }
 .rightSide {
-  justify-content: end;
+  display: flex;
+  justify-content: right;
+  align-items: end;
 }
 .articlProjectPresentation {
-  margin: 0 10%;
+  display: flex;
 }
+
 @media (max-width: 75.375rem) {
+  .articlProjectPresentation {
+    margin: 3%;
+  }
+}
+@media (min-width: 75.375rem) {
   .articlProjectPresentation {
     margin: 8%;
   }
