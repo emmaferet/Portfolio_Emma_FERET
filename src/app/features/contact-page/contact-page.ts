@@ -26,8 +26,8 @@ export class ContactPage {
   contactForm = form(this.contactFormModel, (contact) => {
     required(contact.firstName, { message: 'Prénom requis' });
     required(contact.lastName, { message: 'Nom requis' });
-    required(contact.email, { message: 'Nom requis' });
-    required(contact.message, { message: 'Nom requis' });
+    required(contact.email, { message: 'Mail requis' });
+    required(contact.message, { message: 'Message requis' });
 
     validate(contact.firstName, ({ value }) =>
       // ternary expression
@@ -66,11 +66,11 @@ export class ContactPage {
     validate(contact.message, ({ value }) => {
       const messageValue = value();
 
-      // Vérifier la longueur (10 à 500 caractères)
-      if (messageValue.length < 10 || messageValue.length > 500) {
+      // Vérifier la longueur (5 à 500 caractères)
+      if (messageValue.length < 5 || messageValue.length > 500) {
         return {
           kind: 'invalid-message-length',
-          message: 'Le message doit contenir entre 10 et 500 caractères.',
+          message: 'Le message doit contenir entre 5 et 500 caractères.',
         };
       }
 

@@ -17,7 +17,7 @@
       <form (submit)="submitContactForm($event)" novalidate>
         <div class="row">
           <div class="input-group">
-            <label>First Name</label>
+            <label>First Name *</label>
             <input
               [formField]="contactForm.firstName"
               type="text"
@@ -34,26 +34,70 @@
           </div>
 
           <div class="input-group">
-            <label>Last Name</label>
-            <input type="text" placeholder="Enter your Last Name" />
+            <label>Last Name *</label>
+            <input
+              [formField]="contactForm.lastName"
+              type="text"
+              placeholder="Enter your Last Name"
+            />
+            @let contactLastName = contactForm.lastName();
+            @if (contactLastName.touched() && contactLastName.invalid()) {
+              @for (error of contactLastName.errors(); track error.kind) {
+                <div>
+                  <p>{{ error.message }}</p>
+                </div>
+              }
+            }
           </div>
         </div>
 
         <div class="row">
           <div class="input-group">
-            <label>Email</label>
-            <input type="email" placeholder="Enter a valid email address" />
+            <label>Email *</label>
+            <input
+              type="email"
+              placeholder="Enter a valid email address"
+              [formField]="contactForm.email"
+            />
+            @let contactEmail = contactForm.email();
+            @if (contactEmail.touched() && contactEmail.invalid()) {
+              @for (error of contactEmail.errors(); track error.kind) {
+                <div>
+                  <p>{{ error.message }}</p>
+                </div>
+              }
+            }
           </div>
 
           <div class="input-group">
             <label>Phone</label>
-            <input type="text" placeholder="Enter your phone" />
+            <input
+              type="text"
+              placeholder="Enter your phone"
+              [formField]="contactForm.phoneNumber"
+            />
+            @let contactPhoneNumber = contactForm.phoneNumber();
+            @if (contactPhoneNumber.touched() && contactPhoneNumber.invalid()) {
+              @for (error of contactPhoneNumber.errors(); track error.kind) {
+                <div>
+                  <p>{{ error.message }}</p>
+                </div>
+              }
+            }
           </div>
         </div>
 
         <div class="input-group full">
-          <label>Message</label>
-          <textarea placeholder="Enter your message"></textarea>
+          <label>Message *</label>
+          <textarea placeholder="Enter your message" [formField]="contactForm.message"></textarea>
+          @let contactMessage = contactForm.message();
+          @if (contactMessage.touched() && contactMessage.invalid()) {
+            @for (error of contactMessage.errors(); track error.kind) {
+              <div>
+                <p>{{ error.message }}</p>
+              </div>
+            }
+          }
         </div>
         <!-- TODO: class invalid tant que le formulaire pas valide -->
         <button [disabled]="!contactForm().valid()" type="submit" class="submitButtonContact">

@@ -2,24 +2,35 @@
 @use '@styles/variables.scss';
 
 @media (max-width: 75.375rem) {
+  .positionIntroduction {
+    margin-top: 2rem;
+  }
+}
+@media (min-width: 75.375rem) {
+  .positionIntroduction {
+    margin-top: 10rem;
+  }
+}
+
+@media (max-width: 75.375rem) {
   .fitImageIntroduction {
     width: 80%;
     height: 10rem;
     border-radius: 2rem;
     overflow: hidden;
     object-fit: cover;
-    transform: rotate(4deg);
-    margin: 2%;
+    transform: rotate(-4deg);
+    margin: 0 4%;
   }
 }
 @media (min-width: 75.375rem) {
   .fitImageIntroduction {
-    width: 50rem;
-    height: 25rem;
+    width: 40rem;
+    height: 35rem;
     border-radius: 2rem;
     overflow: hidden;
     object-fit: cover;
-    transform: rotate(5deg);
+    transform: rotate(-5deg);
   }
 }
 .textBoxAlternance {
@@ -47,6 +58,12 @@
   font-weight: bold;
   margin-top: 5%;
 }
+@media (max-width: 75.375rem) {
+  .bigTitleIntroduction {
+    font-size: variables.$size-large-mobile;
+    font-weight: bold;
+  }
+}
 .bigTitleIntroductionColor {
   color: variables.$base-color-darkPurple;
 }
@@ -55,4 +72,10 @@
   width: 90%;
   line-height: 160%;
   margin: 5% 0;
+}
+@media (max-width: 75.375rem) {
+  .introductionContent {
+    font-size: variables.$size-medium-mobile;
+    width: 90%;
+  }
 }
