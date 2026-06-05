@@ -111,6 +111,18 @@ textarea {
   border-radius: 0.5rem;
 }
 
+.submitButtonContactInvalid {
+  width: 100%;
+  background: variables.$base-color-darkPurple-disabled;
+  color: white;
+  border: none;
+  padding: 18px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  border-radius: 0.5rem;
+}
+
 .submitButtonContact:hover {
   opacity: 0.9;
 }

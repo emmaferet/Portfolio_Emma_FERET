@@ -17,7 +17,7 @@
       <form (submit)="submitContactForm($event)" novalidate>
         <div class="row">
           <div class="input-group">
-            <label>First Name *</label>
+            <label>First Name</label>
             <input
               [formField]="contactForm.firstName"
               type="text"
@@ -34,7 +34,7 @@
           </div>
 
           <div class="input-group">
-            <label>Last Name *</label>
+            <label>Last Name</label>
             <input
               [formField]="contactForm.lastName"
               type="text"
@@ -53,7 +53,7 @@
 
         <div class="row">
           <div class="input-group">
-            <label>Email *</label>
+            <label>Email</label>
             <input
               type="email"
               placeholder="Enter a valid email address"
@@ -70,7 +70,7 @@
           </div>
 
           <div class="input-group">
-            <label>Phone</label>
+            <label>Phone (optionnel)</label>
             <input
               type="text"
               placeholder="Enter your phone"
@@ -88,7 +88,7 @@
         </div>
 
         <div class="input-group full">
-          <label>Message *</label>
+          <label>Message</label>
           <textarea placeholder="Enter your message" [formField]="contactForm.message"></textarea>
           @let contactMessage = contactForm.message();
           @if (contactMessage.touched() && contactMessage.invalid()) {
@@ -100,9 +100,13 @@
           }
         </div>
         <!-- TODO: class invalid tant que le formulaire pas valide -->
-        <button [disabled]="!contactForm().valid()" type="submit" class="submitButtonContact">
-          ENVOYER
-        </button>
+        @if (contactForm().invalid()) {
+          <button type="submit" class="submitButtonContactInvalid">ENVOYER</button>
+        } @else {
+          <button [disabled]="!contactForm().valid()" type="submit" class="submitButtonContact">
+            ENVOYER
+          </button>
+        }
       </form>
     </div>
   </div>

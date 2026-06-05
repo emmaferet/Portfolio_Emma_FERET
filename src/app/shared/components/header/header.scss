@@ -65,7 +65,32 @@
     font-size: variables.$size-small-mobile;
   }
 }
+.headerNavigationButtonsNative:hover {
+  background: transparent;
+  border: none;
+  color: variables.$base-color-darkPurple;
+  appearance: none;
+  padding: 0 0.3rem;
+  cursor: pointer;
 
+  display: inline-block;
+
+  text-decoration: underline variables.$base-color-darkPurple;
+  text-underline-offset: 0.5rem;
+  text-decoration-thickness: 0.1rem;
+}
+@media (min-width: 75.375rem) {
+  .headerNavigationButtonsNative:hover {
+    font-size: variables.$size-medium-pc;
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 75.375rem) {
+  .headerNavigationButtonsNative:hover {
+    font-size: variables.$size-small-mobile;
+  }
+}
 .homePageLogo {
   margin: 1rem;
 }

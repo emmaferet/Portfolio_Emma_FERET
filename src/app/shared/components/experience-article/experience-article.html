@@ -1,0 +1,12 @@
+@let experience = userExperience();
+<article class="align centerContent">
+  <div class="articlProjectPresentation column">
+    <p class="titlePartPresentation">Projet n°{{ experience?.id }}</p>
+    <p class="titleH3Hook left">{{ experience?.title }}</p>
+    <p>{{ experience?.company }}</p>
+    <div class="articleContent">
+      <p>{{ experience?.duration }}</p>
+      <p>{{ experience?.description }}</p>
+    </div>
+  </div>
+</article>

@@ -35,18 +35,32 @@
   "experience": [
     {
       "id": 1,
-      "title": "Stage",
-      "company": "",
-      "duration": "",
-      "description": ""
+      "title": "Stage Création de contenu",
+      "company": "Let It Bim",
+      "duration": "Juin 2021",
+      "description": "Communication et promotion Internet de maquettes 3D"
     },
     {
       "id": 2,
-      "title": "Stage2",
-      "company": "",
-      "duration": "",
-      "description": ""
-    }
+      "title": "Stage 3D Character Artist ",
+      "company": "Providence VFX",
+      "duration": "Juillet Aout 2023",
+      "description": "Sculpting, Texturing et Grooming sur des créatures"
+    },
+    {
+      "id": 3,
+      "title": "Equipier Polyvalent",
+      "company": "Burger King",
+      "duration": "Octobre 2024 à Mai 2025",
+      "description": "Service, prise et préparation des commandes"
+    },
+    {
+      "id": 4,
+      "title": "Stage 3D Character Artist ",
+      "company": "Renraku Dynamics",
+      "duration": "Septembre à Decembre 2025",
+      "description": "Création de MetaHuman, refactorisation du blueprint du  MetaHuman au contexte du projet"
+    },
   ],
   "formations": [
     {
