@@ -1,0 +1,59 @@
+@use '@styles/styles.scss';
+@use '@styles/variables.scss';
+
+.fitImageProjects {
+  border-radius: 2rem;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+@media (max-width: 75.375rem) {
+  .fitImageProjects {
+    margin: 0 2%;
+    width: 30rem;
+    height: 10rem;
+  }
+}
+@media (min-width: 75.375rem) {
+  .fitImageProjects {
+    margin: 0 5%;
+    width: 45rem;
+    height: 28rem;
+  }
+}
+
+.articleContent {
+  white-space: pre-line;
+}
+@media (max-width: 75.375rem) {
+  .articleContent {
+    font-size: variables.$size-medium-mobile;
+    line-height: 1rem;
+  }
+}
+@media (min-width: 75.375rem) {
+  .articleContent {
+    word-spacing: 5%;
+    font-size: variables.$size-medium-pc;
+    line-height: 2rem;
+  }
+}
+.rightSide {
+  display: flex;
+  justify-content: right;
+  align-items: end;
+}
+.articlProjectPresentation {
+  display: flex;
+}
+
+@media (max-width: 75.375rem) {
+  .articlProjectPresentation {
+    margin: 3%;
+  }
+}
+@media (min-width: 75.375rem) {
+  .articlProjectPresentation {
+    margin: 8%;
+  }
+}

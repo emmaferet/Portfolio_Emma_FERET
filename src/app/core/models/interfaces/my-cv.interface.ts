@@ -1,32 +1,14 @@
-import { SkillTypeEnum } from '../enums/skillType.enum';
+import { CvExperience } from './cvExperience.interface';
+import { Formations } from './cvFormation.interface';
 import { Projects } from './projects.interfaces';
+import { Skills } from './skills.interface';
 import { User } from './user.interface';
 
 export interface MyCv {
   id: number;
   user: User;
   experience: CvExperience[];
-  formation: CvFormation[];
+  formation: Formations[];
   skills: Skills[];
   projects: Projects[];
-}
-export interface CvExperience {
-  id: number;
-  title: string;
-  company: string;
-  duration: Date;
-  description: string;
-}
-export interface CvFormation {
-  id: number;
-  nameForm: string;
-  degree: string;
-  year: Date;
-  skillsForm: string;
-}
-export interface Skills {
-  id: number;
-  name: string;
-  level: string;
-  type: SkillTypeEnum;
 }

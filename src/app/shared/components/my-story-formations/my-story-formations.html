@@ -1,0 +1,6 @@
+@let userFormationsList = userFormations();
+<p>my-story-formations works!</p>
+@for (formation of userFormationsList; track $index) {
+  <p>{{ formation.year }}</p>
+}
+<p></p>

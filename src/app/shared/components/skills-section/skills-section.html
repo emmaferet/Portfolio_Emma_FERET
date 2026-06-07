@@ -7,9 +7,7 @@
   <div class="align centerContent">
     <!-- Article 3D -->
     <article class="articlGlobalPresentation skillsBoxWhite">
-      <h2 class="h1TitlePurpleBox articlGlobalPresentation darkGreyColor bold">
-        &lt; &gt; Vision 3D
-      </h2>
+      <h2 class="h1TitlePurpleBox articlGlobalPresentation darkGreyColor bold">🎲 Vision 3D</h2>
       <ul>
         @for (skill of userSkillsList; track $index) {
           @if (skill.type === skillTypeEnum.SKILL3D) {
@@ -28,18 +26,18 @@
 
     <!-- Article DEV -->
     <article class="articlGlobalPresentation skillsBoxPurple">
-      <h2 class="h1TitlePurpleBox articlGlobalPresentation softPurpleColor bold">
+      <h2 class="h1TitlePurpleBox articlGlobalPresentation softPurple bold">
         &lt; &gt; Programmation
       </h2>
 
       <ul>
         @for (skill of userSkillsList; track $index) {
           @if (skill.type === skillTypeEnum.SKILLDEV) {
-            <li class="align centerContent">
-              <h3 class="articlGlobalPresentation softPurpleColor bold">
+            <li class="align centerContent softPurple">
+              <h3 class="articlGlobalPresentation bold">
                 {{ skill.name }}
               </h3>
-              <p class="articlGlobalPresentation softPurpleColor">
+              <p class="articlGlobalPresentation softPurple">
                 {{ skill.level }}
               </p>
             </li>

@@ -1,0 +1,28 @@
+@let project = userProject();
+@if (sidePhotoArticle() === sidePhotoArticleEnum.DISPLAYLEFT) {
+  <article class="align centerContent">
+    <div class="articlProjectPresentation column">
+      <p class="titlePartPresentation">Projet n°{{ project?.id }}</p>
+      <p class="titleH3Hook left">{{ project?.name }}</p>
+      <div class="articleContent">
+        <p>{{ project?.year }}</p>
+        <p>{{ project?.description }}</p>
+        <a [href]="project?.link">Lien vers le projet</a>
+      </div>
+    </div>
+    <img [src]="project?.image" class="fitImageProjects" [alt]="project?.alt" />
+  </article>
+} @else {
+  <article class="align centerContent">
+    <img [src]="project?.image" class="fitImageProjects" [alt]="project?.alt" />
+    <div class="column articlProjectPresentation">
+      <p class="titlePartPresentation">Projet n°{{ project?.id }}</p>
+      <p class="titleH3Hook left">{{ project?.name }}</p>
+      <div class="articleContent">
+        <p>{{ project?.year }}</p>
+        <p>{{ project?.description }}</p>
+        <a [href]="project?.link">Lien vers le projet</a>
+      </div>
+    </div>
+  </article>
+}

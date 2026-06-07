@@ -1,11 +1,15 @@
 <app-header
   [nameTitle]="appUser()"
   [headerNavigation]="[
-    { listNavigationElement: 'Work' },
-    { listNavigationElement: 'Story' },
-    { listNavigationElement: 'Philosophy' },
-    { listNavigationElement: 'Contact' },
+    { listNavigationElement: 'Parcours', router: '/mystory' },
+    { listNavigationElement: 'Projets', router: '/projects' },
+    { listNavigationElement: 'Compétences', router: '/competences' },
+    { listNavigationElement: 'Contact', router: '/contact' },
   ]"
 ></app-header>
-<router-outlet></router-outlet>
+@if (loading()) {
+  <app-loader></app-loader>
+} @else {
+  <router-outlet></router-outlet>
+}
 <app-footer [footerUser]="appUser()"></app-footer>

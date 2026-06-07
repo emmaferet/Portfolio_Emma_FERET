@@ -5,7 +5,7 @@
 
 html,
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
   color: variables.$base-color-darkGrey;
   background-image: url('/img/backGroundImg.jpg');
   background-repeat: repeat-x repeat-y;
@@ -18,10 +18,18 @@ body {
   display: flex;
   flex-direction: row;
 }
+.column {
+  display: flex;
+  flex-direction: column;
+}
 .centerContent {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.justifyCenter {
+  display: flex;
+  justify-content: center;
 }
 @media (max-width: 75.375rem) {
   .centerContent {
@@ -39,7 +47,7 @@ body {
 }
 @media (max-width: 75.375rem) {
   .articlGlobalPresentation {
-    margin: 4%;
+    margin: 4% 5%;
   }
 }
 
@@ -53,6 +61,7 @@ body {
 @media (max-width: 75.375rem) {
   .darkPurpleSolidButton {
     padding: 0.45rem 0.5rem;
+    font-size: variables.$size-medium-mobile;
   }
 }
 @media (min-width: 75.375rem) {
@@ -60,7 +69,9 @@ body {
     padding: 0.8rem 2rem;
   }
 }
-
+.darkPurpleSolidButton:hover {
+  opacity: 0.9;
+}
 .darkPurpleSolidButtonNative {
   background-color: variables.$base-color-darkPurple;
   border: none;
@@ -73,9 +84,12 @@ body {
   outline: none;
   font: inherit;
 }
-
+.darkPurpleSolidButtonNative:hover {
+  opacity: 0.9;
+}
 @media (max-width: 75.375rem) {
   .darkPurpleSolidButtonNative {
+    font-size: variables.$size-medium-mobile;
     padding: 0.45rem 0.5rem;
   }
 }
@@ -129,21 +143,4 @@ body {
     font-size: variables.$size-large-pc;
     margin: 1rem 0;
   }
-}
-
-.whiteColor {
-  color: variables.$base-color-whiteCream;
-}
-.darkPurpleColor {
-  color: variables.$base-color-darkPurple;
-}
-.softPurpleColor {
-  color: variables.$base-color-softPurple;
-}
-.darkGreyColor {
-  color: variables.$base-color-darkGrey;
-}
-
-.bold {
-  font-weight: bold;
 }
