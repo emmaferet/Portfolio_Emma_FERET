@@ -1,5 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { form, FormField, pattern, required, validate } from '@angular/forms/signals';
+import emailjs from '@emailjs/browser';
+import { environment } from './../../../environments/environments.development';
 
 interface ContactFormModel {
   firstName: string;
@@ -66,7 +68,7 @@ export class ContactPage {
     validate(contact.message, ({ value }) => {
       const messageValue = value();
 
-      // Vérifier la longueur (5 à 500 caractères)
+      // 1. Vérifier la longueur
       if (messageValue.length < 5 || messageValue.length > 500) {
         return {
           kind: 'invalid-message-length',
@@ -74,40 +76,59 @@ export class ContactPage {
         };
       }
 
-      // Regex sécurisée : autorise lettres, chiffres, espaces et caractères de ponctuation courants
-      // Prévient les attaques regex (ReDoS)
+      // 2. Vérifier les caractères autorisés
       const messageRegex = /^[A-Za-z0-9À-ÿ\s\-.,!?;:'"()\n\r]*$/;
-
       if (!messageRegex.test(messageValue)) {
         return {
           kind: 'invalid-message-format',
           message: 'Le message contient des caractères non autorisés.',
         };
       }
-      // Option 3 : Détecter les patterns suspects (ex: répétitions, balises HTML)
-      const hasSuspiciousPatterns = () => {
-        // declare the value to avoid calling it several times, since it isn't in the callback
-        const value = messageValue;
-        // Pas de < > qui pourraient signaler du HTML
-        if (/<|>/.test(value)) {
-          return {
-            kind: 'suspicious-content',
-            message: 'Les caractères < et > ne sont pas autorisés.',
-          };
-        }
-        // Pas de répétitions excessives (spam)
-        if (/(.)\1{10,}/.test(value)) {
-          return {
-            kind: 'spam-detected',
-            message: 'Trop de caractères répétés détectés.',
-          };
-        }
-        return undefined;
-      };
+
+      // 3. Détecter les patterns suspects
+      if (/<|>/.test(messageValue)) {
+        return {
+          kind: 'suspicious-content',
+          message: 'Les caractères < et > ne sont pas autorisés.',
+        };
+      }
+
+      if (/(.)\1{10,}/.test(messageValue)) {
+        return {
+          kind: 'spam-detected',
+          message: 'Trop de caractères répétés détectés.',
+        };
+      }
+
       return undefined;
     });
   });
 
+  sendContact(contactInfo: ContactFormModel) {
+    const templateParams = {
+      firstName: contactInfo.firstName,
+      lastName: contactInfo.lastName,
+      email: contactInfo.email,
+      phoneNumber: contactInfo.phoneNumber ?? 'Pas de numéro',
+      message: contactInfo.message,
+    };
+    emailjs
+      .send(environment.serviceId, environment.templateId, templateParams, environment.publicKey)
+      // .then = qu'est ce qu'on fait ensuite
+      // ici on set les valeurs à vide
+      .then(() => {
+        // TODO: ne pas trigger les validateurs à ce moment là
+        // créer une modal pour indiquer que l'email a bien été envoyé.....
+        // animation lettre trop kawaiiiii
+        this.contactFormModel.set({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phoneNumber: '',
+          message: '',
+        });
+      });
+  }
   submitContactForm(event: Event) {
     // Prevent the browser from reloading the page
     event.preventDefault();
@@ -124,5 +145,6 @@ export class ContactPage {
 
     const rawData = this.contactFormModel();
     console.log("Formulaire validé. Données prêtes à l'envoi :", rawData);
+    this.sendContact(rawData);
   }
 }

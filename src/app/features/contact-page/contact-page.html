@@ -17,7 +17,7 @@
       <form (submit)="submitContactForm($event)" novalidate>
         <div class="row">
           <div class="input-group">
-            <label>First Name</label>
+            <label>Prénom</label>
             <input
               [formField]="contactForm.firstName"
               type="text"
@@ -99,14 +99,14 @@
             }
           }
         </div>
-        <!-- TODO: class invalid tant que le formulaire pas valide -->
-        @if (contactForm().invalid()) {
-          <button type="submit" class="submitButtonContactInvalid">ENVOYER</button>
-        } @else {
-          <button [disabled]="!contactForm().valid()" type="submit" class="submitButtonContact">
-            ENVOYER
-          </button>
-        }
+
+        <button
+          [disabled]="!contactForm().valid()"
+          type="submit"
+          [class]="contactForm().valid() ? 'submitButtonContact' : 'submitButtonContactInvalid'"
+        >
+          ENVOYER
+        </button>
       </form>
     </div>
   </div>

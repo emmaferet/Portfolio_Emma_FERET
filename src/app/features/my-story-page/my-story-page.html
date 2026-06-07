@@ -1,6 +1,6 @@
 <p>my-story-page works!</p>
 <app-my-story-formations [userFormations]="userFormations()"></app-my-story-formations>
-@let experiencesList = userExperiences();
+@let experiencesList = reversedExperiencesList();
 @for (experience of experiencesList; track $index) {
   <app-experience-article [userExperience]="experience"></app-experience-article>
 }

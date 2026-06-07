@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ExperienceArticle } from '@shared/components/experience-article/experience-article';
 import { MyStoryFormations } from '@shared/components/my-story-formations/my-story-formations';
@@ -22,5 +22,8 @@ export class MyStoryPage {
 
   userExperiences = toSignal(this.experienceService.getExperiences(), {
     initialValue: undefined,
+  });
+  reversedExperiencesList = computed(() => {
+    return this.userExperiences()?.reverse();
   });
 }

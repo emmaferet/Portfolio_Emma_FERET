@@ -7,5 +7,9 @@
     { listNavigationElement: 'Contact', router: '/contact' },
   ]"
 ></app-header>
-<router-outlet></router-outlet>
+@if (loading()) {
+  <app-loader></app-loader>
+} @else {
+  <router-outlet></router-outlet>
+}
 <app-footer [footerUser]="appUser()"></app-footer>
