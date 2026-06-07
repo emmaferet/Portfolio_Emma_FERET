@@ -104,6 +104,8 @@
           [disabled]="!contactForm().valid()"
           type="submit"
           [class]="contactForm().valid() ? 'submitButtonContact' : 'submitButtonContactInvalid'"
+          mat-button
+          (click)="openModal()"
         >
           ENVOYER
         </button>
