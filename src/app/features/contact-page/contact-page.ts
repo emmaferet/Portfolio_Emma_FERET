@@ -2,8 +2,8 @@ import { Component, inject, signal } from '@angular/core';
 import { form, FormField, pattern, required, validate } from '@angular/forms/signals';
 import { MatDialog } from '@angular/material/dialog';
 import emailjs from '@emailjs/browser';
+import { environment } from '@environments/environments.development';
 import { ContactModal } from '@shared/components/contact-modal/contact-modal';
-import { environment } from './../../../environments/environments.development';
 
 interface ContactFormModel {
   firstName: string;
@@ -29,8 +29,6 @@ export class ContactPage {
     message: '',
   });
 
-  //// 1st try with a constructor, it didn't work and didn't inject the properties properly
-  // MatDialog(angular class) properties injection
   public dialog = inject(MatDialog);
 
   contactForm = form(this.contactFormModel, (contact) => {
@@ -123,8 +121,8 @@ export class ContactPage {
     };
     emailjs
       .send(environment.serviceId, environment.templateId, templateParams, environment.publicKey)
-      // .then = qu'est ce qu'on fait ensuite
-      // ici on set les valeurs à vide
+      // .then = what's happening after the .send
+      // here it sets the values to '' and reset the status of the form to untouched
       .then(() => {
         this.contactFormModel.set({
           firstName: '',
@@ -133,8 +131,6 @@ export class ContactPage {
           phoneNumber: '',
           message: '',
         });
-        // use of the .reset() of signals to reset the status of the form to untouched, after sending the
-        // raw data and setting them to ''
         this.contactForm().reset();
       });
   }
@@ -158,7 +154,6 @@ export class ContactPage {
     this.sendContact(rawData);
   }
 
-  // Method to open the dialog, (click) in the html
   openModal(): void {
     this.dialog.open(ContactModal);
   }

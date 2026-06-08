@@ -25,7 +25,8 @@
       "@image/*": ["public/*"],
       "@files/*": ["public/files/*"],
       "@services/*": ["src/app/shared/services/*"],
-      "@enums/*": ["src/app/core/models/enums/*"]
+      "@enums/*": ["src/app/core/models/enums/*"],
+      "@environments/*": ["src/environments/*"]
     }
   },
   "angularCompilerOptions": {
