@@ -105,10 +105,10 @@
           type="submit"
           [class]="contactForm().valid() ? 'submitButtonContact' : 'submitButtonContactInvalid'"
           mat-button
+          (click)="openModal()"
         >
           ENVOYER
         </button>
-        <button (click)="openModal()">MODAL</button>
       </form>
     </div>
   </div>
