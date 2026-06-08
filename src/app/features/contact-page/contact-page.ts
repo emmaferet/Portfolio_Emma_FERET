@@ -1,7 +1,9 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { form, FormField, pattern, required, validate } from '@angular/forms/signals';
+import { MatDialog } from '@angular/material/dialog';
 import emailjs from '@emailjs/browser';
-import { environment } from './../../../environments/environments.development';
+import { environment } from '@environments/environments.development';
+import { ContactModal } from '@shared/components/contact-modal/contact-modal';
 
 interface ContactFormModel {
   firstName: string;
@@ -13,6 +15,7 @@ interface ContactFormModel {
 
 @Component({
   selector: 'app-contact-page',
+  standalone: true,
   imports: [FormField],
   templateUrl: './contact-page.html',
   styleUrl: './contact-page.scss',
@@ -25,6 +28,9 @@ export class ContactPage {
     phoneNumber: '',
     message: '',
   });
+
+  public dialog = inject(MatDialog);
+
   contactForm = form(this.contactFormModel, (contact) => {
     required(contact.firstName, { message: 'Prénom requis' });
     required(contact.lastName, { message: 'Nom requis' });
@@ -49,6 +55,7 @@ export class ContactPage {
           }
         : undefined,
     );
+
     validate(contact.email, ({ value }) =>
       // regex that validates an email
       !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i.test(value())
@@ -114,12 +121,9 @@ export class ContactPage {
     };
     emailjs
       .send(environment.serviceId, environment.templateId, templateParams, environment.publicKey)
-      // .then = qu'est ce qu'on fait ensuite
-      // ici on set les valeurs à vide
+      // .then = what's happening after the .send
+      // here it sets the values to '' and reset the status of the form to untouched
       .then(() => {
-        // TODO: ne pas trigger les validateurs à ce moment là
-        // créer une modal pour indiquer que l'email a bien été envoyé.....
-        // animation lettre trop kawaiiiii
         this.contactFormModel.set({
           firstName: '',
           lastName: '',
@@ -127,8 +131,10 @@ export class ContactPage {
           phoneNumber: '',
           message: '',
         });
+        this.contactForm().reset();
       });
   }
+
   submitContactForm(event: Event) {
     // Prevent the browser from reloading the page
     event.preventDefault();
@@ -146,5 +152,9 @@ export class ContactPage {
     const rawData = this.contactFormModel();
     console.log("Formulaire validé. Données prêtes à l'envoi :", rawData);
     this.sendContact(rawData);
+  }
+
+  openModal(): void {
+    this.dialog.open(ContactModal);
   }
 }
