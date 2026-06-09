@@ -48,7 +48,7 @@ body {
   color: variables.$base-color-darkGrey;
   background-image: url('/img/backGroundImg.jpg');
   background-repeat: repeat-x repeat-y;
-  background-size: 400rem;
+  background-size: 600rem;
   background-position: 200rem 0;
 }
 
@@ -81,6 +81,9 @@ body {
   }
 }
 
+.bold {
+  font-weight: bold;
+}
 .articlGlobalPresentation {
   margin: 0 5%;
 }
@@ -181,6 +184,7 @@ body {
   .titleH3Hook {
     font-size: variables.$size-large-pc;
     margin: 1rem 0;
+    line-height: 5rem;
   }
 }
 .softPurple {

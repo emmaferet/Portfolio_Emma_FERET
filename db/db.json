@@ -38,51 +38,62 @@
       "title": "Stage Création de contenu",
       "company": "Let It Bim",
       "duration": "Juin 2021",
-      "description": "Communication et promotion Internet de maquettes 3D"
+      "description": "Communication et promotion Internet de maquettes 3D",
+      "link": "/letItBim.png"
     },
     {
       "id": 2,
       "title": "Stage 3D Character Artist ",
       "company": "Providence VFX",
       "duration": "Juillet Aout 2023",
-      "description": "Sculpting, Texturing et Grooming sur des créatures"
+      "description": "Sculpting, Texturing et Grooming sur des créatures",
+      "link": "/providence.jpg"
     },
     {
       "id": 3,
       "title": "Equipier Polyvalent",
       "company": "Burger King",
       "duration": "Octobre 2024 à Mai 2025",
-      "description": "Service, prise et préparation des commandes"
+      "description": "Service, prise et préparation des commandes",
+      "link": "/Burger_King.svg"
     },
     {
       "id": 4,
       "title": "Stage 3D Character Artist ",
       "company": "Renraku Dynamics",
       "duration": "Septembre à Decembre 2025",
-      "description": "Création de MetaHuman, refactorisation du blueprint du  MetaHuman au contexte du projet"
+      "description": "Création de MetaHuman, refactorisation du blueprint du MetaHuman au contexte du projet",
+      "link": "/samuel.png"
     }
   ],
   "formations": [
     {
       "id": 1,
-      "nameForm": "Lycée Sainte Marie Beaucamps-Ligny",
-      "degree": "Baccalauréat Général Scientifique Spécialité Informatique et Sciences du Numérique  Option Européenne et Latin",
-      "year": "2019",
-      "skillsForm": ""
+      "nameForm": "💻 2i Academy",
+      "degree": "Developpeur Web & Web mobile",
+      "year": "2026/2027",
+      "skillsForm": "HTML, CSS, JS, TS, Git, Angular"
     },
     {
       "id": 2,
-      "nameForm": "Piktura",
+      "nameForm": "🖥️Formation par un développeur expérimenté",
+      "degree": "",
+      "year": "2026",
+      "skillsForm": "HTML, CSS, JS, TS, Git, Angular"
+    },
+    {
+      "id": 3,
+      "nameForm": "👩‍🎨Piktura",
       "degree": "Master Réalisateur Numérique",
       "year": "2019/2024",
       "skillsForm": " 3D Animation Rigging, Modeling, Sculpting, Texturing et Shading "
     },
     {
-      "id": 3,
-      "nameForm": "Formation par un développeur expérimenté",
-      "degree": "",
-      "year": "2026",
-      "skillsForm": "HTML, CSS, JS, TS, Git, Angular"
+      "id": 4,
+      "nameForm": "✏️Lycée Sainte Marie Beaucamps-Ligny",
+      "degree": "Baccalauréat Général Scientifique Spécialité Informatique et Sciences du Numérique  Option Européenne et Latin",
+      "year": "2019",
+      "skillsForm": ""
     }
   ],
   "skills": [

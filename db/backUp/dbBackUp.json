@@ -35,25 +35,64 @@
   "experience": [
     {
       "id": 1,
-      "title": "Stage",
-      "company": "",
-      "duration": "",
-      "description": ""
+      "title": "Stage Création de contenu",
+      "company": "Let It Bim",
+      "duration": "Juin 2021",
+      "description": "Communication et promotion Internet de maquettes 3D",
+      "link": "/letItBim.png"
     },
     {
       "id": 2,
-      "title": "Stage2",
-      "company": "",
-      "duration": "",
-      "description": ""
+      "title": "Stage 3D Character Artist ",
+      "company": "Providence VFX",
+      "duration": "Juillet Aout 2023",
+      "description": "Sculpting, Texturing et Grooming sur des créatures",
+      "link": "/providence.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Equipier Polyvalent",
+      "company": "Burger King",
+      "duration": "Octobre 2024 à Mai 2025",
+      "description": "Service, prise et préparation des commandes",
+      "link": "/Burger_King.svg"
+    },
+    {
+      "id": 4,
+      "title": "Stage 3D Character Artist ",
+      "company": "Renraku Dynamics",
+      "duration": "Septembre à Decembre 2025",
+      "description": "Création de MetaHuman, refactorisation du blueprint du MetaHuman au contexte du projet",
+      "link": "/samuel.png"
     }
   ],
-  "formation": [
+  "formations": [
     {
       "id": 1,
-      "nameForm": "2iAcademy",
+      "nameForm": "💻 2i Academy",
+      "degree": "Developpeur Web & Web mobile",
+      "year": "2026/2027",
+      "skillsForm": "HTML, CSS, JS, TS, Git, Angular"
+    },
+    {
+      "id": 2,
+      "nameForm": "🖥️Formation par un développeur expérimenté",
       "degree": "",
-      "year": "",
+      "year": "2026",
+      "skillsForm": "HTML, CSS, JS, TS, Git, Angular"
+    },
+    {
+      "id": 3,
+      "nameForm": "👩‍🎨Piktura",
+      "degree": "Master Réalisateur Numérique",
+      "year": "2019/2024",
+      "skillsForm": " 3D Animation Rigging, Modeling, Sculpting, Texturing et Shading "
+    },
+    {
+      "id": 4,
+      "nameForm": "✏️Lycée Sainte Marie Beaucamps-Ligny",
+      "degree": "Baccalauréat Général Scientifique Spécialité Informatique et Sciences du Numérique  Option Européenne et Latin",
+      "year": "2019",
       "skillsForm": ""
     }
   ],
@@ -61,41 +100,67 @@
     {
       "id": 1,
       "name": "Maya",
-      "level": "Proficient"
+      "level": "Proficient",
+      "type": "SKILL3D"
     },
     {
       "id": 2,
       "name": "Zbrush",
-      "level": "Expert"
+      "level": "Expert",
+      "type": "SKILL3D"
     },
     {
       "id": 3,
       "name": "Substance",
-      "level": "Proficient"
+      "level": "Proficient",
+      "type": "SKILL3D"
     },
     {
       "id": 4,
       "name": "HTML/CSS",
-      "level": "Competent"
+      "level": "Competent",
+      "type": "SKILLDEV"
     },
     {
       "id": 5,
       "name": "JS/TS",
-      "level": "Advanced"
+      "level": "Advanced",
+      "type": "SKILLDEV"
     },
     {
       "id": 6,
       "name": "Angular",
-      "level": "Advanced"
+      "level": "Advanced",
+      "type": "SKILLDEV"
     }
   ],
   "projects": [
     {
       "id": 1,
-      "name": "Film",
+      "name": "Ce site haha",
+      "year": 2026,
+      "description": "Mon tout premier portofolio, réalisé en Angular, combinant des compétences en HTML, CSS, JS/TS, sous la surpervision de Quentin Buysschaert !",
+      "image": "/angular-imagePresentation.webp",
+      "link": "https://youtu.be/IgCvP8jAk4g?si=-nixvO4q3WBFoslK",
+      "alt": "premier portofolio Angular"
+    },
+    {
+      "id": 2,
+      "name": "D.S. Al Coda",
       "year": 2025,
-      "description": "",
-      "image": ""
+      "description": "⭐️ 48 sélections officielles\n⭐️ 4 prix\n⭐️ Longlisté pour les BAFTA, semi finaliste des Oscars étudiants, finaliste des Rookies \nCourt métrage 3D de 5ème année, réalisé par Maxime Wattrelos, Emma Feret, Jeremy Trochet, Louis Cocquet, François Mainguet, Rachel Cuvilliez, Florian Lecocq.\nConsumé par la peur de devenir sourd, Ian dessine et mémorises les sons qui l'entourent.",
+      "image": "/dsalcoda_affiche_emmaF.jpg",
+      "link": "https://youtu.be/gLA3pJN7coY?si=hoT0p6HuuKlN0xct",
+      "alt": "projet film D.S. Al Coda"
+    },
+    {
+      "id": 3,
+      "name": "Les oiseaux de nuit",
+      "year": 2023,
+      "description": "🏆15 sélections officielles \n🏆2 prix \nCourt métrage 3D de 3ème année, réalisé par Emma Richet, Candice Yernaux, Emma Feret, Juliette Buysschaert, Rachel Cuvilliez.\nUn loup abandonné découvre une étrange mais magnifique ville.",
+      "image": "/oiseauxDeNuit_affiche_EmmaF.jpg",
+      "link": "https://youtu.be/IgCvP8jAk4g?si=-nixvO4q3WBFoslK",
+      "alt": "projet film Oiseaux de Nuit"
     }
   ]
 }
