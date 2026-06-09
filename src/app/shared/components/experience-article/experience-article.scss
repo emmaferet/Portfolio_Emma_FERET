@@ -1,0 +1,23 @@
+@use '@styles/styles.scss';
+@use '@styles/variables.scss';
+
+.experienceImg {
+  margin: 5% 10%;
+  height: 20rem;
+  width: 30rem;
+  display: flex;
+  border-radius: 5%;
+  object-fit: cover;
+}
+@media (max-width: 75.375rem) {
+  .experienceImg {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+.articleContent {
+  width: 15rem;
+}
+.titlePartPresentation {
+  margin-top: 1rem;
+}
