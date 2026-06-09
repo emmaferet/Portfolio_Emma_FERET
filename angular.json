@@ -33,14 +33,6 @@
             "styles": [
               "./src/styles/styles.scss"
             ],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "security": {
-              "allowedHosts": []
-            },
-            "ssr": {
-              "entry": "src/server.ts"
-            },
             "stylePreprocessorOptions": {
               "includePaths": [
                 "./src/styles"
