@@ -1,0 +1,33 @@
+@use '@styles/styles.scss';
+@use '@styles/variables.scss';
+
+.centerArticleBiography {
+  display: flex;
+  justify-content: space-between;
+}
+.biographyPhoto {
+  margin: 5% 10%;
+  height: 40rem;
+  width: 40rem;
+  display: flex;
+  border-radius: 5%;
+  object-fit: cover;
+}
+@media (max-width: 75.375rem) {
+  .biographyPhoto {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+.contentBiography {
+  font-size: variables.$size-medium-pc;
+  width: 75%;
+  line-height: 160%;
+  margin: 2% 0;
+}
+@media (max-width: 75.375rem) {
+  .contentBiography {
+    font-size: variables.$size-medium-mobile;
+    width: 90%;
+  }
+}
