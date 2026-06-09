@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 import { Skills } from '@core/models/interfaces/skills.interface';
 import { SkillTypeEnum } from './../../../core/models/enums/skillType.enum';
 
@@ -6,6 +6,7 @@ import { SkillTypeEnum } from './../../../core/models/enums/skillType.enum';
   selector: 'app-skills-section',
   imports: [],
   templateUrl: './skills-section.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './skills-section.scss',
 })
 export class SkillsSection {

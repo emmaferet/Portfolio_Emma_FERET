@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ExperienceArticle } from '@shared/components/experience-article/experience-article';
 import { MyStoryFormations } from '@shared/components/my-story-formations/my-story-formations';
@@ -9,6 +9,7 @@ import { ExperienceService } from './../../shared/services/experience/experience
   selector: 'app-my-story-page',
   imports: [MyStoryFormations, ExperienceArticle],
   templateUrl: './my-story-page.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './my-story-page.scss',
 })
 export class MyStoryPage {

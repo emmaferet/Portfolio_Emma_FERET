@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact-section',
   imports: [RouterLink],
   templateUrl: './contact-section.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './contact-section.scss',
 })
 export class ContactSection {
