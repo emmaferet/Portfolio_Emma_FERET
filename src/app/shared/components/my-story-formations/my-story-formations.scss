@@ -1,0 +1,30 @@
+@use '@styles/styles.scss';
+@use '@styles/variables.scss';
+
+@media (max-width: 75.375rem) {
+  .formationDegree {
+    font-size: variables.$size-medium-mobile;
+    margin: 0.5rem 0;
+  }
+}
+@media (min-width: 75.375rem) {
+  .formationDegree {
+    font-size: variables.$size-medium-pc;
+    margin: 0.2rem 0;
+    line-height: 2rem;
+  }
+}
+.formationPresentation {
+  background-color: variables.$base-color-softPurple;
+  border: solid 1px;
+  border-color: variables.$base-color-darkPurple;
+  width: 50%;
+  margin: 3rem auto;
+  border-radius: 2rem;
+}
+.titlePartPresentation {
+  margin-top: 1rem;
+}
+.articleContent {
+  margin: 1rem 0;
+}

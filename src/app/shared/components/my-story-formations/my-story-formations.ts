@@ -9,5 +9,5 @@ import { Formations } from '@core/models/interfaces/cvFormation.interface';
   styleUrl: './my-story-formations.scss',
 })
 export class MyStoryFormations {
-  userFormations = input.required<Formations[] | undefined>();
+  userFormations = input.required<Formations | undefined>();
 }
