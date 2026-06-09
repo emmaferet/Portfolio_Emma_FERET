@@ -1,9 +1,14 @@
-import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import {
+  MatDialogActions,
+  MatDialogClose,
+  MatDialogContent,
+  MatDialogRef,
+} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-contact-modal',
-  imports: [],
+  imports: [MatDialogActions, MatDialogClose, MatDialogContent],
   templateUrl: './contact-modal.html',
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './contact-modal.scss',
