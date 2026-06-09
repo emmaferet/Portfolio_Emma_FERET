@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 import { SidePhotoArticleEnum } from '@core/models/enums/side-photo-article.enum';
 import { Projects } from '@core/models/interfaces/projects.interfaces';
 
@@ -6,6 +6,7 @@ import { Projects } from '@core/models/interfaces/projects.interfaces';
   selector: 'app-project-article',
   imports: [],
   templateUrl: './project-article.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './project-article.scss',
 })
 export class ProjectArticle {

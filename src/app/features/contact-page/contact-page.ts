@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, ChangeDetectionStrategy } from '@angular/core';
 import { form, FormField, pattern, required, validate } from '@angular/forms/signals';
 import { MatDialog } from '@angular/material/dialog';
 import emailjs from '@emailjs/browser';
@@ -18,6 +18,7 @@ interface ContactFormModel {
   standalone: true,
   imports: [FormField],
   templateUrl: './contact-page.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './contact-page.scss',
 })
 export class ContactPage {

@@ -9,7 +9,7 @@
   </div>
   <nav>
     <ul class="align">
-      @let links = footerUser()?.links;
+      @let links = $safeNavigationMigration(footerUser()?.links);
       @for (link of links; track $index) {
         <li>
           @if (link.url.startsWith('mailto')) {

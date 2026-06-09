@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ArticlePrototype } from '@shared/components/article-prototype/article-prototype';
 import { ContactSection } from '@shared/components/contact-section/contact-section';
@@ -10,6 +10,7 @@ import { SkillsService } from './../../shared/services/skills/skills.service';
   selector: 'app-home-page',
   imports: [ArticlePrototype, HomePageIntroduction, SkillsSection, ContactSection],
   templateUrl: './home-page.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './home-page.scss',
 })
 export class HomePage {
