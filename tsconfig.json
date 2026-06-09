@@ -14,19 +14,18 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "preserve",
-    "baseUrl": "./",
     "paths": {
-      "@features/*": ["src/app/features/*"],
-      "@shared/*": ["src/app/shared/*"],
-      "@core/*": ["src/app/core/*"],
-      "@assets/*": ["src/assets/*"],
-      "@styles/*": ["src/styles/*"],
-      "@models/*": ["src/app/core/models/*"],
-      "@image/*": ["public/*"],
-      "@files/*": ["public/files/*"],
-      "@services/*": ["src/app/shared/services/*"],
-      "@enums/*": ["src/app/core/models/enums/*"],
-      "@environments/*": ["src/environments/*"]
+      "@features/*": ["./src/app/features/*"],
+      "@shared/*": ["./src/app/shared/*"],
+      "@core/*": ["./src/app/core/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@models/*": ["./src/app/core/models/*"],
+      "@image/*": ["./public/*"],
+      "@files/*": ["./public/files/*"],
+      "@services/*": ["./src/app/shared/services/*"],
+      "@enums/*": ["./src/app/core/models/enums/*"],
+      "@environments/*": ["./src/environments/*"]
     }
   },
   "angularCompilerOptions": {
