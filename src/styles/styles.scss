@@ -37,13 +37,6 @@ body {
   // Reset the user agent margin.
   margin: 0;
   height: 100%;
-}
-/* You can add global styles to this file, and also import other style files */
-
-// Global CSS
-
-html,
-body {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
   color: variables.$base-color-darkGrey;
   background-image: url('/img/backGroundImg.jpg');
@@ -51,6 +44,9 @@ body {
   background-size: 600rem;
   background-position: 200rem 0;
 }
+/* You can add global styles to this file, and also import other style files */
+
+// Global CSS
 
 .align {
   align-items: center;
