@@ -6,6 +6,7 @@
 @use '@angular/material' as mat;
 @use './variables.scss';
 @use './defaultComportement.scss';
+@import url('https://fonts.google.com/specimen/Playfair+Display');
 
 html {
   height: 100%;
@@ -37,7 +38,8 @@ body {
   // Reset the user agent margin.
   margin: 0;
   height: 100%;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+  font-family: 'Playfair Display', serif;
+
   color: variables.$base-color-darkGrey;
   background-image: url('/img/backGroundImg.jpg');
   background-repeat: repeat-x repeat-y;

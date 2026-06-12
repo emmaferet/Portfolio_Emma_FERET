@@ -2,7 +2,7 @@
 @use '@styles/variables.scss';
 
 .experienceImg {
-  margin: 5% 10%;
+  margin: 2% 10%;
   height: 20rem;
   width: 30rem;
   display: flex;
@@ -16,8 +16,17 @@
   }
 }
 .articleContent {
-  width: 15rem;
+  width: 50rem;
+  margin-left: 5rem;
+  font-size: variables.$size-medium-pc;
 }
 .titlePartPresentation {
   margin-top: 1rem;
+}
+.experiencePres {
+  display: flex;
+  justify-content: space-between;
+}
+.experienceMarginFix {
+  margin-left: 5rem;
 }
