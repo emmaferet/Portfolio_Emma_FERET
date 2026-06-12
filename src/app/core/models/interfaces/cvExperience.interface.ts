@@ -4,4 +4,5 @@ export interface CvExperience {
   company: string;
   duration: Date;
   description: string;
+  link: string;
 }

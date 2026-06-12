@@ -8,9 +8,11 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 999;
+  left: 0;
+  right: 0;
+  z-index: 9999999;
 }
 
 @media (max-width: 75.375rem) {

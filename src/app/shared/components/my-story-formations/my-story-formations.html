@@ -1,6 +1,11 @@
 @let userFormationsList = userFormations();
-<p>my-story-formations works!</p>
-@for (formation of userFormationsList; track $index) {
-  <p>{{ formation.year }}</p>
-}
-<p></p>
+<div class="formationPresentation">
+  <article class="articlGlobalPresentation">
+    <h2 class="titlePartPresentation">{{ userFormationsList?.nameForm }}</h2>
+    <h3 class="formationDegree bold">{{ userFormationsList?.degree }}</h3>
+    <p class="articleContent bold">
+      {{ userFormationsList?.year }}
+    </p>
+    <p class="articleContent">{{ userFormationsList?.skillsForm }}</p>
+  </article>
+</div>

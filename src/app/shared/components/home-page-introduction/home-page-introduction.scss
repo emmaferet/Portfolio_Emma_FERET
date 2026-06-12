@@ -1,6 +1,9 @@
 @use '@styles/styles.scss';
 @use '@styles/variables.scss';
 
+.positionIntroduction {
+  justify-content: center;
+}
 @media (max-width: 75.375rem) {
   .positionIntroduction {
     margin-top: 2rem;
@@ -8,7 +11,7 @@
 }
 @media (min-width: 75.375rem) {
   .positionIntroduction {
-    margin-top: 10rem;
+    margin-top: 15rem;
   }
 }
 

@@ -13,7 +13,13 @@
       @for (link of links; track $index) {
         <li>
           @if (link.url.startsWith('mailto')) {
-            <a [href]="link.url" class="footerNavigationButtons">{{ link.label }}</a>
+            <a
+              [href]="link.url"
+              class="footerNavigationButtons"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ link.label }}</a
+            >
           } @else if (link.label.includes('CV')) {
             <button class="footerNavigationButtonsNative" (click)="downloadCv()">
               {{ link.label }}

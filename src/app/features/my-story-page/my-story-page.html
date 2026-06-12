@@ -1,6 +1,11 @@
-<p>my-story-page works!</p>
-<app-my-story-formations [userFormations]="userFormations()"></app-my-story-formations>
-@let experiencesList = reversedExperiencesList();
-@for (experience of experiencesList; track $index) {
+<app-biography [userInfos]="userInfos()"></app-biography>
+<h3 class="titleH3Hook justifyCenter bold">Mes formations</h3>
+@let formationList = userFormations();
+@for (formation of formationList; track $index) {
+  <app-my-story-formations [userFormations]="formation"></app-my-story-formations>
+}
+<h3 class="titleH3Hook justifyCenter bold">Mes expériences</h3>
+@let experiencesListReverse = reversedExperiencesList();
+@for (experience of experiencesListReverse; track experience.id) {
   <app-experience-article [userExperience]="experience"></app-experience-article>
 }

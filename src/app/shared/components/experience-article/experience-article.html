@@ -1,11 +1,13 @@
 @let experience = userExperience();
-<article class="align centerContent">
-  <div class="articlProjectPresentation column">
-    <p class="titlePartPresentation">{{ experience?.title }}</p>
-    <p class="titleH3Hook left">{{ experience?.company }}</p>
+<article class="align experiencePres">
+  <div class="articlGlobalPresentation column">
+    <p class="titlePartPresentation experienceMarginFix">{{ experience?.title }}</p>
+    <p class="titleH3Hook experienceMarginFix">{{ experience?.company }}</p>
     <div class="articleContent">
       <p>{{ experience?.duration }}</p>
+      <br />
       <p>{{ experience?.description }}</p>
     </div>
   </div>
+  <img src="{{ experience?.link }}" class="experienceImg" />
 </article>
