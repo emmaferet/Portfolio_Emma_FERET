@@ -1,6 +1,6 @@
 @let project = userProject();
 @if (sidePhotoArticle() === sidePhotoArticleEnum.DISPLAYLEFT) {
-  <article class="align centerContent">
+  <article class="align">
     <div class="articlProjectPresentation column">
       <p class="titlePartPresentation">Projet n°{{ project?.id }}</p>
       <p class="titleH3Hook left">{{ project?.name }}</p>
@@ -17,7 +17,7 @@
     />
   </article>
 } @else {
-  <article class="align centerContent">
+  <article class="align">
     <img
       [src]="$safeNavigationMigration(project?.image)"
       class="fitImageProjects"
