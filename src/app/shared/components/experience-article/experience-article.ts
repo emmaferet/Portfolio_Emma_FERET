@@ -1,4 +1,4 @@
-import { Component, input, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { CvExperience } from '@core/models/interfaces/cvExperience.interface';
 
 @Component({
