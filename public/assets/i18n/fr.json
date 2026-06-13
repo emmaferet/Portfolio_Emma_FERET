@@ -1,0 +1,117 @@
+{
+  "NAV": {
+    "HOME": "Accueil",
+    "PROJECTS": "Projets",
+    "MY_STORY": "Parcours",
+    "SKILLS": "Compétences"
+  },
+  "COMMON": {
+    "HIRE_ME": "Hire Me",
+    "LOADING": "Chargement...",
+    "BACK_TO_HOME": "Retour à l'accueil",
+    "PORTFOLIO": "Portofolio.",
+    "CRAFTED_WITH": "Crafted with precision and soul.",
+    "LOGO_ALT": "LogoHomePage"
+  },
+  "HOME": {
+    "TITLE": "Emma Feret",
+    "SUBTITLE": "Portfolio",
+    "INTRODUCTION": {
+      "LABEL": "Alternance Octobre 2026",
+      "TITLE_PART_1": "De l'Art 3D au ",
+      "TITLE_PART_2": "Développement web",
+      "DESCRIPTION": "Ancienne artiste 3D, je transforme aujourd'hui mes visions spatiales en expériences web interactives. Actuellement à la recherche d'une alternance pour fusionner technique et esthétique.",
+      "PROJECTS_BTN": "Projets",
+      "IMAGE_ALT": "image issue du film D.S. Al Coda "
+    },
+    "ARTICLE_1": {
+      "TITLE": "1. Mon histoire",
+      "SUBTITLE": "Fusionner les mondes.",
+      "CONTENT": "Mon parcours a commencé dans le monde du volume et de la lumière. En tant qu'artiste 3D, j'ai appris à sculpter le digital, à comprendre la physique des matériaux et l'importance du détail visuel. \n Aujourd'hui, je transpose cette rigueur esthéthique dans le développement web. Le code est devenu mon nouveau pinceau, me permettant de construire non plus seulement des objets et des personnages, mais des univers interactifs et vivants.",
+      "IMAGE_ALT": "image issue du court-métrage D.S. Al Coda, sorti en 2024"
+    },
+    "ARTICLE_2": {
+      "TITLE": "2. Projets",
+      "SUBTITLE": "Réalisations récentes",
+      "CONTENT": "Une variété de projets, que ça soit deux films réalisés lors de mes 5 années de master ou ce site, premier portofolio, mélangeant divers compétences de développement web.",
+      "IMAGE_ALT": "angular image de présentation"
+    }
+  },
+  "PROJECTS": {
+    "TITLE": "Mes Projets",
+    "FILTER_ALL": "Tous",
+    "ARTICLE": {
+      "PROJECT_NUMBER": "Projet n°",
+      "PROJECT_LINK": "Lien vers le projet",
+      "VIEW_MORE": "Voir plus"
+    }
+  },
+  "MY_STORY": {
+    "WORKS": "my-story-page works!",
+    "FORMATIONS_WORKS": "my-story-formations works!"
+  },
+  "MY_SKILLS": {
+    "WORKS": "my-skills-page works!"
+  },
+  "SKILLS_SECTION": {
+    "PART_TITLE": "03. Expertise",
+    "HOOK_TITLE": "Double Compétence",
+    "CATEGORY_3D": "🎲 Vision 3D",
+    "CATEGORY_DEV": "< > Programmation",
+    "LEVELS": {
+      "EXPERT": "Expert",
+      "PROFICIENT": "Confirmé",
+      "ADVANCED": "Avancé",
+      "COMPETENT": "Intermédiaire"
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Contactez moi !",
+    "DESCRIPTION": "Actuellement à la recherche d'une alternance Developpeuse Web Full stack pour octobre 2026, n'hésitez pas à me contacter pour en discuter !",
+    "SECTION": {
+      "PART_TITLE": "04. Contact",
+      "HOOK_TITLE": "Prêt pour une collaboration ?",
+      "DESCRIPTION": "Je suis activement à la recherche d'une alternance pour mettre mes compétences au service de vos projets les plus ambitieux.",
+      "SEND_MESSAGE_BTN": "Envoyer un message",
+      "MY_CV_BTN": "Mon CV"
+    },
+    "FORM": {
+      "FIRSTNAME_LABEL": "Prénom",
+      "FIRSTNAME_PLACEHOLDER": "Enter your First Name",
+      "LASTNAME_LABEL": "Last Name",
+      "LASTNAME_PLACEHOLDER": "Enter your Last Name",
+      "EMAIL_LABEL": "Email",
+      "EMAIL_PLACEHOLDER": "Enter a valid email address",
+      "PHONE_LABEL": "Phone (optionnel)",
+      "PHONE_PLACEHOLDER": "Enter your phone",
+      "MESSAGE_LABEL": "Message",
+      "MESSAGE_PLACEHOLDER": "Enter your message",
+      "SUBMIT": "ENVOYER"
+    },
+    "ERRORS": {
+      "FIRSTNAME_REQUIRED": "Prénom requis",
+      "LASTNAME_REQUIRED": "Nom requis",
+      "EMAIL_REQUIRED": "Mail requis",
+      "MESSAGE_REQUIRED": "Message requis",
+      "FIRSTNAME_LENGTH": "Ce champ doit posséder entre 2 et 50 caractères",
+      "LASTNAME_LENGTH": "Ce champ doit posséder entre 2 et 50 caractères",
+      "INVALID_EMAIL": "Veuillez saisir une adresse email valide.",
+      "INVALID_PHONE": "Le numéro de téléphone doit être un numéro français valide.",
+      "INVALID_MESSAGE_LENGTH": "Le message doit contenir entre 5 et 500 caractères.",
+      "INVALID_MESSAGE_FORMAT": "Le message contient des caractères non autorisés.",
+      "SPAM_DETECTED": "Trop de caractères répétés détectés."
+    },
+    "MODAL": {
+      "TITLE": "Message envoyé",
+      "MESSAGE": "Merci pour votre message ! Je vous répondrai dans les plus brefs délais.",
+      "CLOSE": "Fermer"
+    }
+  },
+  "ERROR": {
+    "WORKS": "error-page works!"
+  },
+  "FOOTER": {
+    "COPYRIGHT_1": "@ 2026 Emma Feret Portofolio.",
+    "COPYRIGHT_2": "Réalisé avec précision et amour."
+  }
+}

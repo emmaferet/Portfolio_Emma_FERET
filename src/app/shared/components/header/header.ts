@@ -24,4 +24,9 @@ export class Header {
   navigateToProject(route: string) {
     this.router.navigate([route]);
   }
+
+  switchLanguage() {
+    const lang = this.translation.currentLang();
+    this.translation.setLanguage(lang === 'fr' ? 'en' : 'fr');
+  }
 }

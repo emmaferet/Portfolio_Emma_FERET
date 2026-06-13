@@ -1,16 +1,15 @@
 <div class="centerContact">
-  <h2 class="titlePartPresentation">04. Contact</h2>
-  <h3 class="titleH3Hook bold">Prêt pour une collaboration ?</h3>
+  <h2 class="titlePartPresentation">{{ 'CONTACT.SECTION.PART_TITLE' | translate }}</h2>
+  <h3 class="titleH3Hook bold">{{ 'CONTACT.SECTION.HOOK_TITLE' | translate }}</h3>
   <p class="centerSmallDescriptionPositionFix">
-    Je suis activement à la recherche d'une alternance pour mettre mes compétences au service de vos
-    projets les plus ambitieux.
+    {{ 'CONTACT.SECTION.DESCRIPTION' | translate }}
   </p>
   <div class="centerContactPositionFix">
     <a class="darkPurpleSolidButton buttonsPositionMargin" routerLink="/contact">
-      Envoyer un message
+      {{ 'CONTACT.SECTION.SEND_MESSAGE_BTN' | translate }}
     </a>
     <button class="darkPurpleSolidButtonNative buttonsPositionMargin" (click)="downloadCv()">
-      Mon CV
+      {{ 'CONTACT.SECTION.MY_CV_BTN' | translate }}
     </button>
   </div>
 </div>

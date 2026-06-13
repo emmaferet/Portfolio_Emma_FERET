@@ -1,13 +1,15 @@
 @let userSkillsList = userSkills();
 <div>
   <div class="centerSkills">
-    <h2 class="titlePartPresentation">03. Expertise</h2>
-    <h3 class="titleH3Hook">Double Compétence</h3>
+    <h2 class="titlePartPresentation">{{ 'SKILLS_SECTION.PART_TITLE' | translate }}</h2>
+    <h3 class="titleH3Hook">{{ 'SKILLS_SECTION.HOOK_TITLE' | translate }}</h3>
   </div>
   <div class="align centerContent">
     <!-- Article 3D -->
     <article class="articlGlobalPresentation skillsBoxWhite">
-      <h2 class="h1TitlePurpleBox articlGlobalPresentation darkGreyColor bold">🎲 Vision 3D</h2>
+      <h2 class="h1TitlePurpleBox articlGlobalPresentation darkGreyColor bold">
+        {{ 'SKILLS_SECTION.CATEGORY_3D' | translate }}
+      </h2>
       <ul>
         @for (skill of userSkillsList; track $index) {
           @if (skill.type === skillTypeEnum.SKILL3D) {
@@ -16,7 +18,7 @@
                 {{ skill.name }}
               </h3>
               <p class="articlGlobalPresentation darkPurpleColor">
-                {{ skill.level }}
+                {{ skill.level | translate }}
               </p>
             </li>
           }
@@ -27,7 +29,7 @@
     <!-- Article DEV -->
     <article class="articlGlobalPresentation skillsBoxPurple">
       <h2 class="h1TitlePurpleBox articlGlobalPresentation softPurple bold">
-        &lt; &gt; Programmation
+        {{ 'SKILLS_SECTION.CATEGORY_DEV' | translate }}
       </h2>
 
       <ul>
@@ -38,7 +40,7 @@
                 {{ skill.name }}
               </h3>
               <p class="articlGlobalPresentation softPurple">
-                {{ skill.level }}
+                {{ skill.level | translate }}
               </p>
             </li>
           }

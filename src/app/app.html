@@ -1,10 +1,9 @@
 <app-header
   [nameTitle]="appUser()"
   [headerNavigation]="[
-    { listNavigationElement: 'Parcours', router: '/mystory' },
-    { listNavigationElement: 'Projets', router: '/projects' },
-    { listNavigationElement: 'Compétences', router: '/competences' },
-    { listNavigationElement: 'Contact', router: '/contact' },
+    { listNavigationElement: 'NAV.MY_STORY', router: '/mystory' },
+    { listNavigationElement: 'NAV.PROJECTS', router: '/projects' },
+    { listNavigationElement: 'NAV.SKILLS', router: '/competences' },
   ]"
 ></app-header>
 @if (loading()) {

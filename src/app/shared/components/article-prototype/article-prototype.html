@@ -1,9 +1,9 @@
 <div class="align centerContent">
   <article class="articlGlobalPresentation">
-    <h2 class="titlePartPresentation">{{ this.currentArticle().title }}</h2>
-    <h3 class="titleH3Hook">{{ this.currentArticle().subtitle }}</h3>
+    <h2 class="titlePartPresentation">{{ this.currentArticle().title | translate }}</h2>
+    <h3 class="titleH3Hook">{{ this.currentArticle().subtitle | translate }}</h3>
     <p class="articleContent">
-      {{ this.currentArticle().content }}
+      {{ this.currentArticle().content | translate }}
     </p>
   </article>
   <img

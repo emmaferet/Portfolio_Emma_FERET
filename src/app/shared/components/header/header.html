@@ -3,8 +3,7 @@
   <a routerLink="/">
     <img src="/homeLogo.png" alt="LogoHomePage" class="homePageLogo" />
   </a>
-  <h1 class="nameH1Title">{{ 'GENERAL.TITLE' | translate }}</h1>
-  <!-- <h1 class="nameH1Title">{{ nameTitleSignal?.name }} {{ nameTitleSignal?.surname }}</h1> -->
+  <h1 class="nameH1Title">{{ nameTitleSignal?.name }} {{ nameTitleSignal?.surname }}</h1>
   <nav>
     <ul class="align">
       @let headerList = headerNavigation();
@@ -14,11 +13,23 @@
             class="headerNavigationButtonsNative"
             (click)="navigateToProject(listElement.router)"
           >
-            {{ listElement.listNavigationElement }}
+            {{ listElement.listNavigationElement | translate }}
           </button>
         </li>
       }
     </ul>
   </nav>
-  <a routerLink="/contact" class="darkPurpleSolidButton">Hire Me</a>
+  <a routerLink="/contact" class="darkPurpleSolidButton">{{ 'COMMON.HIRE_ME' | translate }}</a>
+
+  <div class="switch">
+    <input
+      id="language-toggle"
+      class="check-toggle check-toggle-round-flat"
+      type="checkbox"
+      (click)="switchLanguage()"
+    />
+    <label for="language-toggle"></label>
+    <span class="on">FR</span>
+    <span class="off">EN</span>
+  </div>
 </header>

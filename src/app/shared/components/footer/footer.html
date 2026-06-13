@@ -3,8 +3,9 @@
     @let user = footerUser();
     <h3 class="h3TitleFooter">{{ user?.name }} {{ user?.surname }}</h3>
     <p>
-      @ 2026 {{ user?.name }} {{ user?.surname }} Portofolio. <br />
-      Crafted with precision and soul.
+      {{ 'FOOTER.COPYRIGHT_1' | translate }}
+      <br />
+      {{ 'FOOTER.COPYRIGHT_2' | translate }}
     </p>
   </div>
   <nav>

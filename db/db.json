@@ -100,37 +100,37 @@
     {
       "id": 1,
       "name": "Maya",
-      "level": "Proficient",
+      "level": "SKILLS_SECTION.LEVELS.PROFICIENT",
       "type": "SKILL3D"
     },
     {
       "id": 2,
       "name": "Zbrush",
-      "level": "Expert",
+      "level": "SKILLS_SECTION.LEVELS.EXPERT",
       "type": "SKILL3D"
     },
     {
       "id": 3,
       "name": "Substance",
-      "level": "Proficient",
+      "level": "SKILLS_SECTION.LEVELS.PROFICIENT",
       "type": "SKILL3D"
     },
     {
       "id": 4,
       "name": "HTML/CSS",
-      "level": "Competent",
+      "level": "SKILLS_SECTION.LEVELS.COMPETENT",
       "type": "SKILLDEV"
     },
     {
       "id": 5,
       "name": "JS/TS",
-      "level": "Advanced",
+      "level": "SKILLS_SECTION.LEVELS.ADVANCED",
       "type": "SKILLDEV"
     },
     {
       "id": 6,
       "name": "Angular",
-      "level": "Advanced",
+      "level": "SKILLS_SECTION.LEVELS.ADVANCED",
       "type": "SKILLDEV"
     }
   ],

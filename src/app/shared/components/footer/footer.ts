@@ -1,9 +1,10 @@
-import { Component, input, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { User } from '@core/models/interfaces/user.interface';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './footer.html',
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './footer.scss',
