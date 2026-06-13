@@ -1,4 +1,4 @@
-import { Component, inject, signal, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import {
   NavigationCancel,
@@ -15,7 +15,7 @@ import { UserService } from '@shared/services/user/user.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer, Loader],
+  imports: [RouterOutlet, Header, Footer, Loader  ],
   templateUrl: './app.html',
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './app.scss',
