@@ -17,7 +17,7 @@
 .formationPresentation {
   border-color: variables.$base-color-darkPurple;
 
-  margin: 2rem 32%;
+  margin: 2rem 28%;
   border-radius: 2rem;
   display: flex;
 }
@@ -49,4 +49,9 @@
   flex: 1;
   background: variables.$base-color-darkPurple;
   opacity: 0.3;
+}
+.formationName {
+  text-decoration: underline variables.$base-color-softOrange 0.2rem;
+  text-underline-offset: 0.5rem;
+  width: 45rem;
 }

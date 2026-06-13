@@ -1,5 +1,6 @@
 @use '@styles/variables.scss';
 @use '@styles/styles.scss';
+
 .centerContact {
   display: flex;
   flex-direction: column;
@@ -9,6 +10,9 @@
   margin-bottom: 6rem;
   background-color: variables.$base-color-whiteCream;
   border-radius: 2rem;
+  border-style: solid;
+  border-width: 0.5rem;
+  border-color: variables.$base-color-softOrange;
   width: 50%;
   height: 25rem;
 }

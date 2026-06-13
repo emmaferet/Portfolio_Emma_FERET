@@ -12,6 +12,7 @@
   display: flex;
   border-radius: 5%;
   object-fit: cover;
+  border: 0.5rem solid variables.$base-color-softOrange;
 }
 @media (max-width: 75.375rem) {
   .biographyPhoto {
