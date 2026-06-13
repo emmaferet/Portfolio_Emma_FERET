@@ -57,7 +57,9 @@
     "PART_TITLE": "03. Expertise",
     "HOOK_TITLE": "Dual Skill",
     "CATEGORY_3D": "🎲 3D Vision",
+    "DESCRIPTION_3D": "The spiritual and organic modeling",
     "CATEGORY_DEV": "< > Programming",
+    "DESCRIPTION_DEV": "The architecture and website design",
     "LEVELS": {
       "EXPERT": "Expert",
       "PROFICIENT": "Proficient",

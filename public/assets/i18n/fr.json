@@ -6,7 +6,7 @@
     "SKILLS": "Compétences"
   },
   "COMMON": {
-    "HIRE_ME": "Hire Me",
+    "HIRE_ME": "Contact",
     "LOADING": "Chargement...",
     "BACK_TO_HOME": "Retour à l'accueil",
     "PORTFOLIO": "Portofolio.",
@@ -57,7 +57,9 @@
     "PART_TITLE": "03. Expertise",
     "HOOK_TITLE": "Double Compétence",
     "CATEGORY_3D": "🎲 Vision 3D",
-    "CATEGORY_DEV": "< > Programmation",
+    "DESCRIPTION_3D": "L'âme artistique et la modélisation organique",
+    "CATEGORY_DEV": "< > Programmation Front",
+    "DESCRIPTION_DEV": "L'architecture et le design de site web",
     "LEVELS": {
       "EXPERT": "Expert",
       "PROFICIENT": "Confirmé",

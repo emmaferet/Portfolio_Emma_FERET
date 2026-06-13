@@ -69,29 +69,29 @@
   "formations": [
     {
       "id": 1,
-      "nameForm": "💻 2i Academy",
-      "degree": "Developpeur Web & Web mobile",
-      "year": "2026/2027",
+      "nameForm": "💻 EPSI",
+      "degree": "Developpeur Concepteur d'Applications Web et Web mobile",
+      "year": "Sept 2026 - 2027",
       "skillsForm": "HTML, CSS, JS, TS, Git, Angular"
     },
     {
       "id": 2,
-      "nameForm": "🖥️Formation par un développeur expérimenté",
+      "nameForm": "🖥️ Formation par un développeur expérimenté",
       "degree": "",
       "year": "2026",
       "skillsForm": "HTML, CSS, JS, TS, Git, Angular"
     },
     {
       "id": 3,
-      "nameForm": "👩‍🎨Piktura",
+      "nameForm": "👩‍🎨 Piktura",
       "degree": "Master Réalisateur Numérique",
-      "year": "2019/2024",
+      "year": "2019 - 2024",
       "skillsForm": " 3D Animation Rigging, Modeling, Sculpting, Texturing et Shading "
     },
     {
       "id": 4,
-      "nameForm": "✏️Lycée Sainte Marie Beaucamps-Ligny",
-      "degree": "Baccalauréat Général Scientifique Spécialité Informatique et Sciences du Numérique  Option Européenne et Latin",
+      "nameForm": "✏️ Lycée Sainte Marie Beaucamps-Ligny",
+      "degree": "Baccalauréat Général Scientifique ISN Option Européenne Latin",
       "year": "2019",
       "skillsForm": ""
     }
