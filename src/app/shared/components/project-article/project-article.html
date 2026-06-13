@@ -7,7 +7,12 @@
       <div class="articleContent">
         <p>{{ project?.year }}</p>
         <p>{{ project?.description }}</p>
-        <a [href]="$safeNavigationMigration(project?.link)">Lien vers le projet</a>
+        <a
+          [href]="$safeNavigationMigration(project?.link)"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Lien vers le projet</a
+        >
       </div>
     </div>
     <img
@@ -29,7 +34,12 @@
       <div class="articleContent">
         <p>{{ project?.year }}</p>
         <p>{{ project?.description }}</p>
-        <a [href]="$safeNavigationMigration(project?.link)">Lien vers le projet</a>
+        <a
+          [href]="$safeNavigationMigration(project?.link)"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Lien vers le projet</a
+        >
       </div>
     </div>
   </article>
