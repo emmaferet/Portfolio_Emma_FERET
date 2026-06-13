@@ -1,0 +1,15 @@
+@use '@styles/variables.scss';
+@use '@styles/styles.scss';
+
+.skillIntroTitle {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skillIntroContent {
+  width: 50%;
+  font-size: variables.$size-medium-pc;
+  text-align: center;
+  line-height: 160%;
+}

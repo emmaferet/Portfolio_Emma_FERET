@@ -1,0 +1,49 @@
+@use '@styles/variables.scss';
+@use '@styles/styles.scss';
+
+.skillsBoxPurple {
+  background-color: variables.$base-color-darkPurple;
+  width: 30%;
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: variables.$base-color-softPurple;
+  border-width: 0.02rem;
+}
+.skillsBoxWhite {
+  background-color: variables.$base-color-whiteCream;
+  width: 30%;
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: variables.$base-color-darkPurple;
+  border-width: 0.02rem;
+}
+.h1TitlePurpleBox {
+  font-size: variables.$size-medium-pc;
+  font-weight: bold;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+}
+.centerSkills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.skillsPageSection {
+  margin: 4rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.smallDescSkills {
+  margin-top: 2rem;
+  font-size: variables.$size-medium-pc;
+  display: flex;
+  justify-content: center;
+}
+
+.skillsPresentation {
+  margin: 5rem 4rem;
+}

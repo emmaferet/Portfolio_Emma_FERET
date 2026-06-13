@@ -1,0 +1,52 @@
+@let userSkillsList = userSkills();
+<div>
+  <div class="align skillsPageSection">
+    <!-- Article 3D -->
+    <article class="articlGlobalPresentation skillsBoxWhite">
+      <h2 class="h1TitlePurpleBox articlGlobalPresentation darkGreyColor bold">
+        {{ 'SKILLS_SECTION.CATEGORY_3D' | translate }}
+      </h2>
+      <p class="articlGlobalPresentation smallDescSkills">
+        {{ 'SKILLS_SECTION.DESCRIPTION_3D' | translate }}
+      </p>
+      <ul>
+        @for (skill of userSkillsList; track $index) {
+          @if (skill.type === skillTypeEnum.SKILL3D) {
+            <li class="centerContent skillsPresentation">
+              <h3 class="articlGlobalPresentation darkGreyColor bold">
+                {{ skill.name }}
+              </h3>
+              <p class="articlGlobalPresentation darkPurpleColor">
+                {{ skill.level | translate }}
+              </p>
+            </li>
+          }
+        }
+      </ul>
+    </article>
+
+    <!-- Article DEV -->
+    <article class="articlGlobalPresentation skillsBoxPurple">
+      <h2 class="h1TitlePurpleBox articlGlobalPresentation softPurple bold">
+        {{ 'SKILLS_SECTION.CATEGORY_DEV' | translate }}
+      </h2>
+      <p class="articlGlobalPresentation softPurple smallDescSkills">
+        {{ 'SKILLS_SECTION.DESCRIPTION_DEV' | translate }}
+      </p>
+      <ul>
+        @for (skill of userSkillsList; track $index) {
+          @if (skill.type === skillTypeEnum.SKILLDEV) {
+            <li class="centerContent softPurple skillsPresentation">
+              <h3 class="articlGlobalPresentation bold">
+                {{ skill.name }}
+              </h3>
+              <p class="articlGlobalPresentation softPurple">
+                {{ skill.level | translate }}
+              </p>
+            </li>
+          }
+        }
+      </ul>
+    </article>
+  </div>
+</div>
