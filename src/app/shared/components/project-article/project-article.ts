@@ -1,10 +1,11 @@
-import { Component, input, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { SidePhotoArticleEnum } from '@core/models/enums/side-photo-article.enum';
 import { Projects } from '@core/models/interfaces/projects.interfaces';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project-article',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './project-article.html',
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './project-article.scss',

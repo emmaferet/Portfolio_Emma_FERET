@@ -6,10 +6,11 @@ import {
   MatDialogRef,
   MatDialogTitle,
 } from '@angular/material/dialog';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-opening-modal',
-  imports: [MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle],
+  imports: [MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle, TranslatePipe],
   templateUrl: './opening-modal.html',
   styleUrl: './opening-modal.scss',
   standalone: true,

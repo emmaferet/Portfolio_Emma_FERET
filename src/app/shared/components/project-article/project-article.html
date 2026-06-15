@@ -2,16 +2,18 @@
 @if (sidePhotoArticle() === sidePhotoArticleEnum.DISPLAYLEFT) {
   <article class="align">
     <div class="articlProjectPresentation column">
-      <p class="titlePartPresentation">Projet n°{{ project?.id }}</p>
-      <p class="titleH3Hook left">{{ project?.name }}</p>
+      <p class="titlePartPresentation">
+        {{ 'PROJECTS_PAGE.PROJET' | translate }} {{ project?.id }}
+      </p>
+      <p class="titleH3Hook left">{{ project?.name | translate }}</p>
       <div class="articleContent">
         <p>{{ project?.year }}</p>
-        <p>{{ project?.description }}</p>
+        <p>{{ project?.description | translate }}</p>
         <a
           [href]="$safeNavigationMigration(project?.link)"
           target="_blank"
           rel="noopener noreferrer"
-          >Lien vers le projet</a
+          >{{ 'PROJECTS_PAGE.LINK' | translate }}</a
         >
       </div>
     </div>
@@ -29,16 +31,18 @@
       [alt]="$safeNavigationMigration(project?.alt)"
     />
     <div class="column articlProjectPresentation">
-      <p class="titlePartPresentation">Projet n°{{ project?.id }}</p>
-      <p class="titleH3Hook left">{{ project?.name }}</p>
+      <p class="titlePartPresentation">
+        {{ 'PROJECTS_PAGE.PROJET' | translate }} {{ project?.id }}
+      </p>
+      <p class="titleH3Hook left">{{ project?.name | translate }}</p>
       <div class="articleContent">
         <p>{{ project?.year }}</p>
-        <p>{{ project?.description }}</p>
+        <p>{{ project?.description | translate }}</p>
         <a
           [href]="$safeNavigationMigration(project?.link)"
           target="_blank"
           rel="noopener noreferrer"
-          >Lien vers le projet</a
+          >{{ 'PROJECTS_PAGE.LINK' | translate }}</a
         >
       </div>
     </div>

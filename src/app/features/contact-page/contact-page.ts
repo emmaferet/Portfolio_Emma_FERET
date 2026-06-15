@@ -1,8 +1,9 @@
-import { Component, inject, signal, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { form, FormField, pattern, required, validate } from '@angular/forms/signals';
 import { MatDialog } from '@angular/material/dialog';
 import emailjs from '@emailjs/browser';
 import { environment } from '@environments/environments.development';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { ContactModal } from '@shared/components/contact-modal/contact-modal';
 
 interface ContactFormModel {
@@ -16,7 +17,7 @@ interface ContactFormModel {
 @Component({
   selector: 'app-contact-page',
   standalone: true,
-  imports: [FormField],
+  imports: [FormField, TranslatePipe],
   templateUrl: './contact-page.html',
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './contact-page.scss',
@@ -32,18 +33,22 @@ export class ContactPage {
 
   public dialog = inject(MatDialog);
 
+  private translate = inject(TranslateService);
+
   contactForm = form(this.contactFormModel, (contact) => {
-    required(contact.firstName, { message: 'Prénom requis' });
-    required(contact.lastName, { message: 'Nom requis' });
-    required(contact.email, { message: 'Mail requis' });
-    required(contact.message, { message: 'Message requis' });
+    required(contact.firstName, {
+      message: 'CONTACT.ERRORS.FIRSTNAME_REQUIRED',
+    });
+    required(contact.lastName, { message: 'CONTACT.ERRORS.LASTNAME_REQUIRED' });
+    required(contact.email, { message: 'CONTACT.ERRORS.EMAIL_REQUIRED' });
+    required(contact.message, { message: 'CONTACT.ERRORS.MESSAGE_REQUIRED' });
 
     validate(contact.firstName, ({ value }) =>
       // ternary expression
       !/^[A-Za-zÀ-ÿ]{2,50}$/i.test(value())
         ? {
             kind: 'alphabet-only',
-            message: 'Ce champ doit posséder entre 2 et 50 caractères',
+            message: 'CONTACT.ERRORS.FIRSTNAME_LENGTH',
           }
         : undefined,
     );
@@ -52,7 +57,7 @@ export class ContactPage {
       !/^[A-Za-zÀ-ÿ]{2,50}$/i.test(value())
         ? {
             kind: 'alphabet-only',
-            message: 'Ce champ doit posséder entre 2 et 50 caractères',
+            message: 'CONTACT.ERRORS.LASTNAME_LENGTH',
           }
         : undefined,
     );
@@ -62,12 +67,12 @@ export class ContactPage {
       !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i.test(value())
         ? {
             kind: 'invalid-email',
-            message: 'Veuillez saisir une adresse email valide.',
+            message: 'CONTACT.ERRORS.INVALID_EMAIL',
           }
         : undefined,
     );
     pattern(contact.phoneNumber, /^(\+|00|0)[1-9][0-9 \-\(\)\.]{7,32}$/i, {
-      message: 'Le numéro de téléphone doit être un numéro français valide.',
+      message: 'CONTACT.ERRORS.INVALID_PHONE',
     });
 
     // pattern(schema.phone, /^(?:(?:+|00)33|0)\s[1-9](?:[\s.-]\d{2}){4}$/, {
@@ -80,7 +85,7 @@ export class ContactPage {
       if (messageValue.length < 5 || messageValue.length > 500) {
         return {
           kind: 'invalid-message-length',
-          message: 'Le message doit contenir entre 5 et 500 caractères.',
+          message: 'CONTACT.ERRORS.INVALID_MESSAGE_LENGTH',
         };
       }
 
@@ -89,7 +94,7 @@ export class ContactPage {
       if (!messageRegex.test(messageValue)) {
         return {
           kind: 'invalid-message-format',
-          message: 'Le message contient des caractères non autorisés.',
+          message: 'CONTACT.ERRORS.INVALID_MESSAGE_FORMAT',
         };
       }
 
@@ -97,14 +102,14 @@ export class ContactPage {
       if (/<|>/.test(messageValue)) {
         return {
           kind: 'suspicious-content',
-          message: 'Les caractères < et > ne sont pas autorisés.',
+          message: 'CONTACT.ERRORS.INVALID_MESSAGE_FORMAT',
         };
       }
 
       if (/(.)\1{10,}/.test(messageValue)) {
         return {
           kind: 'spam-detected',
-          message: 'Trop de caractères répétés détectés.',
+          message: 'CONTACT.ERRORS.SPAM_DETECTED',
         };
       }
 

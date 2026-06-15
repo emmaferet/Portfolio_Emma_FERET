@@ -24,6 +24,7 @@ export class HomePage {
   public dialog = inject(MatDialog);
 
   // To test the modal
+
   // openModal(): void {
   //   this.dialog.open(OpeningModal);
   //   console.log('click');

@@ -2,7 +2,7 @@ export interface CvExperience {
   id: number;
   title: string;
   company: string;
-  duration: Date;
+  duration: string;
   description: string;
   link: string;
 }

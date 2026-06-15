@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { TranslatePipe } from '@ngx-translate/core';
 import { Biography } from '@shared/components/biography/biography';
 import { ExperienceArticle } from '@shared/components/experience-article/experience-article';
 import { MyStoryFormations } from '@shared/components/my-story-formations/my-story-formations';
@@ -9,7 +10,7 @@ import { ExperienceService } from './../../shared/services/experience/experience
 
 @Component({
   selector: 'app-my-story-page',
-  imports: [MyStoryFormations, ExperienceArticle, Biography],
+  imports: [MyStoryFormations, ExperienceArticle, Biography, TranslatePipe],
   templateUrl: './my-story-page.html',
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './my-story-page.scss',

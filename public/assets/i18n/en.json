@@ -58,7 +58,7 @@
     "HOOK_TITLE": "Dual Skill",
     "CATEGORY_3D": "🎲 3D Vision",
     "DESCRIPTION_3D": "The spiritual and organic modeling",
-    "CATEGORY_DEV": "< > Programming",
+    "CATEGORY_DEV": "< > Programming Front",
     "DESCRIPTION_DEV": "The architecture and website design",
     "LEVELS": {
       "EXPERT": "Expert",
@@ -88,7 +88,7 @@
       "PHONE_PLACEHOLDER": "Enter your phone",
       "MESSAGE_LABEL": "Message",
       "MESSAGE_PLACEHOLDER": "Enter your message",
-      "SUBMIT": "SEND"
+      "SUBMIT": "SUBMIT"
     },
     "ERRORS": {
       "FIRSTNAME_REQUIRED": "First name required",
@@ -115,5 +115,92 @@
   "FOOTER": {
     "COPYRIGHT_1": "@ 2026 Emma Feret Portofolio.",
     "COPYRIGHT_2": "Crafted with precision and soul."
+  },
+  "MY_STORY_PAGE": {
+    "TITLE_01": "My formations",
+    "TITLE_02": "My experiences",
+    "CONTENT": {
+      "TITLE_H3": "Full-stack developer",
+      "CONTENT_1": "👩‍🎨As a 3D character artist looking to change career, I am now putting my experience and skills to use in a new project that aligns with my passions and ambitions.",
+      "CONTENT_2": "✨Having completed a Master’s degree in 3D animation at Piktura, I have developed strong qualities such as adaptability, creativity, attention to detail and a sense of responsibility.",
+      "CONTENT_3": "👩‍💻Driven by a genuine desire to develop, I have embarked on a career move into the IT development sector, where I will be actively training at EPSI in September and developing new skills. This move demonstrates my ability to learn quickly, step outside my comfort zone and commit fully to new challenges.",
+      "CONTENT_4": "🙌Curious, motivated and determined, I am currently looking for work-study opportunities that will enable me to bring this new career plan to fruition. I’m open to discussions and new opportunities, so please don’t hesitate to get in touch to talk about it!"
+    },
+    "FORMATIONS": {
+      "FORMATION_1": {
+        "NAME_FORM": "💻 EPSI",
+        "DEGREE": "Web and Mobile Application Developer & Designer",
+        "YEAR": "Sep 2026 - 2027",
+        "SKILLS": "HTML, CSS, JS, TS, Git, Angular"
+      },
+      "FORMATION_2": {
+        "NAME_FORM": "🖥️ Training with an experienced developer",
+        "DEGREE": "",
+        "YEAR": "2026",
+        "SKILLS": "HTML, CSS, JS, TS, Git, Angular"
+      },
+      "FORMATION_3": {
+        "NAME_FORM": "👩‍🎨 Piktura",
+        "DEGREE": "Master's Degree in Digital Directing",
+        "YEAR": "2019 - 2024",
+        "SKILLS": "3D Animation, Rigging, Modeling, Sculpting, Texturing and Shading"
+      },
+      "FORMATION_4": {
+        "NAME_FORM": "✏️ Sainte Marie Beaucamps-Ligny High School",
+        "DEGREE": "Scientific General Baccalaureate with ISN and European & Latin Option",
+        "YEAR": "2019",
+        "SKILLS": ""
+      }
+    },
+    "EXPERIENCES": {
+      "EXPERIENCE_1": {
+        "TITLE": "Content Creation Internship",
+        "DURATION": "June 2021",
+        "DESCRIPTION": "Online communication and promotion of 3D models"
+      },
+      "EXPERIENCE_2": {
+        "TITLE": "3D Character Artist Internship",
+        "DURATION": "July - August 2023",
+        "DESCRIPTION": "Sculpting, Texturing and Grooming for dinosaur characters"
+      },
+      "EXPERIENCE_3": {
+        "TITLE": "Crew Member",
+        "DURATION": "October 2024 to May 2025",
+        "DESCRIPTION": "Customer service, order taking and preparation"
+      },
+      "EXPERIENCE_4": {
+        "TITLE": "3D Character Artist Internship",
+        "DURATION": "September to December 2025",
+        "DESCRIPTION": "Creation of MetaHumans and refactoring of the MetaHuman blueprint to fit the project's requirements"
+      }
+    }
+  },
+  "PROJECTS_PAGE": {
+    "PROJET": "PROJECT N°",
+    "LINK": "Link to the project",
+    "PROJECT_1": {
+      "NAME": "This web portfolio",
+      "DESCRIPTION": "My very first portfolio, built with Angular, combining HTML, CSS and JS/TS skills under the supervision of Quentin Buysschaert!",
+      "ALT": "Image of the Angular framework"
+    },
+    "PROJECT_2": {
+      "NAME": "D.S. Al Coda",
+      "DESCRIPTION": "⭐️ 48 official selections\n⭐️ 4 awards\n⭐️ Longlisted for the BAFTAs, Student Academy Awards semi-finalist, The Rookies finalist\n5th-year 3D short film directed by Maxime Wattrelos, Emma Feret, Jeremy Trochet, Louis Cocquet, François Mainguet, Rachel Cuvilliez, and Florian Lecocq.\nConsumed by the fear of becoming deaf, Ian draws and memorizes the sounds around him.",
+      "ALT": "Image from the short film D.S. Al Coda"
+    },
+    "PROJECT_3": {
+      "NAME": "Oiseaux de nuit",
+      "DESCRIPTION": "🏆 15 official selections\n🏆 2 awards\n3rd-year 3D short film directed by Emma Richet, Candice Yernaux, Emma Feret, Juliette Buysschaert, and Rachel Cuvilliez.\nAn abandoned wolf discovers a strange yet beautiful city.",
+      "ALT": "Image from the short film Oiseaux de Nuit"
+    }
+  },
+  "MY_SKILLS_PAGE": {
+    "SKILLS_TITLE_1": "Evolution of my",
+    "SKILLS_TITLE_2": "Skills.",
+    "SKILLS_DESCRIPTION_INTRO": "From 3D animation to web development, my journey has enabled me to develop valuable skills such as organization, teamwork, precision, and autonomy. Working on both creative and technical projects has taught me how to build reliable solutions, tackle complex challenges, and pay close attention to user experience as well as implementation details."
+  },
+  "OPENING_MODAL": {
+    "TITLE": "WELCOME TO MY PORTFOLIO",
+    "MESSAGE": "This site is currently a work in progress! If you have any feedback, please don’t hesitate to get in touch!"
   }
 }

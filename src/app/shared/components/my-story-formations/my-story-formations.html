@@ -8,11 +8,13 @@
     </div>
     <article class="articlGlobalPresentation">
       <p class="articleContent bold">
-        {{ userFormationsList?.year }}
+        {{ userFormationsList?.year | translate }}
       </p>
-      <h2 class="titlePartPresentation bold formationName">{{ userFormationsList?.nameForm }}</h2>
-      <h3 class="formationDegree">{{ userFormationsList?.degree }}</h3>
-      <p class="articleContent">{{ userFormationsList?.skillsForm }}</p>
+      <h2 class="titlePartPresentation bold formationName">
+        {{ userFormationsList?.nameForm | translate }}
+      </h2>
+      <h3 class="formationDegree">{{ userFormationsList?.degree | translate }}</h3>
+      <p class="articleContent">{{ userFormationsList?.skillsForm | translate }}</p>
     </article>
   </div>
 </div>
