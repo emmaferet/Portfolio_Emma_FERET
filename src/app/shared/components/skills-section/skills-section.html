@@ -1,23 +1,26 @@
 @let userSkillsList = userSkills();
-<div>
+<div class="fixMargin">
   <div class="centerSkills">
-    <h2 class="titlePartPresentation">{{ 'SKILLS_SECTION.PART_TITLE' | translate }}</h2>
-    <h3 class="titleH3Hook">{{ 'SKILLS_SECTION.HOOK_TITLE' | translate }}</h3>
+    <!-- <h2 class="titlePartPresentation">{{ 'SKILLS_SECTION.PART_TITLE' | translate }}</h2> -->
+    <h3 class="titleH3Hook fixMargin">{{ 'SKILLS_SECTION.HOOK_TITLE' | translate }}</h3>
+    <p class="skillsDesc">
+      {{ 'SKILLS_SECTION.DESCRIPTION' | translate }}
+    </p>
   </div>
   <div class="align fixPosition">
     <!-- Article 3D -->
     <article class="articlGlobalPresentation skillsBoxWhite">
       <h2 class="h1TitlePurpleBox articlGlobalPresentation darkGreyColor bold">
-        {{ 'SKILLS_SECTION.CATEGORY_3D' | translate }}
+        {{ 'SKILLS_SECTION.CATEGORY_DEV' | translate }}
       </h2>
       <ul>
         @for (skill of userSkillsList; track $index) {
-          @if (skill.type === skillTypeEnum.SKILL3D) {
+          @if (skill.type === skillTypeEnum.SKILLDEV) {
             <li class="align centerContent">
-              <h3 class="articlGlobalPresentation darkGreyColor bold">
+              <h3 class="articlGlobalPresentation darkGreyColor bold skillsContent">
                 {{ skill.name }}
               </h3>
-              <p class="articlGlobalPresentation darkPurpleColor">
+              <p class="articlGlobalPresentation darkPurpleColor skillsContent">
                 {{ skill.level | translate }}
               </p>
             </li>
@@ -29,17 +32,17 @@
     <!-- Article DEV -->
     <article class="articlGlobalPresentation skillsBoxPurple">
       <h2 class="h1TitlePurpleBox articlGlobalPresentation softPurple bold">
-        {{ 'SKILLS_SECTION.CATEGORY_DEV' | translate }}
+        {{ 'SKILLS_SECTION.CATEGORY_3D' | translate }}
       </h2>
 
       <ul>
         @for (skill of userSkillsList; track $index) {
-          @if (skill.type === skillTypeEnum.SKILLDEV) {
+          @if (skill.type === skillTypeEnum.SKILL3D) {
             <li class="align centerContent softPurple">
-              <h3 class="articlGlobalPresentation bold">
+              <h3 class="articlGlobalPresentation bold skillsContent">
                 {{ skill.name }}
               </h3>
-              <p class="articlGlobalPresentation softPurple">
+              <p class="articlGlobalPresentation softPurple skillsContent">
                 {{ skill.level | translate }}
               </p>
             </li>

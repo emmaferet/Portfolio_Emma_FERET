@@ -31,6 +31,7 @@
 }
 .nameH1Title {
   font-weight: bold;
+  text-decoration: none;
   color: variables.$base-color-darkPurple;
 }
 @media (max-width: 75.375rem) {
@@ -113,14 +114,18 @@
 .switch {
   position: relative;
   display: inline-block;
+  display: flex;
+  justify-content: space-around;
+  width: 60px;
+  height: 28px;
 }
 
 .switch > span {
   position: absolute;
-  top: 10px;
+  top: 7px;
   pointer-events: none;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
   width: 50%;
@@ -143,7 +148,7 @@ input.check-toggle-round-flat:checked ~ .on {
 
 .switch > span.off {
   right: 0;
-  padding-right: 4px;
+  padding-right: 2px;
   color: variables.$base-color-softPurple;
 }
 
@@ -165,8 +170,8 @@ input.check-toggle-round-flat:checked ~ .on {
 
 input.check-toggle-round-flat + label {
   padding: 2px;
-  width: 97px;
-  height: 35px;
+  width: 70px;
+  height: 28px;
   background-color: variables.$base-color-softPurple;
   -webkit-border-radius: 60px;
   -moz-border-radius: 60px;
@@ -182,10 +187,10 @@ input.check-toggle-round-flat + label:after {
 }
 
 input.check-toggle-round-flat + label:before {
-  top: 2px;
-  left: 2px;
-  bottom: 2px;
-  right: 2px;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  right: 1px;
   background-color: variables.$base-color-darkPurple;
 
   -moz-border-radius: 60px;
@@ -194,10 +199,10 @@ input.check-toggle-round-flat + label:before {
   border-radius: 60px;
 }
 input.check-toggle-round-flat + label:after {
-  top: 4px;
-  left: 4px;
-  bottom: 4px;
-  width: 48px;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  width: 30px;
   background-color: #fff;
   -webkit-border-radius: 52px;
   -moz-border-radius: 52px;
@@ -211,5 +216,17 @@ input.check-toggle-round-flat + label:after {
 }
 
 input.check-toggle-round-flat:checked + label:after {
-  margin-left: 44px;
+  margin-left: 26px;
+}
+
+.alignHeader {
+  position: relative;
+}
+
+.headerSwitch {
+  position: fixed;
+  right: 0.8rem;
+  top: 3.7rem;
+
+  z-index: 9999999;
 }

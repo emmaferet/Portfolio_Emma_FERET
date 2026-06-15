@@ -1,27 +1,27 @@
-<header class="header">
-  @let nameTitleSignal = nameTitle();
-  <a routerLink="/">
-    <img src="/homeLogo.png" alt="LogoHomePage" class="homePageLogo" />
-  </a>
-  <h1 class="nameH1Title">{{ nameTitleSignal?.name }} {{ nameTitleSignal?.surname }}</h1>
-  <nav>
-    <ul class="align">
-      @let headerList = headerNavigation();
-      @for (listElement of headerList; track $index) {
-        <li>
-          <button
-            class="headerNavigationButtonsNative"
-            (click)="navigateToProject(listElement.router)"
-          >
-            {{ listElement.listNavigationElement | translate }}
-          </button>
-        </li>
-      }
-    </ul>
-  </nav>
-  <a routerLink="/contact" class="darkPurpleSolidButton">{{ 'COMMON.HIRE_ME' | translate }}</a>
-
-  <div class="switch">
+<header class="alignHeader">
+  <div class="header">
+    @let nameTitleSignal = nameTitle();
+    <a class="nameH1Title" routerLink="/"
+      >{{ nameTitleSignal?.name }} {{ nameTitleSignal?.surname }}</a
+    >
+    <nav>
+      <ul class="align">
+        @let headerList = headerNavigation();
+        @for (listElement of headerList; track $index) {
+          <li>
+            <button
+              class="headerNavigationButtonsNative"
+              (click)="navigateToProject(listElement.router)"
+            >
+              {{ listElement.listNavigationElement | translate }}
+            </button>
+          </li>
+        }
+      </ul>
+    </nav>
+    <a routerLink="/contact" class="darkPurpleSolidButton">{{ 'COMMON.HIRE_ME' | translate }}</a>
+  </div>
+  <div class="switch headerSwitch">
     <input
       id="language-toggle"
       class="check-toggle check-toggle-round-flat"
