@@ -35,6 +35,12 @@
       "SUBTITLE": "Recent works",
       "CONTENT": "A variety of projects, whether it's two films made during my 5 years of master's degree or this site, my first portfolio, mixing various web development skills.",
       "IMAGE_ALT": "angular presentation image"
+    },
+    "ARTICLE_IA": {
+      "TITLE_H2": " AI",
+      "TITLE_H3": "My use of AI",
+      "CONTENT_1": "This site was developed as part of a learning process. In order to make real progress, I chose to limit the use of artificial intelligence to the bare minimum. All the code was written by hand, and AI was only used to check certain syntax, correct code that had already been written, or for other small tasks related in particular to CSS.",
+      "CONTENT_2": "AI-assisted autocomplete was only introduced at the very end of the project, mainly for translation. My primary aim was to understand every line of code written and to gain a practical mastery of the technologies used."
     }
   },
   "PROJECTS": {

@@ -6,8 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 6rem 25%;
-  margin-bottom: 6rem;
+  margin: 6rem 25% 0 25%;
   background-color: variables.$base-color-whiteCream;
   border-radius: 2rem;
   border-style: solid;
@@ -25,6 +24,7 @@
 }
 .centerSmallDescriptionPositionFix {
   margin: 0 20%;
+  font-size: variables.$size-smallPlus-pc;
   text-align: center;
   line-height: 150%;
 }

@@ -35,6 +35,12 @@
       "SUBTITLE": "Réalisations récentes",
       "CONTENT": "Une variété de projets, que ça soit deux films réalisés lors de mes 5 années de master ou ce site, premier portofolio, mélangeant divers compétences de développement web.",
       "IMAGE_ALT": "angular image de présentation"
+    },
+    "ARTICLE_IA": {
+      "TITLE_H2": " IA",
+      "TITLE_H3": "Mon utilisation de l'IA",
+      "CONTENT_1": "Ce site a été développé dans une démarche d’apprentissage. Afin de progresser réellement, j’ai choisi de limiter l’utilisation de l’intelligence artificielle au strict minimum. Tout le code a été écrit à la main, et l’IA n’a été utilisée que pour vérifier certaines syntaxes, corriger du code déjà rédigé ou d’autres petites taches liées notamment au css.",
+      "CONTENT_2": "L’auto-complétion assistée par IA n’a été introduite qu’à la toute fin du projet, principalement pour la traduction. Mon objectif était avant tout de comprendre chaque ligne de code écrite et d’acquérir une maîtrise concrète des technologies utilisées."
     }
   },
   "PROJECTS": {
