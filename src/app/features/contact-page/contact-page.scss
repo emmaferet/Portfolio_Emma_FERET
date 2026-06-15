@@ -126,3 +126,9 @@ textarea {
 .submitButtonContact:hover {
   opacity: 0.9;
 }
+
+input,
+textarea,
+button {
+  font: inherit;
+}
