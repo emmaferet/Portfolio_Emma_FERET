@@ -39,7 +39,7 @@
       "company": "Let It Bim",
       "duration": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_1.DURATION",
       "description": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_1.DESCRIPTION",
-      "link": "/letItBim.png"
+      "link": "letItBim.png"
     },
     {
       "id": 2,
@@ -47,7 +47,7 @@
       "company": "Providence VFX",
       "duration": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_2.DURATION",
       "description": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_2.DESCRIPTION",
-      "link": "/providence.jpg"
+      "link": "providence.jpg"
     },
     {
       "id": 3,
@@ -55,7 +55,7 @@
       "company": "Burger King",
       "duration": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_3.DURATION",
       "description": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_3.DESCRIPTION",
-      "link": "/Burger_King.svg"
+      "link": "Burger_King.svg"
     },
     {
       "id": 4,
@@ -63,7 +63,7 @@
       "company": "Renraku Dynamics",
       "duration": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_4.DURATION",
       "description": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_4.DESCRIPTION",
-      "link": "/samuel.png"
+      "link": "samuel.png"
     }
   ],
   "formations": [
@@ -140,7 +140,7 @@
       "name": "PROJECTS_PAGE.PROJECT_1.NAME",
       "year": 2026,
       "description": "PROJECTS_PAGE.PROJECT_1.DESCRIPTION",
-      "image": "/angular-imagePresentation.webp",
+      "image": "angular-imagePresentation.webp",
       "link": "",
       "alt": "PROJECTS_PAGE.PROJECT_1.ALT"
     },
@@ -149,7 +149,7 @@
       "name": "PROJECTS_PAGE.PROJECT_2.NAME",
       "year": 2025,
       "description": "PROJECTS_PAGE.PROJECT_2.DESCRIPTION",
-      "image": "/dsalcoda_affiche_emmaF.jpg",
+      "image": "dsalcoda_affiche_emmaF.jpg",
       "link": "https://youtu.be/gLA3pJN7coY?si=hoT0p6HuuKlN0xct",
       "alt": "PROJECTS_PAGE.PROJECT_2.ALT"
     },
@@ -158,7 +158,7 @@
       "name": "PROJECTS_PAGE.PROJECT_3.NAME",
       "year": 2023,
       "description": "PROJECTS_PAGE.PROJECT_3.DESCRIPTION",
-      "image": "/oiseauxDeNuit_affiche_EmmaF.jpg",
+      "image": "oiseauxDeNuit_affiche_EmmaF.jpg",
       "link": "https://youtu.be/IgCvP8jAk4g?si=-nixvO4q3WBFoslK",
       "alt": "PROJECTS_PAGE.PROJECT_3.ALT"
     }
