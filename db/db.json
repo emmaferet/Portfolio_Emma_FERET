@@ -39,7 +39,7 @@
       "company": "Let It Bim",
       "duration": "Juin 2021",
       "description": "Communication et promotion Internet de maquettes 3D",
-      "link": "/letItBim.png"
+      "link": "letItBim.png"
     },
     {
       "id": 2,
@@ -47,7 +47,7 @@
       "company": "Providence VFX",
       "duration": "Juillet Aout 2023",
       "description": "Sculpting, Texturing et Grooming sur des créatures",
-      "link": "/providence.jpg"
+      "link": "providence.jpg"
     },
     {
       "id": 3,
@@ -55,7 +55,7 @@
       "company": "Burger King",
       "duration": "Octobre 2024 à Mai 2025",
       "description": "Service, prise et préparation des commandes",
-      "link": "/Burger_King.svg"
+      "link": "Burger_King.svg"
     },
     {
       "id": 4,
@@ -63,7 +63,7 @@
       "company": "Renraku Dynamics",
       "duration": "Septembre à Decembre 2025",
       "description": "Création de MetaHuman, refactorisation du blueprint du MetaHuman au contexte du projet",
-      "link": "/samuel.png"
+      "link": "samuel.png"
     }
   ],
   "formations": [
@@ -140,7 +140,7 @@
       "name": "Ce site haha",
       "year": 2026,
       "description": "Mon tout premier portofolio, réalisé en Angular, combinant des compétences en HTML, CSS, JS/TS, sous la surpervision de Quentin Buysschaert !",
-      "image": "/angular-imagePresentation.webp",
+      "image": "angular-imagePresentation.webp",
       "link": "https://youtu.be/IgCvP8jAk4g?si=-nixvO4q3WBFoslK",
       "alt": "premier portofolio Angular"
     },
@@ -149,7 +149,7 @@
       "name": "D.S. Al Coda",
       "year": 2025,
       "description": "⭐️ 48 sélections officielles\n⭐️ 4 prix\n⭐️ Longlisté pour les BAFTA, semi finaliste des Oscars étudiants, finaliste des Rookies \nCourt métrage 3D de 5ème année, réalisé par Maxime Wattrelos, Emma Feret, Jeremy Trochet, Louis Cocquet, François Mainguet, Rachel Cuvilliez, Florian Lecocq.\nConsumé par la peur de devenir sourd, Ian dessine et mémorises les sons qui l'entourent.",
-      "image": "/dsalcoda_affiche_emmaF.jpg",
+      "image": "dsalcoda_affiche_emmaF.jpg",
       "link": "https://youtu.be/gLA3pJN7coY?si=hoT0p6HuuKlN0xct",
       "alt": "projet film D.S. Al Coda"
     },
@@ -158,7 +158,7 @@
       "name": "Les oiseaux de nuit",
       "year": 2023,
       "description": "🏆15 sélections officielles \n🏆2 prix \nCourt métrage 3D de 3ème année, réalisé par Emma Richet, Candice Yernaux, Emma Feret, Juliette Buysschaert, Rachel Cuvilliez.\nUn loup abandonné découvre une étrange mais magnifique ville.",
-      "image": "/oiseauxDeNuit_affiche_EmmaF.jpg",
+      "image": "oiseauxDeNuit_affiche_EmmaF.jpg",
       "link": "https://youtu.be/IgCvP8jAk4g?si=-nixvO4q3WBFoslK",
       "alt": "projet film Oiseaux de Nuit"
     }
