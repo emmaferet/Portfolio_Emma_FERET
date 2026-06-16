@@ -5,15 +5,18 @@
     alt="image issue du film D.S. Al Coda "
   />
   <article class="articlGlobalPresentation">
-    <p class="textBoxAlternance">Alternance Octobre 2026</p>
-    <h2 class="bigTitleIntroduction">
-      De l'Art 3D au <span class="bigTitleIntroductionColor">Développement web</span>
-    </h2>
+    <p class="textBoxAlternance">{{ 'HOME.INTRODUCTION.LABEL' | translate }}</p>
+    <h1 class="bigTitleIntroduction">
+      {{ 'HOME.INTRODUCTION.TITLE_PART_1' | translate }}
+      <span class="bigTitleIntroductionColor italic">{{
+        'HOME.INTRODUCTION.TITLE_PART_2' | translate
+      }}</span>
+    </h1>
     <p class="introductionContent">
-      Ancienne artiste 3D, je transforme aujourd'hui mes visions spatiales en expériences web
-      interactives. Actuellement à la recherche d'une alternance pour fusionner technique et
-      esthétique.
+      {{ 'HOME.INTRODUCTION.DESCRIPTION' | translate }}
     </p>
-    <a class="darkPurpleSolidButton" routerLink="/projects">Projets</a>
+    <a class="darkPurpleSolidButton" routerLink="/projects">{{
+      'HOME.INTRODUCTION.PROJECTS_BTN' | translate
+    }}</a>
   </article>
 </div>

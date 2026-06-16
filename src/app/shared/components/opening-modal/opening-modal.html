@@ -1,0 +1,13 @@
+<!-- Use of angular material for dialog -->
+<div class="modal">
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close class="close-btn" (click)="closeModal()">✕</button>
+  </mat-dialog-actions>
+  <h2 mat-dialog-title class="title">{{ 'OPENING_MODAL.TITLE' | translate }}</h2>
+
+  <mat-dialog-content class="text">
+    <p>
+      {{ 'OPENING_MODAL.MESSAGE' | translate }}
+    </p>
+  </mat-dialog-content>
+</div>

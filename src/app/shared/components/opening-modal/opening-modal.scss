@@ -1,0 +1,51 @@
+@use '@styles/styles.scss';
+@use '@styles/variables.scss';
+
+.overlay {
+  position: fixed;
+  background: variables.$base-color-dialogGrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal {
+  position: relative;
+
+  background: variables.$base-color-softOrange;
+  border: 2px solid variables.$base-color-darkPurple;
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.title {
+  color: variables.$base-color-darkPurple;
+  font-size: variables.$size-large-pc;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+}
+
+.text {
+  color: variables.$base-color-darkPurple;
+  font-size: variables.$size-medium-pc;
+  margin-bottom: 2rem;
+  width: 100%;
+  line-height: 1.2;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: variables.$base-color-darkPurple;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: variables.$base-color-darkGrey;
+}

@@ -12,7 +12,7 @@
   border-radius: 4rem;
 }
 .h1TitlePurpleBox {
-  font-size: variables.$size-medium-pc;
+  font-size: variables.$size-mediumPlus-pc;
   font-weight: bold;
   margin-top: 10%;
 }
@@ -22,4 +22,20 @@
   align-items: center;
   justify-content: center;
   margin: auto;
+}
+.fixPosition {
+  margin: 6rem 0;
+}
+.fixMargin {
+  margin-top: 4rem;
+}
+
+.skillsContent {
+  font-size: variables.$size-medium-pc;
+}
+.skillsDesc {
+  font-size: variables.$size-medium-pc;
+  width: 50rem;
+  text-align: center;
+  line-height: 160%;
 }

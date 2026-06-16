@@ -1,11 +1,20 @@
 @let userFormationsList = userFormations();
+
 <div class="formationPresentation">
-  <article class="articlGlobalPresentation">
-    <h2 class="titlePartPresentation">{{ userFormationsList?.nameForm }}</h2>
-    <h3 class="formationDegree bold">{{ userFormationsList?.degree }}</h3>
-    <p class="articleContent bold">
-      {{ userFormationsList?.year }}
-    </p>
-    <p class="articleContent">{{ userFormationsList?.skillsForm }}</p>
-  </article>
+  <div class="align">
+    <div class="timeline">
+      <div class="dot"></div>
+      <div class="line"></div>
+    </div>
+    <article class="articlGlobalPresentation">
+      <p class="articleContent bold">
+        {{ userFormationsList?.year | translate }}
+      </p>
+      <h2 class="titlePartPresentation bold formationName">
+        {{ userFormationsList?.nameForm | translate }}
+      </h2>
+      <h3 class="formationDegree">{{ userFormationsList?.degree | translate }}</h3>
+      <p class="articleContent">{{ userFormationsList?.skillsForm | translate }}</p>
+    </article>
+  </div>
 </div>

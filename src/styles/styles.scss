@@ -7,7 +7,7 @@
 @use '@styles/variables.scss';
 @use '@styles/defaultComportement.scss';
 @use '@styles/classes.scss';
-@import url('https://fonts.google.com/specimen/Playfair+Display');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
 html {
   height: 100%;
@@ -44,3 +44,147 @@ body {
   color: variables.$base-color-darkGrey;
 }
 /* You can add global styles to this file, and also import other style files */
+
+// Global CSS
+
+.align {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.centerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.justifyCenter {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 75.375rem) {
+  .centerContent {
+    margin: 20% 0;
+  }
+}
+@media (min-width: 75.375rem) {
+  .centerContent {
+    margin: 10% 0;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+.articlGlobalPresentation {
+  margin: 0 5%;
+}
+@media (max-width: 75.375rem) {
+  .articlGlobalPresentation {
+    margin: 4% 5%;
+  }
+}
+
+.darkPurpleSolidButton {
+  background-color: variables.$base-color-darkPurple;
+  border: none;
+  color: variables.$base-color-whiteCream;
+  text-decoration: none;
+  border-radius: 5rem;
+}
+@media (max-width: 75.375rem) {
+  .darkPurpleSolidButton {
+    padding: 0.45rem 0.5rem;
+    font-size: variables.$size-medium-mobile;
+  }
+}
+@media (min-width: 75.375rem) {
+  .darkPurpleSolidButton {
+    padding: 0.8rem 2rem;
+  }
+}
+.darkPurpleSolidButton:hover {
+  opacity: 0.9;
+}
+.darkPurpleSolidButtonNative {
+  background-color: variables.$base-color-darkPurple;
+  border: none;
+  color: variables.$base-color-whiteCream;
+  text-decoration: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  outline: none;
+  font: inherit;
+}
+.darkPurpleSolidButtonNative:hover {
+  opacity: 0.9;
+}
+@media (max-width: 75.375rem) {
+  .darkPurpleSolidButtonNative {
+    font-size: variables.$size-medium-mobile;
+    padding: 0.45rem 0.5rem;
+  }
+}
+
+@media (min-width: 75.375rem) {
+  .darkPurpleSolidButtonNative {
+    padding: 0.8rem 2rem;
+  }
+}
+.whiteBorderSolidButton {
+  background-color: variables.$base-color-whiteCream;
+  border: solid 1px;
+  border-color: variables.$base-color-darkPurple;
+  color: variables.$base-color-darkPurple;
+  text-decoration: none;
+  border-radius: 5rem;
+}
+@media (max-width: 75.375rem) {
+  .whiteBorderSolidButton {
+    padding: 0.45rem 0.5rem;
+  }
+}
+@media (min-width: 75.375rem) {
+  .whiteBorderSolidButton {
+    padding: 0.8rem 2rem;
+  }
+}
+.titlePartPresentation {
+  color: variables.$base-color-darkPurple;
+  font-weight: bold;
+}
+@media (max-width: 75.375rem) {
+  .titlePartPresentation {
+    font-size: variables.$size-small-mobile;
+  }
+}
+@media (min-width: 75.375rem) {
+  .titlePartPresentation {
+    font-size: variables.$size-medium-pc;
+  }
+}
+
+@media (max-width: 75.375rem) {
+  .titleH3Hook {
+    font-size: variables.$size-large-mobile;
+    margin: 0.5rem 0;
+  }
+}
+@media (min-width: 75.375rem) {
+  .titleH3Hook {
+    font-size: variables.$size-large-pc;
+    margin: 1rem 0;
+    line-height: 5rem;
+  }
+}
+.softPurple {
+  color: variables.$base-color-softPurple;
+}

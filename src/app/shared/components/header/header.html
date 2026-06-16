@@ -1,23 +1,39 @@
-<header class="header">
-  @let nameTitleSignal = nameTitle();
-  <a routerLink="/">
-    <img src="homeLogo.png" alt="LogoHomePage" class="homePageLogo" />
-  </a>
-  <h1 class="nameH1Title">{{ nameTitleSignal?.name }} {{ nameTitleSignal?.surname }}</h1>
-  <nav>
-    <ul class="align">
-      @let headerList = headerNavigation();
-      @for (listElement of headerList; track $index) {
-        <li>
-          <button
-            class="headerNavigationButtonsNative"
-            (click)="navigateToProject(listElement.router)"
-          >
-            {{ listElement.listNavigationElement }}
-          </button>
-        </li>
-      }
-    </ul>
-  </nav>
-  <a routerLink="/contact" class="darkPurpleSolidButton">Hire Me</a>
+<header>
+  <div class="headerContainer">
+    <div class="header">
+      @let nameTitleSignal = nameTitle();
+
+      <a class="nameH1Title" routerLink="/">
+        {{ nameTitleSignal?.name }} {{ nameTitleSignal?.surname }}
+      </a>
+
+      <nav>
+        <ul class="align">
+          @let headerList = headerNavigation();
+
+          @for (listElement of headerList; track $index) {
+            <li>
+              <button
+                class="headerNavigationButtonsNative"
+                (click)="navigateToProject(listElement.router)"
+              >
+                {{ listElement.listNavigationElement | translate }}
+              </button>
+            </li>
+          }
+        </ul>
+      </nav>
+
+      <a routerLink="/contact" class="darkPurpleSolidButton">
+        {{ 'COMMON.HIRE_ME' | translate }}
+      </a>
+    </div>
+
+    <div class="headerSwitch">
+      <div class="checkbox-wrapper-8">
+        <input type="checkbox" id="cb3-8" class="tgl tgl-skewed" (click)="switchLanguage()" />
+        <label for="cb3-8" data-tg-on="EN" data-tg-off="FR" class="tgl-btn"></label>
+      </div>
+    </div>
+  </div>
 </header>

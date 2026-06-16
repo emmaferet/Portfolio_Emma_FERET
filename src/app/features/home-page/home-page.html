@@ -1,23 +1,23 @@
 <app-home-page-introduction></app-home-page-introduction>
+<!-- <button mat-button (click)="openModal()">Open Modal</button> -->
 <app-article-prototype
   [currentArticle]="{
-    title: '1. Mon histoire',
-    subtitle: 'Fusionner les mondes.',
-    content:
-      'Mon parcours a commencé dans le monde du volume et de la lumière. En tant qu\'artiste 3D, j\'ai appris à sculpter le digital, à comprendre la physique des matériaux et l\'importance du détail visuel. \n Aujourd\'hui, je transpose cette rigueur esthéthique dans le développement web. Le code est devenu mon nouveau pinceau, me permettant de construire non plus seulement des objets et des personnages, mais des univers interactifs et vivants.',
+    title: 'HOME.ARTICLE_1.TITLE',
+    subtitle: 'HOME.ARTICLE_1.SUBTITLE',
+    content: 'HOME.ARTICLE_1.CONTENT',
     image: 'projet3D_emmaFeret.jpg',
-    altImage: 'image issue du court-métrage D.S. Al Coda, sorti en 2024',
+    altImage: 'HOME.ARTICLE_1.ALT_IMAGE',
   }"
 ></app-article-prototype>
 <app-article-prototype
   [currentArticle]="{
-    title: '2. Projets',
-    subtitle: 'Réalisations récentes',
-    content:
-      'Une variété de projets, que ça soit deux films réalisés lors de mes 5 années de master ou ce site, premier portofolio, mélangeant divers compétences de développement web.',
+    title: 'HOME.ARTICLE_2.TITLE',
+    subtitle: 'HOME.ARTICLE_2.SUBTITLE',
+    content: 'HOME.ARTICLE_2.CONTENT',
     image: 'angular-imagePresentation.webp',
-    altImage: 'angular image de présentation',
+    altImage: 'HOME.ARTICLE_2.ALT_IMAGE',
   }"
 ></app-article-prototype>
 <app-skills-section [userSkills]="userSkills()"></app-skills-section>
 <app-contact-section></app-contact-section>
+<app-ia-home-page></app-ia-home-page>

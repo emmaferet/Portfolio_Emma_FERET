@@ -1,19 +1,22 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter } from '@angular/router';
-
 import { provideHttpClient } from '@angular/common/http';
-import {
-  provideClientHydration,
-  withEventReplay,
-  withNoIncrementalHydration,
-} from '@angular/platform-browser';
+import { ApplicationConfig } from '@angular/core';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideRouter } from '@angular/router';
+import { provideTranslateService } from '@ngx-translate/core';
+import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
-    provideClientHydration(withEventReplay(), withNoIncrementalHydration()),
     provideHttpClient(),
+    provideAnimationsAsync(),
+    provideTranslateService({
+      fallbackLang: 'fr',
+      loader: provideTranslateHttpLoader({
+        prefix: './assets/i18n/',
+        suffix: '.json',
+      }),
+    }),
   ],
 };

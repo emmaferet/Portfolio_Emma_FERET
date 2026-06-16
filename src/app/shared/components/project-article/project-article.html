@@ -1,13 +1,20 @@
 @let project = userProject();
 @if (sidePhotoArticle() === sidePhotoArticleEnum.DISPLAYLEFT) {
-  <article class="align centerContent">
+  <article class="align">
     <div class="articlProjectPresentation column">
-      <p class="titlePartPresentation">Projet n°{{ project?.id }}</p>
-      <p class="titleH3Hook left">{{ project?.name }}</p>
+      <p class="titlePartPresentation">
+        {{ 'PROJECTS_PAGE.PROJET' | translate }} {{ project?.id }}
+      </p>
+      <p class="titleH3Hook left">{{ project?.name | translate }}</p>
       <div class="articleContent">
         <p>{{ project?.year }}</p>
-        <p>{{ project?.description }}</p>
-        <a [href]="$safeNavigationMigration(project?.link)">Lien vers le projet</a>
+        <p>{{ project?.description | translate }}</p>
+        <a
+          [href]="$safeNavigationMigration(project?.link)"
+          target="_blank"
+          rel="noopener noreferrer"
+          >{{ 'PROJECTS_PAGE.LINK' | translate }}</a
+        >
       </div>
     </div>
     <img
@@ -17,19 +24,26 @@
     />
   </article>
 } @else {
-  <article class="align centerContent">
+  <article class="align">
     <img
       [src]="$safeNavigationMigration(project?.image)"
       class="fitImageProjects"
       [alt]="$safeNavigationMigration(project?.alt)"
     />
     <div class="column articlProjectPresentation">
-      <p class="titlePartPresentation">Projet n°{{ project?.id }}</p>
-      <p class="titleH3Hook left">{{ project?.name }}</p>
+      <p class="titlePartPresentation">
+        {{ 'PROJECTS_PAGE.PROJET' | translate }} {{ project?.id }}
+      </p>
+      <p class="titleH3Hook left">{{ project?.name | translate }}</p>
       <div class="articleContent">
         <p>{{ project?.year }}</p>
-        <p>{{ project?.description }}</p>
-        <a [href]="$safeNavigationMigration(project?.link)">Lien vers le projet</a>
+        <p>{{ project?.description | translate }}</p>
+        <a
+          [href]="$safeNavigationMigration(project?.link)"
+          target="_blank"
+          rel="noopener noreferrer"
+          >{{ 'PROJECTS_PAGE.LINK' | translate }}</a
+        >
       </div>
     </div>
   </article>

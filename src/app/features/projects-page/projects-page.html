@@ -1,4 +1,5 @@
 @let projectsList = userProjects();
+<div class="whiteSpace"></div>
 @for (project of projectsList; track $index) {
   @if (project.id % 2 !== 0) {
     <app-project-article [userProject]="project"></app-project-article>
@@ -9,3 +10,4 @@
     ></app-project-article>
   }
 }
+<div class="whiteSpace"></div>
