@@ -1,8 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { form, FormField, pattern, required, validate } from '@angular/forms/signals';
 import { MatDialog } from '@angular/material/dialog';
-import emailjs from '@emailjs/browser';
-import { environment } from '@environments/environments.development';
+
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { ContactModal } from '@shared/components/contact-modal/contact-modal';
 
@@ -117,48 +116,48 @@ export class ContactPage {
     });
   });
 
-  sendContact(contactInfo: ContactFormModel) {
-    const templateParams = {
-      firstName: contactInfo.firstName,
-      lastName: contactInfo.lastName,
-      email: contactInfo.email,
-      phoneNumber: contactInfo.phoneNumber ?? 'Pas de numéro',
-      message: contactInfo.message,
-    };
-    emailjs
-      .send(environment.serviceId, environment.templateId, templateParams, environment.publicKey)
-      // .then = what's happening after the .send
-      // here it sets the values to '' and reset the status of the form to untouched
-      .then(() => {
-        this.contactFormModel.set({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phoneNumber: '',
-          message: '',
-        });
-        this.contactForm().reset();
-      });
-  }
+  // sendContact(contactInfo: ContactFormModel) {
+  //   const templateParams = {
+  //     firstName: contactInfo.firstName,
+  //     lastName: contactInfo.lastName,
+  //     email: contactInfo.email,
+  //     phoneNumber: contactInfo.phoneNumber ?? 'Pas de numéro',
+  //     message: contactInfo.message,
+  //   };
+  //   emailjs
+  //     .send(environment.serviceId, environment.templateId, templateParams, environment.publicKey)
+  //     // .then = what's happening after the .send
+  //     // here it sets the values to '' and reset the status of the form to untouched
+  //     .then(() => {
+  //       this.contactFormModel.set({
+  //         firstName: '',
+  //         lastName: '',
+  //         email: '',
+  //         phoneNumber: '',
+  //         message: '',
+  //       });
+  //       this.contactForm().reset();
+  //     });
+  // }
 
-  submitContactForm(event: Event) {
-    // Prevent the browser from reloading the page
-    event.preventDefault();
+  // submitContactForm(event: Event) {
+  //   // Prevent the browser from reloading the page
+  //   event.preventDefault();
 
-    // Log the general state of the form
-    console.log('Formulaire valide ?', this.contactForm().valid());
-    console.log('Formulaire modifié (dirty) ?', this.contactForm().dirty());
-    console.log('Formulaire visité (touched) ?', this.contactForm().touched());
+  //   // Log the general state of the form
+  //   console.log('Formulaire valide ?', this.contactForm().valid());
+  //   console.log('Formulaire modifié (dirty) ?', this.contactForm().dirty());
+  //   console.log('Formulaire visité (touched) ?', this.contactForm().touched());
 
-    if (!this.contactForm().valid()) {
-      console.log('Soumission bloquée : Le formulaire contient des erreurs.');
-      return;
-    }
+  //   if (!this.contactForm().valid()) {
+  //     console.log('Soumission bloquée : Le formulaire contient des erreurs.');
+  //     return;
+  //   }
 
-    const rawData = this.contactFormModel();
-    console.log("Formulaire validé. Données prêtes à l'envoi :", rawData);
-    this.sendContact(rawData);
-  }
+  //   const rawData = this.contactFormModel();
+  //   console.log("Formulaire validé. Données prêtes à l'envoi :", rawData);
+  //   this.sendContact(rawData);
+  // }
 
   openModal(): void {
     this.dialog.open(ContactModal);
