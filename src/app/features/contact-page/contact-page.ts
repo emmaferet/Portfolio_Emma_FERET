@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { form, FormField, pattern, required, validate } from '@angular/forms/signals';
 import { MatDialog } from '@angular/material/dialog';
-
+import emailjs from '@emailjs/browser';
+import { environment } from '@environments/environments.development';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { ContactModal } from '@shared/components/contact-modal/contact-modal';
 
