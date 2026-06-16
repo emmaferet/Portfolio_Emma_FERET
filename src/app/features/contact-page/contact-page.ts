@@ -1,8 +1,8 @@
-import { Component, inject, signal, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { form, FormField, pattern, required, validate } from '@angular/forms/signals';
 import { MatDialog } from '@angular/material/dialog';
 import emailjs from '@emailjs/browser';
-import { environment } from '@environments/environments.development';
+import { environment } from '@environments/environments';
 import { ContactModal } from '@shared/components/contact-modal/contact-modal';
 
 interface ContactFormModel {
