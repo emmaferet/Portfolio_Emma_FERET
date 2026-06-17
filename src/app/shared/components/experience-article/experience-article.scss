@@ -2,11 +2,11 @@
 @use '@styles/variables.scss';
 
 .experienceImg {
-  margin: 2% 10%;
+  margin: 5rem 0;
   height: 20rem;
   width: 30rem;
   display: flex;
-  border-radius: 5%;
+  border-radius: 2rem;
   object-fit: cover;
 }
 @media (max-width: 75.375rem) {
@@ -16,7 +16,8 @@
   }
 }
 .articleContent {
-  width: 50rem;
+  width: 30rem;
+  line-height: 2rem;
   margin-left: 5rem;
   font-size: variables.$size-medium-pc;
 }
@@ -26,6 +27,7 @@
 .experiencePres {
   display: flex;
   justify-content: space-between;
+  margin: 0 variables.$marginSides;
 }
 .experienceMarginFix {
   margin-left: 5rem;
