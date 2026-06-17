@@ -5,11 +5,13 @@
   background-color: variables.$base-color-darkPurple;
   width: 50%;
   border-radius: 4rem;
+  transition-delay: 0.15s;
 }
 .skillsBoxWhite {
   background-color: variables.$base-color-whiteCream;
   width: 50%;
   border-radius: 4rem;
+  transition-delay: 0s;
 }
 .h1TitlePurpleBox {
   font-size: variables.$size-mediumPlus-pc;
@@ -23,19 +25,33 @@
   justify-content: center;
   margin: auto;
 }
-.fixPosition {
+.fixPositionContent {
   margin: 6rem 0;
 }
 .fixMargin {
-  margin-top: 4rem;
+  margin: 2rem variables.$marginSidesSmall;
 }
 
 .skillsContent {
-  font-size: variables.$size-medium-pc;
+  font-size: variables.$size-smallPlus-pc;
 }
 .skillsDesc {
   font-size: variables.$size-medium-pc;
   width: 50rem;
   text-align: center;
   line-height: 160%;
+}
+
+//ANimation test
+.skillsCard {
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.skillsCard.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }

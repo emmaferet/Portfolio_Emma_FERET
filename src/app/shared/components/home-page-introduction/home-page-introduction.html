@@ -1,10 +1,8 @@
 <div class="align positionIntroduction">
-  <img
-    class="fitImageIntroduction articlGlobalPresentation"
-    src="emma-feret-SOUR-sideImg.jpg"
-    alt="image issue du film D.S. Al Coda "
-  />
-  <article class="articlGlobalPresentation">
+  <div class="imageWrapper">
+    <img class="fitImageIntroduction" src="emma-feret-SOUR-sideImg.jpg" alt="D.S. Al Coda image " />
+  </div>
+  <article class="articlGlobalPresentation fixArticlePos">
     <p class="textBoxAlternance">{{ 'HOME.INTRODUCTION.LABEL' | translate }}</p>
     <h1 class="bigTitleIntroduction">
       {{ 'HOME.INTRODUCTION.TITLE_PART_1' | translate }}
@@ -15,8 +13,9 @@
     <p class="introductionContent">
       {{ 'HOME.INTRODUCTION.DESCRIPTION' | translate }}
     </p>
-    <a class="darkPurpleSolidButton" routerLink="/projects">{{
+    <a class="darkPurpleSolidButton buttonTest" routerLink="/projects">{{
       'HOME.INTRODUCTION.PROJECTS_BTN' | translate
     }}</a>
   </article>
+  <!-- <button (click)="openModal()">MODALE</button> -->
 </div>

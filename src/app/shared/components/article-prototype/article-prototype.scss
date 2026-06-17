@@ -24,6 +24,7 @@
 
 .articleContent {
   word-spacing: 5%;
+  text-align: justify;
 }
 @media (max-width: 75.375rem) {
   .articleContent {
@@ -37,4 +38,7 @@
     width: 80%;
     line-height: 2rem;
   }
+}
+.fixMargin {
+  margin: 8rem variables.$marginSidesSmall;
 }
