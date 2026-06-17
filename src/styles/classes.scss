@@ -32,6 +32,9 @@
   }
 }
 
+.italic {
+  font-style: italic;
+}
 .bold {
   font-weight: bold;
 }
@@ -50,6 +53,10 @@
   color: variables.$base-color-whiteCream;
   text-decoration: none;
   border-radius: 5rem;
+  transition: all 0.5s;
+}
+.darkPurpleSolidButton:hover {
+  background-color: variables.$base-color-darkPurpleSoft;
 }
 @media (max-width: 75.375rem) {
   .darkPurpleSolidButton {
@@ -62,9 +69,7 @@
     padding: 0.8rem 2rem;
   }
 }
-.darkPurpleSolidButton:hover {
-  opacity: 0.9;
-}
+
 .darkPurpleSolidButtonNative {
   background-color: variables.$base-color-darkPurple;
   border: none;
@@ -76,9 +81,10 @@
   text-align: center;
   outline: none;
   font: inherit;
+  transition: all 0.5s;
 }
 .darkPurpleSolidButtonNative:hover {
-  opacity: 0.9;
+  background-color: variables.$base-color-darkPurpleSoft;
 }
 @media (max-width: 75.375rem) {
   .darkPurpleSolidButtonNative {
