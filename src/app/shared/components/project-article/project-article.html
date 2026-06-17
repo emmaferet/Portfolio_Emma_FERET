@@ -1,6 +1,6 @@
 @let project = userProject();
 @if (sidePhotoArticle() === sidePhotoArticleEnum.DISPLAYLEFT) {
-  <article class="align">
+  <article class="align fixMargin">
     <div class="articlProjectPresentation column">
       <p class="titlePartPresentation">
         {{ 'PROJECTS_PAGE.PROJET' | translate }} {{ project?.id }}
@@ -24,27 +24,29 @@
     />
   </article>
 } @else {
-  <article class="align">
-    <img
-      [src]="$safeNavigationMigration(project?.image)"
-      class="fitImageProjects"
-      [alt]="$safeNavigationMigration(project?.alt)"
-    />
-    <div class="column articlProjectPresentation">
-      <p class="titlePartPresentation">
-        {{ 'PROJECTS_PAGE.PROJET' | translate }} {{ project?.id }}
-      </p>
-      <p class="titleH3Hook left">{{ project?.name | translate }}</p>
-      <div class="articleContent">
-        <p>{{ project?.year }}</p>
-        <p>{{ project?.description | translate }}</p>
-        <a
-          [href]="$safeNavigationMigration(project?.link)"
-          target="_blank"
-          rel="noopener noreferrer"
-          >{{ 'PROJECTS_PAGE.LINK' | translate }}</a
-        >
+  <div class="center fixMarginLeft">
+    <article class="align">
+      <img
+        [src]="$safeNavigationMigration(project?.image)"
+        class="fitImageProjectsRight"
+        [alt]="$safeNavigationMigration(project?.alt)"
+      />
+      <div class="column articlProjectPresentation left">
+        <p class="titlePartPresentation">
+          {{ 'PROJECTS_PAGE.PROJET' | translate }} {{ project?.id }}
+        </p>
+        <p class="titleH3Hook">{{ project?.name | translate }}</p>
+        <div class="articleContent">
+          <p>{{ project?.year }}</p>
+          <p>{{ project?.description | translate }}</p>
+          <a
+            [href]="$safeNavigationMigration(project?.link)"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ 'PROJECTS_PAGE.LINK' | translate }}</a
+          >
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
+  </div>
 }

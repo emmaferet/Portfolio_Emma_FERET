@@ -15,8 +15,6 @@
   }
 }
 .formationPresentation {
-  border-color: variables.$base-color-darkPurple;
-
   margin: 2rem;
   justify-content: center;
   border-radius: 2rem;
@@ -48,11 +46,26 @@
 .line {
   width: 2px;
   flex: 1;
-  background: variables.$base-color-darkPurple;
-  opacity: 0.3;
+  background: variables.$base-color-softGreen;
 }
 .formationName {
-  text-decoration: underline variables.$base-color-softOrange 0.2rem;
+  text-decoration: underline variables.$base-color-darkOrange 0.2rem;
   text-underline-offset: 0.5rem;
+
   width: 45rem;
+}
+
+// Animation
+//ANimation test
+.formationCard {
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.formationCard.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }

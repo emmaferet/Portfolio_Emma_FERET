@@ -1,4 +1,11 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  input,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
 import { Skills } from '@core/models/interfaces/skills.interface';
 import { TranslatePipe } from '@ngx-translate/core';
 import { SkillTypeEnum } from './../../../core/models/enums/skillType.enum';
@@ -17,4 +24,26 @@ export class SkillsSection {
   skillTypeEnum = SkillTypeEnum;
 
   userSkills = input.required<Skills[] | undefined>();
+
+  @ViewChildren('skillCard')
+  cards!: QueryList<ElementRef>;
+
+  ngAfterViewInit(): void {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      {
+        threshold: 0.4,
+      },
+    );
+
+    this.cards.forEach((card) => {
+      observer.observe(card.nativeElement);
+    });
+  }
 }

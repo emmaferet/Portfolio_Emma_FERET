@@ -1,51 +1,103 @@
 @use '@styles/styles.scss';
 @use '@styles/variables.scss';
 
-.overlay {
-  position: fixed;
-  background: variables.$base-color-dialogGrey;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+::ng-deep .cdk-overlay-backdrop {
+  background: rgba(10, 10, 20, 0.4);
+  backdrop-filter: blur(0.5rem);
 }
 
 .modal {
   position: relative;
+  height: 25rem;
+  max-width: 25rem;
 
-  background: variables.$base-color-softOrange;
-  border: 2px solid variables.$base-color-darkPurple;
-  padding: 2.5rem 2rem;
+  padding: 3rem 2.5rem;
   text-align: center;
+
+  /* 🎨 effet glassmorphism */
+  background: rgba(variables.$base-color-softPurple, 0.75);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+
+  border-radius: 24px;
+  border: 1px solid rgba(variables.$base-color-darkPurple, 0.2);
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
 }
 
 .title {
   color: variables.$base-color-darkPurple;
-  font-size: variables.$size-large-pc;
+  font-size: variables.$size-mediumPlus-pc;
   font-weight: bold;
-  letter-spacing: 1px;
+
+  margin-top: 6rem;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
   line-height: 1.2;
-  margin-bottom: 1.2rem;
+  width: 25rem;
 }
 
 .text {
   color: variables.$base-color-darkPurple;
   font-size: variables.$size-medium-pc;
+
   margin-bottom: 2rem;
-  width: 100%;
-  line-height: 1.2;
+  line-height: 2rem;
+
+  opacity: 0.9;
 }
 
 .close-btn {
   position: absolute;
-  top: 0rem;
-  right: 1rem;
-  background: transparent;
-  border: none;
+
+  right: 0.7rem;
+
+  width: 2.3rem;
+  height: 2.3rem;
+
+  border-radius: 50%;
+  border: 1px solid rgba(variables.$base-color-darkPurple, 0.2);
+
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+
   color: variables.$base-color-darkPurple;
-  font-size: 2rem;
+  font-size: 1.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   cursor: pointer;
+
+  transition: all 0.2s ease;
 }
 .close-btn:hover {
-  color: variables.$base-color-darkGrey;
+  transform: scale(1.1);
+}
+
+.starContainer {
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 64px;
+  height: 64px;
+
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(variables.$base-color-darkPurple, 0.2);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.starShape {
+  font-size: 1.8rem;
 }

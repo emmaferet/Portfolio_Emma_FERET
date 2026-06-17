@@ -2,7 +2,9 @@
 @use '@styles/variables.scss';
 
 .positionIntroduction {
+  display: flex;
   justify-content: center;
+  margin: 0 variables.$marginSidesSmall;
 }
 @media (max-width: 75.375rem) {
   .positionIntroduction {
@@ -11,33 +13,35 @@
 }
 @media (min-width: 75.375rem) {
   .positionIntroduction {
-    margin-top: 15rem;
+    margin-top: 13rem;
+    margin-bottom: 5rem;
   }
 }
 
 @media (max-width: 75.375rem) {
   .fitImageIntroduction {
-    width: 80%;
+    width: 20rem;
     height: 10rem;
     border-radius: 2rem;
     overflow: hidden;
     object-fit: cover;
     transform: rotate(-4deg);
-    margin: 0 4%;
   }
 }
 @media (min-width: 75.375rem) {
   .fitImageIntroduction {
-    width: 40rem;
+    width: 35rem;
     height: 35rem;
     border-radius: 2rem;
     overflow: hidden;
     object-fit: cover;
     transform: rotate(-5deg);
+    margin-left: 8rem;
   }
 }
+
 .textBoxAlternance {
-  background-color: variables.$base-color-softOrange;
+  background-color: variables.$base-color-softGreen;
   color: variables.$base-color-darkPurple;
   font-weight: bold;
   padding: 0.5rem 0.5rem;
@@ -59,7 +63,8 @@
 .bigTitleIntroduction {
   font-size: 4rem;
   font-weight: bold;
-  margin-top: 5%;
+  margin-top: 2rem;
+  line-height: 5rem;
 }
 @media (max-width: 75.375rem) {
   .bigTitleIntroduction {
@@ -74,11 +79,24 @@
   font-size: variables.$size-medium-pc;
   width: 90%;
   line-height: 160%;
-  margin: 5% 0;
+  margin: 2rem 0 3rem 0;
 }
 @media (max-width: 75.375rem) {
   .introductionContent {
     font-size: variables.$size-medium-mobile;
     width: 90%;
   }
+}
+
+.buttonTest {
+  background: transparent;
+  border: 2px solid variables.$base-color-darkPurple;
+  color: variables.$base-color-darkPurple;
+  font-weight: bold;
+  font-size: variables.$size-medium-pc;
+  transition: all 0.5s;
+}
+
+.buttonTest:hover {
+  background-color: variables.$base-color-whiteCream;
 }
