@@ -1,8 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { form, FormField, pattern, required, validate } from '@angular/forms/signals';
 import { MatDialog } from '@angular/material/dialog';
-import emailjs from '@emailjs/browser';
-import { environment } from '@environments/environments.development';
+import { environment } from '@environments/environments';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { ContactModal } from '@shared/components/contact-modal/contact-modal';
 
@@ -12,6 +12,10 @@ interface ContactFormModel {
   email: string;
   phoneNumber: string;
   message: string;
+}
+export interface MailResponse {
+  status: number;
+  text: string;
 }
 
 @Component({
@@ -30,6 +34,8 @@ export class ContactPage {
     phoneNumber: '',
     message: '',
   });
+
+  public http = inject(HttpClient);
 
   public dialog = inject(MatDialog);
 
@@ -117,19 +123,13 @@ export class ContactPage {
     });
   });
 
+  private apiUrlMail = environment.apiUrl + '/mail';
+
   sendContact(contactInfo: ContactFormModel) {
-    const templateParams = {
-      firstName: contactInfo.firstName,
-      lastName: contactInfo.lastName,
-      email: contactInfo.email,
-      phoneNumber: contactInfo.phoneNumber ?? 'Pas de numéro',
-      message: contactInfo.message,
-    };
-    emailjs
-      .send(environment.serviceId, environment.templateId, templateParams, environment.publicKey)
-      // .then = what's happening after the .send
-      // here it sets the values to '' and reset the status of the form to untouched
-      .then(() => {
+    this.http.post(`${this.apiUrlMail}/send`, contactInfo).subscribe({
+      next: (response) => {
+        console.log('Email envoyé', response);
+
         this.contactFormModel.set({
           firstName: '',
           lastName: '',
@@ -137,8 +137,15 @@ export class ContactPage {
           phoneNumber: '',
           message: '',
         });
+
         this.contactForm().reset();
-      });
+
+        this.openModal();
+      },
+      error: (err) => {
+        console.error("Erreur lors de l'envoi :", err);
+      },
+    });
   }
 
   submitContactForm(event: Event) {
