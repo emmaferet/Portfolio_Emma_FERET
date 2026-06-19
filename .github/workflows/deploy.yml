@@ -35,7 +35,7 @@ jobs:
       - name: Inject Environment Variables
         env:
           ENV_APIURL: '${{ secrets.APIURL }}'
-        run: sed -i "s|API_URL|$ENV_APIURL|g" src/environments/environment.ts
+        run: sed -i "s|API_URL|$ENV_APIURL|g" src/environments/environments.ts
 
       - name: Build Angular Application
         run: npm run build -- --configuration=production
