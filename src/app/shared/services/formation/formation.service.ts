@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Formations } from '@core/models/interfaces/cvFormation.interface';
+import { Formations } from '@core/models/interfaces/cv-formation.interface';
 import { environment } from '@environments/environments';
 import { Observable } from 'rxjs';
 

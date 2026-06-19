@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { CvExperience } from '@core/models/interfaces/cvExperience.interface';
+import { CvExperience } from '@core/models/interfaces/cv-experience.interface';
 import { environment } from '@environments/environments';
 import { Observable } from 'rxjs';
 
