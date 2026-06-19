@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Formations } from '@core/models/interfaces/cvFormation.interface';
+import { environment } from '@environments/environments';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FormationService {
-  private apiUrl = 'http://localhost:3000/formations';
+  private apiUrl = environment.apiUrl + '/formations';
 
   private http = inject(HttpClient);
 
