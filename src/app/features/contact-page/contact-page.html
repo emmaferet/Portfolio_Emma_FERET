@@ -1,6 +1,5 @@
 <div class="justifyCenter">
   <div class="contact-container">
-    <!-- Colonne gauche -->
     <div class="contact-info">
       <img src="photoID_emmaFERET.jpg" alt="Profile" class="centerPhotoContact" />
 
@@ -11,7 +10,6 @@
       </p>
     </div>
 
-    <!-- Formulaire -->
     <div class="contact-form">
       <form (submit)="submitContactForm($event)" novalidate>
         <div class="row">
@@ -107,11 +105,10 @@
           type="submit"
           [class]="contactForm().valid() ? 'submitButtonContact' : 'submitButtonContactInvalid'"
           mat-button
-          (click)="openModal()"
         >
           {{ 'CONTACT.FORM.SUBMIT' | translate }}
         </button>
-        <button mat-button (click)="openModal()">TEST</button>
+        <!-- <button mat-button (click)="openModal()">TEST</button> -->
       </form>
     </div>
   </div>

@@ -1,5 +1,5 @@
-import { CvExperience } from './cvExperience.interface';
-import { Formations } from './cvFormation.interface';
+import { CvExperience } from './cv-experience.interface';
+import { Formations } from './cv-formation.interface';
 import { Projects } from './projects.interfaces';
 import { Skills } from './skills.interface';
 import { User } from './user.interface';

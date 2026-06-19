@@ -1,18 +1,11 @@
+import { HttpClient } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { form, FormField, pattern, required, validate } from '@angular/forms/signals';
 import { MatDialog } from '@angular/material/dialog';
-import emailjs from '@emailjs/browser';
-import { environment } from '@environments/environments.development';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { ContactFormModel } from '@core/models/interfaces/contact-form-model.interface';
+import { TranslatePipe } from '@ngx-translate/core';
 import { ContactModal } from '@shared/components/contact-modal/contact-modal';
-
-interface ContactFormModel {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phoneNumber: string;
-  message: string;
-}
+import { MailService } from '@shared/services/mail/mail-service';
 
 @Component({
   selector: 'app-contact-page',
@@ -31,9 +24,10 @@ export class ContactPage {
     message: '',
   });
 
+  // Inject services
+  public http = inject(HttpClient);
   public dialog = inject(MatDialog);
-
-  private translate = inject(TranslateService);
+  public mailService = inject(MailService);
 
   contactForm = form(this.contactFormModel, (contact) => {
     required(contact.firstName, {
@@ -75,9 +69,6 @@ export class ContactPage {
       message: 'CONTACT.ERRORS.INVALID_PHONE',
     });
 
-    // pattern(schema.phone, /^(?:(?:+|00)33|0)\s[1-9](?:[\s.-]\d{2}){4}$/, {
-    //   message: 'Le numéro de téléphone doit être un numéro français valide.'
-    // });
     validate(contact.message, ({ value }) => {
       const messageValue = value();
 
@@ -117,19 +108,9 @@ export class ContactPage {
     });
   });
 
-  sendContact(contactInfo: ContactFormModel) {
-    const templateParams = {
-      firstName: contactInfo.firstName,
-      lastName: contactInfo.lastName,
-      email: contactInfo.email,
-      phoneNumber: contactInfo.phoneNumber ?? 'Pas de numéro',
-      message: contactInfo.message,
-    };
-    emailjs
-      .send(environment.serviceId, environment.templateId, templateParams, environment.publicKey)
-      // .then = what's happening after the .send
-      // here it sets the values to '' and reset the status of the form to untouched
-      .then(() => {
+  sendContact(contactInfo: ContactFormModel): void {
+    this.mailService.sendEmailWithContactInfo(contactInfo).subscribe({
+      next: () => {
         this.contactFormModel.set({
           firstName: '',
           lastName: '',
@@ -137,26 +118,28 @@ export class ContactPage {
           phoneNumber: '',
           message: '',
         });
+
         this.contactForm().reset();
-      });
+      },
+      error: (err) => {
+        console.error("Erreur lors de l'envoi : ", err);
+      },
+      complete: () => {
+        this.openModal();
+      },
+    });
   }
 
-  submitContactForm(event: Event) {
+  submitContactForm(event: Event): void {
     // Prevent the browser from reloading the page
     event.preventDefault();
 
-    // Log the general state of the form
-    console.log('Formulaire valide ?', this.contactForm().valid());
-    console.log('Formulaire modifié (dirty) ?', this.contactForm().dirty());
-    console.log('Formulaire visité (touched) ?', this.contactForm().touched());
-
+    // If the form is not valid, do nothing
     if (!this.contactForm().valid()) {
-      console.log('Soumission bloquée : Le formulaire contient des erreurs.');
       return;
     }
 
     const rawData = this.contactFormModel();
-    console.log("Formulaire validé. Données prêtes à l'envoi :", rawData);
     this.sendContact(rawData);
   }
 

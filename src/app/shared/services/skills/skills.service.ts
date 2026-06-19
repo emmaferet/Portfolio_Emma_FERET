@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Skills } from '@core/models/interfaces/skills.interface';
+import { environment } from '@environments/environments';
 
 import { Observable } from 'rxjs';
 
@@ -8,7 +9,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class SkillsService {
-  private apiUrl = 'http://localhost:3000/skills';
+  private apiUrl = environment.apiUrl + '/skills';
 
   // constructor(private http: HttpClient) {}
   private http = inject(HttpClient);
@@ -20,13 +21,5 @@ export class SkillsService {
   // Get one by id
   getSkillById(id: number): Observable<Skills> {
     return this.http.get<Skills>(`${this.apiUrl}/${id}`);
-  }
-  // Update all
-  updateSkills(skillsList: Skills[]): Observable<Skills[]> {
-    return this.http.put<Skills[]>(`${this.apiUrl}`, skillsList);
-  }
-  // Update one by id
-  updateSkillById(id: number, newSkill: Skills): Observable<Skills> {
-    return this.http.put<Skills>(`${this.apiUrl}/${id}`, newSkill);
   }
 }

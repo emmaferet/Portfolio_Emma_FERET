@@ -1,5 +1,12 @@
-import { ChangeDetectionStrategy, Component, ElementRef, input, QueryList, ViewChildren } from '@angular/core';
-import { Formations } from '@core/models/interfaces/cvFormation.interface';
+import {
+    ChangeDetectionStrategy,
+    Component,
+    ElementRef,
+    input,
+    QueryList,
+    ViewChildren,
+} from '@angular/core';
+import { Formations } from '@core/models/interfaces/cv-formation.interface';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({

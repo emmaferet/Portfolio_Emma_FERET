@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { ListNavigation } from '@core/models/interfaces/listNavigation.interface';
+import { ListNavigation } from '@core/models/interfaces/list-navigation.interface';
 import { User } from '@core/models/interfaces/user.interface';
 import { TranslatePipe } from '@ngx-translate/core';
 import { TranslationService } from '@shared/services/translation/translation-service';

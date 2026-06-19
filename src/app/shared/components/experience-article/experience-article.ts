@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { CvExperience } from '@core/models/interfaces/cvExperience.interface';
+import { CvExperience } from '@core/models/interfaces/cv-experience.interface';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
