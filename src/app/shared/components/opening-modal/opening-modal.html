@@ -1,17 +1,21 @@
 <!-- Use of angular material for dialog -->
 <div class="modal" animate.enter="enter-animation">
-  <mat-dialog-actions>
+  <!-- <mat-dialog-actions>
     <button mat-button mat-dialog-close class="close-btn" (click)="closeModal()">✕</button>
-  </mat-dialog-actions>
-  <div class="starContainer">
-    <p class="starShape">✨</p>
-  </div>
+  </mat-dialog-actions> -->
+  <div class="marginDialog"></div>
 
   <h2 mat-dialog-title class="title">{{ 'OPENING_MODAL.TITLE' | translate }}</h2>
 
   <mat-dialog-content class="text">
     <p>
-      {{ 'OPENING_MODAL.MESSAGE' | translate }}
+      {{ 'OPENING_MODAL.MESSAGE_1' | translate }} <br />
+      {{ 'OPENING_MODAL.MESSAGE_2' | translate }}
     </p>
   </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close class="darkPurpleSolidButtonNative" (click)="closeModal()">
+      {{ 'OPENING_MODAL.BUTTON' | translate }}
+    </button>
+  </mat-dialog-actions>
 </div>

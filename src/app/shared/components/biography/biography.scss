@@ -36,3 +36,51 @@
 .topMargin {
   margin: 10rem variables.$marginSidesSmall 10rem variables.$marginSidesSmall;
 }
+
+// Responsive Mobile
+@media (max-width: 75.375rem) {
+  .topMargin {
+    margin: 0rem 1rem 2rem 1rem;
+  }
+
+  .centerArticleBiography {
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: 2rem;
+  }
+
+  .biographyPhoto {
+    width: 14rem;
+    height: 14rem;
+
+    margin: 0;
+
+    border-width: 0.3rem;
+
+    border-radius: 1.5rem;
+  }
+
+  .contentBiography {
+    width: 100%;
+
+    font-size: variables.$size-mediumPlus-mobile;
+
+    line-height: 1.8;
+
+    text-align: left;
+
+    margin-top: 1rem;
+  }
+
+  .titlePartPresentation {
+    text-align: center;
+  }
+
+  .titleH3Hook {
+    text-align: center;
+  }
+}

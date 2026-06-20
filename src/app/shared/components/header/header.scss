@@ -7,7 +7,7 @@
   border-radius: 4rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   top: 0;
   left: 0;
   right: 0;
@@ -16,13 +16,6 @@
   backdrop-filter: blur(1rem);
 }
 
-@media (max-width: 75.375rem) {
-  .header {
-    font-size: variables.$size-medium-mobile;
-    height: 3rem;
-    margin: 1rem 3%;
-  }
-}
 @media (min-width: 75.375rem) {
   .header {
     font-size: variables.$size-medium-pc;
@@ -30,24 +23,31 @@
     margin: 1rem 4rem;
   }
 }
-.headerContainer {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 10rem;
+@media (min-width: 75.375rem) {
+  .headerContainer {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10rem;
 
-  background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
 
-  pointer-events: none;
-  z-index: 4;
-  backdrop-filter: blur(2rem);
-  -webkit-backdrop-filter: blur(2rem);
+    pointer-events: none;
+    z-index: 4;
+    backdrop-filter: blur(2rem);
+    -webkit-backdrop-filter: blur(2rem);
 
-  mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+  }
 }
 
+@media (min-width: 75.375rem) {
+  .fixMargin {
+    margin: 0 6rem;
+  }
+}
 .headerSwitch {
   top: 2.7rem;
   right: 7rem;
@@ -59,15 +59,12 @@
   text-decoration: none;
   color: variables.$base-color-darkPurple;
   transition: all 0.3s ease;
+  line-height: 2rem;
 }
 .nameH1Title:hover {
   color: variables.$base-color-darkPurpleSoft;
 }
-@media (max-width: 75.375rem) {
-  .nameH1Title {
-    font-size: variables.$size-medium-mobile;
-  }
-}
+
 @media (min-width: 75.375rem) {
   .nameH1Title {
     font-size: variables.$size-large-pc;
@@ -97,29 +94,14 @@
   }
 }
 
-@media (max-width: 75.375rem) {
-  .headerNavigationButtonsNative {
-    font-size: variables.$size-small-mobile;
-  }
-}
 .headerNavigationButtonsNative:hover {
   display: inline-block;
   text-decoration: underline variables.$base-color-darkOrange;
   text-underline-offset: 0.5rem;
   text-decoration-thickness: 0.1rem;
-}
-@media (min-width: 75.375rem) {
-  .headerNavigationButtonsNative:hover {
-    font-size: variables.$size-mediumPlus-pc;
-    padding: 0 2rem;
-  }
+  font-size: variables.$size-mediumPlus-pc;
 }
 
-@media (max-width: 75.375rem) {
-  .headerNavigationButtonsNative:hover {
-    font-size: variables.$size-small-mobile;
-  }
-}
 .darkPurpleSolidButton:hover {
   background-color: variables.$base-color-darkPurpleSoft;
 }
@@ -248,4 +230,77 @@
 
 .checkbox-wrapper-8 .tgl-skewed:checked + .tgl-btn:active:after {
   left: 10%;
+}
+
+// responsive mobile
+
+@media (max-width: 75.375rem) {
+  .header {
+    height: 4rem;
+    margin: 0.75rem 1rem;
+    padding: 0 1rem;
+
+    justify-content: space-between;
+    gap: 0.75rem;
+
+    border-radius: 2.5rem;
+  }
+
+  .headerContainer {
+    height: 6rem;
+  }
+
+  .nameH1Title {
+    font-size: variables.$size-large-mobile;
+    line-height: 1rem;
+    width: 2rem;
+  }
+
+  nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .align {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+  }
+
+  .headerNavigationButtonsNative {
+    font-size: variables.$size-medium-mobile;
+    padding: 0 0.4rem;
+    text-underline-offset: 0.25rem;
+  }
+
+  .headerNavigationButtonsNative:hover {
+    font-size: variables.$size-medium-mobile;
+    padding: 0 0.4rem;
+  }
+
+  .darkPurpleSolidButton {
+    font-size: variables.$size-medium-mobile;
+    padding: 0.45rem 0.8rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .headerSwitch {
+    position: fixed;
+    z-index: 5;
+    top: 5rem;
+    right: 0.5rem;
+  }
+
+  .checkbox-wrapper-8 .tgl + .tgl-btn {
+    width: 1.8em;
+    height: 1.8em;
+    font-size: variables.$size-small-mobile;
+  }
 }

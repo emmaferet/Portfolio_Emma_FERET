@@ -1,12 +1,14 @@
 <!-- Use of angular material for dialog -->
 <div class="marginDialog" animate.enter="enter-animation">
-  <h2 mat-dialog-title class="titlePartPresentation">Merci pour votre message !</h2>
+  <h2 mat-dialog-title class="titlePartPresentation">{{ 'CONTACT_MODAL.TITLE' | translate }}</h2>
 
   <mat-dialog-content class="textDialog">
-    <p>Je vous recontacterai dès que possible.</p>
+    <p>{{ 'CONTACT_MODAL.CONTENT' | translate }}</p>
   </mat-dialog-content>
 
   <mat-dialog-actions>
-    <button mat-button mat-dialog-close class="darkPurpleSolidButtonNative">Fermer</button>
+    <button mat-button mat-dialog-close class="darkPurpleSolidButtonNative">
+      {{ 'CONTACT_MODAL.BUTTON' | translate }}
+    </button>
   </mat-dialog-actions>
 </div>

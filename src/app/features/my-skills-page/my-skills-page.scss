@@ -11,3 +11,9 @@
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 75.375rem) {
+  .horizontalLign {
+    margin: 3rem auto;
+  }
+}

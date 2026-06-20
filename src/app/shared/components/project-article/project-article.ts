@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, input, signal } from '@angular/core';
 import { SidePhotoArticleEnum } from '@core/models/enums/side-photo-article.enum';
 import { Projects } from '@core/models/interfaces/projects.interfaces';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -11,6 +11,17 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './project-article.scss',
 })
 export class ProjectArticle {
+  isMobile = signal(false);
+
+  constructor() {
+    this.checkScreen();
+  }
+
+  @HostListener('window:resize')
+  checkScreen() {
+    this.isMobile.set(window.innerWidth <= 1206);
+  }
+  
   userProject = input.required<Projects | undefined>();
   sidePhotoArticleEnum = SidePhotoArticleEnum;
   sidePhotoArticle = input<SidePhotoArticleEnum>(SidePhotoArticleEnum.DISPLAYLEFT);

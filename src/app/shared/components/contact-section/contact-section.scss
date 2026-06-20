@@ -12,7 +12,7 @@
   border-style: solid;
   border-width: 0.5rem;
   border-color: variables.$base-color-softGreen;
-  width: 50%;
+  max-width: 55rem;
   height: 25rem;
 }
 .buttonsPositionMargin {
@@ -21,10 +21,59 @@
 
 .centerContactPositionFix {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .centerSmallDescriptionPositionFix {
-  margin: 0 20%;
+  max-width: 35rem;
+  margin: 0 auto;
+
   font-size: variables.$size-smallPlus-pc;
   text-align: center;
   line-height: 150%;
+}
+
+// Responsive mobile
+@media (max-width: 75.375rem) {
+  .centerContact {
+    width: auto;
+
+    height: auto;
+
+    margin: 4rem 1rem 0 1rem;
+
+    padding: 2rem 1.5rem;
+
+    border-width: 0.3rem;
+    border-radius: 2rem;
+
+    text-align: center;
+  }
+
+  .centerSmallDescriptionPositionFix {
+    margin: 1rem 0;
+
+    font-size: variables.$size-mediumPlus-mobile;
+    line-height: 1.8;
+  }
+
+  .centerContactPositionFix {
+    width: 100%;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+    margin-top: 1.5rem;
+  }
+
+  .buttonsPositionMargin {
+    margin: 0;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

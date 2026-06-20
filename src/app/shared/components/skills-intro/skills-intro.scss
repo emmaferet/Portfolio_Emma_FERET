@@ -13,3 +13,14 @@
   text-align: center;
   line-height: 160%;
 }
+
+@media (max-width: 75.375rem) {
+  .skillIntroContent {
+    width: auto;
+    font-size: variables.$size-mediumPlus-mobile;
+  }
+  .skillIntroTitle {
+    margin-top: 1rem;
+    font-size: variables.$size-medium-mobile;
+  }
+}
