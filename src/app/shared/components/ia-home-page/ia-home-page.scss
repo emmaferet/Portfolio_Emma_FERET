@@ -14,3 +14,10 @@
   width: 50rem;
   margin: 2rem 0;
 }
+
+@media (max-width: 75.375rem) {
+  .contentIA {
+    max-width: 100%;
+    font-size: variables.$size-mediumPlus-mobile;
+  }
+}

@@ -133,3 +133,85 @@ textarea,
 button {
   font: inherit;
 }
+
+// Responsive mobile
+
+@media (max-width: 75.375rem) {
+  .contact-container {
+    width: auto;
+
+    margin: 1.5rem 1rem 2rem 1rem;
+    padding: 1.5rem;
+
+    flex-direction: column;
+
+    gap: 2rem;
+
+    border-radius: 2rem;
+  }
+
+  .contact-info {
+    width: 100%;
+
+    padding: 1.5rem;
+
+    text-align: center;
+
+    box-sizing: border-box;
+  }
+
+  .centerPhotoContact {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .contact-info h1 {
+    font-size: variables.$size-large-mobile;
+
+    margin: 1rem 0;
+  }
+
+  .contact-info p {
+    font-size: variables.$size-mediumPlus-mobile;
+    line-height: 1.8;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+    margin-bottom: 1.5rem;
+  }
+
+  .input-group label {
+    font-size: variables.$size-medium-mobile;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    font-size: variables.$size-medium-mobile;
+
+    padding: 0.75rem 0;
+  }
+
+  textarea {
+    height: 7rem;
+  }
+
+  .submitButtonContact,
+  .submitButtonContactInvalid {
+    padding: 0.9rem;
+
+    font-size: variables.$size-medium-mobile;
+  }
+  .input-group p {
+    color: #c44;
+    font-size: variables.$size-small-mobile;
+    margin-top: 0.4rem;
+  }
+}

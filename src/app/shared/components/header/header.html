@@ -4,7 +4,7 @@
     <div class="header">
       @let nameTitleSignal = nameTitle();
 
-      <a class="nameH1Title" routerLink="/">
+      <a class="nameH1Title fixMargin" routerLink="/">
         {{ nameTitleSignal?.name }} {{ nameTitleSignal?.surname }}
       </a>
 
@@ -25,7 +25,7 @@
         </ul>
       </nav>
 
-      <a routerLink="/contact" class="darkPurpleSolidButton">
+      <a routerLink="/contact" class="darkPurpleSolidButton fixMargin">
         {{ 'COMMON.HIRE_ME' | translate }}
       </a>
     </div>

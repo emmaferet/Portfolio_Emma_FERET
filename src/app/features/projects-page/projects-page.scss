@@ -1,3 +1,9 @@
 .whiteSpace {
-  margin: 8rem 0;
+  margin: 9rem 0;
+}
+
+@media (max-width: 75.375rem) {
+  .whiteSpace {
+    margin: 4rem 0;
+  }
 }

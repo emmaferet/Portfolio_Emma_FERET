@@ -26,7 +26,7 @@
     },
     "ARTICLE_1": {
       "TITLE": "1. My story",
-      "SUBTITLE": "Merging worlds.",
+      "SUBTITLE": "Merging worlds",
       "CONTENT": "My journey began in the world of volume and light. As a 3D artist, I learned to sculpt the digital, to understand the physics of materials and the importance of visual detail. \n Today, I transpose this aesthetic rigor into web development. Code and logic has allowed me to build not only objects and characters, but interactive and living universes.",
       "IMAGE_ALT": "image from the short film D.S. Al Coda, released in 2024"
     },
@@ -121,7 +121,8 @@
   },
   "FOOTER": {
     "COPYRIGHT_1": "@ 2026 Emma Feret Portofolio.",
-    "COPYRIGHT_2": "Crafted with precision and soul."
+    "COPYRIGHT_2": "Crafted with precision and soul.",
+    "COPYRIGHT_3": "Last updated: 20 June 2026"
   },
   "MY_STORY_PAGE": {
     "TITLE_01": "My formations",
@@ -208,6 +209,13 @@
   },
   "OPENING_MODAL": {
     "TITLE": "WELCOME TO MY PORTFOLIO",
-    "MESSAGE": "This site is currently a work in progress! If you have any feedback, please don’t hesitate to get in touch!"
+    "MESSAGE_1": "This site is currently a work in progress! ",
+    "MESSAGE_2": "If you have any feedback, please don’t hesitate to get in touch!",
+    "BUTTON": "Explore my portfolio"
+  },
+  "CONTACT_MODAL": {
+    "TITLE": "Thank you for your message !",
+    "CONTENT": "I’ll get back to you as soon as possible.",
+    "BUTTON": "Close"
   }
 }

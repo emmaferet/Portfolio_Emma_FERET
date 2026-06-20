@@ -27,6 +27,9 @@
 }
 .fixPositionContent {
   margin: 6rem 0;
+
+  align-items: stretch;
+  gap: 2rem;
 }
 .fixMargin {
   margin: 2rem variables.$marginSidesSmall;
@@ -37,9 +40,10 @@
 }
 .skillsDesc {
   font-size: variables.$size-medium-pc;
-  width: 50rem;
   text-align: center;
   line-height: 160%;
+  max-width: 50rem;
+  width: 100%;
 }
 
 //ANimation test
@@ -54,4 +58,66 @@
 .skillsCard.visible {
   opacity: 1;
   transform: translateY(0) scale(1);
+}
+
+// Responsive
+
+@media (max-width: 75.375rem) {
+  .fixMargin {
+    margin: 2rem 1rem;
+  }
+
+  .centerSkills {
+    text-align: center;
+  }
+
+  .skillsDesc {
+    width: 100%;
+
+    font-size: variables.$size-mediumPlus-mobile;
+    line-height: 1.8;
+
+    margin-top: 1rem;
+  }
+
+  .fixPositionContent {
+    flex-direction: column;
+
+    margin: 2rem 0;
+    gap: 1.5rem;
+
+    align-items: stretch;
+  }
+
+  .skillsBoxWhite,
+  .skillsBoxPurple {
+    width: 100%;
+
+    border-radius: 2rem;
+
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  .h1TitlePurpleBox {
+    font-size: variables.$size-mediumPlus-mobile;
+
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+
+    text-align: center;
+  }
+
+  .skillsContent {
+    font-size: variables.$size-medium-mobile;
+  }
+
+  .centerContent {
+    margin: 0.75rem 0;
+  }
+
+  li.centerContent {
+    justify-content: space-between;
+    align-items: center;
+  }
 }

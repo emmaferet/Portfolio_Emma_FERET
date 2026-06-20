@@ -26,7 +26,7 @@
     },
     "ARTICLE_1": {
       "TITLE": "1. Mon histoire",
-      "SUBTITLE": "Fusionner les mondes.",
+      "SUBTITLE": "Fusionner les mondes",
       "CONTENT": "Mon parcours a commencé dans le monde du volume et de la lumière. En tant qu'artiste 3D, j'ai appris à sculpter le digital, à comprendre la physique des matériaux et l'importance du détail visuel. \n Aujourd'hui, je transpose cette rigueur esthéthique dans le développement web. Le code et la logique me permettent de construire non plus seulement des objets et des personnages, mais des univers interactifs et vivants.",
       "IMAGE_ALT": "image issue du court-métrage D.S. Al Coda, sorti en 2024"
     },
@@ -121,7 +121,8 @@
   },
   "FOOTER": {
     "COPYRIGHT_1": "@ 2026 Emma Feret Portofolio.",
-    "COPYRIGHT_2": "Réalisé avec précision et amour."
+    "COPYRIGHT_2": "Réalisé avec précision et amour.",
+    "COPYRIGHT_3": "Date de dernière mise à jour : 20 Juin 2026"
   },
   "MY_STORY_PAGE": {
     "TITLE_01": "Mes formations",
@@ -208,6 +209,13 @@
   },
   "OPENING_MODAL": {
     "TITLE": "BIENVENUE SUR MON PORTOFOLIO",
-    "MESSAGE": "Ce site est pour l'instant en Work In Progress ! Si vous avez des retours, n'hésitez pas me à les communiquer via Contact !"
+    "MESSAGE_1": "Ce site est pour l'instant en Work In Progress ! ",
+    "MESSAGE_2": "Si vous avez des retours, n'hésitez pas me à les communiquer via Contact !",
+    "BUTTON": "Découvrir mon portofolio"
+  },
+  "CONTACT_MODAL": {
+    "TITLE": "Merci pour votre message !",
+    "CONTENT": "Je vous recontacterai dès que possible.",
+    "BUTTON": "Fermer"
   }
 }

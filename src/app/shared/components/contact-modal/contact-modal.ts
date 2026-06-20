@@ -5,10 +5,11 @@ import {
   MatDialogContent,
   MatDialogRef,
 } from '@angular/material/dialog';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-modal',
-  imports: [MatDialogActions, MatDialogClose, MatDialogContent],
+  imports: [MatDialogActions, MatDialogClose, MatDialogContent, TranslatePipe],
   templateUrl: './contact-modal.html',
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './contact-modal.scss',

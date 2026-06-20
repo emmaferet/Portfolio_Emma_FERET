@@ -69,3 +69,56 @@
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+// Responsive
+
+@media (max-width: 75.375rem) {
+  .formationPresentation {
+    margin: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .align {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .timeline {
+    height: 100%;
+    margin-right: 1rem;
+  }
+
+  .dot {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+
+  .line {
+    width: 2px;
+    min-height: 6rem;
+  }
+
+  .articleContent {
+    font-size: variables.$size-small-mobile;
+    margin: 0.8rem 0;
+  }
+
+  .formationName {
+    width: auto;
+    font-size: variables.$size-medium-mobile;
+    text-underline-offset: 0.3rem;
+  }
+
+  .formationDegree {
+    font-size: variables.$size-smallPlus-pc; // ou small-mobile si tu veux encore plus compact
+    margin: 0.3rem 0;
+  }
+
+  .titlePartPresentation {
+    margin-top: 0.5rem;
+  }
+
+  .articlGlobalPresentation {
+    margin: 0;
+  }
+}
