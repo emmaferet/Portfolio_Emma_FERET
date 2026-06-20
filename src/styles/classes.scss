@@ -60,7 +60,6 @@
 }
 @media (max-width: 75.375rem) {
   .darkPurpleSolidButton {
-    padding: 0.45rem 0.5rem;
     font-size: variables.$size-medium-mobile;
   }
 }
@@ -89,7 +88,7 @@
 @media (max-width: 75.375rem) {
   .darkPurpleSolidButtonNative {
     font-size: variables.$size-medium-mobile;
-    padding: 0.45rem 0.5rem;
+    padding: 0.3rem 0.3rem;
   }
 }
 
