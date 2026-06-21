@@ -15,7 +15,7 @@ export class Footer {
 
   downloadCv() {
     const link = document.createElement('a');
-    link.href = '@files/CVWebDev_EmmaFERET.pdf';
+    link.href = 'files/CVWebDev_EmmaFERET.pdf';
     link.download = 'CVWebDev_EmmaFERET.pdf';
     document.body.appendChild(link);
     link.click();
