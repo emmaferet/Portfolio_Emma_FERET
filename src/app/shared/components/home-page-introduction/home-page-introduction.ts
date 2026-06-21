@@ -14,6 +14,6 @@ export class HomePageIntroduction {
   constructor(public dialog: MatDialog) {}
 
   // openModal(): void {
-  //   this.dialog.open(OpeningModal);
+  //   this.dialog.open(WarningModal);
   // }
 }

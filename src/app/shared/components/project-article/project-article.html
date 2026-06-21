@@ -19,8 +19,9 @@
             [href]="$safeNavigationMigration(project?.link)"
             target="_blank"
             rel="noopener noreferrer"
-            >{{ 'PROJECTS_PAGE.LINK' | translate }}</a
-          >
+            class="linkProject"
+            >{{ 'PROJECTS_PAGE.LINK' | translate }}
+          </a>
         </div>
       </div>
     </article>
@@ -36,10 +37,12 @@
         <div class="articleContent">
           <p>{{ project?.year }}</p>
           <p>{{ project?.description | translate }}</p>
+          <br />
           <a
             [href]="$safeNavigationMigration(project?.link)"
             target="_blank"
             rel="noopener noreferrer"
+            class="linkProject"
             >{{ 'PROJECTS_PAGE.LINK' | translate }}</a
           >
         </div>
@@ -51,8 +54,8 @@
       />
     </article>
   } @else {
-    <div class="center fixMarginLeft">
-      <article class="align">
+    <div class="fixMarginLeft">
+      <article class="center">
         <img
           [src]="$safeNavigationMigration(project?.image)"
           class="fitImageProjectsRight"
@@ -66,10 +69,12 @@
           <div class="articleContent">
             <p>{{ project?.year }}</p>
             <p>{{ project?.description | translate }}</p>
+            <br />
             <a
               [href]="$safeNavigationMigration(project?.link)"
               target="_blank"
               rel="noopener noreferrer"
+              class="linkProject"
               >{{ 'PROJECTS_PAGE.LINK' | translate }}</a
             >
           </div>

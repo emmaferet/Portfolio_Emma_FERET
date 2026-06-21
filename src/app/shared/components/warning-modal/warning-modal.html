@@ -1,0 +1,18 @@
+<!-- Use of angular material for dialog -->
+<div class="modal" animate.enter="enter-animation">
+  <!-- <mat-dialog-actions>
+    <button mat-button mat-dialog-close class="close-btn" (click)="closeModal()">✕</button>
+  </mat-dialog-actions> -->
+  <div class="marginDialog"></div>
+
+  <h2 mat-dialog-title class="title">{{ 'WARNING_MODAL.TITLE' | translate }}</h2>
+
+  <mat-dialog-content class="text">
+    <p>{{ 'WARNING_MODAL.CONTENT' | translate }} <br /></p>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close class="darkPurpleSolidButtonNative" (click)="closeModal()">
+      {{ 'WARNING_MODAL.BUTTON' | translate }}
+    </button>
+  </mat-dialog-actions>
+</div>

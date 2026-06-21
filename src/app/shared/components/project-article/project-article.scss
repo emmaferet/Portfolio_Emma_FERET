@@ -23,7 +23,7 @@
 
 @media (min-width: 75.375rem) {
   .fitImageProjectsRight {
-    width: 45rem;
+    width: 35rem;
     height: 28rem;
   }
 }
@@ -54,14 +54,38 @@
   }
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-}
-.fixMarginLeft {
-  margin-left: 12rem;
+.linkProject {
+  text-decoration: none;
+  color: variables.$base-color-darkPurple;
+  margin: 5rem 0;
+  font-weight: bold;
 }
 
+.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15%;
+}
+.fixMarginLeft {
+}
+
+.left {
+  text-align: left;
+  display: flex;
+  justify-content: space-around;
+}
+.align {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
 // Responsive
 
 @media (max-width: 75.375rem) {

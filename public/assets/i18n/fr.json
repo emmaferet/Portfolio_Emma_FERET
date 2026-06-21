@@ -20,7 +20,7 @@
       "LABEL": "Alternance Octobre 2026",
       "TITLE_PART_1": "De l'Art 3D au ",
       "TITLE_PART_2": "Développement web",
-      "DESCRIPTION": "Ancienne artiste 3D, je transforme aujourd'hui mes visions spatiales en expériences web interactives. Actuellement à la recherche d'une alternance pour fusionner technique et esthétique.",
+      "DESCRIPTION": "Artiste 3D, je transforme aujourd'hui mes visions spatiales en expériences web interactives. Actuellement à la recherche d'une alternance pour fusionner technique et esthétique.",
       "PROJECTS_BTN": "Projets",
       "IMAGE_ALT": "image issue du film D.S. Al Coda "
     },
@@ -48,7 +48,7 @@
     "FILTER_ALL": "Tous",
     "ARTICLE": {
       "PROJECT_NUMBER": "Projet n°",
-      "PROJECT_LINK": "Lien vers le projet",
+      "PROJECT_LINK": "Lien vers le projet >",
       "VIEW_MORE": "Voir plus"
     }
   },
@@ -122,7 +122,7 @@
   "FOOTER": {
     "COPYRIGHT_1": "@ 2026 Emma Feret Portofolio.",
     "COPYRIGHT_2": "Réalisé avec précision et amour.",
-    "COPYRIGHT_3": "Date de dernière mise à jour : 20 Juin 2026"
+    "COPYRIGHT_3": "Date de dernière mise à jour : 21 Juin 2026"
   },
   "MY_STORY_PAGE": {
     "TITLE_01": "Mes formations",
@@ -185,7 +185,7 @@
   },
   "PROJECTS_PAGE": {
     "PROJET": "PROJET N°",
-    "LINK": "Lien vers le projet",
+    "LINK": "Lien vers le projet >",
     "PROJECT_1": {
       "NAME": "Ce portofolio web",
       "DESCRIPTION": "Mon tout premier portofolio, réalisé en Angular, combinant des compétences en HTML, CSS, JS/TS, sous la surpervision de Quentin Buysschaert !",
@@ -216,6 +216,11 @@
   "CONTACT_MODAL": {
     "TITLE": "Merci pour votre message !",
     "CONTENT": "Je vous recontacterai dès que possible.",
+    "BUTTON": "Fermer"
+  },
+  "WARNING_MODAL": {
+    "TITLE": "Attention !",
+    "CONTENT": "Les données étant hébergées sur un serveur gratuit, elles peuvent prendre en moyenne 50 secondes à charger. Merci de patienter.",
     "BUTTON": "Fermer"
   }
 }
