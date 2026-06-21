@@ -122,7 +122,7 @@
   "FOOTER": {
     "COPYRIGHT_1": "@ 2026 Emma Feret Portofolio.",
     "COPYRIGHT_2": "Crafted with precision and soul.",
-    "COPYRIGHT_3": "Last updated: 20 June 2026"
+    "COPYRIGHT_3": "Last updated: 21 June 2026"
   },
   "MY_STORY_PAGE": {
     "TITLE_01": "My formations",
@@ -185,7 +185,7 @@
   },
   "PROJECTS_PAGE": {
     "PROJET": "PROJECT N°",
-    "LINK": "Link to the project",
+    "LINK": "Link to the project >",
     "PROJECT_1": {
       "NAME": "This web portfolio",
       "DESCRIPTION": "My very first portfolio, built with Angular, combining HTML, CSS and JS/TS skills under the supervision of Quentin Buysschaert!",
@@ -216,6 +216,11 @@
   "CONTACT_MODAL": {
     "TITLE": "Thank you for your message !",
     "CONTENT": "I’ll get back to you as soon as possible.",
+    "BUTTON": "Close"
+  },
+  "WARNING_MODAL": {
+    "TITLE": "Warning !",
+    "CONTENT": "The data are hosted on a free server, and may take up to 50 seconds to load. Please be patient.",
     "BUTTON": "Close"
   }
 }
