@@ -3,11 +3,13 @@ import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({ providedIn: 'root' })
 export class TranslationService {
+  // Private
   private translateService = inject(TranslateService);
-
   private readonly STORAGE_KEY = 'app_language';
-  public currentLang = signal<string>('fr');
   private allowedLang = ['fr', 'en'];
+
+  // Public
+  public currentLang = signal<string>('fr');
 
   private get storage(): Storage | null {
     return typeof localStorage !== 'undefined' ? localStorage : null;

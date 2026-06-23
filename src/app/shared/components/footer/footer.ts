@@ -1,10 +1,12 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { User } from '@core/models/interfaces/user.interface';
 import { TranslatePipe } from '@ngx-translate/core';
+import packageInfo from '@package/package.json';
+import { FormatDatePipe } from '@shared/pipes/format-date-pipe';
 
 @Component({
   selector: 'app-footer',
-  imports: [TranslatePipe],
+  imports: [TranslatePipe, FormatDatePipe],
   templateUrl: './footer.html',
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './footer.scss',
@@ -12,6 +14,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 export class Footer {
   footerUser = input.required<User | undefined>();
   // listNavigationFooter = input.required<ListNavigation[]>();
+  lastUpdateTimestamp = new Date(packageInfo.meta.lastUpdate).getTime();
 
   downloadCv() {
     const link = document.createElement('a');
