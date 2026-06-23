@@ -1,0 +1,58 @@
+@use '@styles/variables.scss';
+@use '@styles/defaultComportement.scss';
+
+.testing-container {
+  width: 100rem;
+  gap: 2rem; /* Espace entre chaque bloc de fonctionnalité */
+  margin-top: 12rem;
+  margin-bottom: 8rem;
+}
+
+.test-section {
+  width: 100%;
+  // Contour demandé pour bien délimiter les fonctionnalités
+  border: 0.125rem solid variables.$base-color-darkPurple;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  background-color: variables.$base-color-whiteCream;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    // Un léger effet d'ombre au survol pour rendre le labo plus interactif
+    box-shadow: 0 0.5rem 1rem variables.$base-color-dialogShadow;
+  }
+}
+
+.section-header {
+  border-bottom: 0.063rem solid variables.$base-color-softPurple;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.section-content {
+  width: 90%;
+  font-size: variables.$size-medium-pc;
+  color: variables.$base-color-darkGrey;
+}
+
+// Style optionnel pour une zone de feedback visuel dans tes tests
+.test-box {
+  border: 0.063rem dashed variables.$base-color-darkPurpleSoft;
+  padding: 2rem;
+  background-color: variables.$base-color-softYellow;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+// Adaptations mobiles rapides en rem
+@media (max-width: 75.375rem) {
+  .test-section {
+    padding: 1rem;
+  }
+  .section-content {
+    font-size: variables.$size-medium-mobile;
+  }
+}
