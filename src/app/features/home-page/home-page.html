@@ -1,2 +1,24 @@
 <app-home-page-introduction></app-home-page-introduction>
-<app-article-prototype></app-article-prototype>
+
+<app-article-prototype
+  [currentArticle]="{
+    title: 'HOME.ARTICLE_1.TITLE',
+    subtitle: 'HOME.ARTICLE_1.SUBTITLE',
+    content: 'HOME.ARTICLE_1.CONTENT',
+    image: 'projet3D_emmaFeret.jpg',
+    altImage: 'HOME.ARTICLE_1.ALT_IMAGE',
+  }"
+></app-article-prototype>
+<app-article-prototype
+  [currentArticle]="{
+    title: 'HOME.ARTICLE_2.TITLE',
+    subtitle: 'HOME.ARTICLE_2.SUBTITLE',
+    content: 'HOME.ARTICLE_2.CONTENT',
+    image: 'angular-imagePresentation.webp',
+    altImage: 'HOME.ARTICLE_2.ALT_IMAGE',
+  }"
+></app-article-prototype>
+
+<app-skills-section [userSkills]="userSkills()"></app-skills-section>
+<app-contact-section></app-contact-section>
+<app-ia-home-page></app-ia-home-page>

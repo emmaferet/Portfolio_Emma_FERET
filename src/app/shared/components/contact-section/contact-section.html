@@ -1,0 +1,15 @@
+<div class="centerContact">
+  <!-- <h2 class="titlePartPresentation">{{ 'CONTACT.SECTION.PART_TITLE' | translate }}</h2> -->
+  <h2 class="titleH3Hook bold">{{ 'CONTACT.SECTION.HOOK_TITLE' | translate }}</h2>
+  <p class="centerSmallDescriptionPositionFix">
+    {{ 'CONTACT.SECTION.DESCRIPTION' | translate }}
+  </p>
+  <div class="centerContactPositionFix">
+    <a class="darkPurpleSolidButton buttonsPositionMargin" routerLink="/contact">
+      {{ 'CONTACT.SECTION.SEND_MESSAGE_BTN' | translate }}
+    </a>
+    <button class="darkPurpleSolidButtonNative buttonsPositionMargin" (click)="downloadCv()">
+      {{ 'CONTACT.SECTION.MY_CV_BTN' | translate }}
+    </button>
+  </div>
+</div>

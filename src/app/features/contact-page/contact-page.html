@@ -1,0 +1,115 @@
+<div class="justifyCenter">
+  <div class="contact-container">
+    <div class="contact-info">
+      <img src="photoID_emmaFERET.jpg" alt="Profile" class="centerPhotoContact" />
+
+      <h1>{{ 'CONTACT.TITLE' | translate }}!</h1>
+
+      <p>
+        {{ 'CONTACT.DESCRIPTION' | translate }}
+      </p>
+    </div>
+
+    <div class="contact-form">
+      <form (submit)="submitContactForm($event)" novalidate>
+        <div class="row">
+          <div class="input-group">
+            <label>{{ 'CONTACT.FORM.FIRSTNAME_LABEL' | translate }}</label>
+            <input
+              [formField]="contactForm.firstName"
+              type="text"
+              placeholder="{{ 'CONTACT.FORM.FIRSTNAME_PLACEHOLDER' | translate }}"
+            />
+            @let contactFirstName = contactForm.firstName();
+            @if (contactFirstName.touched() && contactFirstName.invalid()) {
+              @for (error of contactFirstName.errors(); track error.kind) {
+                <div>
+                  <p>{{ error.message | translate }}</p>
+                </div>
+              }
+            }
+          </div>
+
+          <div class="input-group">
+            <label>{{ 'CONTACT.FORM.LASTNAME_LABEL' | translate }}</label>
+            <input
+              [formField]="contactForm.lastName"
+              type="text"
+              placeholder="{{ 'CONTACT.FORM.LASTNAME_PLACEHOLDER' | translate }}"
+            />
+            @let contactLastName = contactForm.lastName();
+            @if (contactLastName.touched() && contactLastName.invalid()) {
+              @for (error of contactLastName.errors(); track error.kind) {
+                <div>
+                  <p>{{ error.message | translate }}</p>
+                </div>
+              }
+            }
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-group">
+            <label>Email</label>
+            <input
+              type="email"
+              placeholder="{{ 'CONTACT.FORM.EMAIL_PLACEHOLDER' | translate }}"
+              [formField]="contactForm.email"
+            />
+            @let contactEmail = contactForm.email();
+            @if (contactEmail.touched() && contactEmail.invalid()) {
+              @for (error of contactEmail.errors(); track error.kind) {
+                <div>
+                  <p>{{ error.message | translate }}</p>
+                </div>
+              }
+            }
+          </div>
+
+          <div class="input-group">
+            <label>{{ 'CONTACT.FORM.PHONE_LABEL' | translate }}</label>
+            <input
+              type="text"
+              placeholder="{{ 'CONTACT.FORM.PHONE_PLACEHOLDER' | translate }}"
+              [formField]="contactForm.phoneNumber"
+            />
+            @let contactPhoneNumber = contactForm.phoneNumber();
+            @if (contactPhoneNumber.touched() && contactPhoneNumber.invalid()) {
+              @for (error of contactPhoneNumber.errors(); track error.kind) {
+                <div>
+                  <p>{{ error.message | translate }}</p>
+                </div>
+              }
+            }
+          </div>
+        </div>
+
+        <div class="input-group full">
+          <label>Message</label>
+          <textarea
+            placeholder="{{ 'CONTACT.FORM.MESSAGE_PLACEHOLDER' | translate }}"
+            [formField]="contactForm.message"
+          ></textarea>
+          @let contactMessage = contactForm.message();
+          @if (contactMessage.touched() && contactMessage.invalid()) {
+            @for (error of contactMessage.errors(); track error.kind) {
+              <div>
+                <p>{{ error.message | translate }}</p>
+              </div>
+            }
+          }
+        </div>
+
+        <button
+          [disabled]="!contactForm().valid()"
+          type="submit"
+          [class]="contactForm().valid() ? 'submitButtonContact' : 'submitButtonContactInvalid'"
+          mat-button
+        >
+          {{ 'CONTACT.FORM.SUBMIT' | translate }}
+        </button>
+        <!-- <button mat-button (click)="openModal()">TEST</button> -->
+      </form>
+    </div>
+  </div>
+</div>

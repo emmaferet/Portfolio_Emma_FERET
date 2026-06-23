@@ -1,0 +1,226 @@
+{
+  "NAV": {
+    "HOME": "Accueil",
+    "PROJECTS": "Projets",
+    "MY_STORY": "Parcours",
+    "SKILLS": "Compétences"
+  },
+  "COMMON": {
+    "HIRE_ME": "Contact",
+    "LOADING": "Chargement...",
+    "BACK_TO_HOME": "Retour à l'accueil",
+    "PORTFOLIO": "Portofolio.",
+    "CRAFTED_WITH": "Crafted with precision and soul.",
+    "LOGO_ALT": "LogoHomePage"
+  },
+  "HOME": {
+    "TITLE": "Emma Feret",
+    "SUBTITLE": "Portfolio",
+    "INTRODUCTION": {
+      "LABEL": "Alternance Octobre 2026",
+      "TITLE_PART_1": "De l'Art 3D au ",
+      "TITLE_PART_2": "Développement web",
+      "DESCRIPTION": "Artiste 3D, je transforme aujourd'hui mes visions spatiales en expériences web interactives. Actuellement à la recherche d'une alternance pour fusionner technique et esthétique.",
+      "PROJECTS_BTN": "Projets",
+      "IMAGE_ALT": "image issue du film D.S. Al Coda "
+    },
+    "ARTICLE_1": {
+      "TITLE": "1. Mon histoire",
+      "SUBTITLE": "Fusionner les mondes",
+      "CONTENT": "Mon parcours a commencé dans le monde du volume et de la lumière. En tant qu'artiste 3D, j'ai appris à sculpter le digital, à comprendre la physique des matériaux et l'importance du détail visuel. \n Aujourd'hui, je transpose cette rigueur esthéthique dans le développement web. Le code et la logique me permettent de construire non plus seulement des objets et des personnages, mais des univers interactifs et vivants.",
+      "IMAGE_ALT": "image issue du court-métrage D.S. Al Coda, sorti en 2024"
+    },
+    "ARTICLE_2": {
+      "TITLE": "2. Projets",
+      "SUBTITLE": "Réalisations récentes",
+      "CONTENT": "Une variété de projets, que ça soit deux films réalisés lors de mes 5 années de master ou ce site, premier portofolio, mélangeant divers compétences de développement web.",
+      "IMAGE_ALT": "angular image de présentation"
+    },
+    "ARTICLE_IA": {
+      "TITLE_H2": " IA",
+      "TITLE_H3": "Mon utilisation de l'IA",
+      "CONTENT_1": "Ce site a été développé dans une démarche d’apprentissage. Afin de progresser réellement, j’ai choisi de limiter l’utilisation de l’intelligence artificielle au strict minimum. Tout le code a été écrit à la main, et l’IA n’a été utilisée que pour vérifier certaines syntaxes, corriger du code déjà rédigé ou d’autres petites taches liées notamment au css.",
+      "CONTENT_2": "L’auto-complétion assistée par IA n’a été introduite qu’à la toute fin du projet, principalement pour la traduction. Mon objectif était avant tout de comprendre chaque ligne de code écrite et d’acquérir une maîtrise concrète des technologies utilisées."
+    }
+  },
+  "PROJECTS": {
+    "TITLE": "Mes Projets",
+    "FILTER_ALL": "Tous",
+    "ARTICLE": {
+      "PROJECT_NUMBER": "Projet n°",
+      "PROJECT_LINK": "Lien vers le projet >",
+      "VIEW_MORE": "Voir plus"
+    }
+  },
+  "MY_STORY": {
+    "WORKS": "my-story-page works!",
+    "FORMATIONS_WORKS": "my-story-formations works!"
+  },
+  "MY_SKILLS": {
+    "WORKS": "my-skills-page works!"
+  },
+  "SKILLS_SECTION": {
+    "PART_TITLE": "03. Expertise",
+    "HOOK_TITLE": "Double Compétence",
+    "DESCRIPTION": "Forte d’un parcours en 3D et en développement web, je combine compétences techniques, rigueur et sens du détail pour créer des expériences web efficaces.",
+    "CATEGORY_3D": "🎲 Vision 3D",
+    "DESCRIPTION_3D": "L'âme artistique et la modélisation organique",
+    "CATEGORY_DEV": "< > Programmation Front",
+    "DESCRIPTION_DEV": "L'architecture et le design de site web",
+    "LEVELS": {
+      "EXPERT": "Expert",
+      "PROFICIENT": "Confirmé",
+      "ADVANCED": "Avancé",
+      "COMPETENT": "Intermédiaire"
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Contactez moi !",
+    "DESCRIPTION": "Actuellement à la recherche d'une alternance Developpeuse Web Full stack pour octobre 2026, n'hésitez pas à me contacter pour en discuter !",
+    "SECTION": {
+      "PART_TITLE": "04. Contact",
+      "HOOK_TITLE": "Prêt pour une collaboration ?",
+      "DESCRIPTION": "Je suis activement à la recherche d'une alternance pour mettre mes compétences au service de vos projets les plus ambitieux.",
+      "SEND_MESSAGE_BTN": "Envoyer un message",
+      "MY_CV_BTN": "Mon CV"
+    },
+    "FORM": {
+      "FIRSTNAME_LABEL": "Prénom",
+      "FIRSTNAME_PLACEHOLDER": "Entrez votre prénom",
+      "LASTNAME_LABEL": "Nom",
+      "LASTNAME_PLACEHOLDER": "Entrez votre nom",
+      "EMAIL_LABEL": "Email",
+      "EMAIL_PLACEHOLDER": "Entrez une adresse mail valide",
+      "PHONE_LABEL": "Téléphone (optionnel)",
+      "PHONE_PLACEHOLDER": "Entrez votre numéro de téléphone",
+      "MESSAGE_LABEL": "Message",
+      "MESSAGE_PLACEHOLDER": "Ecrivez votre message",
+      "SUBMIT": "ENVOYER"
+    },
+    "ERRORS": {
+      "FIRSTNAME_REQUIRED": "Prénom requis",
+      "LASTNAME_REQUIRED": "Nom requis",
+      "EMAIL_REQUIRED": "Mail requis",
+      "MESSAGE_REQUIRED": "Message requis",
+      "FIRSTNAME_LENGTH": "Ce champ doit posséder entre 2 et 50 caractères",
+      "LASTNAME_LENGTH": "Ce champ doit posséder entre 2 et 50 caractères",
+      "INVALID_EMAIL": "Veuillez saisir une adresse email valide.",
+      "INVALID_PHONE": "Le numéro de téléphone doit être un numéro français valide.",
+      "INVALID_MESSAGE_LENGTH": "Le message doit contenir entre 5 et 500 caractères.",
+      "INVALID_MESSAGE_FORMAT": "Le message contient des caractères non autorisés.",
+      "SPAM_DETECTED": "Trop de caractères répétés détectés."
+    },
+    "MODAL": {
+      "TITLE": "Message envoyé",
+      "MESSAGE": "Merci pour votre message ! Je vous répondrai dans les plus brefs délais.",
+      "CLOSE": "Fermer"
+    }
+  },
+  "ERROR": {
+    "WORKS": "error-page works!"
+  },
+  "FOOTER": {
+    "COPYRIGHT_1": "@ 2026 Emma Feret Portofolio.",
+    "COPYRIGHT_2": "Réalisé avec précision et amour.",
+    "COPYRIGHT_3": "Date de dernière mise à jour : "
+  },
+  "MY_STORY_PAGE": {
+    "TITLE_01": "Mes formations",
+    "TITLE_02": "Mes expériences",
+    "CONTENT": {
+      "TITLE_H3": "Developpeuse Full Stack",
+      "CONTENT_1": "👩‍🎨Artiste de personnages 3D en reconversion, je mets aujourd’hui mon expérience et mes compétences au service d’un nouveau projet aligné avec mes passions et mes ambitions.",
+      "CONTENT_2": "✨Titulaire d'un master à Piktura en animation 3D, j’ai développé des qualités solides telles que l’adaptabilité, la créativité, la rigueur et le sens des responsabilités.",
+      "CONTENT_3": "👩‍💻Animée par une réelle envie d’évolution, j’ai entrepris une transition vers le secteur du développement informatique, dans lequel je me formerai activement à EPSI en septembre et développerai de nouvelles compétences. Cette démarche témoigne de ma capacité à apprendre rapidement, à sortir de ma zone de confort et à m’investir pleinement dans de nouveaux défis.",
+      "CONTENT_4": "🙌Curieuse, motivée et déterminée, je suis aujourd’hui à la recherche d’opportunités d'alternance qui me permettront de concrétiser ce nouveau projet professionnel. Ouverte aux échanges et aux opportunités, n’hésitez pas à me contacter pour en discuter !"
+    },
+    "FORMATIONS": {
+      "FORMATION_1": {
+        "NAME_FORM": "💻 EPSI",
+        "DEGREE": "Developpeur Concepteur d'Applications Web et Web mobile",
+        "YEAR": "Sept 2026 - 2027",
+        "SKILLS": "HTML, CSS, JS, TS, Git, Angular"
+      },
+      "FORMATION_2": {
+        "NAME_FORM": "🖥️ Formation par un développeur expérimenté",
+        "DEGREE": "",
+        "YEAR": "2026",
+        "SKILLS": "HTML, CSS, JS, TS, Git, Angular"
+      },
+      "FORMATION_3": {
+        "NAME_FORM": "👩‍🎨 Piktura",
+        "DEGREE": "Master Réalisateur Numérique",
+        "YEAR": "2019 - 2024",
+        "SKILLS": " 3D Animation Rigging, Modeling, Sculpting, Texturing et Shading "
+      },
+      "FORMATION_4": {
+        "NAME_FORM": "✏️ Lycée Sainte Marie Beaucamps-Ligny",
+        "DEGREE": "Baccalauréat Général Scientifique ISN Option Européenne Latin",
+        "YEAR": "2019",
+        "SKILLS": ""
+      }
+    },
+    "EXPERIENCES": {
+      "EXPERIENCE_1": {
+        "TITLE": "Stage Création de contenu",
+        "DURATION": "Juin 2021",
+        "DESCRIPTION": "Communication et promotion Internet de maquettes 3D"
+      },
+      "EXPERIENCE_2": {
+        "TITLE": "Stage 3D Character Artist ",
+        "DURATION": "Juillet Aout 2023",
+        "DESCRIPTION": "Sculpting, Texturing et Grooming sur des dinosaures"
+      },
+      "EXPERIENCE_3": {
+        "TITLE": "Equipier Polyvalent",
+        "DURATION": "Octobre 2024 à Mai 2025",
+        "DESCRIPTION": "Service, prise et préparation des commandes"
+      },
+      "EXPERIENCE_4": {
+        "TITLE": "Stage 3D Character Artist ",
+        "DURATION": "Septembre à Decembre 2025",
+        "DESCRIPTION": "Création de MetaHuman, refactorisation du blueprint du MetaHuman au contexte du projet"
+      }
+    }
+  },
+  "PROJECTS_PAGE": {
+    "PROJET": "PROJET N°",
+    "LINK": "Lien vers le projet >",
+    "PROJECT_1": {
+      "NAME": "Ce portofolio web",
+      "DESCRIPTION": "Mon tout premier portofolio, réalisé en Angular, combinant des compétences en HTML, CSS, JS/TS, sous la surpervision de Quentin Buysschaert !",
+      "ALT": "Image du framework angular"
+    },
+    "PROJECT_2": {
+      "NAME": "D.S. Al Coda",
+      "DESCRIPTION": "⭐️ 48 sélections officielles\n⭐️ 4 prix\n⭐️ Longlisté pour les BAFTA, semi finaliste des Oscars étudiants, finaliste des Rookies \nCourt métrage 3D de 5ème année, réalisé par Maxime Wattrelos, Emma Feret, Jeremy Trochet, Louis Cocquet, François Mainguet, Rachel Cuvilliez, Florian Lecocq.\nConsumé par la peur de devenir sourd, Ian dessine et mémorises les sons qui l'entourent.",
+      "ALT": "image du court-métrage D.S. Al Coda"
+    },
+    "PROJECT_3": {
+      "NAME": "Les oiseaux de nuit",
+      "DESCRIPTION": "🏆15 sélections officielles \n🏆2 prix \nCourt métrage 3D de 3ème année, réalisé par Emma Richet, Candice Yernaux, Emma Feret, Juliette Buysschaert, Rachel Cuvilliez.\nUn loup abandonné découvre une étrange mais magnifique ville.",
+      "ALT": "image du court-métrage Oiseaux de Nuit"
+    }
+  },
+  "MY_SKILLS_PAGE": {
+    "SKILLS_TITLE_1": "Evolution de mes",
+    "SKILLS_TITLE_2": "Compétences.",
+    "SKILLS_DESCRIPTION_INTRO": "Mon parcours, de l'animation 3D au développement web, m'a permis de développer des compétences complémentaires telles que l'organisation, le travail d'équipe, la rigueur et l'autonomie. Habituée à collaborer sur des projets créatifs et techniques, j'ai appris à construire des solutions solides, à résoudre des problématiques complexes et à porter une attention particulière à l'expérience utilisateur comme aux détails de réalisation."
+  },
+  "OPENING_MODAL": {
+    "TITLE": "BIENVENUE SUR MON PORTOFOLIO",
+    "MESSAGE_1": "Ce site est pour l'instant en Work In Progress ! ",
+    "MESSAGE_2": "Si vous avez des retours, n'hésitez pas me à les communiquer via Contact !",
+    "BUTTON": "Découvrir mon portofolio"
+  },
+  "CONTACT_MODAL": {
+    "TITLE": "Merci pour votre message !",
+    "CONTENT": "Je vous recontacterai dès que possible.",
+    "BUTTON": "Fermer"
+  },
+  "WARNING_MODAL": {
+    "TITLE": "Attention !",
+    "CONTENT": "Les données étant hébergées sur un serveur gratuit, elles peuvent prendre en moyenne 50 secondes à charger. Merci de patienter.",
+    "BUTTON": "Fermer"
+  }
+}

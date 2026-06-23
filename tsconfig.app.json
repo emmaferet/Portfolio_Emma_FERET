@@ -6,6 +6,14 @@
     "outDir": "./out-tsc/app",
     "types": ["node"]
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["src/**/*.spec.ts"]
+  "include": ["src/**/*.ts", "../trash/myCvInfos.ts"],
+  "exclude": ["src/**/*.spec.ts"],
+  "angularCompilerOptions": {
+    "extendedDiagnostics": {
+      "checks": {
+        "nullishCoalescingNotNullable": "suppress",
+        "optionalChainNotNullable": "suppress"
+      }
+    }
+  }
 }

@@ -1,22 +1,45 @@
 <footer class="footer">
-            <div class="positionTitleFooter">
-                <h3 class="h3TitleFooter">Emma Feret</h3>
-                <p >@ 2026 Emma Feret Portofolio. <br> Crafted with precision and soul.</p>
-            </div>
-            <nav >
-                <ul class="align">
-                    <li >
-                        <a href="#" class="footerNavigationButtons">Linkedin</a>
-                    </li>
-                    <li >
-                        <a href="#" class="footerNavigationButtons">GitHub</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footerNavigationButtons">CV</a>
-                    </li>
-                    <li >
-                        <a href="#" class="footerNavigationButtons">Mail</a>
-                    </li>
-                </ul>
-            </nav>
+  <nav>
+    <ul class="align">
+      @let links = $safeNavigationMigration(footerUser()?.links);
+      @for (link of links; track $index) {
+        <li>
+          @if (link.url.startsWith('mailto')) {
+            <a
+              [href]="link.url"
+              class="footerNavigationButtons"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ link.label }}</a
+            >
+          } @else if (link.label.includes('CV')) {
+            <button class="footerNavigationButtonsNative" (click)="downloadCv()">
+              {{ link.label }}
+            </button>
+          } @else {
+            <a
+              [href]="link.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footerNavigationButtons"
+              >{{ link.label }}</a
+            >
+          }
+        </li>
+      }
+    </ul>
+  </nav>
+  <div class="positionTitleFooter">
+    @let user = footerUser();
+    <h3 class="h3TitleFooter">{{ user?.name }} {{ user?.surname }}</h3>
+    <p>
+      {{ 'FOOTER.COPYRIGHT_1' | translate }}
+      <br />
+      {{ 'FOOTER.COPYRIGHT_2' | translate }}
+      <br />
+      {{ 'FOOTER.COPYRIGHT_3' | translate }} {{ lastUpdateTimestamp | formatDate }}
+      <br />
+      V.{{ version }}
+    </p>
+  </div>
 </footer>

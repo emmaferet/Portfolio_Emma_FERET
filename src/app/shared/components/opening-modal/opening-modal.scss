@@ -1,0 +1,177 @@
+@use '@styles/styles.scss';
+@use '@styles/variables.scss';
+
+::ng-deep .cdk-overlay-backdrop {
+  background: rgba(10, 10, 20, 0.4);
+  backdrop-filter: blur(0.5rem);
+}
+.marginDialog::before {
+  content: '✦';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 4.5rem;
+  height: 4.5rem;
+  margin: 0 auto 1.5rem;
+
+  border-radius: 50%;
+  background: rgba(variables.$base-color-darkPurple, 0.2);
+
+  color: variables.$base-color-darkPurple;
+  font-size: 2rem;
+}
+
+.modal {
+  position: relative;
+
+  max-width: 25rem;
+
+  padding: 3rem 2.5rem;
+  text-align: center;
+
+  /* 🎨 effet glassmorphism */
+  background: rgba(variables.$base-color-softOrange, 0.4);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+
+  border-radius: 24px;
+  border: 1px solid rgba(variables.$base-color-darkPurple, 0.2);
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  color: variables.$base-color-darkPurple;
+  font-size: variables.$size-mediumPlus-pc;
+  font-weight: bold;
+
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.2;
+  width: 25rem;
+}
+
+.text {
+  color: variables.$base-color-darkPurple;
+  font-size: variables.$size-medium-pc;
+
+  margin-bottom: 2rem;
+  line-height: 2rem;
+
+  opacity: 0.9;
+}
+
+.close-btn {
+  position: absolute;
+
+  right: 0.7rem;
+
+  width: 2.3rem;
+  height: 2.3rem;
+
+  border-radius: 50%;
+  border: 1px solid rgba(variables.$base-color-darkPurple, 0.2);
+
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+
+  color: variables.$base-color-darkPurple;
+  font-size: 1.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+.close-btn:hover {
+  transform: scale(1.1);
+}
+
+.darkPurpleSolidButtonNative {
+  width: 100%;
+  max-width: 380px;
+  height: 52px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: variables.$base-color-darkPurple;
+  color: variables.$base-color-whiteCream;
+
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+// responsive
+@media (max-width: 75.375rem) {
+  .modal {
+    width: 90vw;
+    max-width: 22rem;
+
+    padding: 2rem 1.25rem;
+    border-radius: 1.25rem;
+
+    box-sizing: border-box;
+  }
+
+  .marginDialog::before {
+    width: 3.5rem;
+    height: 3.5rem;
+
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    width: 100%;
+    font-size: variables.$size-medium-mobile;
+
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .text {
+    font-size: variables.$size-small-mobile;
+    line-height: 1.6rem;
+
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .close-btn {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+
+    right: 0.5rem;
+    top: 0.5rem;
+  }
+
+  .darkPurpleSolidButtonNative {
+    width: 100%;
+    max-width: 100%;
+
+    height: 44px;
+    font-size: variables.$size-small-mobile;
+  }
+
+  mat-dialog-actions {
+    justify-content: center;
+    padding: 0;
+  }
+}

@@ -1,0 +1,19 @@
+@use '@styles/variables.scss';
+@use '@styles/styles.scss';
+
+.horizontalLign {
+  margin: 4rem auto;
+  height: 0.1rem;
+  width: 25%;
+  flex: 1;
+  background: variables.$base-color-darkPurple;
+  opacity: 0.3;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 75.375rem) {
+  .horizontalLign {
+    margin: 3rem auto;
+  }
+}

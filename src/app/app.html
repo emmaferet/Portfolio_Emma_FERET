@@ -1,3 +1,14 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<app-header
+  [nameTitle]="appUser()"
+  [headerNavigation]="[
+    { listNavigationElement: 'NAV.MY_STORY', router: '/mystory' },
+    { listNavigationElement: 'NAV.PROJECTS', router: '/projects' },
+    { listNavigationElement: 'NAV.SKILLS', router: '/competences' },
+  ]"
+></app-header>
+@if (loading()) {
+  <app-loader></app-loader>
+} @else {
+  <router-outlet></router-outlet>
+}
+<app-footer [footerUser]="appUser()"></app-footer>

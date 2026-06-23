@@ -1,0 +1,217 @@
+@use '@styles/classes.scss';
+@use '@styles/variables.scss';
+@use '@styles/defaultComportement.scss';
+
+.contact-container {
+  width: 69rem;
+  background: variables.$base-color-whiteCream;
+  margin: 11.2rem 5rem 5.3rem 5rem;
+  padding: 3.1rem;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  border-radius: 5rem;
+}
+
+/* Carte gauche */
+
+.contact-info {
+  width: 24rem;
+  background: variables.$base-color-softPurple;
+  padding: 2.2rem 2.3rem;
+  border-radius: 2rem;
+}
+.centerPhotoContact {
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  margin: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.contact-info h1 {
+  font-size: variables.$size-large-pc;
+  font-weight: 300;
+  color: variables.$base-color-darkGrey;
+  margin: 2rem 0;
+  align-items: center;
+}
+
+.contact-info p {
+  color: variables.$base-color-darkGrey;
+  line-height: 1.9;
+  font-size: variables.$size-medium-pc;
+}
+
+/* Formulaire */
+
+.contact-form {
+  flex: 1;
+}
+
+form {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-size: 1rem;
+  color: variables.$base-color-darkGrey;
+  margin-bottom: 0.6rem;
+}
+
+.input-group input,
+.input-group textarea {
+  border: none;
+  border-bottom: 1px solid #b6b6b6;
+  padding: 0.6rem 0;
+  background: transparent;
+  font-size: 1rem;
+  outline: none;
+  color: variables.$base-color-darkGrey;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: variables.$base-color-softGrey;
+}
+
+.full {
+  margin-bottom: 2.2rem;
+}
+
+textarea {
+  resize: none;
+  height: 5.6rem;
+}
+
+/* Bouton */
+
+.submitButtonContact {
+  width: 100%;
+  background: variables.$base-color-darkPurple;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0.5rem;
+}
+
+.submitButtonContactInvalid {
+  width: 100%;
+  background: variables.$base-color-darkPurple-disabled;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  border-radius: 0.5rem;
+}
+
+.submitButtonContact:hover {
+  opacity: 0.9;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+// Responsive mobile
+
+@media (max-width: 75.375rem) {
+  .contact-container {
+    width: auto;
+
+    margin: 1.5rem 1rem 2rem 1rem;
+    padding: 1.5rem;
+
+    flex-direction: column;
+
+    gap: 2rem;
+
+    border-radius: 2rem;
+  }
+
+  .contact-info {
+    width: 100%;
+
+    padding: 1.5rem;
+
+    text-align: center;
+
+    box-sizing: border-box;
+  }
+
+  .centerPhotoContact {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .contact-info h1 {
+    font-size: variables.$size-large-mobile;
+
+    margin: 1rem 0;
+  }
+
+  .contact-info p {
+    font-size: variables.$size-mediumPlus-mobile;
+    line-height: 1.8;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+    margin-bottom: 1.5rem;
+  }
+
+  .input-group label {
+    font-size: variables.$size-medium-mobile;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    font-size: variables.$size-medium-mobile;
+
+    padding: 0.75rem 0;
+  }
+
+  textarea {
+    height: 7rem;
+  }
+
+  .submitButtonContact,
+  .submitButtonContactInvalid {
+    padding: 0.9rem;
+
+    font-size: variables.$size-medium-mobile;
+  }
+  .input-group p {
+    color: #c44;
+    font-size: variables.$size-small-mobile;
+    margin-top: 0.4rem;
+  }
+}

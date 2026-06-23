@@ -1,0 +1,86 @@
+@use '@styles/classes.scss';
+@use '@styles/variables.scss';
+
+.centerArticleBiography {
+  display: flex;
+  justify-content: space-between;
+}
+.biographyPhoto {
+  margin: 0 5rem;
+  height: 40rem;
+  width: 40rem;
+  display: flex;
+  border-radius: 5%;
+  object-fit: cover;
+  border: 0.5rem solid variables.$base-color-darkOrange;
+}
+@media (max-width: 75.375rem) {
+  .biographyPhoto {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+.contentBiography {
+  font-size: variables.$size-medium-pc;
+  width: 40rem;
+  line-height: 160%;
+  margin: 1rem 0;
+}
+@media (max-width: 75.375rem) {
+  .contentBiography {
+    font-size: variables.$size-medium-mobile;
+    width: 90%;
+  }
+}
+
+.topMargin {
+  margin: 10rem variables.$marginSidesSmall 10rem variables.$marginSidesSmall;
+}
+
+// Responsive Mobile
+@media (max-width: 75.375rem) {
+  .topMargin {
+    margin: 0rem 1rem 2rem 1rem;
+  }
+
+  .centerArticleBiography {
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: 2rem;
+  }
+
+  .biographyPhoto {
+    width: 14rem;
+    height: 14rem;
+
+    margin: 0;
+
+    border-width: 0.3rem;
+
+    border-radius: 1.5rem;
+  }
+
+  .contentBiography {
+    width: 100%;
+
+    font-size: variables.$size-mediumPlus-mobile;
+
+    line-height: 1.8;
+
+    text-align: left;
+
+    margin-top: 1rem;
+  }
+
+  .titlePartPresentation {
+    text-align: center;
+  }
+
+  .titleH3Hook {
+    text-align: center;
+  }
+}

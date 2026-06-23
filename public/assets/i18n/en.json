@@ -1,0 +1,226 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "PROJECTS": "Projects",
+    "MY_STORY": "My Story",
+    "SKILLS": "Skills"
+  },
+  "COMMON": {
+    "HIRE_ME": "Hire Me",
+    "LOADING": "Loading...",
+    "BACK_TO_HOME": "Back to Home",
+    "PORTFOLIO": "Portfolio.",
+    "CRAFTED_WITH": "Crafted with precision and soul.",
+    "LOGO_ALT": "LogoHomePage"
+  },
+  "HOME": {
+    "TITLE": "Emma Feret",
+    "SUBTITLE": "Portfolio",
+    "INTRODUCTION": {
+      "LABEL": "Work-study October 2026",
+      "TITLE_PART_1": "From 3D Art to ",
+      "TITLE_PART_2": "Web Development",
+      "DESCRIPTION": "Former 3D artist, I now transform my spatial visions into interactive web experiences. Currently looking for a work-study program to merge technique and aesthetics.",
+      "PROJECTS_BTN": "Projects",
+      "IMAGE_ALT": "image from the short film D.S. Al Coda "
+    },
+    "ARTICLE_1": {
+      "TITLE": "1. My story",
+      "SUBTITLE": "Merging worlds",
+      "CONTENT": "My journey began in the world of volume and light. As a 3D artist, I learned to sculpt the digital, to understand the physics of materials and the importance of visual detail. \n Today, I transpose this aesthetic rigor into web development. Code and logic has allowed me to build not only objects and characters, but interactive and living universes.",
+      "IMAGE_ALT": "image from the short film D.S. Al Coda, released in 2024"
+    },
+    "ARTICLE_2": {
+      "TITLE": "2. Projects",
+      "SUBTITLE": "Recent works",
+      "CONTENT": "A variety of projects, whether it's two films made during my 5 years of master's degree or this site, my first portfolio, mixing various web development skills.",
+      "IMAGE_ALT": "angular presentation image"
+    },
+    "ARTICLE_IA": {
+      "TITLE_H2": " AI",
+      "TITLE_H3": "My use of AI",
+      "CONTENT_1": "This site was developed as part of a learning process. In order to make real progress, I chose to limit the use of artificial intelligence to the bare minimum. All the code was written by hand, and AI was only used to check certain syntax, correct code that had already been written, or for other small tasks related in particular to CSS.",
+      "CONTENT_2": "AI-assisted autocomplete was only introduced at the very end of the project, mainly for translation. My primary aim was to understand every line of code written and to gain a practical mastery of the technologies used."
+    }
+  },
+  "PROJECTS": {
+    "TITLE": "My Projects",
+    "FILTER_ALL": "All",
+    "ARTICLE": {
+      "PROJECT_NUMBER": "Project n°",
+      "PROJECT_LINK": "Link to project",
+      "VIEW_MORE": "View more"
+    }
+  },
+  "MY_STORY": {
+    "WORKS": "my-story-page works!",
+    "FORMATIONS_WORKS": "my-story-formations works!"
+  },
+  "MY_SKILLS": {
+    "WORKS": "my-skills-page works!"
+  },
+  "SKILLS_SECTION": {
+    "PART_TITLE": "03. Expertise",
+    "HOOK_TITLE": "Dual Skill",
+    "DESCRIPTION": "With a background in 3D design and web development, I combine technical skills, a meticulous approach and an eye for detail to create effective web experiences.",
+    "CATEGORY_3D": "🎲 3D Vision",
+    "DESCRIPTION_3D": "The spiritual and organic modeling",
+    "CATEGORY_DEV": "< > Programming Front",
+    "DESCRIPTION_DEV": "The architecture and website design",
+    "LEVELS": {
+      "EXPERT": "Expert",
+      "PROFICIENT": "Proficient",
+      "ADVANCED": "Advanced",
+      "COMPETENT": "Competent"
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Contact me !",
+    "DESCRIPTION": "Currently looking for a Full stack Web Developer work-study program for October 2026, do not hesitate to contact me to discuss it!",
+    "SECTION": {
+      "PART_TITLE": "04. Contact",
+      "HOOK_TITLE": "Ready for a collaboration?",
+      "DESCRIPTION": "I am actively looking for a work-study program to put my skills at the service of your most ambitious projects.",
+      "SEND_MESSAGE_BTN": "Send a message",
+      "MY_CV_BTN": "My CV"
+    },
+    "FORM": {
+      "FIRSTNAME_LABEL": "First Name",
+      "FIRSTNAME_PLACEHOLDER": "Enter your First Name",
+      "LASTNAME_LABEL": "Last Name",
+      "LASTNAME_PLACEHOLDER": "Enter your Last Name",
+      "EMAIL_LABEL": "Email",
+      "EMAIL_PLACEHOLDER": "Enter a valid email address",
+      "PHONE_LABEL": "Phone (optional)",
+      "PHONE_PLACEHOLDER": "Enter your phone",
+      "MESSAGE_LABEL": "Message",
+      "MESSAGE_PLACEHOLDER": "Enter your message",
+      "SUBMIT": "SUBMIT"
+    },
+    "ERRORS": {
+      "FIRSTNAME_REQUIRED": "First name required",
+      "LASTNAME_REQUIRED": "Last name required",
+      "EMAIL_REQUIRED": "Email required",
+      "MESSAGE_REQUIRED": "Message required",
+      "FIRSTNAME_LENGTH": "This field must contain between 2 and 50 characters",
+      "LASTNAME_LENGTH": "This field must contain between 2 and 50 characters",
+      "INVALID_EMAIL": "Please enter a valid email address.",
+      "INVALID_PHONE": "The phone number must be a valid French number.",
+      "INVALID_MESSAGE_LENGTH": "The message must contain between 5 and 500 characters.",
+      "INVALID_MESSAGE_FORMAT": "The message contains unauthorized characters.",
+      "SPAM_DETECTED": "Too many repeated characters detected."
+    },
+    "MODAL": {
+      "TITLE": "Message Sent",
+      "MESSAGE": "Thank you for your message! I will get back to you as soon as possible.",
+      "CLOSE": "Close"
+    }
+  },
+  "ERROR": {
+    "WORKS": "error-page works!"
+  },
+  "FOOTER": {
+    "COPYRIGHT_1": "@ 2026 Emma Feret Portofolio.",
+    "COPYRIGHT_2": "Crafted with precision and soul.",
+    "COPYRIGHT_3": "Last updated: "
+  },
+  "MY_STORY_PAGE": {
+    "TITLE_01": "My formations",
+    "TITLE_02": "My experiences",
+    "CONTENT": {
+      "TITLE_H3": "Full-stack developer",
+      "CONTENT_1": "👩‍🎨As a 3D character artist looking to change career, I am now putting my experience and skills to use in a new project that aligns with my passions and ambitions.",
+      "CONTENT_2": "✨Having completed a Master’s degree in 3D animation at Piktura, I have developed strong qualities such as adaptability, creativity, attention to detail and a sense of responsibility.",
+      "CONTENT_3": "👩‍💻Driven by a genuine desire to develop, I have embarked on a career move into the IT development sector, where I will be actively training at EPSI in September and developing new skills. This move demonstrates my ability to learn quickly, step outside my comfort zone and commit fully to new challenges.",
+      "CONTENT_4": "🙌Curious, motivated and determined, I am currently looking for work-study opportunities that will enable me to bring this new career plan to fruition. I’m open to discussions and new opportunities, so please don’t hesitate to get in touch to talk about it!"
+    },
+    "FORMATIONS": {
+      "FORMATION_1": {
+        "NAME_FORM": "💻 EPSI",
+        "DEGREE": "Web and Mobile Application Developer & Designer",
+        "YEAR": "Sep 2026 - 2027",
+        "SKILLS": "HTML, CSS, JS, TS, Git, Angular"
+      },
+      "FORMATION_2": {
+        "NAME_FORM": "🖥️ Training with an experienced developer",
+        "DEGREE": "",
+        "YEAR": "2026",
+        "SKILLS": "HTML, CSS, JS, TS, Git, Angular"
+      },
+      "FORMATION_3": {
+        "NAME_FORM": "👩‍🎨 Piktura",
+        "DEGREE": "Master's Degree in Digital Directing",
+        "YEAR": "2019 - 2024",
+        "SKILLS": "3D Animation, Rigging, Modeling, Sculpting, Texturing and Shading"
+      },
+      "FORMATION_4": {
+        "NAME_FORM": "✏️ Sainte Marie Beaucamps-Ligny High School",
+        "DEGREE": "Scientific General Baccalaureate with ISN and European & Latin Option",
+        "YEAR": "2019",
+        "SKILLS": ""
+      }
+    },
+    "EXPERIENCES": {
+      "EXPERIENCE_1": {
+        "TITLE": "Content Creation Internship",
+        "DURATION": "June 2021",
+        "DESCRIPTION": "Online communication and promotion of 3D models"
+      },
+      "EXPERIENCE_2": {
+        "TITLE": "3D Character Artist Internship",
+        "DURATION": "July - August 2023",
+        "DESCRIPTION": "Sculpting, Texturing and Grooming for dinosaur characters"
+      },
+      "EXPERIENCE_3": {
+        "TITLE": "Crew Member",
+        "DURATION": "October 2024 to May 2025",
+        "DESCRIPTION": "Customer service, order taking and preparation"
+      },
+      "EXPERIENCE_4": {
+        "TITLE": "3D Character Artist Internship",
+        "DURATION": "September to December 2025",
+        "DESCRIPTION": "Creation of MetaHumans and refactoring of the MetaHuman blueprint to fit the project's requirements"
+      }
+    }
+  },
+  "PROJECTS_PAGE": {
+    "PROJET": "PROJECT N°",
+    "LINK": "Link to the project >",
+    "PROJECT_1": {
+      "NAME": "This web portfolio",
+      "DESCRIPTION": "My very first portfolio, built with Angular, combining HTML, CSS and JS/TS skills under the supervision of Quentin Buysschaert!",
+      "ALT": "Image of the Angular framework"
+    },
+    "PROJECT_2": {
+      "NAME": "D.S. Al Coda",
+      "DESCRIPTION": "⭐️ 48 official selections\n⭐️ 4 awards\n⭐️ Longlisted for the BAFTAs, Student Academy Awards semi-finalist, The Rookies finalist\n5th-year 3D short film directed by Maxime Wattrelos, Emma Feret, Jeremy Trochet, Louis Cocquet, François Mainguet, Rachel Cuvilliez, and Florian Lecocq.\nConsumed by the fear of becoming deaf, Ian draws and memorizes the sounds around him.",
+      "ALT": "Image from the short film D.S. Al Coda"
+    },
+    "PROJECT_3": {
+      "NAME": "Oiseaux de nuit",
+      "DESCRIPTION": "🏆 15 official selections\n🏆 2 awards\n3rd-year 3D short film directed by Emma Richet, Candice Yernaux, Emma Feret, Juliette Buysschaert, and Rachel Cuvilliez.\nAn abandoned wolf discovers a strange yet beautiful city.",
+      "ALT": "Image from the short film Oiseaux de Nuit"
+    }
+  },
+  "MY_SKILLS_PAGE": {
+    "SKILLS_TITLE_1": "Evolution of my",
+    "SKILLS_TITLE_2": "Skills.",
+    "SKILLS_DESCRIPTION_INTRO": "From 3D animation to web development, my journey has enabled me to develop valuable skills such as organization, teamwork, precision, and autonomy. Working on both creative and technical projects has taught me how to build reliable solutions, tackle complex challenges, and pay close attention to user experience as well as implementation details."
+  },
+  "OPENING_MODAL": {
+    "TITLE": "WELCOME TO MY PORTFOLIO",
+    "MESSAGE_1": "This site is currently a work in progress! ",
+    "MESSAGE_2": "If you have any feedback, please don’t hesitate to get in touch!",
+    "BUTTON": "Explore my portfolio"
+  },
+  "CONTACT_MODAL": {
+    "TITLE": "Thank you for your message !",
+    "CONTENT": "I’ll get back to you as soon as possible.",
+    "BUTTON": "Close"
+  },
+  "WARNING_MODAL": {
+    "TITLE": "Warning !",
+    "CONTENT": "The data are hosted on a free server, and may take up to 50 seconds to load. Please be patient.",
+    "BUTTON": "Close"
+  }
+}

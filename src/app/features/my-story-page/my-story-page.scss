@@ -1,0 +1,13 @@
+@use '@styles/defaultComportement.scss';
+@use '@styles/variables.scss';
+@use '@styles/classes.scss';
+
+.fixMargin {
+  margin: 5rem 0;
+}
+
+@media (max-width: 75.375rem) {
+  .fixMargin {
+    margin: 3rem 0;
+  }
+}

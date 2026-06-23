@@ -1,0 +1,110 @@
+@use '@styles/styles.scss';
+@use '@styles/variables.scss';
+
+.modal {
+  position: relative;
+
+  max-width: 30rem;
+
+  padding: 3rem 2.5rem;
+  text-align: center;
+  height: fit-content;
+
+  background: rgba(variables.$base-color-softOrange, 0.4);
+}
+
+.title {
+  color: variables.$base-color-darkPurple;
+  font-size: variables.$size-mediumPlus-pc;
+  font-weight: bold;
+
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.2;
+  width: 25rem;
+}
+
+.text {
+  color: variables.$base-color-darkPurple;
+  font-size: variables.$size-medium-pc;
+
+  margin-bottom: 2rem;
+  line-height: 2rem;
+
+  opacity: 0.9;
+}
+
+.darkPurpleSolidButtonNative {
+  margin: 0 auto;
+  max-width: 380px;
+  height: 52px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: variables.$base-color-darkPurple;
+  color: variables.$base-color-whiteCream;
+
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+    transform: scale(1.01);
+  }
+}
+// responsive
+@media (max-width: 75.375rem) {
+  .modal {
+    width: 15rem;
+    max-width: 15rem;
+
+    padding: 2rem 1.25rem;
+    border-radius: 1.25rem;
+  }
+
+  .marginDialog::before {
+    width: 3.5rem;
+    height: 3.5rem;
+
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    width: 100%;
+    font-size: variables.$size-mediumPlus-mobile;
+
+    margin-top: 0rem;
+    margin-bottom: 0.75rem;
+
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .text {
+    font-size: variables.$size-medium-mobile;
+    line-height: 1.6rem;
+
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .darkPurpleSolidButtonNative {
+    width: 8rem;
+    max-width: 100%;
+
+    height: 44px;
+    font-size: variables.$size-small-mobile;
+  }
+
+  mat-dialog-actions {
+    justify-content: center;
+    padding: 0;
+  }
+}

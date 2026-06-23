@@ -1,14 +1,15 @@
-@use '@styles/styles.scss';
+@use '@styles/classes.scss';
+@use '@styles/variables.scss';
 
 //
 .footer {
-  background-color: styles.$base-color-whiteCream;
+  background-color: variables.$base-color-whiteCream;
   border: none;
   border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: styles.$base-color-darkGrey;
+  color: variables.$base-color-darkGrey;
 }
 
 @media (max-width: 75.375rem) {
@@ -22,16 +23,19 @@
   }
 }
 
+.positionTitleFooter {
+  text-align: right;
+}
 @media (max-width: 75.375rem) {
   .positionTitleFooter {
-    font-size: styles.$size-medium-mobile;
+    font-size: variables.$size-medium-mobile;
     margin: 0.5rem;
     line-height: 1rem;
   }
 }
 @media (min-width: 75.375rem) {
   .positionTitleFooter {
-    font-size: styles.$size-medium-pc;
+    font-size: variables.$size-medium-pc;
     margin: 0.5rem 2rem;
     line-height: 1.5rem;
   }
@@ -45,17 +49,42 @@
   padding: 0 0.3rem;
   text-decoration: none;
   font-weight: bold;
-  color: styles.$base-color-darkGrey;
+  color: variables.$base-color-darkGrey;
 }
 
 @media (min-width: 75.375rem) {
   .footerNavigationButtons {
-    font-size: styles.$size-medium-pc;
+    font-size: variables.$size-medium-pc;
     padding: 0 2rem;
   }
 }
 @media (max-width: 75.375rem) {
   .footerNavigationButtons {
-    font-size: styles.$size-small-mobile;
+    font-size: variables.$size-small-mobile;
+  }
+}
+
+.footerNavigationButtonsNative {
+  background: transparent;
+  border: none;
+  appearance: none;
+  padding: 0 0.3rem;
+  font-weight: bold;
+  color: variables.$base-color-darkGrey;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+@media (min-width: 75.375rem) {
+  .footerNavigationButtonsNative {
+    font-size: variables.$size-medium-pc;
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 75.375rem) {
+  .footerNavigationButtonsNative {
+    font-size: variables.$size-small-mobile;
   }
 }

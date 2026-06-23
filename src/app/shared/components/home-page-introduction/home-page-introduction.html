@@ -1,14 +1,21 @@
-<div class="align centerContent ">
-  <article class="articlGlobalPresentation">
-    <p class="textBoxAlternance"> Alternance Octobre 2026</p>
-    <h2 class="bigTitleIntroduction">De l'Art 3D au <span class="bigTitleIntroductionColor">Développement web</span></h2>
+<div class="align positionIntroduction">
+  <div class="imageWrapper">
+    <img class="fitImageIntroduction" src="emma-feret-SOUR-sideImg.jpg" alt="D.S. Al Coda image " />
+  </div>
+  <article class="articlGlobalPresentation fixArticlePos">
+    <p class="textBoxAlternance">{{ 'HOME.INTRODUCTION.LABEL' | translate }}</p>
+    <h1 class="bigTitleIntroduction">
+      {{ 'HOME.INTRODUCTION.TITLE_PART_1' | translate }}
+      <span class="bigTitleIntroductionColor italic">{{
+        'HOME.INTRODUCTION.TITLE_PART_2' | translate
+      }}</span>
+    </h1>
     <p class="introductionContent">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, dolores eaque. Et tempore.
+      {{ 'HOME.INTRODUCTION.DESCRIPTION' | translate }}
     </p>
-    <a href="" class="darkPurpleSolidButton">Projets</a>
+    <a class="darkPurpleSolidButton buttonTest" routerLink="/projects">{{
+      'HOME.INTRODUCTION.PROJECTS_BTN' | translate
+    }}</a>
   </article>
-  <img class="fitImageIntroduction" src="/img/emma-feret-SOUR-sideImg.jpg" alt="image">
-
+  <!-- <button (click)="openModal()">MODALE</button> -->
 </div>
-
-

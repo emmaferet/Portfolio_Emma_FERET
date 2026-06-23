@@ -1,0 +1,166 @@
+{
+  "$schema": "../node_modules/json-server/schema.json",
+  "user": {
+    "name": "Emma",
+    "surname": "Feret",
+    "age": 25,
+    "phone": "0671252815",
+    "mail": "emmaferet11@gmail.com",
+    "location": "Lille",
+    "school": "2iAcademy",
+    "rythm": "3 semaines en entreprise, 1 semaine à l'école",
+    "links": [
+      {
+        "id": 1,
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/emma-feret/"
+      },
+      {
+        "id": 2,
+        "label": "GitHub",
+        "url": "https://github.com/emmaferet/"
+      },
+      {
+        "id": 3,
+        "label": "CV",
+        "url": ""
+      },
+      {
+        "id": 4,
+        "label": "Mail",
+        "url": "mailto:emmaferet11@gmail.com"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "id": 1,
+      "title": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_1.TITLE",
+      "company": "Let It Bim",
+      "duration": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_1.DURATION",
+      "description": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_1.DESCRIPTION",
+      "link": "letItBim.png"
+    },
+    {
+      "id": 2,
+      "title": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_2.TITLE",
+      "company": "Providence VFX",
+      "duration": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_2.DURATION",
+      "description": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_2.DESCRIPTION",
+      "link": "providence.jpg"
+    },
+    {
+      "id": 3,
+      "title": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_3.TITLE",
+      "company": "Burger King",
+      "duration": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_3.DURATION",
+      "description": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_3.DESCRIPTION",
+      "link": "Burger_King.svg"
+    },
+    {
+      "id": 4,
+      "title": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_4.TITLE",
+      "company": "Renraku Dynamics",
+      "duration": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_4.DURATION",
+      "description": "MY_STORY_PAGE.EXPERIENCES.EXPERIENCE_4.DESCRIPTION",
+      "link": "samuel.png"
+    }
+  ],
+  "formations": [
+    {
+      "id": 1,
+      "nameForm": "MY_STORY_PAGE.FORMATIONS.FORMATION_1.NAME_FORM",
+      "degree": "MY_STORY_PAGE.FORMATIONS.FORMATION_1.DEGREE",
+      "year": "MY_STORY_PAGE.FORMATIONS.FORMATION_1.YEAR",
+      "skillsForm": "MY_STORY_PAGE.FORMATIONS.FORMATION_1.SKILLS"
+    },
+    {
+      "id": 2,
+      "nameForm": "MY_STORY_PAGE.FORMATIONS.FORMATION_2.NAME_FORM",
+      "degree": "MY_STORY_PAGE.FORMATIONS.FORMATION_2.DEGREE",
+      "year": "MY_STORY_PAGE.FORMATIONS.FORMATION_2.YEAR",
+      "skillsForm": "MY_STORY_PAGE.FORMATIONS.FORMATION_2.SKILLS"
+    },
+    {
+      "id": 3,
+      "nameForm": "MY_STORY_PAGE.FORMATIONS.FORMATION_3.NAME_FORM",
+      "degree": "MY_STORY_PAGE.FORMATIONS.FORMATION_3.DEGREE",
+      "year": "MY_STORY_PAGE.FORMATIONS.FORMATION_3.YEAR",
+      "skillsForm": "MY_STORY_PAGE.FORMATIONS.FORMATION_3.SKILLS"
+    },
+    {
+      "id": 4,
+      "nameForm": "MY_STORY_PAGE.FORMATIONS.FORMATION_4.NAME_FORM",
+      "degree": "MY_STORY_PAGE.FORMATIONS.FORMATION_4.DEGREE",
+      "year": "MY_STORY_PAGE.FORMATIONS.FORMATION_4.YEAR",
+      "skillsForm": "MY_STORY_PAGE.FORMATIONS.FORMATION_4.SKILLS"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "name": "Maya",
+      "level": "SKILLS_SECTION.LEVELS.PROFICIENT",
+      "type": "SKILL3D"
+    },
+    {
+      "id": 2,
+      "name": "Zbrush",
+      "level": "SKILLS_SECTION.LEVELS.EXPERT",
+      "type": "SKILL3D"
+    },
+    {
+      "id": 3,
+      "name": "Substance",
+      "level": "SKILLS_SECTION.LEVELS.PROFICIENT",
+      "type": "SKILL3D"
+    },
+    {
+      "id": 4,
+      "name": "HTML/CSS",
+      "level": "SKILLS_SECTION.LEVELS.COMPETENT",
+      "type": "SKILLDEV"
+    },
+    {
+      "id": 5,
+      "name": "JS/TS",
+      "level": "SKILLS_SECTION.LEVELS.ADVANCED",
+      "type": "SKILLDEV"
+    },
+    {
+      "id": 6,
+      "name": "Angular",
+      "level": "SKILLS_SECTION.LEVELS.ADVANCED",
+      "type": "SKILLDEV"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "PROJECTS_PAGE.PROJECT_1.NAME",
+      "year": 2026,
+      "description": "PROJECTS_PAGE.PROJECT_1.DESCRIPTION",
+      "image": "angular-imagePresentation.webp",
+      "link": "",
+      "alt": "PROJECTS_PAGE.PROJECT_1.ALT"
+    },
+    {
+      "id": 2,
+      "name": "PROJECTS_PAGE.PROJECT_2.NAME",
+      "year": 2025,
+      "description": "PROJECTS_PAGE.PROJECT_2.DESCRIPTION",
+      "image": "dsalcoda_affiche_emmaF.jpg",
+      "link": "https://youtu.be/gLA3pJN7coY?si=hoT0p6HuuKlN0xct",
+      "alt": "PROJECTS_PAGE.PROJECT_2.ALT"
+    },
+    {
+      "id": 3,
+      "name": "PROJECTS_PAGE.PROJECT_3.NAME",
+      "year": 2023,
+      "description": "PROJECTS_PAGE.PROJECT_3.DESCRIPTION",
+      "image": "oiseauxDeNuit_affiche_EmmaF.jpg",
+      "link": "https://youtu.be/IgCvP8jAk4g?si=-nixvO4q3WBFoslK",
+      "alt": "PROJECTS_PAGE.PROJECT_3.ALT"
+    }
+  ]
+}

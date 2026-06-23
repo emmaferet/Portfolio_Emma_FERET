@@ -1,0 +1,71 @@
+@use '@styles/classes.scss';
+@use '@styles/variables.scss';
+
+.experienceImg {
+  margin: 5rem 0;
+  height: 20rem;
+  width: 30rem;
+  display: flex;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.articleContent {
+  width: 30rem;
+  line-height: 2rem;
+  margin-left: 5rem;
+  font-size: variables.$size-medium-pc;
+}
+.titlePartPresentation {
+  margin-top: 1rem;
+}
+.experiencePres {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 variables.$marginSides;
+}
+.experienceMarginFix {
+  margin-left: 5rem;
+}
+
+@media (max-width: 75.375rem) {
+  .experiencePres {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 3rem 5%;
+    gap: 1.5rem;
+  }
+
+  .experienceImg {
+    height: 10rem;
+    width: 100%;
+    max-width: 18rem;
+    margin: 1rem 0 0 0;
+    align-self: center;
+  }
+
+  .articleContent {
+    width: 100%;
+    margin-left: 0;
+    font-size: variables.$size-small-mobile;
+    line-height: 1rem;
+  }
+
+  .experienceMarginFix {
+    margin-left: 0;
+  }
+
+  .titlePartPresentation {
+    font-size: variables.$size-small-mobile;
+    margin-top: 0.5rem;
+  }
+
+  .titleH3Hook {
+    font-size: variables.$size-large-mobile;
+    margin: 0.3rem 0;
+  }
+
+  .column {
+    width: 100%;
+  }
+}

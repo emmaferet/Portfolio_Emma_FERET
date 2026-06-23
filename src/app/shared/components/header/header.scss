@@ -1,54 +1,306 @@
-@use '@styles/styles.scss';
+@use '@styles/classes.scss';
+@use '@styles/variables.scss';
 
 .header {
-  background-color: styles.$base-color-whiteCream;
-  border: 0.1rem solid styles.$base-color-softPurple;
+  background-color: variables.$base-color-whiteCream;
+  border: 0.1rem solid variables.$base-color-softPurple;
   border-radius: 4rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  position: sticky;
+  justify-content: space-between;
   top: 0;
-  z-index: 999;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  position: fixed;
+  backdrop-filter: blur(1rem);
 }
 
-@media (max-width: 75.375rem) {
+@media (min-width: 75.375rem) {
   .header {
-    font-size: styles.$size-medium-mobile;
-    height: 3rem;
-    margin: 1rem 3%;
+    font-size: variables.$size-medium-pc;
+    height: 5rem;
+    margin: 1rem 4rem;
   }
 }
 @media (min-width: 75.375rem) {
-  header {
-    font-size: styles.$size-medium-pc;
-    height: 5rem;
-    margin: 2rem 4%;
+  .headerContainer {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10rem;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    pointer-events: none;
+    z-index: 4;
+    backdrop-filter: blur(2rem);
+    -webkit-backdrop-filter: blur(2rem);
+
+    mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
   }
+}
+
+@media (min-width: 75.375rem) {
+  .fixMargin {
+    margin: 0 6rem;
+  }
+}
+.headerSwitch {
+  top: 2.7rem;
+  right: 7rem;
+  position: fixed;
+  z-index: 5;
 }
 .nameH1Title {
   font-weight: bold;
-  color: styles.$base-color-darkPurple;
-}
-@media (max-width: 75.375rem) {
-  .nameH1Title {
-    font-size: styles.$size-large-mobile;
-  }
-}
-@media (min-width: 75.375rem) {
-  .nameH1Title {
-    font-size: styles.$size-large-pc;
-  }
-}
-.headerNavigationButtons {
-  background-color: transparent;
-  color: styles.$base-color-darkGrey;
-  padding: 0 0.3rem;
   text-decoration: none;
+  color: variables.$base-color-darkPurple;
+  transition: all 0.3s ease;
+  line-height: 2rem;
+}
+.nameH1Title:hover {
+  color: variables.$base-color-darkPurpleSoft;
 }
 
 @media (min-width: 75.375rem) {
-  .headerNavigationButtons {
-    font-size: styles.$size-medium-pc;
+  .nameH1Title {
+    font-size: variables.$size-large-pc;
+  }
+}
+.headerNavigationButtonsNative {
+  background: transparent;
+  border: none;
+
+  appearance: none;
+  padding: 0 0.3rem;
+  color: variables.$base-color-darkGrey;
+  cursor: pointer;
+
+  display: inline-block;
+  text-decoration: underline variables.$base-color-whiteCream;
+  text-underline-offset: 0.5rem;
+  text-decoration-thickness: 0.1rem;
+
+  transition: all 0.4s ease;
+}
+
+@media (min-width: 75.375rem) {
+  .headerNavigationButtonsNative {
+    font-size: variables.$size-medium-pc;
+    padding: 0 2rem;
+  }
+}
+
+.headerNavigationButtonsNative:hover {
+  display: inline-block;
+  text-decoration: underline variables.$base-color-darkOrange;
+  text-underline-offset: 0.5rem;
+  text-decoration-thickness: 0.1rem;
+  font-size: variables.$size-mediumPlus-pc;
+}
+
+.darkPurpleSolidButton:hover {
+  background-color: variables.$base-color-darkPurpleSoft;
+}
+
+// Css of switch language button
+
+/* From Uiverse.io by Shoh2008 */
+.checkbox-wrapper-8 .tgl {
+  display: none;
+}
+
+.checkbox-wrapper-8 .tgl,
+.checkbox-wrapper-8 .tgl:after,
+.checkbox-wrapper-8 .tgl:before,
+.checkbox-wrapper-8 .tgl *,
+.checkbox-wrapper-8 .tgl *:after,
+.checkbox-wrapper-8 .tgl *:before,
+.checkbox-wrapper-8 .tgl + .tgl-btn {
+  box-sizing: border-box;
+}
+
+.checkbox-wrapper-8 .tgl::-moz-selection,
+.checkbox-wrapper-8 .tgl:after::-moz-selection,
+.checkbox-wrapper-8 .tgl:before::-moz-selection,
+.checkbox-wrapper-8 .tgl *::-moz-selection,
+.checkbox-wrapper-8 .tgl *:after::-moz-selection,
+.checkbox-wrapper-8 .tgl *:before::-moz-selection,
+.checkbox-wrapper-8 .tgl + .tgl-btn::-moz-selection,
+.checkbox-wrapper-8 .tgl::selection,
+.checkbox-wrapper-8 .tgl:after::selection,
+.checkbox-wrapper-8 .tgl:before::selection,
+.checkbox-wrapper-8 .tgl *::selection,
+.checkbox-wrapper-8 .tgl *:after::selection,
+.checkbox-wrapper-8 .tgl *:before::selection,
+.checkbox-wrapper-8 .tgl + .tgl-btn::selection {
+  background: none;
+}
+
+.checkbox-wrapper-8 .tgl + .tgl-btn {
+  outline: 0;
+  display: block;
+  width: 2em;
+  height: 2em;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox-wrapper-8 .tgl + .tgl-btn:after,
+.checkbox-wrapper-8 .tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.checkbox-wrapper-8 .tgl + .tgl-btn:after {
+  left: 0;
+}
+
+.checkbox-wrapper-8 .tgl + .tgl-btn:before {
+  display: none;
+}
+
+.checkbox-wrapper-8 .tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+
+.checkbox-wrapper-8 .tgl-skewed + .tgl-btn {
+  overflow: hidden;
+  transform: skew(-10deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: all 0.2s ease;
+  font-family: sans-serif;
+  background: variables.$base-color-darkPurpleSoft;
+}
+
+.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:after,
+.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:before {
+  transform: skew(10deg);
+  display: inline-block;
+  transition: all 0.2s ease;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  line-height: 2em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:after {
+  left: 100%;
+  content: attr(data-tg-on);
+}
+
+.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:before {
+  left: 0;
+  content: attr(data-tg-off);
+}
+
+.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:active {
+  background: #888;
+}
+
+.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:active:before {
+  left: -10%;
+}
+
+.checkbox-wrapper-8 .tgl-skewed:checked + .tgl-btn {
+  background: variables.$base-color-softGreen;
+}
+
+.checkbox-wrapper-8 .tgl-skewed:checked + .tgl-btn:before {
+  left: -100%;
+}
+
+.checkbox-wrapper-8 .tgl-skewed:checked + .tgl-btn:after {
+  left: 0;
+}
+
+.checkbox-wrapper-8 .tgl-skewed:checked + .tgl-btn:active:after {
+  left: 10%;
+}
+
+// responsive mobile
+
+@media (max-width: 75.375rem) {
+  .header {
+    height: 4rem;
+    margin: 0.75rem 1rem;
+    padding: 0 1rem;
+
+    justify-content: space-between;
+    gap: 0.75rem;
+
+    border-radius: 2.5rem;
+  }
+
+  .headerContainer {
+    height: 6rem;
+  }
+
+  .nameH1Title {
+    font-size: variables.$size-large-mobile;
+    line-height: 1rem;
+    width: 2rem;
+  }
+
+  nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .align {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+  }
+
+  .headerNavigationButtonsNative {
+    font-size: variables.$size-medium-mobile;
+    padding: 0 0.4rem;
+    text-underline-offset: 0.25rem;
+  }
+
+  .headerNavigationButtonsNative:hover {
+    font-size: variables.$size-medium-mobile;
+    padding: 0 0.4rem;
+  }
+
+  .darkPurpleSolidButton {
+    font-size: variables.$size-medium-mobile;
+    padding: 0.45rem 0.8rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .headerSwitch {
+    position: fixed;
+    z-index: 5;
+    top: 5rem;
+    right: 0.5rem;
+  }
+
+  .checkbox-wrapper-8 .tgl + .tgl-btn {
+    width: 1.8em;
+    height: 1.8em;
+    font-size: variables.$size-small-mobile;
   }
 }

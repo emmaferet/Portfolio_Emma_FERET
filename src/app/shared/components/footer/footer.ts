@@ -1,9 +1,28 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { User } from '@core/models/interfaces/user.interface';
+import { TranslatePipe } from '@ngx-translate/core';
+import packageInfo from '@package/package.json';
+import { FormatDatePipe } from '@shared/pipes/format-date-pipe';
 
 @Component({
   selector: 'app-footer',
-  imports: [],
+  imports: [TranslatePipe, FormatDatePipe],
   templateUrl: './footer.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './footer.scss',
 })
-export class Footer {}
+export class Footer {
+  footerUser = input.required<User | undefined>();
+  // listNavigationFooter = input.required<ListNavigation[]>();
+  lastUpdateTimestamp = new Date(packageInfo.meta.lastUpdate).getTime();
+  version = packageInfo.version;
+
+  downloadCv() {
+    const link = document.createElement('a');
+    link.href = 'files/CVWebDev_EmmaFERET.pdf';
+    link.download = 'CVWebDev_EmmaFERET.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+}

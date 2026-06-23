@@ -1,0 +1,16 @@
+@let userInfosList = userInfos();
+<div class="align topMargin centerArticleBiography">
+  <img src="photoID_emmaFERET.jpg" class="biographyPhoto" />
+  <div>
+    <h2 class="titlePartPresentation">{{ userInfosList?.name }} {{ userInfosList?.surname }}</h2>
+    <h3 class="titleH3Hook bold">{{ 'MY_STORY_PAGE.CONTENT.TITLE_H3' | translate }}</h3>
+    <p class="contentBiography">
+      {{ 'MY_STORY_PAGE.CONTENT.CONTENT_1' | translate }}
+      <br /><br />{{ 'MY_STORY_PAGE.CONTENT.CONTENT_2' | translate }}
+      <br />
+      <br />{{ 'MY_STORY_PAGE.CONTENT.CONTENT_3' | translate }} <br /><br />{{
+        'MY_STORY_PAGE.CONTENT.CONTENT_4' | translate
+      }}
+    </p>
+  </div>
+</div>

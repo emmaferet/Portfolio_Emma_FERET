@@ -1,0 +1,137 @@
+@use '@styles/classes.scss';
+@use '@styles/variables.scss';
+
+.fixMargin {
+  margin: 6rem variables.$marginSides 6rem variables.$marginSides;
+  justify-content: center;
+}
+.fitImageProjects {
+  border-radius: 1.5rem;
+  object-fit: cover;
+}
+
+@media (min-width: 75.375rem) {
+  .fitImageProjects {
+    width: 30rem;
+    height: 28rem;
+  }
+}
+.fitImageProjectsRight {
+  border-radius: 1.5rem;
+  object-fit: cover;
+}
+
+@media (min-width: 75.375rem) {
+  .fitImageProjectsRight {
+    width: 35rem;
+    height: 28rem;
+  }
+}
+.articleContent {
+  max-width: 30rem;
+}
+
+@media (min-width: 75.375rem) {
+  .articleContent {
+    word-spacing: 5%;
+    font-size: variables.$size-medium-pc;
+    line-height: 2rem;
+    width: 30rem;
+  }
+}
+.rightSide {
+  display: flex;
+  justify-content: right;
+  align-items: end;
+}
+.articlProjectPresentation {
+  display: flex;
+}
+
+@media (min-width: 75.375rem) {
+  .articlProjectPresentation {
+    margin: 8%;
+  }
+}
+
+.linkProject {
+  text-decoration: none;
+  color: variables.$base-color-darkPurple;
+  margin: 5rem 0;
+  font-weight: bold;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15%;
+}
+.fixMarginLeft {
+}
+
+.left {
+  text-align: left;
+  display: flex;
+  justify-content: space-around;
+}
+.align {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+// Responsive
+
+@media (max-width: 75.375rem) {
+  /* FORCE UN SEUL COMPORTEMENT POUR LES 2 VARIANTS */
+  .fixMargin,
+  .fixMarginLeft {
+    margin: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* IMAGE TOUJOURS EN HAUT (anti-zigzag) */
+  .fitImageProjects,
+  .fitImageProjectsRight {
+    width: 100%;
+    max-width: 24rem;
+    height: 14rem;
+    border-radius: 1.5rem;
+    object-fit: cover;
+
+    /* 🔥 CRUCIAL : annule toute logique gauche/droite */
+    order: 0 !important;
+  }
+
+  /* CONTENU IDENTIQUE POUR TOUS LES PROJETS */
+  .articlProjectPresentation {
+    width: 100%;
+    margin: 1.5rem 0 0 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .articleContent {
+    width: 100%;
+    font-size: variables.$size-small-mobile;
+    line-height: 1.7;
+    text-align: left;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .titleH3Hook {
+    text-align: center;
+  }
+}

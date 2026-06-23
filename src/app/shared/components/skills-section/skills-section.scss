@@ -1,0 +1,123 @@
+@use '@styles/variables.scss';
+@use '@styles/classes.scss';
+
+.skillsBoxPurple {
+  background-color: variables.$base-color-darkPurple;
+  width: 50%;
+  border-radius: 4rem;
+  transition-delay: 0.15s;
+}
+.skillsBoxWhite {
+  background-color: variables.$base-color-whiteCream;
+  width: 50%;
+  border-radius: 4rem;
+  transition-delay: 0s;
+}
+.h1TitlePurpleBox {
+  font-size: variables.$size-mediumPlus-pc;
+  font-weight: bold;
+  margin-top: 10%;
+}
+.centerSkills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.fixPositionContent {
+  margin: 6rem 0;
+
+  align-items: stretch;
+  gap: 2rem;
+}
+.fixMargin {
+  margin: 2rem variables.$marginSidesSmall;
+}
+
+.skillsContent {
+  font-size: variables.$size-smallPlus-pc;
+}
+.skillsDesc {
+  font-size: variables.$size-medium-pc;
+  text-align: center;
+  line-height: 160%;
+  max-width: 50rem;
+  width: 100%;
+}
+
+//ANimation test
+.skillsCard {
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.skillsCard.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+// Responsive
+
+@media (max-width: 75.375rem) {
+  .fixMargin {
+    margin: 2rem 1rem;
+  }
+
+  .centerSkills {
+    text-align: center;
+  }
+
+  .skillsDesc {
+    width: 100%;
+
+    font-size: variables.$size-mediumPlus-mobile;
+    line-height: 1.8;
+
+    margin-top: 1rem;
+  }
+
+  .fixPositionContent {
+    flex-direction: column;
+
+    margin: 2rem 0;
+    gap: 1.5rem;
+
+    align-items: stretch;
+  }
+
+  .skillsBoxWhite,
+  .skillsBoxPurple {
+    width: 100%;
+
+    border-radius: 2rem;
+
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  .h1TitlePurpleBox {
+    font-size: variables.$size-mediumPlus-mobile;
+
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+
+    text-align: center;
+  }
+
+  .skillsContent {
+    font-size: variables.$size-medium-mobile;
+  }
+
+  .centerContent {
+    margin: 0.75rem 0;
+  }
+
+  li.centerContent {
+    justify-content: space-between;
+    align-items: center;
+  }
+}

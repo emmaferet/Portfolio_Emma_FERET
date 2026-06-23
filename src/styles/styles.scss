@@ -1,122 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
-@use "./variables.scss";
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+@use '@styles/variables.scss';
+@use '@styles/defaultComportement.scss';
+@use '@styles/classes.scss';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
-
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+html {
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$magenta-palette,
+        tertiary: mat.$violet-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
+
 body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
+  // Default the application to a light color theme. This can be changed to
+  // `dark` to enable the dark color theme, or to `light dark` to defer to the
+  // user's system settings.
+  color-scheme: light;
 
-// Global CSS
-$size-medium-pc:1.2rem;
-$size-medium-mobile:0.6rem;
-$size-large-pc:2.5rem;
-$size-large-mobile:1rem;
-$size-small-pc:0.8rem;
-$size-small-mobile:0.6rem;
+  // Set a default background, font and text colors for the application using
+  // Angular Material's system-level CSS variables. Learn more about these
+  // variables at https://material.angular.dev/guide/system-variables
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
 
+  // Reset the user agent margin.
+  margin: 0;
+  height: 100%;
+  font-family: 'Playfair Display', serif;
 
-$base-color-darkPurple: #585594;
-$base-color-softPurple: #ede8f0;
-$base-color-whiteCream: #fcf8f5;
-$base-color-softOrange: #fbe6d7;
-$base-color-softOrange: #f0ede9;
-$base-color-darkGrey: #1c1c1a;
-
-
-html, body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color:$base-color-darkGrey;
-    background-image: url("/img/backGroundImg.jpg") ;
-    background-repeat: repeat-x repeat-y;
-    background-size: 300rem;
-
+  color: variables.$base-color-darkGrey;
 }
-
-
-
-.align{
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-}
-.centerContent{
-    align-items: center;
-    justify-content:space-around;
-}
-@media (max-width: 75.375rem){
-  .centerContent{
-    margin: 20% 0;
-}}
-@media (min-width: 75.375rem){
-  .centerContent{
-    margin: 10% 0;
-}}
-
-
-.articlGlobalPresentation{
-  margin:4%;
-}
-
-.darkPurpleSolidButton{
-    background-color: $base-color-darkPurple;
-    border: none;
-    color: $base-color-whiteCream ;
-    text-decoration: none;
-    border-radius: 5rem;
-
-}
-@media (max-width: 75.375rem){
-  .darkPurpleSolidButton{
-    padding: 0.45rem 0.5rem;
-}
-}
-@media (min-width: 75.375rem){
-    .darkPurpleSolidButton{
-      padding: 0.8rem 2rem;
-}
-}
+/* You can add global styles to this file, and also import other style files */

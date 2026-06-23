@@ -1,0 +1,110 @@
+@use '@styles/variables.scss';
+@use '@styles/styles.scss';
+
+.skillsBoxPurple {
+  background-color: variables.$base-color-darkPurple;
+  width: 30%;
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: variables.$base-color-softOrange;
+  border-width: 0.3rem;
+}
+.skillsBoxWhite {
+  background-color: variables.$base-color-whiteCream;
+  width: 30%;
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: variables.$base-color-darkPurple;
+  border-width: 0.3rem;
+}
+.h1TitlePurpleBox {
+  font-size: variables.$size-medium-pc;
+  font-weight: bold;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+}
+.centerSkills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.skillsPageSection {
+  margin: 4rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.smallDescSkills {
+  margin-top: 2rem;
+  font-size: variables.$size-medium-pc;
+  display: flex;
+  justify-content: center;
+}
+
+.skillsPresentation {
+  margin: 5rem 4rem;
+}
+
+.fixMargin {
+  margin-top: 8rem;
+}
+
+@media (max-width: 75.375rem) {
+  .skillsPageSection {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 2rem;
+
+    margin: 0rem 1rem 3rem 1rem;
+  }
+
+  .skillsBoxWhite,
+  .skillsBoxPurple {
+    width: 100%;
+
+    margin: 0;
+
+    border-radius: 1.5rem;
+
+    box-sizing: border-box;
+  }
+
+  .h1TitlePurpleBox {
+    font-size: variables.$size-mediumPlus-mobile;
+
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+
+    text-align: center;
+  }
+
+  .smallDescSkills {
+    margin: 1rem 1.5rem 2rem 1.5rem;
+
+    font-size: variables.$size-medium-mobile;
+
+    text-align: center;
+
+    line-height: 1.7;
+  }
+
+  .skillsPresentation {
+    margin: 1rem 1.5rem;
+
+    align-items: center;
+  }
+
+  .skillsPresentation h3,
+  .skillsPresentation p {
+    font-size: variables.$size-medium-mobile;
+  }
+
+  .fixMargin {
+    margin-top: 2rem;
+  }
+}

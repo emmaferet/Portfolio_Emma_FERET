@@ -1,0 +1,65 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    environment: github-pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: v24.15.x
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Update version & metadata
+        run: npm run prebuild
+
+      - name: Inject Environment Variables
+        env:
+          ENV_APIURL: '${{ secrets.APIURL }}'
+        run: sed -i "s|API_URL|$ENV_APIURL|g" src/environments/environments.ts
+
+      - name: Build
+        run: npm run build -- --configuration=production --base-href /Portofolio_Emma_FERET/
+        env:
+          EMAIL_SERVICE_ID: ${{ vars.EMAIL_SERVICE_ID }}
+          EMAIL_TEMPLATE_ID: ${{ vars.EMAIL_TEMPLATE_ID }}
+          EMAIL_PUBLIC_KEY: ${{ vars.EMAIL_PUBLIC_KEY }}
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/browser
+
+  deploy:
+    name: Deploy
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

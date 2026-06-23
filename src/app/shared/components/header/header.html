@@ -1,20 +1,40 @@
-<header class="header">
-  <h1 class="nameH1Title">Emma Feret</h1>
-  <nav>
-    <ul class="align">
-      <li>
-        <a href="#" class="headerNavigationButtons">Work</a>
-      </li>
-      <li>
-        <a href="#" class="headerNavigationButtons">Story</a>
-      </li>
-      <li>
-        <a href="#" class="headerNavigationButtons">Philosophy</a>
-      </li>
-      <li>
-        <a href="#" class="headerNavigationButtons">Contact</a>
-      </li>
-    </ul>
-  </nav>
-  <a href="#" class="darkPurpleSolidButton">Hire Me</a>
+<header>
+  <div class="headerContainer"></div>
+  <div>
+    <div class="header">
+      @let nameTitleSignal = nameTitle();
+
+      <a class="nameH1Title fixMargin" routerLink="/">
+        {{ nameTitleSignal?.name }} {{ nameTitleSignal?.surname }}
+      </a>
+
+      <nav>
+        <ul class="align">
+          @let headerList = headerNavigation();
+
+          @for (listElement of headerList; track $index) {
+            <li>
+              <button
+                class="headerNavigationButtonsNative"
+                (click)="navigateToProject(listElement.router)"
+              >
+                {{ listElement.listNavigationElement | translate }}
+              </button>
+            </li>
+          }
+        </ul>
+      </nav>
+
+      <a routerLink="/contact" class="darkPurpleSolidButton fixMargin">
+        {{ 'COMMON.HIRE_ME' | translate }}
+      </a>
+    </div>
+
+    <div class="headerSwitch">
+      <div class="checkbox-wrapper-8">
+        <input type="checkbox" id="cb3-8" class="tgl tgl-skewed" (click)="switchLanguage()" />
+        <label for="cb3-8" data-tg-on="EN" data-tg-off="FR" class="tgl-btn"></label>
+      </div>
+    </div>
+  </div>
 </header>
