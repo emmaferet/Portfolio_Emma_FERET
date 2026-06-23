@@ -3,6 +3,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "resolveJsonModule": true,
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -25,7 +26,8 @@
       "@files/*": ["./public/files/*"],
       "@services/*": ["./src/app/shared/services/*"],
       "@enums/*": ["./src/app/core/models/enums/*"],
-      "@environments/*": ["./src/environments/*"]
+      "@environments/*": ["./src/environments/*"],
+      "@package/*": ["./package.json"]
     }
   },
   "angularCompilerOptions": {
