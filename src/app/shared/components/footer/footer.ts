@@ -15,6 +15,7 @@ export class Footer {
   footerUser = input.required<User | undefined>();
   // listNavigationFooter = input.required<ListNavigation[]>();
   lastUpdateTimestamp = new Date(packageInfo.meta.lastUpdate).getTime();
+  version = packageInfo.version;
 
   downloadCv() {
     const link = document.createElement('a');
