@@ -31,6 +31,11 @@ export const routes: Routes = [
     title: 'Contact',
   },
   {
+    path: 'kitten-page',
+    loadComponent: () => import('./features/testing-page/testing-page').then((m) => m.TestingPage),
+    title: 'Kitten Page',
+  },
+  {
     // ** redirige vers toutes les pages non définies
     // tjrs mettre en bas de la liste de route, car il vérifie toutes les routes au dessus
     path: '**',

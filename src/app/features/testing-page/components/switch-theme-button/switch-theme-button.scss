@@ -1,0 +1,80 @@
+@use '@styles/variables.scss';
+
+// ... (garde ton code précédent ici) ...
+
+/* --- BOUTON ANIMÉ MODE NUIT CLEANED --- */
+
+.st-sunMoonThemeToggleBtn {
+  position: relative;
+  cursor: pointer;
+  // Taille adaptée en rem pour matcher la hauteur de tes boutons (environ 40px)
+  width: 2.5rem;
+  height: 2.5rem;
+  color: variables.$base-color-darkPurple;
+
+  .themeToggleInput {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    cursor: pointer;
+    z-index: 2; // Reste cliquable au-dessus du SVG
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease;
+    transform: rotate(40deg);
+    z-index: 1;
+
+    .sunMoon {
+      transform-origin: center center;
+      transition: transform 0.4s ease;
+      transform: scale(1);
+    }
+
+    .sunRay {
+      transform-origin: center center;
+      transform: scale(0);
+    }
+
+    mask > circle {
+      transition: transform 0.64s cubic-bezier(0.41, 0.64, 0.32, 1.575);
+      transform: translate(0rem, 0rem);
+    }
+  }
+
+  // ÉTAT COCHÉ (Mode Nuit activé)
+  .themeToggleInput:checked + svg {
+    transform: rotate(90deg);
+    // Changement de couleur optionnel pour le mode nuit si tu veux qu'il devienne orange par exemple :
+    // color: variables.$base-color-darkOrange;
+
+    mask > circle {
+      // Conversion des 16px -3px d'origine en rem pour la cohérence
+      transform: translate(1rem, -0.188rem);
+    }
+
+    .sunMoon {
+      transform: scale(0.55);
+    }
+
+    .sunRay {
+      animation: showRay 0.4s ease 0s 1 forwards;
+    }
+  }
+}
+
+@keyframes showRay {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
