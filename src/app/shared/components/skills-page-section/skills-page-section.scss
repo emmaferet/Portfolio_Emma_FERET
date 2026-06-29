@@ -51,7 +51,16 @@
 .fixMargin {
   margin-top: 8rem;
 }
-
+.skillsImg {
+  width: 3rem;
+  height: 3rem;
+}
+.darkGreyColor {
+  font-size: variables.$size-medium-pc;
+}
+.softPurple {
+  font-size: variables.$size-medium-pc;
+}
 @media (max-width: 75.375rem) {
   .skillsPageSection {
     flex-direction: column;

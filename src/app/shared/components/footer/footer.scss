@@ -51,10 +51,14 @@
   font-weight: bold;
   color: variables.$base-color-darkGrey;
   transition: all 0.5s ease;
+  text-decoration: underline variables.$base-color-whiteCream;
+  text-underline-offset: 0.5rem;
 }
 
 .footerNavigationButtons:hover {
   color: variables.$base-color-darkPurple;
+  text-decoration: underline variables.$base-color-darkOrange;
+  text-underline-offset: 0.5rem;
   font-size: 1.5rem;
 }
 
@@ -93,10 +97,14 @@
   font-family: inherit;
   text-decoration: none;
   transition: all 0.5s ease;
+  text-decoration: underline variables.$base-color-whiteCream;
+  text-underline-offset: 0.5rem;
 }
 .footerNavigationButtonsNative:hover {
   color: variables.$base-color-darkPurple;
   font-size: 1.5rem;
+  text-decoration: underline variables.$base-color-darkOrange;
+  text-underline-offset: 0.5rem;
 }
 
 @media (min-width: 75.375rem) {

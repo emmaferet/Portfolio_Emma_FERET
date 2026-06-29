@@ -92,7 +92,7 @@
 .headerNavigationButtonsNative {
   background: transparent;
   border: none;
-
+  font-family: inherit;
   appearance: none;
   padding: 0 0.3rem;
   color: variables.$base-color-darkGrey;
@@ -109,6 +109,7 @@
 @media (min-width: 75.375rem) {
   .headerNavigationButtonsNative {
     font-size: variables.$size-medium-pc;
+
     padding: 0 2rem;
   }
 }
@@ -119,6 +120,7 @@
   text-underline-offset: 0.5rem;
   text-decoration-thickness: 0.1rem;
   font-size: variables.$size-mediumPlus-pc;
+  color: variables.$base-color-darkPurple;
 }
 
 .darkPurpleSolidButton:hover {
