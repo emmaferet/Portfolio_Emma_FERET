@@ -222,5 +222,25 @@
     "TITLE": "Warning !",
     "CONTENT": "The data are hosted on a free server, and may take up to 50 seconds to load. Please be patient.",
     "BUTTON": "Close"
+  },
+  "TESTING_PAGE": {
+    "TESTING_TITLE": "Angular Testing Lab",
+    "TESTING_DESCRIPTION": "A space dedicated to prototyping and testing features.",
+    "SECTION_1": {
+      "TITLE": "Global Theme Management",
+      "DESCRIPTION": "Feature: Dark Mode & SVG Custom Animations",
+      "STATUS": "Status: COMPLETED",
+      "OBJECTIF": "Technical objective:",
+      "OBJECTIF_DESCRIPTION": "Implementation of a theme switch (Light/Dark) using global CSS variables injected by Angular.",
+      "COMPOSANT": "Reusable component, controlled via a hidden checkbox input and animated using pure CSS/SVG.",
+      "DEMO": "Test the switch:"
+    },
+    "SECTION_2": {
+      "TITLE": "Feature: Custom Angular Directives",
+      "STATUS": "Status: COMPLETED",
+      "COMPOSANT": "Hover your mouse over the blocks below to test the hover effect directive (Highlight):",
+      "DEMO": "🔥 Hover over me to turn me orange!",
+      "DEMO_2": "✨ It works on this second separate block too!"
+    }
   }
 }

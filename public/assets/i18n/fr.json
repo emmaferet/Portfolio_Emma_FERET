@@ -222,5 +222,25 @@
     "TITLE": "Attention !",
     "CONTENT": "Les données étant hébergées sur un serveur gratuit, elles peuvent prendre en moyenne 50 secondes à charger. Merci de patienter.",
     "BUTTON": "Fermer"
+  },
+  "TESTING_PAGE": {
+    "TESTING_TITLE": "Laboratoire de Tests Angular",
+    "TESTING_DESCRIPTION": "Espace dédié au prototypage et à la validation des fonctionnalités.",
+    "SECTION_1": {
+      "TITLE": "Gestion du Thème Global",
+      "DESCRIPTION": "Feature: Dark Mode & SVG Custom Animations",
+      "STATUS": "Statut : FINI",
+      "OBJECTIF": "Objectif technique :",
+      "OBJECTIF_DESCRIPTION": "Implémentation d'un basculement de thème (Light/Dark) via des variables CSS globales injectées par Angular.",
+      "COMPOSANT": "Composant réutilisable, contrôleur par un input checkbox masqué et animé en pur CSS/SVG.",
+      "DEMO": "Tester le switch :"
+    },
+    "SECTION_2": {
+      "TITLE": "Fonctionnalité : Directives Angular Personnalisées",
+      "STATUS": "Statut : FINI",
+      "COMPOSANT": "Passe ta souris sur les blocs ci-dessous pour tester la directive d'effet au survol (Highlight) :",
+      "DEMO": "🔥 Survole-moi pour me colorer en Orange !",
+      "DEMO_2": "✨ Ça marche aussi sur ce deuxième bloc séparé !"
+    }
   }
 }
