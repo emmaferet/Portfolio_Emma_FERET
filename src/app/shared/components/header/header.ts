@@ -1,4 +1,11 @@
-import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostListener,
+  inject,
+  input,
+  signal,
+} from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { ListNavigation } from '@core/models/interfaces/list-navigation.interface';
 import { User } from '@core/models/interfaces/user.interface';
@@ -28,5 +35,16 @@ export class Header {
   switchLanguage() {
     const lang = this.translation.currentLang();
     this.translation.setLanguage(lang === 'fr' ? 'en' : 'fr');
+  }
+
+  isMobile = signal(false);
+
+  constructor() {
+    this.checkScreen();
+  }
+
+  @HostListener('window:resize')
+  checkScreen() {
+    this.isMobile.set(window.innerWidth <= 1206);
   }
 }

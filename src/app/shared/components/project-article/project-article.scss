@@ -89,6 +89,9 @@
 // Responsive
 
 @media (max-width: 75.375rem) {
+  .smallTopFix {
+    margin: 6rem 0 0 0;
+  }
   /* FORCE UN SEUL COMPORTEMENT POUR LES 2 VARIANTS */
   .fixMargin,
   .fixMarginLeft {

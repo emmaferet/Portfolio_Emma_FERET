@@ -1,30 +1,31 @@
 <main class="testing-container column articlGlobalPresentation" [class.dark-theme]="isDarkMode">
-  <h1 class="titleH3Hook">Laboratoire de Tests Angular</h1>
-  <p class="italic">Espace dédié au prototypage et à la validation des fonctionnalités.</p>
+  <h2 class="titleH3Hook">{{ 'TESTING_PAGE.TESTING_TITLE' | translate }}</h2>
+  <p class="italic">{{ 'TESTING_PAGE.TESTING_DESCRIPTION' | translate }}</p>
 
   <section class="test-section column">
     <div class="section-header centerContent">
       <div class="column">
-        <h2 class="titlePartPresentation">Gestion du Thème Global</h2>
-        <span class="tech-stack-badge">Feature: Dark Mode & SVG Custom Animations</span>
+        <h2 class="titlePartPresentation">{{ 'TESTING_PAGE.SECTION_1.TITLE' | translate }}</h2>
+        <span class="tech-stack-badge">{{ 'TESTING_PAGE.SECTION_1.DESCRIPTION' | translate }}</span>
       </div>
-      <span class="status-badge italic">Statut : En cours de développement</span>
+      <span class="status-badge italic">{{ 'TESTING_PAGE.SECTION_1.STATUS' | translate }}</span>
     </div>
 
     <div class="section-content split-layout">
       <div class="feature-info column">
-        <p class="bold">Objectif technique :</p>
+        <p class="bold">{{ 'TESTING_PAGE.SECTION_1.OBJECTIF' | translate }}</p>
         <p>
-          Implémentation d'un basculement de thème (Light/Dark) via des variables CSS globales
-          injectées par Angular.
+          {{ 'TESTING_PAGE.SECTION_1.OBJECTIF_DESCRIPTION' | translate }}
         </p>
         <p class="italic">
-          Composant réutilisable, contrôlé par un input checkbox masqué et animé en pur CSS/SVG.
+          {{ 'TESTING_PAGE.SECTION_1.COMPOSANT' | translate }}
         </p>
       </div>
 
       <div class="feature-demo align">
-        <span class="demo-label size-medium-pc">Tester le switch :</span>
+        <span class="demo-label size-medium-pc">{{
+          'TESTING_PAGE.SECTION_1.DEMO' | translate
+        }}</span>
 
         <app-switch-theme-button [switchTheme]="isDarkMode" (themeChanged)="toggleTheme($event)">
         </app-switch-theme-button>
@@ -36,38 +37,22 @@
 
   <section class="test-section column">
     <div class="section-header centerContent">
-      <h2 class="titlePartPresentation">Fonctionnalité : Directives Angular Personnalisées</h2>
-      <span class="italic">Statut : En Test</span>
+      <h2 class="titlePartPresentation">{{ 'TESTING_PAGE.SECTION_2.TITLE' | translate }}</h2>
+      <span class="italic">{{ 'TESTING_PAGE.SECTION_2.STATUS' | translate }}</span>
     </div>
     <div class="section-content">
       <p>
-        Passe ta souris sur les blocs ci-dessous pour tester la directive d'effet au survol
-        (Highlight) :
+        {{ 'TESTING_PAGE.SECTION_2.COMPOSANT' | translate }}
       </p>
 
       <div class="column" style="gap: 1rem; margin-top: 1rem">
         <div appHighlight class="test-box justifyCenter align">
-          <span class="bold">🔥 Survole-moi pour me colorer en Orange !</span>
+          <span class="bold">{{ 'TESTING_PAGE.SECTION_2.DEMO' | translate }}</span>
         </div>
 
         <div appHighlight class="test-box justifyCenter align">
-          <span class="bold">✨ Ça marche aussi sur ce deuxième bloc séparé !</span>
+          <span class="bold">{{ 'TESTING_PAGE.SECTION_2.DEMO_2' | translate }}</span>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="test-section column">
-    <div class="section-header centerContent">
-      <h2 class="titlePartPresentation">Fonctionnalité : Composants de Formulaires & Boutons</h2>
-      <span class="italic">Statut : OK</span>
-    </div>
-    <div class="section-content">
-      <p>Vérification du comportement visuel des boutons de la charte graphique :</p>
-      <div class="align" style="gap: 1rem; margin-top: 1rem">
-        <button class="darkPurpleSolidButtonNative">Bouton Principal</button>
-        <a href="#" class="darkPurpleSolidButton">Lien Bouton</a>
-        <button class="whiteBorderSolidButton">Bouton Secondaire</button>
       </div>
     </div>
   </section>

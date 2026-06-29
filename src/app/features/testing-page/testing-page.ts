@@ -1,11 +1,12 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { HighlightDirective } from '@core/directives/highlight';
+import { TranslatePipe } from '@ngx-translate/core';
 import { StorageService } from '@shared/services/storage/storage.service';
 import { SwitchThemeButton } from './components/switch-theme-button/switch-theme-button';
 
 @Component({
   selector: 'app-testing-page',
-  imports: [HighlightDirective, SwitchThemeButton],
+  imports: [HighlightDirective, SwitchThemeButton, TranslatePipe],
   templateUrl: './testing-page.html',
   styleUrl: './testing-page.scss',
 })

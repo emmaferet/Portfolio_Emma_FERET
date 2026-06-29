@@ -50,6 +50,24 @@
   text-decoration: none;
   font-weight: bold;
   color: variables.$base-color-darkGrey;
+  transition: all 0.5s ease;
+}
+
+.footerNavigationButtons:hover {
+  color: variables.$base-color-darkPurple;
+  font-size: 1.5rem;
+}
+
+.mailFooter {
+  height: 3rem;
+  width: 3rem;
+  margin: 0.5rem;
+  transition: all 0.5s ease;
+}
+.mailFooter:hover {
+  height: 3.5rem;
+  width: 3.5rem;
+  color: variables.$base-color-darkPurple;
 }
 
 @media (min-width: 75.375rem) {
@@ -74,6 +92,11 @@
   cursor: pointer;
   font-family: inherit;
   text-decoration: none;
+  transition: all 0.5s ease;
+}
+.footerNavigationButtonsNative:hover {
+  color: variables.$base-color-darkPurple;
+  font-size: 1.5rem;
 }
 
 @media (min-width: 75.375rem) {
@@ -87,4 +110,12 @@
   .footerNavigationButtonsNative {
     font-size: variables.$size-small-mobile;
   }
+  .mailFooter {
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-top: 1rem;
+  }
+}
+.brFooter {
+  font-weight: bold;
 }

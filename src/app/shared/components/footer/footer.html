@@ -10,8 +10,8 @@
               class="footerNavigationButtons"
               target="_blank"
               rel="noopener noreferrer"
-              >{{ link.label }}</a
-            >
+              ><img src="/logos/mail_icone.png" alt="mail_icone" class="mailFooter"
+            /></a>
           } @else if (link.label.includes('CV')) {
             <button class="footerNavigationButtonsNative" (click)="downloadCv()">
               {{ link.label }}
@@ -37,9 +37,9 @@
       <br />
       {{ 'FOOTER.COPYRIGHT_2' | translate }}
       <br />
-      {{ 'FOOTER.COPYRIGHT_3' | translate }} {{ lastUpdateTimestamp | formatDate }}
-      <br />
-      V.{{ version }}
+      {{ 'FOOTER.COPYRIGHT_3' | translate
+      }}<span class="brFooter"> {{ lastUpdateTimestamp | formatDate }} </span><br />
+      V.<span class="brFooter">{{ version }}</span>
     </p>
   </div>
 </footer>

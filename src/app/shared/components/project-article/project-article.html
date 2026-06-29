@@ -1,7 +1,8 @@
 @let project = userProject();
 @if (isMobile()) {
+  <div class="smallTopFix"></div>
   <div class="fixMarginLeft">
-    <article class="">
+    <article>
       <img
         [src]="$safeNavigationMigration(project?.image)"
         class="fitImageProjectsRight"

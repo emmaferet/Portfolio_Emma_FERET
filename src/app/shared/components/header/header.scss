@@ -42,6 +42,25 @@
     mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
   }
 }
+@media (max-width: 75.375rem) {
+  .headerContainer {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 15rem;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    pointer-events: none;
+    z-index: 4;
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+
+    mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+  }
+}
 
 @media (min-width: 75.375rem) {
   .fixMargin {
@@ -242,8 +261,9 @@
 
     justify-content: space-between;
     gap: 0.75rem;
-
-    border-radius: 2.5rem;
+    border-color: variables.$base-color-darkPurpleSoft;
+    border-width: 0.1rem;
+    border-radius: 2rem;
   }
 
   .headerContainer {
@@ -303,4 +323,209 @@
     height: 1.8em;
     font-size: variables.$size-small-mobile;
   }
+}
+
+// Hamburger Menu
+/* HEADER */
+
+.mobileHeader {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.75rem 1rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+
+  background-color: variables.$base-color-whiteCream;
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+  z-index: 10;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Checkbox cachée */
+
+.menu_hamburger {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Bouton burger */
+
+.burgerButton {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  z-index: 1002;
+}
+
+.burgerButton span,
+.burgerButton span::before,
+.burgerButton span::after {
+  position: absolute;
+
+  width: 24px;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: variables.$base-color-darkPurple;
+
+  transition: 0.3s ease;
+}
+
+.burgerButton span::before,
+.burgerButton span::after {
+  content: '';
+}
+
+.burgerButton span::before {
+  transform: translateY(-7px);
+}
+
+.burgerButton span::after {
+  transform: translateY(7px);
+}
+
+/* Croix */
+
+.menu_hamburger:checked + .burgerButton span {
+  background: transparent;
+}
+
+.menu_hamburger:checked + .burgerButton span::before {
+  transform: rotate(45deg);
+}
+
+.menu_hamburger:checked + .burgerButton span::after {
+  transform: rotate(-45deg);
+}
+
+/* MENU */
+
+.burgerNav {
+  position: fixed;
+
+  top: 5.8rem;
+  left: 1rem;
+  right: 1rem;
+
+  padding: 2rem;
+
+  border: 1px solid variables.$base-color-darkPurple;
+  border-radius: 2rem;
+
+  background: rgba(variables.$base-color-whiteCream, 0.9);
+  backdrop-filter: blur(24px);
+
+  box-shadow: 0 20px 50px rgba(20, 20, 40, 0.12);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-1rem);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s;
+
+  z-index: 9;
+}
+
+.menu_hamburger:checked + .burgerButton + .burgerNav {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+/* Navigation */
+
+.burgerNav ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.burgerNav button {
+  font-family: inherit;
+  width: 100%;
+  font-size: variables.$size-large-mobile;
+  padding: 1rem 1.5rem;
+
+  border: 1px solid rgba(96, 82, 175, 0.2);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.6);
+
+  color: variables.$base-color-darkPurple;
+
+  font-size: 1.1rem;
+  font-weight: 500;
+
+  text-align: left;
+
+  transition: 0.2s;
+}
+
+.burgerNav button:active {
+  transform: scale(0.98);
+}
+
+/* Bouton Hire Me */
+
+.burgerNav .darkPurpleSolidButton {
+  width: 100%;
+
+  padding: 1rem 1.5rem;
+
+  border: 1px solid rgba(96, 82, 175, 0.2);
+  border-radius: 999px;
+
+  background: variables.$base-color-darkPurple;
+
+  color: variables.$base-color-softPurple;
+
+  font-size: variables.$size-large-mobile;
+  font-weight: 500;
+
+  text-align: left;
+
+  transition: 0.2s;
+}
+
+/* Pour éviter que le menu passe devant le header */
+
+.headerActions,
+.nameH1Title {
+  position: relative;
+  z-index: 9;
+}
+.whiteSpace {
+  margin: 1rem 0;
 }

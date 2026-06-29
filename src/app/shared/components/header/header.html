@@ -1,40 +1,98 @@
-<header>
+@if (isMobile()) {
   <div class="headerContainer"></div>
-  <div>
-    <div class="header">
-      @let nameTitleSignal = nameTitle();
+  <header class="header">
+    <a class="nameH1Title" routerLink="/" (click)="burger.checked = false">
+      {{ nameTitle()?.name }}
+      {{ nameTitle()?.surname }}
+    </a>
 
-      <a class="nameH1Title fixMargin" routerLink="/">
-        {{ nameTitleSignal?.name }} {{ nameTitleSignal?.surname }}
-      </a>
+    <div class="headerActions">
+      <div class="checkbox-wrapper-8">
+        <input type="checkbox" id="cb3-8" class="tgl tgl-skewed" (click)="switchLanguage()" />
+        <label for="cb3-8" data-tg-on="EN" data-tg-off="FR" class="tgl-btn"> </label>
+      </div>
 
-      <nav>
-        <ul class="align">
-          @let headerList = headerNavigation();
+      <input
+        class="menu_hamburger"
+        type="checkbox"
+        id="hamburgerMenu"
+        #burger
+        class="menu_hamburger"
+        type="checkbox"
+        id="hamburgerMenu"
+      />
 
-          @for (listElement of headerList; track $index) {
+      <label class="burgerButton" for="hamburgerMenu">
+        <span></span>
+      </label>
+
+      <nav class="burgerNav">
+        <ul>
+          @for (listElement of headerNavigation(); track $index) {
             <li>
               <button
                 class="headerNavigationButtonsNative"
-                (click)="navigateToProject(listElement.router)"
+                (click)="navigateToProject(listElement.router); burger.checked = false"
               >
                 {{ listElement.listNavigationElement | translate }}
               </button>
             </li>
           }
+
+          <li>
+            <div class="whiteSpace"></div>
+            <a
+              routerLink="/contact"
+              class="darkPurpleSolidButton"
+              (click)="navigateToProject('/contact'); burger.checked = false"
+            >
+              {{ 'COMMON.HIRE_ME' | translate }}
+            </a>
+          </li>
         </ul>
       </nav>
-
-      <a routerLink="/contact" class="darkPurpleSolidButton fixMargin">
-        {{ 'COMMON.HIRE_ME' | translate }}
-      </a>
     </div>
+  </header>
+} @else {
+  <header>
+    <div class="headerContainer"></div>
 
-    <div class="headerSwitch">
-      <div class="checkbox-wrapper-8">
-        <input type="checkbox" id="cb3-8" class="tgl tgl-skewed" (click)="switchLanguage()" />
-        <label for="cb3-8" data-tg-on="EN" data-tg-off="FR" class="tgl-btn"></label>
+    <div>
+      <div class="header">
+        @let nameTitleSignal = nameTitle();
+
+        <a class="nameH1Title fixMargin" routerLink="/">
+          {{ nameTitleSignal?.name }} {{ nameTitleSignal?.surname }}
+        </a>
+
+        <nav>
+          <ul class="align">
+            @let headerList = headerNavigation();
+
+            @for (listElement of headerList; track $index) {
+              <li>
+                <button
+                  class="headerNavigationButtonsNative"
+                  (click)="navigateToProject(listElement.router)"
+                >
+                  {{ listElement.listNavigationElement | translate }}
+                </button>
+              </li>
+            }
+          </ul>
+        </nav>
+
+        <a routerLink="/contact" class="darkPurpleSolidButton fixMargin">
+          {{ 'COMMON.HIRE_ME' | translate }}
+        </a>
+      </div>
+
+      <div class="headerSwitch">
+        <div class="checkbox-wrapper-8">
+          <input type="checkbox" id="cb3-8" class="tgl tgl-skewed" (click)="switchLanguage()" />
+          <label for="cb3-8" data-tg-on="EN" data-tg-off="FR" class="tgl-btn"></label>
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
+}
