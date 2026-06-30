@@ -1,11 +1,12 @@
 @if (isMobile()) {
   <div class="headerContainer"></div>
   <header class="header">
-    <a class="nameH1Title" routerLink="/" (click)="burger.checked = false">
-      {{ nameTitle()?.name }}
-      {{ nameTitle()?.surname }}
-    </a>
-
+    <h1>
+      <a class="nameH1Title" routerLink="/" (click)="burger.checked = false">
+        {{ nameTitle()?.name }}
+        {{ nameTitle()?.surname }}
+      </a>
+    </h1>
     <div class="headerActions">
       <div class="checkbox-wrapper-8">
         <input type="checkbox" id="cb3-8" class="tgl tgl-skewed" (click)="switchLanguage()" />
@@ -57,41 +58,57 @@
   <header>
     <div class="headerContainer"></div>
 
-    <div>
-      <div class="header">
-        @let nameTitleSignal = nameTitle();
-
-        <a class="nameH1Title fixMargin" routerLink="/">
+    <div class="header">
+      @let nameTitleSignal = nameTitle();
+      <h1>
+        <a
+          class="nameH1Title fixMargin"
+          routerLink="/"
+          aria-label="titre de la page. Bouton qui permet de rediriger vers la page d'accueil"
+        >
           {{ nameTitleSignal?.name }} {{ nameTitleSignal?.surname }}
         </a>
+      </h1>
 
-        <nav>
-          <ul class="align">
-            @let headerList = headerNavigation();
+      <nav>
+        <ul class="align">
+          @let headerList = headerNavigation();
 
-            @for (listElement of headerList; track $index) {
-              <li>
-                <button
-                  class="headerNavigationButtonsNative"
-                  (click)="navigateToProject(listElement.router)"
-                >
-                  {{ listElement.listNavigationElement | translate }}
-                </button>
-              </li>
-            }
-          </ul>
-        </nav>
+          @for (listElement of headerList; track $index) {
+            <li>
+              <button
+                class="headerNavigationButtonsNative"
+                (click)="navigateToProject(listElement.router)"
+                aria-label="Bouton qui redirige vers"
+              >
+                {{ listElement.listNavigationElement | translate }}
+              </button>
+            </li>
+          }
+        </ul>
+      </nav>
 
-        <a routerLink="/contact" class="darkPurpleSolidButton fixMargin">
-          {{ 'COMMON.HIRE_ME' | translate }}
-        </a>
-      </div>
+      <a
+        routerLink="/contact"
+        class="darkPurpleSolidButton fixMargin"
+        aria-label="bouton qui dirige vers la page de contact"
+      >
+        {{ 'COMMON.HIRE_ME' | translate }}
+      </a>
+    </div>
 
-      <div class="headerSwitch">
-        <div class="checkbox-wrapper-8">
-          <input type="checkbox" id="cb3-8" class="tgl tgl-skewed" (click)="switchLanguage()" />
-          <label for="cb3-8" data-tg-on="EN" data-tg-off="FR" class="tgl-btn"></label>
-        </div>
+    <div class="headerSwitch">
+      <div class="checkbox-wrapper-8">
+        <input
+          type="checkbox"
+          id="cb3-8"
+          class="tgl tgl-skewed"
+          (change)="switchLanguage()"
+          aria-label="Changer de langage entre français et anglais"
+          (keydown.enter)="switchLanguage()"
+          [checked]="isEnglish()"
+        />
+        <label for="cb3-8" data-tg-on="EN" data-tg-off="FR" class="tgl-btn" role="switch"></label>
       </div>
     </div>
   </header>

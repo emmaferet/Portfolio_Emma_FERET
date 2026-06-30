@@ -131,9 +131,22 @@
 
 /* From Uiverse.io by Shoh2008 */
 .checkbox-wrapper-8 .tgl {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
-
+.checkbox-wrapper-8 .tgl:focus-visible + .tgl-btn {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.6); // halo sombre pour contraste sur fond clair
+}
 .checkbox-wrapper-8 .tgl,
 .checkbox-wrapper-8 .tgl:after,
 .checkbox-wrapper-8 .tgl:before,

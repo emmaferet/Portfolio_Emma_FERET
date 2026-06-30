@@ -1,6 +1,7 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  computed,
   HostListener,
   inject,
   input,
@@ -21,8 +22,11 @@ import { TranslationService } from '@shared/services/translation/translation.ser
 })
 export class Header {
   headerNavigation = input.required<ListNavigation[]>();
-
   nameTitle = input.required<User | undefined>();
+
+  isEnglish = computed(() => this.translation.currentLang() === 'en');
+
+  isMobile = signal(false);
 
   private router = inject(Router);
 
@@ -36,8 +40,6 @@ export class Header {
     const lang = this.translation.currentLang();
     this.translation.setLanguage(lang === 'fr' ? 'en' : 'fr');
   }
-
-  isMobile = signal(false);
 
   constructor() {
     this.checkScreen();

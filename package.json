@@ -9,7 +9,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "serve:ssr:EmmaFeretPortofolio": "node dist/EmmaFeretPortofolio/server/server.mjs",
     "dev": "ng serve --configuration development",
     "api": "json-server --watch db/db.json --port 3000",
@@ -33,6 +35,7 @@
     "@ngx-translate/http-loader": "^18.0.0",
     "dayjs": "^1.11.21",
     "express": "^5.1.0",
+    "jest-environment-jsdom": "^30.4.1",
     "json-server": "^1.0.0-beta.15",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
@@ -42,9 +45,13 @@
     "@angular/cli": "^22.0.0",
     "@angular/compiler-cli": "^22.0.0",
     "@types/express": "^5.0.1",
+    "@types/jest": "^30.0.0",
     "@types/node": "^20.17.19",
+    "jest": "^30.4.2",
+    "jest-preset-angular": "^17.0.0",
     "jsdom": "^28.0.0",
     "prettier": "^3.8.1",
+    "ts-node": "^10.9.2",
     "typescript": "~6.0.3",
     "vitest": "^4.0.8"
   }

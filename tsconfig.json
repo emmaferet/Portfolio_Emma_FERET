@@ -3,6 +3,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "types": ["jest", "jest-preset-angular"],
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/@types/jest",
+      "node_modules/@types/jest-preset-angular"
+    ],
     "resolveJsonModule": true,
     "strict": true,
     "noImplicitOverride": true,
