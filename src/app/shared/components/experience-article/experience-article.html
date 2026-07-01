@@ -9,5 +9,9 @@
       <p>{{ experience?.description | translate }}</p>
     </div>
   </div>
-  <img src="{{ experience?.link }}" class="experienceImg" />
+  <img
+    src="{{ experience?.link }}"
+    class="experienceImg"
+    alt="image representant l'experience de {{ experience?.title }}"
+  />
 </article>

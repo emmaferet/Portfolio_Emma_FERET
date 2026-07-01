@@ -1,45 +1,78 @@
 <main class="testing-container column articlGlobalPresentation" [class.dark-theme]="isDarkMode">
-  <h2 class="titleH3Hook">{{ 'TESTING_PAGE.TESTING_TITLE' | translate }}</h2>
-  <p class="italic">{{ 'TESTING_PAGE.TESTING_DESCRIPTION' | translate }}</p>
+  <h2 class="titleH3Hook">
+    {{ 'TESTING_PAGE.TESTING_TITLE' | translate }}
+  </h2>
+
+  <p class="italic">
+    {{ 'TESTING_PAGE.TESTING_DESCRIPTION' | translate }}
+  </p>
 
   <section class="test-section column">
     <div class="section-header centerContent">
       <div class="column">
-        <h2 class="titlePartPresentation">{{ 'TESTING_PAGE.SECTION_1.TITLE' | translate }}</h2>
-        <span class="tech-stack-badge">{{ 'TESTING_PAGE.SECTION_1.DESCRIPTION' | translate }}</span>
+        <h3 class="titlePartPresentation">
+          {{ 'TESTING_PAGE.SECTION_1.TITLE' | translate }}
+        </h3>
+
+        <span class="tech-stack-badge">
+          {{ 'TESTING_PAGE.SECTION_1.DESCRIPTION' | translate }}
+        </span>
       </div>
-      <span class="status-badge italic">{{ 'TESTING_PAGE.SECTION_1.STATUS' | translate }}</span>
+
+      <span class="status-badge italic">
+        {{ 'TESTING_PAGE.SECTION_1.STATUS' | translate }}
+      </span>
     </div>
 
     <div class="section-content split-layout">
       <div class="feature-info column">
-        <p class="bold">{{ 'TESTING_PAGE.SECTION_1.OBJECTIF' | translate }}</p>
+        <p class="bold">
+          {{ 'TESTING_PAGE.SECTION_1.OBJECTIF' | translate }}
+        </p>
+
         <p>
           {{ 'TESTING_PAGE.SECTION_1.OBJECTIF_DESCRIPTION' | translate }}
         </p>
+
         <p class="italic">
           {{ 'TESTING_PAGE.SECTION_1.COMPOSANT' | translate }}
         </p>
       </div>
 
       <div class="feature-demo align">
-        <span class="demo-label size-medium-pc">{{
-          'TESTING_PAGE.SECTION_1.DEMO' | translate
-        }}</span>
+        <span class="demo-label size-medium-pc">
+          {{ 'TESTING_PAGE.SECTION_1.DEMO' | translate }}
+        </span>
 
-        <app-switch-theme-button [switchTheme]="isDarkMode" (themeChanged)="toggleTheme($event)">
+        <app-switch-theme-button
+          [switchTheme]="isDarkMode"
+          (themeChanged)="toggleTheme($event)"
+          aria-label="Bouton qui permet de changer le thème clair ou sombre"
+        >
         </app-switch-theme-button>
 
-        <button class="whiteBorderSolidButton reset-btn" (click)="resetTheme()">Reset</button>
+        <button
+          class="whiteBorderSolidButton reset-btn"
+          (click)="resetTheme()"
+          aria-label="Bouton qui réinitialise le thème"
+        >
+          Reset
+        </button>
       </div>
     </div>
   </section>
 
   <section class="test-section column">
     <div class="section-header centerContent">
-      <h2 class="titlePartPresentation">{{ 'TESTING_PAGE.SECTION_2.TITLE' | translate }}</h2>
-      <span class="italic">{{ 'TESTING_PAGE.SECTION_2.STATUS' | translate }}</span>
+      <h2 class="titlePartPresentation">
+        {{ 'TESTING_PAGE.SECTION_2.TITLE' | translate }}
+      </h2>
+
+      <span class="italic">
+        {{ 'TESTING_PAGE.SECTION_2.STATUS' | translate }}
+      </span>
     </div>
+
     <div class="section-content">
       <p>
         {{ 'TESTING_PAGE.SECTION_2.COMPOSANT' | translate }}
@@ -47,11 +80,15 @@
 
       <div class="column" style="gap: 1rem; margin-top: 1rem">
         <div appHighlight class="test-box justifyCenter align">
-          <span class="bold">{{ 'TESTING_PAGE.SECTION_2.DEMO' | translate }}</span>
+          <span class="bold">
+            {{ 'TESTING_PAGE.SECTION_2.DEMO' | translate }}
+          </span>
         </div>
 
         <div appHighlight class="test-box justifyCenter align">
-          <span class="bold">{{ 'TESTING_PAGE.SECTION_2.DEMO_2' | translate }}</span>
+          <span class="bold">
+            {{ 'TESTING_PAGE.SECTION_2.DEMO_2' | translate }}
+          </span>
         </div>
       </div>
     </div>

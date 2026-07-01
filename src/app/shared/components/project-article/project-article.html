@@ -1,6 +1,8 @@
 @let project = userProject();
+
 @if (isMobile()) {
   <div class="smallTopFix"></div>
+
   <div class="fixMarginLeft">
     <article>
       <img
@@ -8,20 +10,31 @@
         class="fitImageProjectsRight"
         [alt]="$safeNavigationMigration(project?.alt)"
       />
+
       <div class="column articlProjectPresentation left">
-        <p class="titlePartPresentation">
+        <h2 class="titlePartPresentation">
           {{ 'PROJECTS_PAGE.PROJET' | translate }} {{ project?.id }}
-        </p>
-        <p class="titleH3Hook">{{ project?.name | translate }}</p>
+        </h2>
+
+        <h3 class="titleH3Hook">
+          {{ project?.name | translate }}
+        </h3>
+
         <div class="articleContent">
           <p>{{ project?.year }}</p>
+
           <p>{{ project?.description | translate }}</p>
+
           <a
             [href]="$safeNavigationMigration(project?.link)"
             target="_blank"
             rel="noopener noreferrer"
             class="linkProject"
-            >{{ 'PROJECTS_PAGE.LINK' | translate }}
+            aria-label="Lien qui ouvre le projet {{
+              project?.name | translate
+            }} dans un nouvel onglet"
+          >
+            {{ 'PROJECTS_PAGE.LINK' | translate }}
           </a>
         </div>
       </div>
@@ -31,23 +44,35 @@
   @if (sidePhotoArticle() === sidePhotoArticleEnum.DISPLAYLEFT) {
     <article class="align fixMargin">
       <div class="articlProjectPresentation column">
-        <p class="titlePartPresentation">
+        <h2 class="titlePartPresentation">
           {{ 'PROJECTS_PAGE.PROJET' | translate }} {{ project?.id }}
-        </p>
-        <p class="titleH3Hook">{{ project?.name | translate }}</p>
+        </h2>
+
+        <h3 class="titleH3Hook">
+          {{ project?.name | translate }}
+        </h3>
+
         <div class="articleContent">
           <p>{{ project?.year }}</p>
+
           <p>{{ project?.description | translate }}</p>
+
           <br />
+
           <a
             [href]="$safeNavigationMigration(project?.link)"
             target="_blank"
             rel="noopener noreferrer"
             class="linkProject"
-            >{{ 'PROJECTS_PAGE.LINK' | translate }}</a
+            aria-label="Lien qui ouvre le projet {{
+              project?.name | translate
+            }} dans un nouvel onglet"
           >
+            {{ 'PROJECTS_PAGE.LINK' | translate }}
+          </a>
         </div>
       </div>
+
       <img
         [src]="$safeNavigationMigration(project?.image)"
         class="fitImageProjects"
@@ -62,22 +87,34 @@
           class="fitImageProjectsRight"
           [alt]="$safeNavigationMigration(project?.alt)"
         />
+
         <div class="column articlProjectPresentation left">
-          <p class="titlePartPresentation">
+          <h2 class="titlePartPresentation">
             {{ 'PROJECTS_PAGE.PROJET' | translate }} {{ project?.id }}
-          </p>
-          <p class="titleH3Hook">{{ project?.name | translate }}</p>
+          </h2>
+
+          <h3 class="titleH3Hook">
+            {{ project?.name | translate }}
+          </h3>
+
           <div class="articleContent">
             <p>{{ project?.year }}</p>
+
             <p>{{ project?.description | translate }}</p>
+
             <br />
+
             <a
               [href]="$safeNavigationMigration(project?.link)"
               target="_blank"
               rel="noopener noreferrer"
               class="linkProject"
-              >{{ 'PROJECTS_PAGE.LINK' | translate }}</a
+              aria-label="Lien qui ouvre le projet {{
+                project?.name | translate
+              }} dans un nouvel onglet"
             >
+              {{ 'PROJECTS_PAGE.LINK' | translate }}
+            </a>
           </div>
         </div>
       </article>

@@ -1,4 +1,5 @@
 @let userSkillsList = userSkills();
+
 <div>
   <div class="align skillsPageSection">
     <!-- Article 3D -->
@@ -6,9 +7,11 @@
       <h2 class="h1TitlePurpleBox articlGlobalPresentation darkGreyColor bold">
         {{ 'SKILLS_SECTION.CATEGORY_DEV' | translate }}
       </h2>
+
       <p class="articlGlobalPresentation smallDescSkills">
         {{ 'SKILLS_SECTION.DESCRIPTION_DEV' | translate }}
       </p>
+
       <ul>
         @for (skill of userSkillsList; track $index) {
           @if (skill.type === skillTypeEnum.SKILLDEV) {
@@ -20,7 +23,12 @@
               <p class="articlGlobalPresentation darkGreyColor">
                 {{ skill.level | translate }}
               </p>
-              <img src="{{ skill.image }}" alt="{{ skill.name }} image" class="skillsImg" />
+
+              <img
+                src="{{ skill.image }}"
+                alt="Logo de la compétence {{ skill.name }}"
+                class="skillsImg"
+              />
             </li>
           }
         }
@@ -32,9 +40,11 @@
       <h2 class="h1TitlePurpleBox articlGlobalPresentation softPurple bold">
         {{ 'SKILLS_SECTION.CATEGORY_3D' | translate }}
       </h2>
+
       <p class="articlGlobalPresentation softPurple smallDescSkills">
         {{ 'SKILLS_SECTION.DESCRIPTION_3D' | translate }}
       </p>
+
       <ul>
         @for (skill of userSkillsList; track $index) {
           @if (skill.type === skillTypeEnum.SKILL3D) {
@@ -46,7 +56,12 @@
               <p class="articlGlobalPresentation softPurple">
                 {{ skill.level | translate }}
               </p>
-              <img src="{{ skill.image }}" alt="{{ skill.name }} image" class="skillsImg" />
+
+              <img
+                src="{{ skill.image }}"
+                alt="Logo de la compétence {{ skill.name }}"
+                class="skillsImg"
+              />
             </li>
           }
         }

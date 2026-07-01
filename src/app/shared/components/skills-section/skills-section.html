@@ -2,7 +2,7 @@
 <div class="fixMargin">
   <div class="centerSkills">
     <!-- <h2 class="titlePartPresentation">{{ 'SKILLS_SECTION.PART_TITLE' | translate }}</h2> -->
-    <h3 class="titleH3Hook fixMargin">{{ 'SKILLS_SECTION.HOOK_TITLE' | translate }}</h3>
+    <h2 class="titleH3Hook fixMargin">{{ 'SKILLS_SECTION.HOOK_TITLE' | translate }}</h2>
     <p class="skillsDesc">
       {{ 'SKILLS_SECTION.DESCRIPTION' | translate }}
     </p>
@@ -10,9 +10,9 @@
   <div class="align fixPositionContent">
     <!-- Article 3D -->
     <article #skillCard class="articlGlobalPresentation skillsBoxWhite skillsCard">
-      <h2 class="h1TitlePurpleBox articlGlobalPresentation darkGreyColor bold">
+      <h3 class="h1TitlePurpleBox articlGlobalPresentation darkGreyColor bold">
         {{ 'SKILLS_SECTION.CATEGORY_DEV' | translate }}
-      </h2>
+      </h3>
       <ul>
         @for (skill of userSkillsList; track $index) {
           @if (skill.type === skillTypeEnum.SKILLDEV) {
@@ -32,9 +32,9 @@
 
     <!-- Article DEV -->
     <article #skillCard class="articlGlobalPresentation skillsBoxPurple skillsCard">
-      <h2 class="h1TitlePurpleBox articlGlobalPresentation softPurple bold">
+      <h3 class="h1TitlePurpleBox articlGlobalPresentation softPurple bold">
         {{ 'SKILLS_SECTION.CATEGORY_3D' | translate }}
-      </h2>
+      </h3>
 
       <ul>
         @for (skill of userSkillsList; track $index) {

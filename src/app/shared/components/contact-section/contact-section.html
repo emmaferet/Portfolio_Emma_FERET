@@ -1,14 +1,28 @@
 <div class="centerContact">
   <!-- <h2 class="titlePartPresentation">{{ 'CONTACT.SECTION.PART_TITLE' | translate }}</h2> -->
-  <h2 class="titleH3Hook bold">{{ 'CONTACT.SECTION.HOOK_TITLE' | translate }}</h2>
+
+  <h2 class="titleH3Hook bold">
+    {{ 'CONTACT.SECTION.HOOK_TITLE' | translate }}
+  </h2>
+
   <p class="centerSmallDescriptionPositionFix">
     {{ 'CONTACT.SECTION.DESCRIPTION' | translate }}
   </p>
+
   <div class="centerContactPositionFix">
-    <a class="darkPurpleSolidButton buttonsPositionMargin" routerLink="/contact">
+    <a
+      class="darkPurpleSolidButton buttonsPositionMargin"
+      routerLink="/contact"
+      aria-label="Bouton qui redirige vers la page de contact"
+    >
       {{ 'CONTACT.SECTION.SEND_MESSAGE_BTN' | translate }}
     </a>
-    <button class="darkPurpleSolidButtonNative buttonsPositionMargin" (click)="downloadCv()">
+
+    <button
+      class="darkPurpleSolidButtonNative buttonsPositionMargin"
+      (click)="downloadCv()"
+      aria-label="Bouton qui permet de télécharger mon CV"
+    >
       {{ 'CONTACT.SECTION.MY_CV_BTN' | translate }}
     </button>
   </div>

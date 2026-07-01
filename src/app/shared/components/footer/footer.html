@@ -2,6 +2,7 @@
   <nav>
     <ul class="align">
       @let links = $safeNavigationMigration(footerUser()?.links);
+
       @for (link of links; track $index) {
         <li>
           @if (link.url.startsWith('mailto')) {
@@ -10,10 +11,16 @@
               class="footerNavigationButtons"
               target="_blank"
               rel="noopener noreferrer"
-              ><img src="logos/mail_icone.png" alt="mail_icone" class="mailFooter"
-            /></a>
+              aria-label="Lien permettant d'envoyer un e-mail"
+            >
+              <img src="logos/mail_icone.webp" alt="" class="mailFooter" />
+            </a>
           } @else if (link.label.includes('CV')) {
-            <button class="footerNavigationButtonsNative" (click)="downloadCv()">
+            <button
+              class="footerNavigationButtonsNative"
+              (click)="downloadCv()"
+              aria-label="Bouton qui permet de télécharger mon CV"
+            >
               {{ link.label }}
             </button>
           } @else {
@@ -22,23 +29,31 @@
               target="_blank"
               rel="noopener noreferrer"
               class="footerNavigationButtons"
-              >{{ link.label }}</a
+              aria-label="Lien externe vers {{ link.label }}"
             >
+              {{ link.label }}
+            </a>
           }
         </li>
       }
     </ul>
   </nav>
+
   <div class="positionTitleFooter">
     @let user = footerUser();
+
     <h3 class="h3TitleFooter">{{ user?.name }} {{ user?.surname }}</h3>
+
     <p>
       {{ 'FOOTER.COPYRIGHT_1' | translate }}
       <br />
       {{ 'FOOTER.COPYRIGHT_2' | translate }}
       <br />
-      {{ 'FOOTER.COPYRIGHT_3' | translate
-      }}<span class="brFooter"> {{ lastUpdateTimestamp | formatDate }} </span><br />
+      {{ 'FOOTER.COPYRIGHT_3' | translate }}
+      <span class="brFooter">
+        {{ lastUpdateTimestamp | formatDate }}
+      </span>
+      <br />
       V.<span class="brFooter">{{ version }}</span>
     </p>
   </div>

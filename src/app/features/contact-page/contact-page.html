@@ -1,7 +1,7 @@
 <div class="justifyCenter">
   <div class="contact-container">
     <div class="contact-info">
-      <img src="photoID_emmaFERET.jpg" alt="Profile" class="centerPhotoContact" />
+      <img src="photoID_emmaFERET.webp" alt="Portrait d'Emma Feret" class="centerPhotoContact" />
 
       <h1>{{ 'CONTACT.TITLE' | translate }}!</h1>
 
@@ -14,12 +14,19 @@
       <form (submit)="submitContactForm($event)" novalidate>
         <div class="row">
           <div class="input-group">
-            <label>{{ 'CONTACT.FORM.FIRSTNAME_LABEL' | translate }}</label>
+            <label for="firstName">
+              {{ 'CONTACT.FORM.FIRSTNAME_LABEL' | translate }}
+            </label>
+
             <input
+              id="firstName"
               [formField]="contactForm.firstName"
               type="text"
               placeholder="{{ 'CONTACT.FORM.FIRSTNAME_PLACEHOLDER' | translate }}"
+              aria-label="Champ prénom"
+              aria-required="true"
             />
+
             @let contactFirstName = contactForm.firstName();
             @if (contactFirstName.touched() && contactFirstName.invalid()) {
               @for (error of contactFirstName.errors(); track error.kind) {
@@ -31,12 +38,19 @@
           </div>
 
           <div class="input-group">
-            <label>{{ 'CONTACT.FORM.LASTNAME_LABEL' | translate }}</label>
+            <label for="lastName">
+              {{ 'CONTACT.FORM.LASTNAME_LABEL' | translate }}
+            </label>
+
             <input
+              id="lastName"
               [formField]="contactForm.lastName"
               type="text"
               placeholder="{{ 'CONTACT.FORM.LASTNAME_PLACEHOLDER' | translate }}"
+              aria-label="Champ nom"
+              aria-required="true"
             />
+
             @let contactLastName = contactForm.lastName();
             @if (contactLastName.touched() && contactLastName.invalid()) {
               @for (error of contactLastName.errors(); track error.kind) {
@@ -50,12 +64,17 @@
 
         <div class="row">
           <div class="input-group">
-            <label>Email</label>
+            <label for="email">Email</label>
+
             <input
+              id="email"
               type="email"
               placeholder="{{ 'CONTACT.FORM.EMAIL_PLACEHOLDER' | translate }}"
               [formField]="contactForm.email"
+              aria-label="Champ adresse e-mail"
+              aria-required="true"
             />
+
             @let contactEmail = contactForm.email();
             @if (contactEmail.touched() && contactEmail.invalid()) {
               @for (error of contactEmail.errors(); track error.kind) {
@@ -67,12 +86,18 @@
           </div>
 
           <div class="input-group">
-            <label>{{ 'CONTACT.FORM.PHONE_LABEL' | translate }}</label>
+            <label for="phone">
+              {{ 'CONTACT.FORM.PHONE_LABEL' | translate }}
+            </label>
+
             <input
+              id="phone"
               type="text"
               placeholder="{{ 'CONTACT.FORM.PHONE_PLACEHOLDER' | translate }}"
               [formField]="contactForm.phoneNumber"
+              aria-label="Champ numéro de téléphone"
             />
+
             @let contactPhoneNumber = contactForm.phoneNumber();
             @if (contactPhoneNumber.touched() && contactPhoneNumber.invalid()) {
               @for (error of contactPhoneNumber.errors(); track error.kind) {
@@ -85,11 +110,16 @@
         </div>
 
         <div class="input-group full">
-          <label>Message</label>
+          <label for="message">Message</label>
+
           <textarea
+            id="message"
             placeholder="{{ 'CONTACT.FORM.MESSAGE_PLACEHOLDER' | translate }}"
             [formField]="contactForm.message"
+            aria-label="Champ message"
+            aria-required="true"
           ></textarea>
+
           @let contactMessage = contactForm.message();
           @if (contactMessage.touched() && contactMessage.invalid()) {
             @for (error of contactMessage.errors(); track error.kind) {
@@ -105,9 +135,11 @@
           type="submit"
           [class]="contactForm().valid() ? 'submitButtonContact' : 'submitButtonContactInvalid'"
           mat-button
+          aria-label="Bouton qui permet d'envoyer le formulaire de contact"
         >
           {{ 'CONTACT.FORM.SUBMIT' | translate }}
         </button>
+
         <!-- <button mat-button (click)="openModal()">TEST</button> -->
       </form>
     </div>
