@@ -425,18 +425,17 @@
 
 /* Croix */
 
-.menu_hamburger:checked + .burgerButton span {
+.burgerButton.open span {
   background: transparent;
 }
 
-.menu_hamburger:checked + .burgerButton span::before {
+.burgerButton.open span::before {
   transform: rotate(45deg);
 }
 
-.menu_hamburger:checked + .burgerButton span::after {
+.burgerButton.open span::after {
   transform: rotate(-45deg);
 }
-
 /* MENU */
 
 .burgerNav {
@@ -468,7 +467,11 @@
 
   z-index: 9;
 }
-
+.burgerNav.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 .menu_hamburger:checked + .burgerButton + .burgerNav {
   opacity: 1;
   visibility: visible;

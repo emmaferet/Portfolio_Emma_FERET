@@ -27,6 +27,7 @@ export class Header {
   isEnglish = computed(() => this.translation.currentLang() === 'en');
 
   isMobile = signal(false);
+  burgerOpen = signal(false);
 
   private router = inject(Router);
 
@@ -48,5 +49,17 @@ export class Header {
   @HostListener('window:resize')
   checkScreen() {
     this.isMobile.set(window.innerWidth <= 1206);
+  }
+
+  openBurger() {
+    this.burgerOpen.set(true);
+  }
+
+  closeBurger() {
+    this.burgerOpen.set(false);
+  }
+
+  toggleBurger() {
+    this.burgerOpen.update((v) => !v);
   }
 }

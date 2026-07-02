@@ -1,75 +1,18 @@
-@if (isMobile()) {
+<header>
   <div class="headerContainer"></div>
-  <header class="header">
+
+  <div class="header">
+    @let nameTitleSignal = nameTitle();
     <h1>
-      <a class="nameH1Title" routerLink="/" (click)="burger.checked = false">
-        {{ nameTitle()?.name }}
-        {{ nameTitle()?.surname }}
+      <a
+        class="nameH1Title fixMargin"
+        routerLink="/"
+        aria-label="titre de la page. Bouton qui permet de rediriger vers la page d'accueil"
+        (click)="closeBurger()"
+        >{{ nameTitleSignal?.name }} {{ nameTitleSignal?.surname }}
       </a>
     </h1>
-    <div class="headerActions">
-      <div class="checkbox-wrapper-8">
-        <input type="checkbox" id="cb3-8" class="tgl tgl-skewed" (click)="switchLanguage()" />
-        <label for="cb3-8" data-tg-on="EN" data-tg-off="FR" class="tgl-btn"> </label>
-      </div>
-
-      <input
-        class="menu_hamburger"
-        type="checkbox"
-        id="hamburgerMenu"
-        #burger
-        class="menu_hamburger"
-        type="checkbox"
-        id="hamburgerMenu"
-      />
-
-      <label class="burgerButton" for="hamburgerMenu">
-        <span></span>
-      </label>
-
-      <nav class="burgerNav">
-        <ul>
-          @for (listElement of headerNavigation(); track $index) {
-            <li>
-              <button
-                class="headerNavigationButtonsNative"
-                (click)="navigateToProject(listElement.router); burger.checked = false"
-              >
-                {{ listElement.listNavigationElement | translate }}
-              </button>
-            </li>
-          }
-
-          <li>
-            <div class="whiteSpace"></div>
-            <a
-              routerLink="/contact"
-              class="darkPurpleSolidButton"
-              (click)="navigateToProject('/contact'); burger.checked = false"
-            >
-              {{ 'COMMON.HIRE_ME' | translate }}
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-} @else {
-  <header>
-    <div class="headerContainer"></div>
-
-    <div class="header">
-      @let nameTitleSignal = nameTitle();
-      <h1>
-        <a
-          class="nameH1Title fixMargin"
-          routerLink="/"
-          aria-label="titre de la page. Bouton qui permet de rediriger vers la page d'accueil"
-        >
-          {{ nameTitleSignal?.name }} {{ nameTitleSignal?.surname }}
-        </a>
-      </h1>
-
+    @if (!isMobile()) {
       <nav>
         <ul class="align">
           @let headerList = headerNavigation();
@@ -95,8 +38,54 @@
       >
         {{ 'COMMON.HIRE_ME' | translate }}
       </a>
-    </div>
+    } @else {
+      <div class="headerActions">
+        <div class="checkbox-wrapper-8">
+          <input type="checkbox" id="cb3-8" class="tgl tgl-skewed" (click)="switchLanguage()" />
+          <label for="cb3-8" data-tg-on="EN" data-tg-off="FR" class="tgl-btn"> </label>
+        </div>
 
+        <input
+          class="menu_hamburger"
+          type="checkbox"
+          id="hamburgerMenu"
+          [checked]="burgerOpen()"
+          (change)="burgerOpen.set($any($event.target).checked)"
+        />
+
+        <label class="burgerButton" for="hamburgerMenu" [class.open]="burgerOpen()">
+          <span></span>
+        </label>
+
+        <nav class="burgerNav" [class.open]="burgerOpen()">
+          <ul>
+            @for (listElement of headerNavigation(); track $index) {
+              <li>
+                <button
+                  class="headerNavigationButtonsNative"
+                  (click)="navigateToProject(listElement.router); closeBurger()"
+                >
+                  {{ listElement.listNavigationElement | translate }}
+                </button>
+              </li>
+            }
+
+            <li>
+              <div class="whiteSpace"></div>
+              <a
+                routerLink="/contact"
+                class="darkPurpleSolidButton"
+                (click)="navigateToProject('/contact'); closeBurger()"
+              >
+                {{ 'COMMON.HIRE_ME' | translate }}
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    }
+  </div>
+  @if (!isMobile()) {
     <div class="headerSwitch">
       <div class="checkbox-wrapper-8">
         <input
@@ -111,5 +100,5 @@
         <label for="cb3-8" data-tg-on="EN" data-tg-off="FR" class="tgl-btn" role="switch"></label>
       </div>
     </div>
-  </header>
-}
+  }
+</header>
