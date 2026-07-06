@@ -1,7 +1,20 @@
-<div class="marginFixError">
-  <section class="error-container">
-    <span class="four"><span class="screen-reader-text">4</span></span>
-    <span class="zero"><span class="screen-reader-text">0</span></span>
-    <span class="four"><span class="screen-reader-text">4</span></span>
-  </section>
+<div class="error-container">
+  @if (code()) {
+    <h2>{{ 'ERROR_PAGE.PAGE.TITLE_CODE' | translate }} {{ code() }}</h2>
+    <p>{{ message() | translate }}</p>
+  } @else {
+    <h2>{{ 'ERROR_PAGE.PAGE.TITLE_NO_CODE' | translate }}</h2>
+    <p>{{ 'ERROR_PAGE.PAGE.MESSAGE' | translate }}</p>
+  }
+
+  <div class="actions">
+    <button routerLink="/" class="btn-home">{{ 'ERROR_PAGE.PAGE.BUTTON' | translate }}</button>
+  </div>
+
+  <!-- ###Test - Simulate HTTP error
+  <div class="test-buttons">
+    @for (errorCode of testCodes; track errorCode) {
+      <button (click)="simulateError(errorCode)" class="btn-test">Simuler {{ errorCode }}</button>
+    }
+  </div> -->
 </div>

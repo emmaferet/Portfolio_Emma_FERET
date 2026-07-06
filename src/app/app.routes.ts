@@ -40,6 +40,6 @@ export const routes: Routes = [
     // tjrs mettre en bas de la liste de route, car il vérifie toutes les routes au dessus
     path: '**',
     loadComponent: () => import('./features/error-page/error-page').then((m) => m.ErrorPage),
-    title: 'Error',
+    title: 'Erreur 404',
   },
 ];
