@@ -4,7 +4,8 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": ["node"]
+    "types": ["node", "jest"],
+    "noUnusedLocals": true
   },
   "include": ["src/**/*.ts", "../trash/myCvInfos.ts"],
   "exclude": ["src/**/*.spec.ts"],

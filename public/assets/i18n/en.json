@@ -116,9 +116,6 @@
       "CLOSE": "Close"
     }
   },
-  "ERROR": {
-    "WORKS": "error-page works!"
-  },
   "FOOTER": {
     "COPYRIGHT_1": "@ 2026 Emma Feret Portofolio.",
     "COPYRIGHT_2": "Crafted with precision and soul.",
@@ -246,6 +243,24 @@
       "COMPOSANT": "Hover your mouse over the blocks below to test the hover effect directive (Highlight):",
       "DEMO": "🔥 Hover over me to turn me orange!",
       "DEMO_2": "✨ It works on this second separate block too!"
+    }
+  },
+  "ERROR_PAGE": {
+    "PAGE": {
+      "TITLE_CODE": "Error",
+      "TITLE_NO_CODE": "Oops !",
+      "MESSAGE": "An unexpected error has occurred.",
+      "BUTTON": "Return to the homepage"
+    },
+    "MESSAGE": {
+      "400": "Bad request. Please check the entered information.",
+      "401": "Unauthorized. Please log in to access this page.",
+      "403": "Access denied. You do not have the necessary permissions.",
+      "404": "Page not found. The address may be incorrect.",
+      "429": "Too many requests. Please wait a few minutes and try again.",
+      "500": "Internal server error. Please contact the administrator.",
+      "503": "Service unavailable. The server is temporarily overloaded.",
+      "DEFAULT": "An unexpected error has occurred."
     }
   }
 }

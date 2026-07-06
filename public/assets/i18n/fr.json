@@ -116,9 +116,6 @@
       "CLOSE": "Fermer"
     }
   },
-  "ERROR": {
-    "WORKS": "error-page works!"
-  },
   "FOOTER": {
     "COPYRIGHT_1": "@ 2026 Emma Feret Portofolio.",
     "COPYRIGHT_2": "Réalisé avec précision et amour.",
@@ -246,6 +243,24 @@
       "COMPOSANT": "Passe ta souris sur les blocs ci-dessous pour tester la directive d'effet au survol (Highlight) :",
       "DEMO": "🔥 Survole-moi pour me colorer en Orange !",
       "DEMO_2": "✨ Ça marche aussi sur ce deuxième bloc séparé !"
+    }
+  },
+  "ERROR_PAGE": {
+    "PAGE": {
+      "TITLE_CODE": "Erreur",
+      "TITLE_NO_CODE": "Oups !",
+      "MESSAGE": "Aucune erreur spécifique n'a été detectée.",
+      "BUTTON": "Retour à l'accueil"
+    },
+    "MESSAGE": {
+      "400": "Requête incorrecte. Veuillez vérifier les informations saisies.",
+      "401": "Non autorisé. Veuillez vous connecter pour accéder à cette page.",
+      "403": "Accès interdit. Vous n'avez pas les permissions nécessaires.",
+      "404": "Page non trouvée. L'adresse est peut-être incorrecte.",
+      "429": "Trop de requêtes. Veuillez attendre quelques minutes puis réessayez.",
+      "500": "Erreur interne du serveur. Veuillez contacter l'administrateur.",
+      "503": "Service indisponible. Le serveur est temporairement surchargé.",
+      "DEFAULT": "Une erreur inattendue est survenue."
     }
   }
 }
