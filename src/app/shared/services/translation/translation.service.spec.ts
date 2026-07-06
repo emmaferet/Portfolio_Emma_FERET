@@ -2,55 +2,56 @@ import { TestBed } from '@angular/core/testing';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslationService } from './translation.service';
 
-// Describe : expliquer ou décrire quelque chose de façon claire.
+// Describe: explain or describe something clearly.
 describe('TranslationService', () => {
   let service: TranslationService;
-  // Mock : simuler un comportement pour tester une partie du code/instancie pour de faux.
+  // Mock: simulate a behavior to test a part of the code/fake instantiation.
   let translateServiceMock: jest.Mocked<TranslateService>;
 
-  // BeforeEach : exécuter une préparation avant chaque test.
+  // BeforeEach: run a setup before each test.
   beforeEach(() => {
     translateServiceMock = {
-      // on mock les méthodes de TranslateService pour éviter les appels réels. pas besoin d'avoir le comportement réel de ces méthodes pour nos tests.
+      // we mock TranslateService's methods to avoid real calls. no need for the real behavior of these methods for our tests.
       use: jest.fn(),
       setFallbackLang: jest.fn(),
       getBrowserLang: jest.fn().mockReturnValue('fr'),
     } as unknown as jest.Mocked<TranslateService>;
-    // on espionne la méthode getItem/setItem de Storage et on l'injecte dans le service pour retourner notre mock au lieu de l'instance réelle.
+    // we spy on Storage's getItem/setItem method and inject it into the service to return our mock instead of the real instance.
     jest.spyOn(Storage.prototype, 'getItem').mockImplementation(() => null);
     jest.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {});
     TestBed.configureTestingModule({
       providers: [
         TranslationService,
-        // On fournit notre mock à la place du vrai TranslateService
+        // We provide our mock instead of the real TranslateService
         { provide: TranslateService, useValue: translateServiceMock },
       ],
     });
   });
 
-  // Après chaque test, on reset les mocks pour éviter les effets de bord entre les tests.
+  // After each test, we reset the mocks to avoid side effects between tests.
   afterEach(() => {
     jest.restoreAllMocks();
   });
 
   it('should be created', () => {
-    // TestBed crée le service DANS le contexte d'injection → inject() fonctionne ✅
+    // TestBed creates the service WITHIN the injection context → inject() works ✅
     service = TestBed.inject(TranslationService);
 
     expect(service).toBeTruthy();
   });
 
   it('should initialize with default language if storage and browserLang are empty', () => {
-    // Arrange : configure l'environnement de test
+    // Arrange: set up the test environment
     translateServiceMock.getBrowserLang.mockReturnValue(undefined);
 
+    // Act: execute the code under test
+    // fakes the service's behavior
     service = TestBed.inject(TranslationService);
-    // Act : execute le code à tester
-    // fake le comportement du service
+
+    // Assert: check the results
+    // verify that the current language is indeed 'fr' as expected in the service
     expect(translateServiceMock.setFallbackLang).toHaveBeenCalledWith('fr');
     expect(translateServiceMock.use).toHaveBeenCalledWith('fr');
-    // Assert : vérifie les résultats
-    // verifie que la langue courante est bien 'fr' comme prévu dans le service
     expect(service.currentLang()).toBe('fr');
   });
 
@@ -58,15 +59,15 @@ describe('TranslationService', () => {
     // Arrange
     jest.spyOn(Storage.prototype, 'getItem').mockReturnValue('en');
 
-    service = TestBed.inject(TranslationService);
     // Act
+    service = TestBed.inject(TranslationService);
+    // Assert
     expect(translateServiceMock.setFallbackLang).toHaveBeenCalledWith('fr');
     expect(translateServiceMock.use).toHaveBeenCalledWith('en');
-    // Assert
     expect(service.currentLang()).toBe('en');
   });
 
-  // Meme test qu'au dessus mais avec plusieurs langues possibles
+  // Same test as above but with several possible languages
   it.each(['en', 'fr'])(
     'should initialize with saved language from local storage if present',
     (language) => {
@@ -76,9 +77,9 @@ describe('TranslationService', () => {
       // Act
       service = TestBed.inject(TranslationService);
 
+      // Assert
       expect(translateServiceMock.setFallbackLang).toHaveBeenCalledWith('fr');
       expect(translateServiceMock.use).toHaveBeenCalledWith(language);
-      // Assert
       expect(service.currentLang()).toBe(language);
     },
   );
@@ -88,10 +89,10 @@ describe('TranslationService', () => {
 
     // Act
     service = TestBed.inject(TranslationService);
-    expect(translateServiceMock.setFallbackLang).toHaveBeenCalledWith('fr');
-    expect(translateServiceMock.use).toHaveBeenCalledWith('fr');
 
     // Assert
+    expect(translateServiceMock.setFallbackLang).toHaveBeenCalledWith('fr');
+    expect(translateServiceMock.use).toHaveBeenCalledWith('fr');
     expect(service.currentLang()).toBe('fr');
   });
 

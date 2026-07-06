@@ -11,7 +11,7 @@ import { Router, RouterLink } from '@angular/router';
 import { ListNavigation } from '@core/models/interfaces/list-navigation.interface';
 import { User } from '@core/models/interfaces/user.interface';
 import { TranslatePipe } from '@ngx-translate/core';
-import { TranslationService } from '@shared/services/translation/translation.service';
+import { TranslationService } from '@services/translation/translation.service';
 
 @Component({
   selector: 'app-header',
@@ -39,7 +39,9 @@ export class Header {
 
   switchLanguage() {
     const lang = this.translation.currentLang();
+    console.log(lang + ' ts header');
     this.translation.setLanguage(lang === 'fr' ? 'en' : 'fr');
+    console.log(this.translation.currentLang() + ' ts header');
   }
 
   constructor() {
