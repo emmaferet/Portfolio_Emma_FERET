@@ -9,7 +9,7 @@
     "HIRE_ME": "Contact",
     "LOADING": "Chargement...",
     "BACK_TO_HOME": "Retour à l'accueil",
-    "PORTFOLIO": "Portofolio.",
+    "PORTFOLIO": "Portfolio.",
     "CRAFTED_WITH": "Crafted with precision and soul.",
     "LOGO_ALT": "LogoHomePage"
   },
@@ -33,7 +33,7 @@
     "ARTICLE_2": {
       "TITLE": "2. Projets",
       "SUBTITLE": "Réalisations récentes",
-      "CONTENT": "Une variété de projets, que ça soit deux films réalisés lors de mes 5 années de master ou ce site, premier portofolio, mélangeant divers compétences de développement web.",
+      "CONTENT": "Une variété de projets, que ça soit deux films réalisés lors de mes 5 années de master ou ce site, premier portfolio, mélangeant divers compétences de développement web.",
       "IMAGE_ALT": "angular image de présentation"
     },
     "ARTICLE_IA": {
@@ -117,7 +117,7 @@
     }
   },
   "FOOTER": {
-    "COPYRIGHT_1": "@ 2026 Emma Feret Portofolio.",
+    "COPYRIGHT_1": "@ 2026 Emma Feret Portfolio.",
     "COPYRIGHT_2": "Réalisé avec précision et amour.",
     "COPYRIGHT_3": "Date de dernière mise à jour : "
   },
@@ -184,8 +184,8 @@
     "PROJET": "PROJET N°",
     "LINK": "Lien vers le projet >",
     "PROJECT_1": {
-      "NAME": "Ce portofolio web",
-      "DESCRIPTION": "Mon tout premier portofolio, réalisé en Angular, combinant des compétences en HTML, CSS, JS/TS, sous la surpervision de Quentin Buysschaert !",
+      "NAME": "Ce portfolio web",
+      "DESCRIPTION": "Mon tout premier portfolio, réalisé en Angular, combinant des compétences en HTML, CSS, JS/TS, sous la surpervision de Quentin Buysschaert !",
       "ALT": "Image du framework angular"
     },
     "PROJECT_2": {
@@ -210,10 +210,10 @@
     "SKILLS_DESCRIPTION_INTRO": "Mon parcours, de l'animation 3D au développement web, m'a permis de développer des compétences complémentaires telles que l'organisation, le travail d'équipe, la rigueur et l'autonomie. Habituée à collaborer sur des projets créatifs et techniques, j'ai appris à construire des solutions solides, à résoudre des problématiques complexes et à porter une attention particulière à l'expérience utilisateur comme aux détails de réalisation."
   },
   "OPENING_MODAL": {
-    "TITLE": "BIENVENUE SUR MON PORTOFOLIO",
+    "TITLE": "BIENVENUE SUR MON PORTFOLIO",
     "MESSAGE_1": "Ce site est pour l'instant en Work In Progress ! ",
     "MESSAGE_2": "Si vous avez des retours, n'hésitez pas me à les communiquer via Contact !",
-    "BUTTON": "Découvrir mon portofolio"
+    "BUTTON": "Découvrir mon portfolio"
   },
   "CONTACT_MODAL": {
     "TITLE": "Merci pour votre message !",
