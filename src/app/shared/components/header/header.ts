@@ -39,9 +39,7 @@ export class Header {
 
   switchLanguage() {
     const lang = this.translation.currentLang();
-    console.log(lang + ' ts header');
     this.translation.setLanguage(lang === 'fr' ? 'en' : 'fr');
-    console.log(this.translation.currentLang() + ' ts header');
   }
 
   constructor() {
