@@ -1,22 +1,55 @@
 @use '@styles/variables.scss';
 @use '@styles/classes.scss';
 
+.alignSkills {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+}
 .skillsBoxPurple {
   background-color: variables.$base-color-darkPurple;
-  width: 50%;
-  border-radius: 4rem;
+  width: 60rem;
+  border-radius: 3rem;
   transition-delay: 0.15s;
+  height: 30rem;
+  max-height: 40rem;
+}
+.skillRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 4rem;
+  align-items: center;
+
+  margin: 2.5rem 2rem;
+}
+
+.skillRow h3 {
+  justify-self: start;
+}
+
+.skillRow p {
+  justify-self: center;
+  text-align: center;
+}
+
+.skillRow img {
+  justify-self: end;
 }
 .skillsBoxWhite {
   background-color: variables.$base-color-whiteCream;
-  width: 50%;
-  border-radius: 4rem;
+  width: 60rem;
+  height: 30rem;
+  max-height: 40rem;
+  border-radius: 3rem;
   transition-delay: 0s;
 }
 .h1TitlePurpleBox {
   font-size: variables.$size-mediumPlus-pc;
   font-weight: bold;
-  margin-top: 10%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
 .centerSkills {
   display: flex;
@@ -32,7 +65,7 @@
   gap: 2rem;
 }
 .fixMargin {
-  margin: 2rem variables.$marginSidesSmall;
+  margin: 2rem 4rem;
 }
 
 .skillsContent {
@@ -48,6 +81,7 @@
 
 //ANimation test
 .skillsCard {
+  margin: 2rem;
   opacity: 0;
   transform: translateY(50px) scale(0.95);
   transition:
@@ -63,10 +97,15 @@
 .skillsImg {
   width: 4rem;
   height: 4rem;
+
+  margin: 1rem 2rem 0 0;
+}
+.java {
+  width: 5rem;
+  height: 5rem;
   margin-right: 2rem;
 }
 // Responsive
-
 @media (max-width: 75.375rem) {
   .fixMargin {
     margin: 2rem 1rem;
@@ -78,39 +117,38 @@
 
   .skillsDesc {
     width: 100%;
-
     font-size: variables.$size-mediumPlus-mobile;
     line-height: 1.8;
-
     margin-top: 1rem;
   }
 
-  .fixPositionContent {
+  /* Les cartes passent simplement en colonne */
+  .alignSkills {
     flex-direction: column;
-
-    margin: 2rem 0;
+    align-items: center;
+    margin-top: 2rem;
     gap: 1.5rem;
+  }
 
-    align-items: stretch;
+  .skillsCard {
+    margin: 0;
+    width: 100%;
   }
 
   .skillsBoxWhite,
   .skillsBoxPurple {
     width: 100%;
-
+    height: auto;
+    max-height: none;
+    min-height: auto;
     border-radius: 2rem;
-
-    margin: 0;
     padding: 1rem 0;
   }
-  .skillsBoxWhite {
-  }
+
   .h1TitlePurpleBox {
     font-size: variables.$size-mediumPlus-mobile;
-
     margin-top: 1rem;
     margin-bottom: 1.5rem;
-
     text-align: center;
   }
 
@@ -122,8 +160,22 @@
     margin: 0.75rem 0;
   }
 
+  /* On conserve le positionnement desktop */
   li.centerContent {
+    display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .skillsImg {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 1.5rem 0 0;
+  }
+
+  .java {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 1.5rem;
   }
 }

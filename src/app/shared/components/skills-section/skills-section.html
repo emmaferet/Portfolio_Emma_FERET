@@ -7,16 +7,16 @@
       {{ 'SKILLS_SECTION.DESCRIPTION' | translate }}
     </p>
   </div>
-  <div class="align fixPositionContent">
-    <!-- Article 3D -->
-    <article #skillCard class="articlGlobalPresentation skillsBoxWhite skillsCard">
+  <div class="alignSkills">
+    <!-- Article FRONT -->
+    <article #skillCard class="skillsBoxWhite skillsCard">
       <h3 class="h1TitlePurpleBox articlGlobalPresentation darkGreyColor bold">
         {{ 'SKILLS_SECTION.CATEGORY_DEV' | translate }}
       </h3>
       <ul>
         @for (skill of userSkillsList; track $index) {
           @if (skill.type === skillTypeEnum.SKILLDEV) {
-            <li class="align centerContent">
+            <li class="skillRow">
               <h3 class="articlGlobalPresentation darkGreyColor bold skillsContent">
                 {{ skill.name }}
               </h3>
@@ -29,21 +29,41 @@
         }
       </ul>
     </article>
-
-    <!-- Article DEV -->
-    <article #skillCard class="articlGlobalPresentation skillsBoxPurple skillsCard">
+    <!-- Article BACK -->
+    <article #skillCard class="skillsBoxPurple skillsCard">
       <h3 class="h1TitlePurpleBox articlGlobalPresentation softPurple bold">
+        {{ 'SKILLS_SECTION.CATEGORY_BACK' | translate }}
+      </h3>
+      <ul>
+        @for (skill of userSkillsList; track $index) {
+          @if (skill.type === skillTypeEnum.SKILLBACK) {
+            <li class="skillRow softPurple">
+              <h3 class="articlGlobalPresentation darkGreyColor bold skillsContent">
+                {{ skill.name }}
+              </h3>
+              <p class="articlGlobalPresentation darkPurpleColor skillsContent">
+                {{ skill.level | translate }}
+              </p>
+              <img src="{{ skill.image }}" alt="{{ skill.name }} image" class="java" />
+            </li>
+          }
+        }
+      </ul>
+    </article>
+    <!-- Article 3D -->
+    <article #skillCard class="skillsBoxWhite skillsCard">
+      <h3 class="h1TitlePurpleBox articlGlobalPresentation bold">
         {{ 'SKILLS_SECTION.CATEGORY_3D' | translate }}
       </h3>
 
       <ul>
         @for (skill of userSkillsList; track $index) {
           @if (skill.type === skillTypeEnum.SKILL3D) {
-            <li class="align centerContent softPurple">
+            <li class="grid skillRow">
               <h3 class="articlGlobalPresentation bold skillsContent">
                 {{ skill.name }}
               </h3>
-              <p class="articlGlobalPresentation softPurple skillsContent">
+              <p class="articlGlobalPresentation skillsContent">
                 {{ skill.level | translate }}
               </p>
               <img src="{{ skill.image }}" alt="{{ skill.name }} image" class="skillsImg" />

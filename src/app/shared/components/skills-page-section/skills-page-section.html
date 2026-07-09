@@ -1,14 +1,14 @@
 @let userSkillsList = userSkills();
 
 <div>
-  <div class="align skillsPageSection">
+  <div class="skillsPageSection">
     <!-- Article 3D -->
-    <article class="articlGlobalPresentation skillsBoxWhite">
-      <h2 class="h1TitlePurpleBox articlGlobalPresentation darkGreyColor bold">
+    <article class="skillsBoxPurple">
+      <h2 class="h1TitlePurpleBox articlGlobalPresentation softPurple bold">
         {{ 'SKILLS_SECTION.CATEGORY_DEV' | translate }}
       </h2>
 
-      <p class="articlGlobalPresentation smallDescSkills">
+      <p class="articlGlobalPresentation smallDescSkills softPurple">
         {{ 'SKILLS_SECTION.DESCRIPTION_DEV' | translate }}
       </p>
 
@@ -16,18 +16,50 @@
         @for (skill of userSkillsList; track $index) {
           @if (skill.type === skillTypeEnum.SKILLDEV) {
             <li class="centerContent skillsPresentation">
-              <h3 class="articlGlobalPresentation darkGreyColor bold">
+              <h3 class="articlGlobalPresentation softPurple bold start">
                 {{ skill.name }}
               </h3>
 
-              <p class="articlGlobalPresentation darkGreyColor">
+              <p class="articlGlobalPresentation softPurple center">
                 {{ skill.level | translate }}
               </p>
 
               <img
                 src="{{ skill.image }}"
                 alt="Logo de la compétence {{ skill.name }}"
-                class="skillsImg"
+                class="skillsImg end"
+              />
+            </li>
+          }
+        }
+      </ul>
+    </article>
+    <!-- Article BACK -->
+    <article class="skillsBoxWhite">
+      <h2 class="h1TitlePurpleBox articlGlobalPresentation bold fixSize">
+        {{ 'SKILLS_SECTION.CATEGORY_BACK' | translate }}
+      </h2>
+
+      <p class="articlGlobalPresentation darkGreyColor smallDescSkills">
+        {{ 'SKILLS_SECTION.DESCRIPTION_BACK' | translate }}
+      </p>
+
+      <ul>
+        @for (skill of userSkillsList; track $index) {
+          @if (skill.type === skillTypeEnum.SKILLBACK) {
+            <li class="centerContent skillsPresentation">
+              <h3 class="articlGlobalPresentation bold start">
+                {{ skill.name }}
+              </h3>
+
+              <p class="articlGlobalPresentation darkGreyColor center">
+                {{ skill.level | translate }}
+              </p>
+
+              <img
+                src="{{ skill.image }}"
+                alt="Logo de la compétence {{ skill.name }}"
+                class="skillsImg end"
               />
             </li>
           }
@@ -36,7 +68,7 @@
     </article>
 
     <!-- Article DEV -->
-    <article class="articlGlobalPresentation skillsBoxPurple">
+    <article class="skillsBoxPurple">
       <h2 class="h1TitlePurpleBox articlGlobalPresentation softPurple bold">
         {{ 'SKILLS_SECTION.CATEGORY_3D' | translate }}
       </h2>
@@ -49,18 +81,18 @@
         @for (skill of userSkillsList; track $index) {
           @if (skill.type === skillTypeEnum.SKILL3D) {
             <li class="centerContent softPurple skillsPresentation">
-              <h3 class="articlGlobalPresentation bold">
+              <h3 class="articlGlobalPresentation bold start">
                 {{ skill.name }}
               </h3>
 
-              <p class="articlGlobalPresentation softPurple">
+              <p class="articlGlobalPresentation softPurple center">
                 {{ skill.level | translate }}
               </p>
 
               <img
                 src="{{ skill.image }}"
                 alt="Logo de la compétence {{ skill.name }}"
-                class="skillsImg"
+                class="skillsImg end"
               />
             </li>
           }

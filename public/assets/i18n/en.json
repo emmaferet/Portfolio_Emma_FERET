@@ -67,6 +67,8 @@
     "DESCRIPTION_3D": "The spiritual and organic modeling",
     "CATEGORY_DEV": "< > Programming Front",
     "DESCRIPTION_DEV": "The architecture and website design",
+    "CATEGORY_BACK": "< > Programing Backend",
+    "DESCRIPTION_BACK": "Database management and logical architecture",
     "LEVELS": {
       "EXPERT": "Expert",
       "PROFICIENT": "Proficient",

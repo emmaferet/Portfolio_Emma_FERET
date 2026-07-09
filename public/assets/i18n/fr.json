@@ -67,6 +67,8 @@
     "DESCRIPTION_3D": "L'âme artistique et la modélisation organique",
     "CATEGORY_DEV": "< > Programmation Front",
     "DESCRIPTION_DEV": "L'architecture et le design de site web",
+    "CATEGORY_BACK": "< > Programmation Backend",
+    "DESCRIPTION_BACK": "Gestion de base de données et architecture logicielle",
     "LEVELS": {
       "EXPERT": "Expert",
       "PROFICIENT": "Confirmé",

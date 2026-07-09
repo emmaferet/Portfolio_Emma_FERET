@@ -1,22 +1,38 @@
 @use '@styles/variables.scss';
 @use '@styles/styles.scss';
 
+.skillsPageSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 7rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
 .skillsBoxPurple {
   background-color: variables.$base-color-darkPurple;
-  width: 30%;
-  border-radius: 1rem;
-  border-style: solid;
+  width: 40rem;
+  border-radius: 3rem;
+  transition-delay: 0.15s;
+  height: 45rem;
+  max-height: 40rem;
   border-color: variables.$base-color-softOrange;
-  border-width: 0.3rem;
+  border-width: 1rem;
+  margin: 0 1rem;
 }
 .skillsBoxWhite {
   background-color: variables.$base-color-whiteCream;
-  width: 30%;
-  border-radius: 1rem;
-  border-style: solid;
+  width: 40rem;
+  height: 45rem;
+  max-height: 40rem;
+  border-radius: 3rem;
+  transition-delay: 0s;
   border-color: variables.$base-color-darkPurple;
-  border-width: 0.3rem;
+  border-width: 1rem;
+  margin: 0 1rem;
 }
+
 .h1TitlePurpleBox {
   font-size: variables.$size-medium-pc;
   font-weight: bold;
@@ -24,17 +40,26 @@
   display: flex;
   justify-content: center;
 }
-.centerSkills {
-  display: flex;
-  flex-direction: column;
+
+.skillsPresentation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3rem;
   align-items: center;
-  justify-content: center;
-  margin: auto;
+
+  margin: 5rem 2rem;
 }
-.skillsPageSection {
-  margin: 4rem 0;
-  display: flex;
-  justify-content: center;
+.start {
+  justify-self: start;
+  font-size: variables.$size-medium-pc;
+}
+
+.center {
+  justify-self: center;
+  text-align: center;
+}
+
+.end {
+  justify-self: end;
 }
 
 .smallDescSkills {
@@ -42,10 +67,12 @@
   font-size: variables.$size-medium-pc;
   display: flex;
   justify-content: center;
+  text-align: center;
+  line-height: 1.7;
 }
 
 .skillsPresentation {
-  margin: 5rem 4rem;
+  margin: 5rem 2rem;
 }
 
 .fixMargin {
@@ -77,7 +104,7 @@
     width: 100%;
 
     margin: 0;
-
+    height: auto;
     border-radius: 1.5rem;
 
     box-sizing: border-box;
