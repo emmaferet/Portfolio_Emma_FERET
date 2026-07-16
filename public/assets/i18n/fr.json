@@ -264,5 +264,9 @@
       "503": "Service indisponible. Le serveur est temporairement surchargé.",
       "DEFAULT": "Une erreur inattendue est survenue."
     }
+  },
+  "LOADER_DATA": {
+    "TITLE": "Les données sont actuellement en chargement.",
+    "MESSAGE": "Veuillez patienter quelques instants."
   }
 }

@@ -264,5 +264,9 @@
       "503": "Service unavailable. The server is temporarily overloaded.",
       "DEFAULT": "An unexpected error has occurred."
     }
+  },
+  "LOADER_DATA": {
+    "TITLE": "The data is currently loading. ",
+    "MESSAGE": "Please wait a moment."
   }
 }
