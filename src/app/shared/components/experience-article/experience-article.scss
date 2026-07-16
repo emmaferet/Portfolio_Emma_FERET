@@ -27,11 +27,11 @@
 .experienceMarginFix {
   margin-left: 5rem;
 }
-
 @media (max-width: 75.375rem) {
   .experiencePres {
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center; // centre .column et .experienceImg horizontalement
     margin: 3rem 5%;
     gap: 1.5rem;
   }
@@ -49,10 +49,12 @@
     margin-left: 0;
     font-size: variables.$size-small-mobile;
     line-height: 1rem;
+    text-align: center; // centre "duration" et "description"
   }
 
   .experienceMarginFix {
     margin-left: 0;
+    text-align: center; // centre titre + nom d'entreprise
   }
 
   .titlePartPresentation {
@@ -67,5 +69,8 @@
 
   .column {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; // centre le bloc .articleContent lui-même dans la colonne
   }
 }

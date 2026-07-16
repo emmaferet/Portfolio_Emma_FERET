@@ -1,3 +1,7 @@
 <app-skills-intro></app-skills-intro>
 <hr class="horizontalLign" />
-<app-skills-page-section [userSkills]="userSkills()"></app-skills-page-section>
+@if (isLoading()) {
+  <app-loader-data></app-loader-data>
+} @else {
+  <app-skills-page-section [userSkills]="userSkills()"></app-skills-page-section>
+}

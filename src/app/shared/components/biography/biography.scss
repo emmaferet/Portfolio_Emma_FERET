@@ -4,9 +4,11 @@
 .centerArticleBiography {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
 .biographyPhoto {
-  margin: 0 5rem;
+  margin-right: 5rem;
   height: 40rem;
   width: 40rem;
   display: flex;
@@ -34,7 +36,7 @@
 }
 
 .topMargin {
-  margin: 10rem variables.$marginSidesSmall 10rem variables.$marginSidesSmall;
+  margin: 10rem 8rem 10rem 8rem;
 }
 
 // Responsive Mobile
@@ -65,15 +67,16 @@
   }
 
   .contentBiography {
-    width: 100%;
+    width: 90%;
 
     font-size: variables.$size-mediumPlus-mobile;
+    display: flex;
 
     line-height: 1.8;
 
-    text-align: left;
+    text-align: center;
 
-    margin-top: 1rem;
+    margin: 1rem auto;
   }
 
   .titlePartPresentation {

@@ -1,11 +1,17 @@
 <app-biography [userInfos]="userInfos()"></app-biography>
 <h2 class="titleH3Hook justifyCenter bold fixMargin">{{ 'MY_STORY_PAGE.TITLE_01' | translate }}</h2>
-@let formationList = userFormations();
-@for (formation of formationList; track $index) {
-  <app-my-story-formations [userFormations]="formation"></app-my-story-formations>
-}
-<h2 class="titleH3Hook justifyCenter bold fixMargin">{{ 'MY_STORY_PAGE.TITLE_02' | translate }}</h2>
-@let experiencesListReverse = reversedExperiencesList();
-@for (experience of experiencesListReverse; track experience.id) {
-  <app-experience-article [userExperience]="experience"></app-experience-article>
+@if (isLoading()) {
+  <app-loader-data></app-loader-data>
+} @else {
+  @let formationList = userFormations();
+  @for (formation of formationList; track $index) {
+    <app-my-story-formations [userFormations]="formation"></app-my-story-formations>
+  }
+  <h2 class="titleH3Hook justifyCenter bold fixMargin">
+    {{ 'MY_STORY_PAGE.TITLE_02' | translate }}
+  </h2>
+  @let experiencesListReverse = reversedExperiencesList();
+  @for (experience of experiencesListReverse; track experience.id) {
+    <app-experience-article [userExperience]="experience"></app-experience-article>
+  }
 }

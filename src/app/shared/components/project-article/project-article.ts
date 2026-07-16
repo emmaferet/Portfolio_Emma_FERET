@@ -21,7 +21,7 @@ export class ProjectArticle {
   checkScreen() {
     this.isMobile.set(window.innerWidth <= 1206);
   }
-  
+
   userProject = input.required<Projects | undefined>();
   sidePhotoArticleEnum = SidePhotoArticleEnum;
   sidePhotoArticle = input<SidePhotoArticleEnum>(SidePhotoArticleEnum.DISPLAYLEFT);

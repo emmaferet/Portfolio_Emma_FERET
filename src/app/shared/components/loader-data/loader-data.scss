@@ -1,0 +1,42 @@
+@use '@styles/variables.scss';
+.loader {
+  width: 3.75rem;
+  height: 3.75rem;
+  border: 0.3rem solid #fff;
+  border-bottom-color: variables.$base-color-darkPurple;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loaderLayout {
+  height: 30vh;
+}
+
+.loaderTitle {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  font-size: variables.$size-medium-pc;
+  line-height: 2rem;
+  margin-top: 5rem;
+  background-color: variables.$base-color-whiteCream;
+  border-radius: 1rem;
+  color: variables.$base-color-darkPurple;
+  width: 30rem;
+}
+@media (max-width: 75.375rem) {
+  .loaderTitle {
+    margin-top: 8rem;
+  }
+}

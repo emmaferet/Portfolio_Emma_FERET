@@ -73,9 +73,10 @@
 
 @media (max-width: 75.375rem) {
   .formationPresentation {
-    margin: 1rem;
+    margin: 2rem auto;
     flex-direction: column;
     align-items: flex-start;
+    max-width: 20rem;
   }
 
   .align {
@@ -95,7 +96,7 @@
 
   .line {
     width: 2px;
-    min-height: 6rem;
+    min-height: 8rem;
   }
 
   .articleContent {

@@ -1,13 +1,17 @@
 @let projectsList = userProjects();
 <div class="whiteSpace"></div>
-@for (project of projectsList; track $index) {
-  @if (project.id % 2 !== 0) {
-    <app-project-article [userProject]="project"></app-project-article>
-  } @else {
-    <app-project-article
-      [userProject]="project"
-      [sidePhotoArticle]="sidePhotoArticleEnum.DISPLAYRIGHT"
-    ></app-project-article>
+@if (isLoading()) {
+  <app-loader-data></app-loader-data>
+} @else {
+  @for (project of projectsList; track $index) {
+    @if (project.id % 2 !== 0) {
+      <app-project-article [userProject]="project"></app-project-article>
+    } @else {
+      <app-project-article
+        [userProject]="project"
+        [sidePhotoArticle]="sidePhotoArticleEnum.DISPLAYRIGHT"
+      ></app-project-article>
+    }
   }
+  <div class="whiteSpace"></div>
 }
-<div class="whiteSpace"></div>

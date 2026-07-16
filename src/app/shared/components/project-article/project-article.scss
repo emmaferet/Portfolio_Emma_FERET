@@ -66,7 +66,6 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   margin-left: 15%;
 }
@@ -92,6 +91,7 @@
   .smallTopFix {
     margin: 6rem 0 0 0;
   }
+
   /* FORCE UN SEUL COMPORTEMENT POUR LES 2 VARIANTS */
   .fixMargin,
   .fixMarginLeft {
@@ -100,28 +100,32 @@
     justify-content: center;
   }
 
-  /* IMAGE TOUJOURS EN HAUT (anti-zigzag) */
+  /* Neutralise le décalage desktop */
+  .center {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  /* IMAGE TOUJOURS EN HAUT (anti-zigzag) + centrage garanti */
   .fitImageProjects,
   .fitImageProjectsRight {
+    display: block;
     width: 100%;
     max-width: 24rem;
     height: 14rem;
+    margin: 0 auto; // centre l'image même si le parent est plus large que 24rem
     border-radius: 1.5rem;
     object-fit: cover;
 
-    /* 🔥 CRUCIAL : annule toute logique gauche/droite */
     order: 0 !important;
   }
 
-  /* CONTENU IDENTIQUE POUR TOUS LES PROJETS */
   .articlProjectPresentation {
     width: 100%;
     margin: 1.5rem 0 0 0;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     text-align: center;
   }
 
@@ -129,7 +133,6 @@
     width: 100%;
     font-size: variables.$size-small-mobile;
     line-height: 1.7;
-    text-align: left;
     margin-top: 1rem;
     text-align: center;
   }

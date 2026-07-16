@@ -18,7 +18,10 @@
     altImage: 'HOME.ARTICLE_2.ALT_IMAGE',
   }"
 ></app-article-prototype>
-
-<app-skills-section [userSkills]="userSkills()"></app-skills-section>
+@if (isLoading()) {
+  <app-loader-data></app-loader-data>
+} @else {
+  <app-skills-section [userSkills]="userSkills()"></app-skills-section>
+}
 <app-contact-section></app-contact-section>
 <app-ia-home-page></app-ia-home-page>
