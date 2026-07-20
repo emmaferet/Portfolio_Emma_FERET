@@ -36,11 +36,11 @@
 // Responsive mobile
 @media (max-width: 75.375rem) {
   .centerContact {
-    width: auto;
+    width: 80%;
 
     height: auto;
 
-    margin: 4rem 1rem 0 1rem;
+    margin: 4rem auto 0 auto;
 
     padding: 2rem 1.5rem;
 
@@ -75,5 +75,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .darkPurpleSolidButton {
+    width: 15rem;
+    height: 2rem;
+  }
+  .darkPurpleSolidButtonNative {
+    width: 10rem;
+    height: 2rem;
   }
 }
