@@ -139,10 +139,10 @@
       "id": 1,
       "name": "Ce site haha",
       "year": 2026,
-      "description": "Mon tout premier portofolio, réalisé en Angular, combinant des compétences en HTML, CSS, JS/TS, sous la surpervision de Quentin Buysschaert !",
+      "description": "Mon tout premier portfolio, réalisé en Angular, combinant des compétences en HTML, CSS, JS/TS, sous la surpervision de Quentin Buysschaert !",
       "image": "/angular-imagePresentation.webp",
       "link": "https://youtu.be/IgCvP8jAk4g?si=-nixvO4q3WBFoslK",
-      "alt": "premier portofolio Angular"
+      "alt": "premier portfolio Angular"
     },
     {
       "id": 2,

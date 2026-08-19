@@ -41,7 +41,7 @@ jobs:
         run: sed -i "s|API_URL|$ENV_APIURL|g" src/environments/environments.ts
 
       - name: Build
-        run: npm run build -- --configuration=production --base-href /Portofolio_Emma_FERET/
+        run: npm run build -- --configuration=production --base-href /Portfolio_Emma_FERET/
         env:
           EMAIL_SERVICE_ID: ${{ vars.EMAIL_SERVICE_ID }}
           EMAIL_TEMPLATE_ID: ${{ vars.EMAIL_TEMPLATE_ID }}

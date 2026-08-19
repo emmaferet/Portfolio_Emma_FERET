@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "EmmaFeretPortofolio": {
+    "EmmaFeretPortfolio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -80,10 +80,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "EmmaFeretPortofolio:build:production"
+              "buildTarget": "EmmaFeretPortfolio:build:production"
             },
             "development": {
-              "buildTarget": "EmmaFeretPortofolio:build:development"
+              "buildTarget": "EmmaFeretPortfolio:build:development"
             }
           },
           "defaultConfiguration": "development"

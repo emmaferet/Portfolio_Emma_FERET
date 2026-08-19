@@ -23,7 +23,7 @@ import { UserService } from '@shared/services/user/user.service';
   styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('EmmaFeretPortofolio');
+  protected readonly title = signal('EmmaFeretPortfolio');
 
   private userService = inject(UserService);
 
