@@ -13,7 +13,6 @@ import { Footer } from '@shared/components/footer/footer';
 import { Header } from '@shared/components/header/header';
 import { Loader } from '@shared/components/loader/loader';
 import { OpeningModal } from '@shared/components/opening-modal/opening-modal';
-import { WarningModal } from '@shared/components/warning-modal/warning-modal';
 import { UserService } from '@shared/services/user/user.service';
 
 @Component({
@@ -56,11 +55,11 @@ export class App {
     if (!seen) {
       localStorage.setItem('welcomeModalSeen', 'true');
 
-      const welcomeRef = this.dialog.open(OpeningModal);
+      this.dialog.open(OpeningModal);
 
-      welcomeRef.afterClosed().subscribe(() => {
-        this.dialog.open(WarningModal);
-      });
+      // welcomeRef.afterClosed().subscribe(() => {
+      //   this.dialog.open(WarningModal);
+      // });
     }
   }
 }
