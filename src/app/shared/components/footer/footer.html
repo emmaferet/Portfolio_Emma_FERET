@@ -16,13 +16,15 @@
               <img src="logos/mail_icone.webp" alt="" class="mailFooter" />
             </a>
           } @else if (link.label.includes('CV')) {
-            <button
-              class="footerNavigationButtonsNative"
-              (click)="downloadCv()"
+            <a
+              class="footerNavigationButtons"
+              href="files/CVWebDev_EmmaFERET.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Bouton qui permet de télécharger mon CV"
             >
               {{ link.label }}
-            </button>
+            </a>
           } @else {
             <a
               [href]="link.url"
